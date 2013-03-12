@@ -442,7 +442,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "touch -cm ${SRCROOT}/OWNTEST\ncp ${SRCROOT}/../TEST/1.jpg ${SRCROOT}/OWNTEST/1.jpg\ncp ${SRCROOT}/../TEST/2.jpg ${SRCROOT}/OWNTEST/2.jpg";
+			shellScript = "# touch -cm ${SRCROOT}/OWNTEST\n#cp ${SRCROOT}/../TEST/1.jpg ${SRCROOT}/OWNTEST/1.jpg\n#cp ${SRCROOT}/../TEST/2.jpg ${SRCROOT}/OWNTEST/2.jpg";
 		};
 /* End PBXShellScriptBuildPhase section */
 
