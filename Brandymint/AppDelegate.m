@@ -10,6 +10,8 @@
 
 @implementation AppDelegate
 
+@synthesize ownViewController;
+
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
@@ -18,7 +20,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    ownViewController = [[OwnViewController alloc] initWithNibName:@"OwnViewController" bundle:[NSBundle mainBundle]];
+    
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = ownViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

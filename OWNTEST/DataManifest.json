@@ -1,0 +1,45 @@
+{
+    "head": [
+        {
+            //
+        }
+    ],
+    "child": [
+        {
+            "title":    "Potee",
+            "subtitle": "NEW WAY OF PLANNING",
+            "description":  "Potee is project-managing web app with visual approach at it's core. It's a new way of planning. Now you know what is the next step in you projects.",
+            "url":  "potee.me",
+            "screens":  [
+              "potee_screenshot.jpg"
+            ]
+        },
+        {
+            "title":    "Potee",
+            "subtitle": "NEW WAY OF PLANNING",
+            "description":  "Potee is project-managing web app with visual approach at it's core. It's a new way of planning. Now you know what is the next step in you projects.",
+            "url":  "potee.me",
+            "screens":  [
+                "potee_screenshot.jpg"
+            ]
+        },
+        {
+            "title":    "Potee",
+            "subtitle": "NEW WAY OF PLANNING",
+            "description":  "Potee is project-managing web app with visual approach at it's core. It's a new way of planning. Now you know what is the next step in you projects.",
+            "url":  "potee.me",
+            "screens":  [
+                "potee_screenshot.jpg"
+            ]
+        },
+        {
+            "title":    "Potee",
+            "subtitle": "NEW WAY OF PLANNING",
+            "description":  "Potee is project-managing web app with visual approach at it's core. It's a new way of planning. Now you know what is the next step in you projects.",
+            "url":  "potee.me",
+            "screens":  [
+                "potee_screenshot.jpg"
+            ]
+        }
+    ]
+}
