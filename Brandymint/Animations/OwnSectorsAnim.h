@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+// оффсет чего?
 #define OFFSET_X    70
 #define OFFSET_Y    50
 
