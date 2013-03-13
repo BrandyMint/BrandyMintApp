@@ -14,9 +14,9 @@
 @dynamic desc;
 @dynamic image;
 @dynamic link;
+@dynamic position;
 @dynamic subtitle;
 @dynamic title;
 @dynamic url;
-@dynamic order;
 
 @end

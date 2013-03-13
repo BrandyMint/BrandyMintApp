@@ -14,10 +14,16 @@
     NSArray *cardsBuffer;
 }
 
-@property (nonatomic, readonly) NSArray *cardsBuffer;
+@property (retain, readonly) NSArray *cardsBuffer;
 
 +(CardsRepository *) sharedRepository;
 
+-(NSManagedObjectContext*) managerContext;
+
 -(Card*) getFirstCard;
+-(Card*) getNextCard:(Card*)prevCard;
+-(Card*) getPreviousCard:(Card*)prevCard;
+
+-(void) replaceCards:(NSArray*)cardsArray;
 
 @end

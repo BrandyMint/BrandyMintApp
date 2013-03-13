@@ -12,12 +12,12 @@
 
 @interface Card : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * order;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * subtitle;
 @property (nonatomic, retain) NSString * desc;
-@property (nonatomic, retain) UIImage * image;
+@property (nonatomic, retain) NSString *image;
 @property (nonatomic, retain) NSString * link;
+@property (nonatomic, retain) NSNumber * position;
+@property (nonatomic, retain) NSString * subtitle;
+@property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * url;
 
 @end
