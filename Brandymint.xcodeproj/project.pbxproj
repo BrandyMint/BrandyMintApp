@@ -1,691 +1,1954 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		7C01D50516EE0B70004216EC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4EF16EE0B70004216EC /* background.jpg */; };
-		7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F016EE0B70004216EC /* background@2x.jpg */; };
-		7C01D50716EE0B70004216EC /* brandymint_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F116EE0B70004216EC /* brandymint_logo_white.png */; };
-		7C01D50816EE0B70004216EC /* brandymint_logo_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F216EE0B70004216EC /* brandymint_logo_white@2x.png */; };
-		7C01D50916EE0B70004216EC /* icon-agile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F316EE0B70004216EC /* icon-agile.png */; };
-		7C01D50A16EE0B70004216EC /* icon-agile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F416EE0B70004216EC /* icon-agile@2x.png */; };
-		7C01D50B16EE0B70004216EC /* icon-cloud-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F516EE0B70004216EC /* icon-cloud-tap.png */; };
-		7C01D50C16EE0B70004216EC /* icon-cloud-tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F616EE0B70004216EC /* icon-cloud-tap@2x.png */; };
-		7C01D50D16EE0B70004216EC /* icon-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F716EE0B70004216EC /* icon-cloud.png */; };
-		7C01D50E16EE0B70004216EC /* icon-cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F816EE0B70004216EC /* icon-cloud@2x.png */; };
-		7C01D50F16EE0B70004216EC /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F916EE0B70004216EC /* icon-location.png */; };
-		7C01D51016EE0B70004216EC /* icon-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4FA16EE0B70004216EC /* icon-location@2x.png */; };
-		7C01D51116EE0B70004216EC /* icon-projects.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4FB16EE0B70004216EC /* icon-projects.png */; };
-		7C01D51216EE0B70004216EC /* icon-projects@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4FC16EE0B70004216EC /* icon-projects@2x.png */; };
-		7C01D51316EE0B70004216EC /* icon-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4FD16EE0B70004216EC /* icon-right.png */; };
-		7C01D51416EE0B70004216EC /* icon-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4FE16EE0B70004216EC /* icon-right@2x.png */; };
-		7C01D51516EE0B70004216EC /* icon-rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4FF16EE0B70004216EC /* icon-rocket.png */; };
-		7C01D51616EE0B70004216EC /* icon-rocket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D50016EE0B70004216EC /* icon-rocket@2x.png */; };
-		7C01D51716EE0B70004216EC /* icon-share.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D50116EE0B70004216EC /* icon-share.png */; };
-		7C01D51816EE0B70004216EC /* icon-share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D50216EE0B70004216EC /* icon-share@2x.png */; };
-		7C01D51916EE0B70004216EC /* potee_screenshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D50316EE0B70004216EC /* potee_screenshot.jpg */; };
-		7C01D51A16EE0B70004216EC /* potee_screenshot@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D50416EE0B70004216EC /* potee_screenshot@2x.jpg */; };
-		7C3DC5AB16EF45D900C00066 /* OwnSectorsAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */; };
-		7C8191EE16E867A000B71598 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191ED16E867A000B71598 /* UIKit.framework */; };
-		7C8191F016E867A000B71598 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191EF16E867A000B71598 /* Foundation.framework */; };
-		7C8191F216E867A000B71598 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
-		7C8191F416E867A000B71598 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F316E867A000B71598 /* CoreData.framework */; };
-		7C8191FA16E867A000B71598 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C8191F816E867A000B71598 /* InfoPlist.strings */; };
-		7C8191FC16E867A000B71598 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8191FB16E867A000B71598 /* main.m */; };
-		7C81920016E867A000B71598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8191FF16E867A000B71598 /* AppDelegate.m */; };
-		7C81920216E867A000B71598 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C81920116E867A000B71598 /* Default.png */; };
-		7C81920416E867A000B71598 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C81920316E867A000B71598 /* Default@2x.png */; };
-		7C81920616E867A000B71598 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C81920516E867A000B71598 /* Default-568h@2x.png */; };
-		7C81920916E867A000B71598 /* Brandymint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C81920716E867A000B71598 /* Brandymint.xcdatamodeld */; };
-		7C81921116E867A000B71598 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C81921016E867A000B71598 /* SenTestingKit.framework */; };
-		7C81921216E867A000B71598 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191ED16E867A000B71598 /* UIKit.framework */; };
-		7C81921316E867A000B71598 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191EF16E867A000B71598 /* Foundation.framework */; };
-		7C81921416E867A000B71598 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F316E867A000B71598 /* CoreData.framework */; };
-		7C81921C16E867A000B71598 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C81921A16E867A000B71598 /* InfoPlist.strings */; };
-		7C81921F16E867A000B71598 /* BrandymintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C81921E16E867A000B71598 /* BrandymintTests.m */; };
-		7C81922E16E8685A00B71598 /* OwnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C81922C16E8685A00B71598 /* OwnViewController.m */; };
-		7C81922F16E8685A00B71598 /* OwnViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81922D16E8685A00B71598 /* OwnViewController.xib */; };
-		7C81923D16E86B1400B71598 /* brandymint_2013_redesign_fnl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C81923A16E86B1400B71598 /* brandymint_2013_redesign_fnl.jpg */; };
-		7C81923E16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C81923B16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg */; };
-		7C81923F16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C81923C16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg */; };
-		7C81924416E86D0B00B71598 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C81924216E86D0B00B71598 /* CardViewController.m */; };
-		7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81924316E86D0B00B71598 /* CardViewController.xib */; };
-		7C81926816E8B4C500B71598 /* OWNTEST in Resources */ = {isa = PBXBuildFile; fileRef = 7C81926716E8B4C500B71598 /* OWNTEST */; };
-		83B2380716EF8A4200AA4E46 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380616EF8A4100AA4E46 /* Card.m */; };
-		83B2380816EF8A4200AA4E46 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380616EF8A4100AA4E46 /* Card.m */; };
-		83B2380B16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
-		83B2380C16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7C81921516E867A000B71598 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C8191E016E867A000B71598 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7C8191E816E867A000B71598;
-			remoteInfo = Brandymint;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		7C01D4EF16EE0B70004216EC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		7C01D4F016EE0B70004216EC /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
-		7C01D4F116EE0B70004216EC /* brandymint_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brandymint_logo_white.png; sourceTree = "<group>"; };
-		7C01D4F216EE0B70004216EC /* brandymint_logo_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brandymint_logo_white@2x.png"; sourceTree = "<group>"; };
-		7C01D4F316EE0B70004216EC /* icon-agile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-agile.png"; sourceTree = "<group>"; };
-		7C01D4F416EE0B70004216EC /* icon-agile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-agile@2x.png"; sourceTree = "<group>"; };
-		7C01D4F516EE0B70004216EC /* icon-cloud-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud-tap.png"; sourceTree = "<group>"; };
-		7C01D4F616EE0B70004216EC /* icon-cloud-tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud-tap@2x.png"; sourceTree = "<group>"; };
-		7C01D4F716EE0B70004216EC /* icon-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud.png"; sourceTree = "<group>"; };
-		7C01D4F816EE0B70004216EC /* icon-cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud@2x.png"; sourceTree = "<group>"; };
-		7C01D4F916EE0B70004216EC /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location.png"; sourceTree = "<group>"; };
-		7C01D4FA16EE0B70004216EC /* icon-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location@2x.png"; sourceTree = "<group>"; };
-		7C01D4FB16EE0B70004216EC /* icon-projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-projects.png"; sourceTree = "<group>"; };
-		7C01D4FC16EE0B70004216EC /* icon-projects@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-projects@2x.png"; sourceTree = "<group>"; };
-		7C01D4FD16EE0B70004216EC /* icon-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-right.png"; sourceTree = "<group>"; };
-		7C01D4FE16EE0B70004216EC /* icon-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-right@2x.png"; sourceTree = "<group>"; };
-		7C01D4FF16EE0B70004216EC /* icon-rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-rocket.png"; sourceTree = "<group>"; };
-		7C01D50016EE0B70004216EC /* icon-rocket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-rocket@2x.png"; sourceTree = "<group>"; };
-		7C01D50116EE0B70004216EC /* icon-share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-share.png"; sourceTree = "<group>"; };
-		7C01D50216EE0B70004216EC /* icon-share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-share@2x.png"; sourceTree = "<group>"; };
-		7C01D50316EE0B70004216EC /* potee_screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = potee_screenshot.jpg; sourceTree = "<group>"; };
-		7C01D50416EE0B70004216EC /* potee_screenshot@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "potee_screenshot@2x.jpg"; sourceTree = "<group>"; };
-		7C3DC5A916EF45D900C00066 /* OwnSectorsAnim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnSectorsAnim.h; sourceTree = "<group>"; };
-		7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnSectorsAnim.m; sourceTree = "<group>"; };
-		7C8191E916E867A000B71598 /* Brandymint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brandymint.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C8191ED16E867A000B71598 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		7C8191EF16E867A000B71598 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7C8191F116E867A000B71598 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7C8191F316E867A000B71598 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		7C8191F716E867A000B71598 /* Brandymint-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Brandymint-Info.plist"; sourceTree = "<group>"; };
-		7C8191F916E867A000B71598 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7C8191FB16E867A000B71598 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7C8191FD16E867A000B71598 /* Brandymint-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brandymint-Prefix.pch"; sourceTree = "<group>"; };
-		7C8191FE16E867A000B71598 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7C8191FF16E867A000B71598 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7C81920116E867A000B71598 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		7C81920316E867A000B71598 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		7C81920516E867A000B71598 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7C81920816E867A000B71598 /* Brandymint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Brandymint.xcdatamodel; sourceTree = "<group>"; };
-		7C81920F16E867A000B71598 /* BrandymintTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrandymintTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C81921016E867A000B71598 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7C81921916E867A000B71598 /* BrandymintTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrandymintTests-Info.plist"; sourceTree = "<group>"; };
-		7C81921B16E867A000B71598 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7C81921D16E867A000B71598 /* BrandymintTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandymintTests.h; sourceTree = "<group>"; };
-		7C81921E16E867A000B71598 /* BrandymintTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandymintTests.m; sourceTree = "<group>"; };
-		7C81922B16E8685A00B71598 /* OwnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnViewController.h; sourceTree = "<group>"; };
-		7C81922C16E8685A00B71598 /* OwnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnViewController.m; sourceTree = "<group>"; };
-		7C81922D16E8685A00B71598 /* OwnViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OwnViewController.xib; sourceTree = "<group>"; };
-		7C81923A16E86B1400B71598 /* brandymint_2013_redesign_fnl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brandymint_2013_redesign_fnl.jpg; sourceTree = "<group>"; };
-		7C81923B16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brandymint_2013_redesign_fnl2.jpg; sourceTree = "<group>"; };
-		7C81923C16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brandymint_2013_redesign_fnl3.jpg; sourceTree = "<group>"; };
-		7C81924116E86D0B00B71598 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
-		7C81924216E86D0B00B71598 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
-		7C81924316E86D0B00B71598 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
-		7C81926716E8B4C500B71598 /* OWNTEST */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OWNTEST; sourceTree = SOURCE_ROOT; };
-		83B2380516EF8A4000AA4E46 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		83B2380616EF8A4100AA4E46 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		83B2380916EF92E900AA4E46 /* ImageToDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageToDataTransformer.h; sourceTree = "<group>"; };
-		83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageToDataTransformer.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		7C8191E616E867A000B71598 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C8191EE16E867A000B71598 /* UIKit.framework in Frameworks */,
-				7C8191F016E867A000B71598 /* Foundation.framework in Frameworks */,
-				7C8191F216E867A000B71598 /* CoreGraphics.framework in Frameworks */,
-				7C8191F416E867A000B71598 /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7C81920B16E867A000B71598 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C81921116E867A000B71598 /* SenTestingKit.framework in Frameworks */,
-				7C81921216E867A000B71598 /* UIKit.framework in Frameworks */,
-				7C81921316E867A000B71598 /* Foundation.framework in Frameworks */,
-				7C81921416E867A000B71598 /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		7C3DC5A816EF453B00C00066 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				7C3DC5A916EF45D900C00066 /* OwnSectorsAnim.h */,
-				7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		7C8191DE16E867A000B71598 = {
-			isa = PBXGroup;
-			children = (
-				7C8191F516E867A000B71598 /* Brandymint */,
-				7C81921716E867A000B71598 /* BrandymintTests */,
-				7C8191EC16E867A000B71598 /* Frameworks */,
-				7C8191EA16E867A000B71598 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		7C8191EA16E867A000B71598 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7C8191E916E867A000B71598 /* Brandymint.app */,
-				7C81920F16E867A000B71598 /* BrandymintTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7C8191EC16E867A000B71598 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7C8191ED16E867A000B71598 /* UIKit.framework */,
-				7C8191EF16E867A000B71598 /* Foundation.framework */,
-				7C8191F116E867A000B71598 /* CoreGraphics.framework */,
-				7C8191F316E867A000B71598 /* CoreData.framework */,
-				7C81921016E867A000B71598 /* SenTestingKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7C8191F516E867A000B71598 /* Brandymint */ = {
-			isa = PBXGroup;
-			children = (
-				7C3DC5A816EF453B00C00066 /* Animations */,
-				7C81922816E867FE00B71598 /* Controllers */,
-				7C81922916E867FE00B71598 /* Resources */,
-				8392726A16EF9B3A00C9D303 /* Application */,
-				8392726916EF9B2900C9D303 /* Models */,
-				7C8191F616E867A000B71598 /* Supporting Files */,
-				7C81926716E8B4C500B71598 /* OWNTEST */,
-			);
-			path = Brandymint;
-			sourceTree = "<group>";
-		};
-		7C8191F616E867A000B71598 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7C8191F716E867A000B71598 /* Brandymint-Info.plist */,
-				7C8191F816E867A000B71598 /* InfoPlist.strings */,
-				7C8191FB16E867A000B71598 /* main.m */,
-				7C8191FD16E867A000B71598 /* Brandymint-Prefix.pch */,
-				7C81920116E867A000B71598 /* Default.png */,
-				7C81920316E867A000B71598 /* Default@2x.png */,
-				7C81920516E867A000B71598 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7C81921716E867A000B71598 /* BrandymintTests */ = {
-			isa = PBXGroup;
-			children = (
-				7C81921D16E867A000B71598 /* BrandymintTests.h */,
-				7C81921E16E867A000B71598 /* BrandymintTests.m */,
-				7C81921816E867A000B71598 /* Supporting Files */,
-			);
-			path = BrandymintTests;
-			sourceTree = "<group>";
-		};
-		7C81921816E867A000B71598 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7C81921916E867A000B71598 /* BrandymintTests-Info.plist */,
-				7C81921A16E867A000B71598 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7C81922816E867FE00B71598 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7C81922A16E8684100B71598 /* OwnViewController */,
-				7C81924016E86CF600B71598 /* CardViewController */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7C81922916E867FE00B71598 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7C01D4EF16EE0B70004216EC /* background.jpg */,
-				7C01D4F016EE0B70004216EC /* background@2x.jpg */,
-				7C01D4F116EE0B70004216EC /* brandymint_logo_white.png */,
-				7C01D4F216EE0B70004216EC /* brandymint_logo_white@2x.png */,
-				7C01D4F316EE0B70004216EC /* icon-agile.png */,
-				7C01D4F416EE0B70004216EC /* icon-agile@2x.png */,
-				7C01D4F516EE0B70004216EC /* icon-cloud-tap.png */,
-				7C01D4F616EE0B70004216EC /* icon-cloud-tap@2x.png */,
-				7C01D4F716EE0B70004216EC /* icon-cloud.png */,
-				7C01D4F816EE0B70004216EC /* icon-cloud@2x.png */,
-				7C01D4F916EE0B70004216EC /* icon-location.png */,
-				7C01D4FA16EE0B70004216EC /* icon-location@2x.png */,
-				7C01D4FB16EE0B70004216EC /* icon-projects.png */,
-				7C01D4FC16EE0B70004216EC /* icon-projects@2x.png */,
-				7C01D4FD16EE0B70004216EC /* icon-right.png */,
-				7C01D4FE16EE0B70004216EC /* icon-right@2x.png */,
-				7C01D4FF16EE0B70004216EC /* icon-rocket.png */,
-				7C01D50016EE0B70004216EC /* icon-rocket@2x.png */,
-				7C01D50116EE0B70004216EC /* icon-share.png */,
-				7C01D50216EE0B70004216EC /* icon-share@2x.png */,
-				7C01D50316EE0B70004216EC /* potee_screenshot.jpg */,
-				7C01D50416EE0B70004216EC /* potee_screenshot@2x.jpg */,
-				7C81923A16E86B1400B71598 /* brandymint_2013_redesign_fnl.jpg */,
-				7C81923B16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg */,
-				7C81923C16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		7C81922A16E8684100B71598 /* OwnViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7C81922B16E8685A00B71598 /* OwnViewController.h */,
-				7C81922C16E8685A00B71598 /* OwnViewController.m */,
-				7C81922D16E8685A00B71598 /* OwnViewController.xib */,
-			);
-			path = OwnViewController;
-			sourceTree = "<group>";
-		};
-		7C81924016E86CF600B71598 /* CardViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7C81924116E86D0B00B71598 /* CardViewController.h */,
-				7C81924216E86D0B00B71598 /* CardViewController.m */,
-				7C81924316E86D0B00B71598 /* CardViewController.xib */,
-			);
-			path = CardViewController;
-			sourceTree = "<group>";
-		};
-		8392726916EF9B2900C9D303 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7C81920716E867A000B71598 /* Brandymint.xcdatamodeld */,
-				83B2380916EF92E900AA4E46 /* ImageToDataTransformer.h */,
-				83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */,
-				83B2380516EF8A4000AA4E46 /* Card.h */,
-				83B2380616EF8A4100AA4E46 /* Card.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		8392726A16EF9B3A00C9D303 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				7C8191FE16E867A000B71598 /* AppDelegate.h */,
-				7C8191FF16E867A000B71598 /* AppDelegate.m */,
-			);
-			name = Application;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		7C8191E816E867A000B71598 /* Brandymint */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7C81922216E867A000B71598 /* Build configuration list for PBXNativeTarget "Brandymint" */;
-			buildPhases = (
-				7C8191E516E867A000B71598 /* Sources */,
-				7C8191E616E867A000B71598 /* Frameworks */,
-				7C8191E716E867A000B71598 /* Resources */,
-				7C81924616E898FA00B71598 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Brandymint;
-			productName = Brandymint;
-			productReference = 7C8191E916E867A000B71598 /* Brandymint.app */;
-			productType = "com.apple.product-type.application";
-		};
-		7C81920E16E867A000B71598 /* BrandymintTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7C81922516E867A000B71598 /* Build configuration list for PBXNativeTarget "BrandymintTests" */;
-			buildPhases = (
-				7C81920A16E867A000B71598 /* Sources */,
-				7C81920B16E867A000B71598 /* Frameworks */,
-				7C81920C16E867A000B71598 /* Resources */,
-				7C81920D16E867A000B71598 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7C81921616E867A000B71598 /* PBXTargetDependency */,
-			);
-			name = BrandymintTests;
-			productName = BrandymintTests;
-			productReference = 7C81920F16E867A000B71598 /* BrandymintTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		7C8191E016E867A000B71598 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = "denisdbv@gmail.com";
-			};
-			buildConfigurationList = 7C8191E316E867A000B71598 /* Build configuration list for PBXProject "Brandymint" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7C8191DE16E867A000B71598;
-			productRefGroup = 7C8191EA16E867A000B71598 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				7C8191E816E867A000B71598 /* Brandymint */,
-				7C81920E16E867A000B71598 /* BrandymintTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		7C8191E716E867A000B71598 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C8191FA16E867A000B71598 /* InfoPlist.strings in Resources */,
-				7C81920216E867A000B71598 /* Default.png in Resources */,
-				7C81920416E867A000B71598 /* Default@2x.png in Resources */,
-				7C81920616E867A000B71598 /* Default-568h@2x.png in Resources */,
-				7C81922F16E8685A00B71598 /* OwnViewController.xib in Resources */,
-				7C81923D16E86B1400B71598 /* brandymint_2013_redesign_fnl.jpg in Resources */,
-				7C81923E16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg in Resources */,
-				7C81923F16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg in Resources */,
-				7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */,
-				7C81926816E8B4C500B71598 /* OWNTEST in Resources */,
-				7C01D50516EE0B70004216EC /* background.jpg in Resources */,
-				7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */,
-				7C01D50716EE0B70004216EC /* brandymint_logo_white.png in Resources */,
-				7C01D50816EE0B70004216EC /* brandymint_logo_white@2x.png in Resources */,
-				7C01D50916EE0B70004216EC /* icon-agile.png in Resources */,
-				7C01D50A16EE0B70004216EC /* icon-agile@2x.png in Resources */,
-				7C01D50B16EE0B70004216EC /* icon-cloud-tap.png in Resources */,
-				7C01D50C16EE0B70004216EC /* icon-cloud-tap@2x.png in Resources */,
-				7C01D50D16EE0B70004216EC /* icon-cloud.png in Resources */,
-				7C01D50E16EE0B70004216EC /* icon-cloud@2x.png in Resources */,
-				7C01D50F16EE0B70004216EC /* icon-location.png in Resources */,
-				7C01D51016EE0B70004216EC /* icon-location@2x.png in Resources */,
-				7C01D51116EE0B70004216EC /* icon-projects.png in Resources */,
-				7C01D51216EE0B70004216EC /* icon-projects@2x.png in Resources */,
-				7C01D51316EE0B70004216EC /* icon-right.png in Resources */,
-				7C01D51416EE0B70004216EC /* icon-right@2x.png in Resources */,
-				7C01D51516EE0B70004216EC /* icon-rocket.png in Resources */,
-				7C01D51616EE0B70004216EC /* icon-rocket@2x.png in Resources */,
-				7C01D51716EE0B70004216EC /* icon-share.png in Resources */,
-				7C01D51816EE0B70004216EC /* icon-share@2x.png in Resources */,
-				7C01D51916EE0B70004216EC /* potee_screenshot.jpg in Resources */,
-				7C01D51A16EE0B70004216EC /* potee_screenshot@2x.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7C81920C16E867A000B71598 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C81921C16E867A000B71598 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7C81920D16E867A000B71598 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		7C81924616E898FA00B71598 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# touch -cm ${SRCROOT}/OWNTEST\n#cp ${SRCROOT}/../TEST/1.jpg ${SRCROOT}/OWNTEST/1.jpg\n#cp ${SRCROOT}/../TEST/2.jpg ${SRCROOT}/OWNTEST/2.jpg";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		7C8191E516E867A000B71598 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C8191FC16E867A000B71598 /* main.m in Sources */,
-				7C81920016E867A000B71598 /* AppDelegate.m in Sources */,
-				7C81920916E867A000B71598 /* Brandymint.xcdatamodeld in Sources */,
-				7C81922E16E8685A00B71598 /* OwnViewController.m in Sources */,
-				7C81924416E86D0B00B71598 /* CardViewController.m in Sources */,
-				7C3DC5AB16EF45D900C00066 /* OwnSectorsAnim.m in Sources */,
-				83B2380716EF8A4200AA4E46 /* Card.m in Sources */,
-				83B2380B16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7C81920A16E867A000B71598 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C81921F16E867A000B71598 /* BrandymintTests.m in Sources */,
-				83B2380816EF8A4200AA4E46 /* Card.m in Sources */,
-				83B2380C16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7C81921616E867A000B71598 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7C8191E816E867A000B71598 /* Brandymint */;
-			targetProxy = 7C81921516E867A000B71598 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7C8191F816E867A000B71598 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C8191F916E867A000B71598 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7C81921A16E867A000B71598 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C81921B16E867A000B71598 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		7C81922016E867A000B71598 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Debug;
-		};
-		7C81922116E867A000B71598 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7C81922316E867A000B71598 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brandy Mint LLC";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Brandymint/Brandymint-Prefix.pch";
-				INFOPLIST_FILE = "Brandymint/Brandymint-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C92684D1-5DDC-4AF7-ACFF-FE822905D4D0";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		7C81922416E867A000B71598 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brandy Mint LLC";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Brandymint/Brandymint-Prefix.pch";
-				INFOPLIST_FILE = "Brandymint/Brandymint-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C92684D1-5DDC-4AF7-ACFF-FE822905D4D0";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		7C81922616E867A000B71598 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Brandymint.app/Brandymint";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Brandymint/Brandymint-Prefix.pch";
-				INFOPLIST_FILE = "BrandymintTests/BrandymintTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		7C81922716E867A000B71598 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Brandymint.app/Brandymint";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Brandymint/Brandymint-Prefix.pch";
-				INFOPLIST_FILE = "BrandymintTests/BrandymintTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		7C8191E316E867A000B71598 /* Build configuration list for PBXProject "Brandymint" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7C81922016E867A000B71598 /* Debug */,
-				7C81922116E867A000B71598 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7C81922216E867A000B71598 /* Build configuration list for PBXNativeTarget "Brandymint" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7C81922316E867A000B71598 /* Debug */,
-				7C81922416E867A000B71598 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7C81922516E867A000B71598 /* Build configuration list for PBXNativeTarget "BrandymintTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7C81922616E867A000B71598 /* Debug */,
-				7C81922716E867A000B71598 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7C81920716E867A000B71598 /* Brandymint.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7C81920816E867A000B71598 /* Brandymint.xcdatamodel */,
-			);
-			currentVersion = 7C81920816E867A000B71598 /* Brandymint.xcdatamodel */;
-			path = Brandymint.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = 7C8191E016E867A000B71598 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>3FDD8401E13B4A509E9DBC6C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>7B0DBF926A2F48D9BC6513C1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3FDD8401E13B4A509E9DBC6C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<key>7C01D4EF16EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>background.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F016EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>background@2x.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F116EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>brandymint_logo_white.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F216EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>brandymint_logo_white@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F316EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-agile.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F416EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-agile@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F516EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-cloud-tap.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F616EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-cloud-tap@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F716EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-cloud.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F816EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-cloud@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4F916EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-location.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4FA16EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-location@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4FB16EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-projects.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4FC16EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-projects@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4FD16EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-right.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4FE16EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-right@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D4FF16EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-rocket.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D50016EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-rocket@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D50116EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-share.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D50216EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-share@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D50316EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>potee_screenshot.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D50416EE0B70004216EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>potee_screenshot@2x.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C01D50516EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4EF16EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50616EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F016EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50716EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F116EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50816EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F216EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50916EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F316EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50A16EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F416EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50B16EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F516EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50C16EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F616EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50D16EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F716EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50E16EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F816EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D50F16EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4F916EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51016EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4FA16EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51116EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4FB16EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51216EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4FC16EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51316EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4FD16EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51416EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4FE16EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51516EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D4FF16EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51616EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D50016EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51716EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D50116EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51816EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D50216EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51916EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D50316EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C01D51A16EE0B70004216EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C01D50416EE0B70004216EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C3DC5A816EF453B00C00066</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C3DC5A916EF45D900C00066</string>
+				<string>7C3DC5AA16EF45D900C00066</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Animations</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C3DC5A916EF45D900C00066</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>OwnSectorsAnim.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C3DC5AA16EF45D900C00066</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>OwnSectorsAnim.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C3DC5AB16EF45D900C00066</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C3DC5AA16EF45D900C00066</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C8191DE16E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C8191F516E867A000B71598</string>
+				<string>7C81921716E867A000B71598</string>
+				<string>7C8191EC16E867A000B71598</string>
+				<string>7C8191EA16E867A000B71598</string>
+				<string>EE832F4F9DB24A7F935CD76D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191E016E867A000B71598</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0450</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>denisdbv@gmail.com</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>7C8191E316E867A000B71598</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7C8191DE16E867A000B71598</string>
+			<key>productRefGroup</key>
+			<string>7C8191EA16E867A000B71598</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>7C8191E816E867A000B71598</string>
+				<string>7C81920E16E867A000B71598</string>
+			</array>
+		</dict>
+		<key>7C8191E316E867A000B71598</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>7C81922016E867A000B71598</string>
+				<string>7C81922116E867A000B71598</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>7C8191E516E867A000B71598</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7C8191FC16E867A000B71598</string>
+				<string>7C81920016E867A000B71598</string>
+				<string>7C81920916E867A000B71598</string>
+				<string>7C81922E16E8685A00B71598</string>
+				<string>7C81924416E86D0B00B71598</string>
+				<string>7C3DC5AB16EF45D900C00066</string>
+				<string>83B2380716EF8A4200AA4E46</string>
+				<string>83B2380B16EF92E900AA4E46</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7C8191E616E867A000B71598</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7C8191EE16E867A000B71598</string>
+				<string>7C8191F016E867A000B71598</string>
+				<string>7C8191F216E867A000B71598</string>
+				<string>7C8191F416E867A000B71598</string>
+				<string>7B0DBF926A2F48D9BC6513C1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7C8191E716E867A000B71598</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7C8191FA16E867A000B71598</string>
+				<string>7C81920216E867A000B71598</string>
+				<string>7C81920416E867A000B71598</string>
+				<string>7C81920616E867A000B71598</string>
+				<string>7C81922F16E8685A00B71598</string>
+				<string>7C81923D16E86B1400B71598</string>
+				<string>7C81923E16E86B1400B71598</string>
+				<string>7C81923F16E86B1400B71598</string>
+				<string>7C81924516E86D0B00B71598</string>
+				<string>7C81926816E8B4C500B71598</string>
+				<string>7C01D50516EE0B70004216EC</string>
+				<string>7C01D50616EE0B70004216EC</string>
+				<string>7C01D50716EE0B70004216EC</string>
+				<string>7C01D50816EE0B70004216EC</string>
+				<string>7C01D50916EE0B70004216EC</string>
+				<string>7C01D50A16EE0B70004216EC</string>
+				<string>7C01D50B16EE0B70004216EC</string>
+				<string>7C01D50C16EE0B70004216EC</string>
+				<string>7C01D50D16EE0B70004216EC</string>
+				<string>7C01D50E16EE0B70004216EC</string>
+				<string>7C01D50F16EE0B70004216EC</string>
+				<string>7C01D51016EE0B70004216EC</string>
+				<string>7C01D51116EE0B70004216EC</string>
+				<string>7C01D51216EE0B70004216EC</string>
+				<string>7C01D51316EE0B70004216EC</string>
+				<string>7C01D51416EE0B70004216EC</string>
+				<string>7C01D51516EE0B70004216EC</string>
+				<string>7C01D51616EE0B70004216EC</string>
+				<string>7C01D51716EE0B70004216EC</string>
+				<string>7C01D51816EE0B70004216EC</string>
+				<string>7C01D51916EE0B70004216EC</string>
+				<string>7C01D51A16EE0B70004216EC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7C8191E816E867A000B71598</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>7C81922216E867A000B71598</string>
+			<key>buildPhases</key>
+			<array>
+				<string>7C8191E516E867A000B71598</string>
+				<string>7C8191E616E867A000B71598</string>
+				<string>7C8191E716E867A000B71598</string>
+				<string>7C81924616E898FA00B71598</string>
+				<string>BA7DC43C4C2E4809B6772A37</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Brandymint</string>
+			<key>productName</key>
+			<string>Brandymint</string>
+			<key>productReference</key>
+			<string>7C8191E916E867A000B71598</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>7C8191E916E867A000B71598</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Brandymint.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>7C8191EA16E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C8191E916E867A000B71598</string>
+				<string>7C81920F16E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191EC16E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C8191ED16E867A000B71598</string>
+				<string>7C8191EF16E867A000B71598</string>
+				<string>7C8191F116E867A000B71598</string>
+				<string>7C8191F316E867A000B71598</string>
+				<string>7C81921016E867A000B71598</string>
+				<string>3FDD8401E13B4A509E9DBC6C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191ED16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>7C8191EE16E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191ED16E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C8191EF16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>7C8191F016E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191EF16E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C8191F116E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>7C8191F216E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191F116E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C8191F316E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>7C8191F416E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191F316E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C8191F516E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C3DC5A816EF453B00C00066</string>
+				<string>7C81922816E867FE00B71598</string>
+				<string>7C81922916E867FE00B71598</string>
+				<string>8392726A16EF9B3A00C9D303</string>
+				<string>8392726916EF9B2900C9D303</string>
+				<string>7C8191F616E867A000B71598</string>
+				<string>7C81926716E8B4C500B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Brandymint</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191F616E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C8191F716E867A000B71598</string>
+				<string>7C8191F816E867A000B71598</string>
+				<string>7C8191FB16E867A000B71598</string>
+				<string>7C8191FD16E867A000B71598</string>
+				<string>7C81920116E867A000B71598</string>
+				<string>7C81920316E867A000B71598</string>
+				<string>7C81920516E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191F716E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Brandymint-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191F816E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C8191F916E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191F916E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191FA16E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191F816E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C8191FB16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191FC16E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191FB16E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C8191FD16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Brandymint-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191FE16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8191FF16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81920016E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191FF16E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81920116E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81920216E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81920116E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81920316E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81920416E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81920316E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81920516E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default-568h@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81920616E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81920516E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81920716E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C81920816E867A000B71598</string>
+			</array>
+			<key>currentVersion</key>
+			<string>7C81920816E867A000B71598</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>Brandymint.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>7C81920816E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>Brandymint.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81920916E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81920716E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81920A16E867A000B71598</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7C81921F16E867A000B71598</string>
+				<string>83B2380816EF8A4200AA4E46</string>
+				<string>83B2380C16EF92E900AA4E46</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7C81920B16E867A000B71598</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7C81921116E867A000B71598</string>
+				<string>7C81921216E867A000B71598</string>
+				<string>7C81921316E867A000B71598</string>
+				<string>7C81921416E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7C81920C16E867A000B71598</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7C81921C16E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7C81920D16E867A000B71598</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string># Run the unit tests in this test bundle.
+"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests"
+</string>
+		</dict>
+		<key>7C81920E16E867A000B71598</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>7C81922516E867A000B71598</string>
+			<key>buildPhases</key>
+			<array>
+				<string>7C81920A16E867A000B71598</string>
+				<string>7C81920B16E867A000B71598</string>
+				<string>7C81920C16E867A000B71598</string>
+				<string>7C81920D16E867A000B71598</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>7C81921616E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>BrandymintTests</string>
+			<key>productName</key>
+			<string>BrandymintTests</string>
+			<key>productReference</key>
+			<string>7C81920F16E867A000B71598</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>7C81920F16E867A000B71598</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>BrandymintTests.octest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>7C81921016E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SenTestingKit.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/SenTestingKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>7C81921116E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81921016E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81921216E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191ED16E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81921316E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191EF16E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81921416E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C8191F316E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81921516E867A000B71598</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>7C8191E016E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>7C8191E816E867A000B71598</string>
+			<key>remoteInfo</key>
+			<string>Brandymint</string>
+		</dict>
+		<key>7C81921616E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>7C8191E816E867A000B71598</string>
+			<key>targetProxy</key>
+			<string>7C81921516E867A000B71598</string>
+		</dict>
+		<key>7C81921716E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C81921D16E867A000B71598</string>
+				<string>7C81921E16E867A000B71598</string>
+				<string>7C81921816E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>BrandymintTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81921816E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C81921916E867A000B71598</string>
+				<string>7C81921A16E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81921916E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>BrandymintTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81921A16E867A000B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C81921B16E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81921B16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81921C16E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81921A16E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81921D16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BrandymintTests.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81921E16E867A000B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>BrandymintTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81921F16E867A000B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81921E16E867A000B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81922016E867A000B71598</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>7C81922116E867A000B71598</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>7C81922216E867A000B71598</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>7C81922316E867A000B71598</string>
+				<string>7C81922416E867A000B71598</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>7C81922316E867A000B71598</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EE832F4F9DB24A7F935CD76D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Distribution: Brandy Mint LLC</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Brandymint/Brandymint-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Brandymint/Brandymint-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string>C92684D1-5DDC-4AF7-ACFF-FE822905D4D0</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>7C81922416E867A000B71598</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EE832F4F9DB24A7F935CD76D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Distribution: Brandy Mint LLC</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Brandymint/Brandymint-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Brandymint/Brandymint-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string>C92684D1-5DDC-4AF7-ACFF-FE822905D4D0</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>7C81922516E867A000B71598</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>7C81922616E867A000B71598</string>
+				<string>7C81922716E867A000B71598</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>7C81922616E867A000B71598</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Brandymint.app/Brandymint</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
+					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Brandymint/Brandymint-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>BrandymintTests/BrandymintTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>7C81922716E867A000B71598</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Brandymint.app/Brandymint</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
+					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Brandymint/Brandymint-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>BrandymintTests/BrandymintTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>7C81922816E867FE00B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C81922A16E8684100B71598</string>
+				<string>7C81924016E86CF600B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Controllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81922916E867FE00B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C01D4EF16EE0B70004216EC</string>
+				<string>7C01D4F016EE0B70004216EC</string>
+				<string>7C01D4F116EE0B70004216EC</string>
+				<string>7C01D4F216EE0B70004216EC</string>
+				<string>7C01D4F316EE0B70004216EC</string>
+				<string>7C01D4F416EE0B70004216EC</string>
+				<string>7C01D4F516EE0B70004216EC</string>
+				<string>7C01D4F616EE0B70004216EC</string>
+				<string>7C01D4F716EE0B70004216EC</string>
+				<string>7C01D4F816EE0B70004216EC</string>
+				<string>7C01D4F916EE0B70004216EC</string>
+				<string>7C01D4FA16EE0B70004216EC</string>
+				<string>7C01D4FB16EE0B70004216EC</string>
+				<string>7C01D4FC16EE0B70004216EC</string>
+				<string>7C01D4FD16EE0B70004216EC</string>
+				<string>7C01D4FE16EE0B70004216EC</string>
+				<string>7C01D4FF16EE0B70004216EC</string>
+				<string>7C01D50016EE0B70004216EC</string>
+				<string>7C01D50116EE0B70004216EC</string>
+				<string>7C01D50216EE0B70004216EC</string>
+				<string>7C01D50316EE0B70004216EC</string>
+				<string>7C01D50416EE0B70004216EC</string>
+				<string>7C81923A16E86B1400B71598</string>
+				<string>7C81923B16E86B1400B71598</string>
+				<string>7C81923C16E86B1400B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81922A16E8684100B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C81922B16E8685A00B71598</string>
+				<string>7C81922C16E8685A00B71598</string>
+				<string>7C81922D16E8685A00B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>OwnViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81922B16E8685A00B71598</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>OwnViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81922C16E8685A00B71598</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>OwnViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81922D16E8685A00B71598</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>OwnViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81922E16E8685A00B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81922C16E8685A00B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81922F16E8685A00B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81922D16E8685A00B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81923A16E86B1400B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>brandymint_2013_redesign_fnl.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81923B16E86B1400B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>brandymint_2013_redesign_fnl2.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81923C16E86B1400B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>brandymint_2013_redesign_fnl3.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81923D16E86B1400B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81923A16E86B1400B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81923E16E86B1400B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81923B16E86B1400B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81923F16E86B1400B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81923C16E86B1400B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81924016E86CF600B71598</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C81924116E86D0B00B71598</string>
+				<string>7C81924216E86D0B00B71598</string>
+				<string>7C81924316E86D0B00B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CardViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81924116E86D0B00B71598</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CardViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81924216E86D0B00B71598</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CardViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81924316E86D0B00B71598</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>CardViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C81924416E86D0B00B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81924216E86D0B00B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81924516E86D0B00B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81924316E86D0B00B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7C81924616E898FA00B71598</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string># touch -cm ${SRCROOT}/OWNTEST
+#cp ${SRCROOT}/../TEST/1.jpg ${SRCROOT}/OWNTEST/1.jpg
+#cp ${SRCROOT}/../TEST/2.jpg ${SRCROOT}/OWNTEST/2.jpg</string>
+		</dict>
+		<key>7C81926716E8B4C500B71598</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder</string>
+			<key>path</key>
+			<string>OWNTEST</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>7C81926816E8B4C500B71598</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C81926716E8B4C500B71598</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8392726916EF9B2900C9D303</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C81920716E867A000B71598</string>
+				<string>83B2380916EF92E900AA4E46</string>
+				<string>83B2380A16EF92E900AA4E46</string>
+				<string>83B2380516EF8A4000AA4E46</string>
+				<string>83B2380616EF8A4100AA4E46</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8392726A16EF9B3A00C9D303</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C8191FE16E867A000B71598</string>
+				<string>7C8191FF16E867A000B71598</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Application</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>83B2380516EF8A4000AA4E46</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Card.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>83B2380616EF8A4100AA4E46</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Card.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>83B2380716EF8A4200AA4E46</key>
+		<dict>
+			<key>fileRef</key>
+			<string>83B2380616EF8A4100AA4E46</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>83B2380816EF8A4200AA4E46</key>
+		<dict>
+			<key>fileRef</key>
+			<string>83B2380616EF8A4100AA4E46</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>83B2380916EF92E900AA4E46</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ImageToDataTransformer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>83B2380A16EF92E900AA4E46</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ImageToDataTransformer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>83B2380B16EF92E900AA4E46</key>
+		<dict>
+			<key>fileRef</key>
+			<string>83B2380A16EF92E900AA4E46</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>83B2380C16EF92E900AA4E46</key>
+		<dict>
+			<key>fileRef</key>
+			<string>83B2380A16EF92E900AA4E46</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BA7DC43C4C2E4809B6772A37</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+		<key>EE832F4F9DB24A7F935CD76D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>7C8191E016E867A000B71598</string>
+</dict>
+</plist>
