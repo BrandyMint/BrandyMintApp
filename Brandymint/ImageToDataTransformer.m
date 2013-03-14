@@ -16,8 +16,8 @@
 
 -(id)transformedValue:(id)value {
 //    NSData* coreDataImage = [NSData dataWithData:UIImagePNGRepresentation(value)];
-    return UIImagePNGRepresentation(value);
-
+    //return UIImagePNGRepresentation(value);
+    return UIImageJPEGRepresentation(value, 1.0);
 }
 
 -(id)reverseTransformedValue:(id)value {

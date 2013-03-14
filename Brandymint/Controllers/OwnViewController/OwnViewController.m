@@ -9,6 +9,7 @@
 #import "OwnViewController.h"
 #import "CardViewController.h"
 #import "OwnSectorsAnim.h"
+#import "Card.h"
 
 //
 //
@@ -56,7 +57,17 @@
     
     [self.view showBrandymintLogo];
     [self.view showTopLine];
-    //[self.view showBottomLine];
+    
+    [[UpdateManager updateManager] receiveJSONFromUrl:@"http://brandymint.ru/api/v1/app.json"];
+    
+    /*[[UpdateManager updateManager] readJsonFromFile];
+    
+    Card *card1 = [[CardsRepository sharedRepository] getFirstCard];
+    NSLog(@"%@", card1);
+    Card *card2 = [[CardsRepository sharedRepository] getNextCard:card1];
+    NSLog(@"%@", card2);
+    Card *card3 = [[CardsRepository sharedRepository] getPreviousCard:card2];
+    NSLog(@"%@", card3);*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,8 +88,8 @@
         int imgWidth = image.size.width;
         int imgHeight = image.size.height;
         
-        NSLog(@"%@",[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"OWNTEST"]);
-        image = [UIImage imageNamed:@"OWNTEST/1.jpg"];
+        //NSLog(@"%@",[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"OWNTEST"]);
+        //image = [UIImage imageNamed:@"OWNTEST/1.jpg"];
         //image = [UIImage imageWithContentsOfFile:GetFullPath(@"OWNTEST/1.jpg")];
         
         int dx, dy = 0;
