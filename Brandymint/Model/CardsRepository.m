@@ -183,53 +183,94 @@ static CardsRepository *sharedSingleton = NULL;
     return [cardsBuffer objectAtIndex:index];
 }
 
+/*
+
 #pragma mark -
 #pragma mark Delete all cards
 
--(void) deleteAllCards
+-(void) deleteCard:(Card *)card
 {
     NSManagedObjectContext * context = [self managerContext];
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:[NSEntityDescription entityForName:@"Card" inManagedObjectContext:context]];
     NSArray * result = [context executeFetchRequest:fetch error:nil];
-    for (id card in result)
+    for (id card in result) {
         [context deleteObject:card];
+        
+    }
     
     [self saveData];
 }
+ 
+ */
+
+-(UIImage *) downloadImageByUrl: (NSString *)image_url
+{
+    UIImage* image = [UIImage imageNamed:@"icon-cloud.png"]; //[[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image_url]]];
+    
+    return image;
+}
 
 #pragma mark -
+#pragma mark find card by key
+
+-(Card *) findCardByKey: (NSString *)key
+{
+    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
+    [fetch setEntity:[NSEntityDescription entityForName:@"Card" inManagedObjectContext:[self managerContext]]];
+    
+    NSPredicate* pred = [NSPredicate predicateWithFormat:@"key == %@", key];
+    [fetch setPredicate:pred];
+    
+    NSArray * found_cards = [[self managerContext] executeFetchRequest:fetch error:nil];
+    
+    if(found_cards.count > 0)
+    {
+        return [found_cards objectAtIndex:0];
+    }
+    
+    return nil;
+}
+
 #pragma mark create new card
 
--(void) replaceCards:(id)cardsArray
+-(void) updateCards:(id)cardsArray
 {
-    NSManagedObjectContext *context = [self managerContext];
-    
-    [self deleteAllCards];
-    
-    [cardsArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    NSMutableArray *existenCards = [cardsBuffer copy];
         
-        NSInteger position = [[obj objectForKey:@"position"] integerValue];
-        NSString *title = [obj objectForKey:@"title"];
-        NSString *subtitile = [obj objectForKey:@"subtitle"];
-        NSString *desc = [obj objectForKey:@"desc"];
-        NSString *link = [obj objectForKey:@"link"];
-        NSString *url = [obj objectForKey:@"url"];
+    [cardsArray enumerateObjectsUsingBlock:^(id card_dictionary, NSUInteger idx, BOOL *stop) {
         
-        NSString *image = [obj objectForKey:@"image"];
-        UIImage *imageData = [UIImage imageNamed:image];
-        
-        Card *card = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:context];
-        card.position = [NSNumber numberWithInteger:position];
-        card.title = title;
-        card.subtitle = subtitile;
-        card.desc = desc;
-        card.link = link;
-        card.url = url;
-        card.image = @"taram pam pam";
-        
-        [self saveData];
+        //TODO: ПО ОПИСАНИЮ APPLE ПОИСК И СОЗДАНИЕ ДЕЛАЮТСЯ В ОДНОМ КОНТЕКСТЕ ПАМЯТИ, ПОЭТОМУ
+        // СНАЧАЛО НУЖНО ИСКАТЬ, А ПОТОМ СОЗДАВАТЬ. (ПОМЕНЯТЬ МЕТОДЫ МЕСТАМИ)
+        Card *card = [Card createFromDictionary:card_dictionary];
+        Card *existen_card = [self findCardByKey: card.key];
+                
+        if (existen_card) {
+            if ([existen_card.updated_at isEqualToDate:card.updated_at]) {
+                card = nil;
+            } else {
+                if (![existen_card.image_url isEqualToString:card.image_url]) {
+                 card.image = [self downloadImageByUrl:card.image_url];                    
+                }
+                // Карточка existen замещается с card
+                existen_card = card;
+                
+                // Удалять из cardsBuffer
+                [existenCards removeObject:existen_card];
+            }
+        } else {
+            // Создается новая карточка
+            card.image = [self downloadImageByUrl:card.image_url];
+            [existenCards removeObject:existen_card];
+        }
     }];
+
+    // Удалить все что остались в cardsBuffer
+    for (Card *card in existenCards) {
+        [[self managerContext] deleteObject:card];
+    }
+    
+    [self saveData];
     
     [self getAllCards];
 }

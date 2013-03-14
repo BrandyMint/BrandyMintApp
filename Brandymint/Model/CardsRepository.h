@@ -24,6 +24,6 @@
 -(Card*) getNextCard:(Card*)prevCard;
 -(Card*) getPreviousCard:(Card*)prevCard;
 
--(void) replaceCards:(NSArray*)cardsArray;
+-(void) updateCards:(NSArray*)cardsArray;
 
 @end

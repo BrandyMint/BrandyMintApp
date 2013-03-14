@@ -58,14 +58,16 @@
     [self.view showBrandymintLogo];
     [self.view showTopLine];
     
-    [[UpdateManager updateManager] readJsonFromFile];
+    [[UpdateManager updateManager] receiveJSONFromUrl:@"http://brandymint.ru/api/v1/app.json"];
+    
+    /*[[UpdateManager updateManager] readJsonFromFile];
     
     Card *card1 = [[CardsRepository sharedRepository] getFirstCard];
     NSLog(@"%@", card1);
     Card *card2 = [[CardsRepository sharedRepository] getNextCard:card1];
     NSLog(@"%@", card2);
     Card *card3 = [[CardsRepository sharedRepository] getPreviousCard:card2];
-    NSLog(@"%@", card3);
+    NSLog(@"%@", card3);*/
 }
 
 - (void)didReceiveMemoryWarning

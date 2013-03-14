@@ -35,6 +35,7 @@
 		7C19C04F16F0966D003D6CDE /* DataManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C19C04E16F0966D003D6CDE /* DataManifest.json */; };
 		7C19C05516F0A7DC003D6CDE /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C19C05416F0A7DC003D6CDE /* Card.m */; };
 		7C3DC5AB16EF45D900C00066 /* OwnSectorsAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */; };
+		7C61759F16F1B32900D57594 /* NSDate+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C61759E16F1B32900D57594 /* NSDate+external.m */; };
 		7C8191EE16E867A000B71598 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191ED16E867A000B71598 /* UIKit.framework */; };
 		7C8191F016E867A000B71598 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191EF16E867A000B71598 /* Foundation.framework */; };
 		7C8191F216E867A000B71598 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
@@ -107,6 +108,8 @@
 		7C19C05416F0A7DC003D6CDE /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
 		7C3DC5A916EF45D900C00066 /* OwnSectorsAnim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnSectorsAnim.h; sourceTree = "<group>"; };
 		7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnSectorsAnim.m; sourceTree = "<group>"; };
+		7C61759D16F1B32900D57594 /* NSDate+external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+external.h"; sourceTree = "<group>"; };
+		7C61759E16F1B32900D57594 /* NSDate+external.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+external.m"; sourceTree = "<group>"; };
 		7C8191E916E867A000B71598 /* Brandymint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brandymint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8191ED16E867A000B71598 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C8191EF16E867A000B71598 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -188,6 +191,15 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		7C61759C16F1B31400D57594 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7C61759D16F1B32900D57594 /* NSDate+external.h */,
+				7C61759E16F1B32900D57594 /* NSDate+external.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		7C8191DE16E867A000B71598 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +236,7 @@
 		7C8191F516E867A000B71598 /* Brandymint */ = {
 			isa = PBXGroup;
 			children = (
+				7C61759C16F1B31400D57594 /* Common */,
 				7C3DC5A816EF453B00C00066 /* Animations */,
 				7C81922816E867FE00B71598 /* Controllers */,
 				7C81922916E867FE00B71598 /* Resources */,
@@ -531,6 +544,7 @@
 				7C19C04916F09364003D6CDE /* UpdateManager.m in Sources */,
 				7C19C04C16F09393003D6CDE /* CardsRepository.m in Sources */,
 				7C19C05516F0A7DC003D6CDE /* Card.m in Sources */,
+				7C61759F16F1B32900D57594 /* NSDate+external.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

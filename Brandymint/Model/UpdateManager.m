@@ -43,13 +43,19 @@ static UpdateManager *sharedSingleton = NULL;
 - (void)fetchedData:(NSData *)responseData {
     
     NSError* error;
-    NSDictionary* json = [NSJSONSerialization
+    NSDictionary* jsonData = [NSJSONSerialization
                           JSONObjectWithData:responseData
-                          
                           options:kNilOptions
                           error:&error];
     
-    NSLog(@"%@", json);
+    if (jsonData != nil)
+    {
+        NSArray *cardsArray = [jsonData objectForKey:@"cards"];
+        if(cardsArray != nil)
+        {
+            [[CardsRepository sharedRepository] updateCards:cardsArray];
+        }
+    }
 }
 
 #pragma mark -
@@ -70,7 +76,7 @@ static UpdateManager *sharedSingleton = NULL;
         NSArray *cardsArray = [jsonData objectForKey:@"cards"];
         if(cardsArray != nil)
         {
-            [[CardsRepository sharedRepository] replaceCards:cardsArray];
+            [[CardsRepository sharedRepository] updateCards:cardsArray];
         }
     }
 }
