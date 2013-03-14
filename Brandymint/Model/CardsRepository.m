@@ -183,33 +183,11 @@ static CardsRepository *sharedSingleton = NULL;
     return [cardsBuffer objectAtIndex:index];
 }
 
-/*
-
-#pragma mark -
-#pragma mark Delete all cards
-
 -(void) deleteCard:(Card *)card
 {
-    NSManagedObjectContext * context = [self managerContext];
-    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
-    [fetch setEntity:[NSEntityDescription entityForName:@"Card" inManagedObjectContext:context]];
-    NSArray * result = [context executeFetchRequest:fetch error:nil];
-    for (id card in result) {
-        [context deleteObject:card];
-        
-    }
-    
-    [self saveData];
+    [[[CardsRepository sharedRepository] managerContext] deleteObject:card];
 }
- 
- */
 
--(UIImage *) downloadImageByUrl: (NSString *)image_url
-{
-    UIImage* image = [UIImage imageNamed:@"icon-cloud.png"]; //[[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image_url]]];
-    
-    return image;
-}
 
 #pragma mark -
 #pragma mark find card by key
@@ -234,45 +212,6 @@ static CardsRepository *sharedSingleton = NULL;
 
 #pragma mark create new card
 
--(void) updateCards:(id)cardsArray
-{
-    NSMutableArray *existenCards = [cardsBuffer copy];
-        
-    [cardsArray enumerateObjectsUsingBlock:^(id card_dictionary, NSUInteger idx, BOOL *stop) {
-        
-        //TODO: ПО ОПИСАНИЮ APPLE ПОИСК И СОЗДАНИЕ ДЕЛАЮТСЯ В ОДНОМ КОНТЕКСТЕ ПАМЯТИ, ПОЭТОМУ
-        // СНАЧАЛО НУЖНО ИСКАТЬ, А ПОТОМ СОЗДАВАТЬ. (ПОМЕНЯТЬ МЕТОДЫ МЕСТАМИ)
-        Card *card = [Card createFromDictionary:card_dictionary];
-        Card *existen_card = [self findCardByKey: card.key];
-                
-        if (existen_card) {
-            if ([existen_card.updated_at isEqualToDate:card.updated_at]) {
-                card = nil;
-            } else {
-                if (![existen_card.image_url isEqualToString:card.image_url]) {
-                 card.image = [self downloadImageByUrl:card.image_url];                    
-                }
-                // Карточка existen замещается с card
-                existen_card = card;
-                
-                // Удалять из cardsBuffer
-                [existenCards removeObject:existen_card];
-            }
-        } else {
-            // Создается новая карточка
-            card.image = [self downloadImageByUrl:card.image_url];
-            [existenCards removeObject:existen_card];
-        }
-    }];
 
-    // Удалить все что остались в cardsBuffer
-    for (Card *card in existenCards) {
-        [[self managerContext] deleteObject:card];
-    }
-    
-    [self saveData];
-    
-    [self getAllCards];
-}
 
 @end

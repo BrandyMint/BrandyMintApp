@@ -28,7 +28,7 @@
 + (void)initialize {
     if (self == [Card class]) {
         ImageToDataTransformer *transformer = [[ImageToDataTransformer alloc] init];
-        [NSValueTransformer setValueTransformer:transformer forName:@"image_transformer"];
+        [NSValueTransformer setValueTransformer:transformer forName:@"ImageToDataTransformer"];
     }
 }
 

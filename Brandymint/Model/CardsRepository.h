@@ -11,10 +11,10 @@
 
 @interface CardsRepository : NSObject
 {
-    NSArray *cardsBuffer;
+    NSMutableArray *cardsBuffer;
 }
 
-@property (retain, readonly) NSArray *cardsBuffer;
+@property (retain, readonly) NSMutableArray *cardsBuffer;
 
 +(CardsRepository *) sharedRepository;
 
@@ -23,7 +23,9 @@
 -(Card*) getFirstCard;
 -(Card*) getNextCard:(Card*)prevCard;
 -(Card*) getPreviousCard:(Card*)prevCard;
-
--(void) updateCards:(NSArray*)cardsArray;
+-(Card*) findCardByKey: (NSString *)key;
+-(void) deleteCard:(Card*)card;
+-(BOOL)saveData;
+-(NSArray*) getAllCards;
 
 @end
