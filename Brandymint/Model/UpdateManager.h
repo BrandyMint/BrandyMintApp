@@ -12,7 +12,6 @@
 
 +(UpdateManager *) updateManager;
 
--(void) receiveJSONFromUrl:(NSString*)urlString;
--(void) readJsonFromFile;
+-(void) updateData;
 
 @end

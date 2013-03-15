@@ -58,7 +58,7 @@
     [self.view showBrandymintLogo];
     [self.view showTopLine];
     
-    [[UpdateManager updateManager] receiveJSONFromUrl:@"http://brandymint.ru/api/v1/app.json"];
+    [[UpdateManager updateManager] updateData];
     
     /*[[UpdateManager updateManager] readJsonFromFile];
     

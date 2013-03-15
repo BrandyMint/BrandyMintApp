@@ -10,6 +10,7 @@
 #import "CardsRepository.h"
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
+#import "NSDate+external.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
@@ -27,6 +28,65 @@ static UpdateManager *sharedSingleton = NULL;
     }
     return (sharedSingleton);
 }
+
+-(void) updateData
+{
+  [self receiveJSONFromUrl:@"http://brandymint.ru/api/v1/app.json"];
+}
+
+-(UIImage *) downloadImageByUrl: (NSString *)image_url
+{
+    UIImage* image = [UIImage imageNamed:@"icon-cloud.png"]; //[[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image_url]]];
+    
+    return image;
+}
+
+-(void) updateCards:(id)cardsArray  
+{
+    CardsRepository* repo = CardsRepository.sharedRepository;
+    
+    NSMutableArray *cardsToDelete = [[NSMutableArray alloc]init];
+    [cardsToDelete addObjectsFromArray:repo.cardsBuffer];
+    
+    [cardsArray enumerateObjectsUsingBlock:^(id card_dict, NSUInteger idx, BOOL *stop) {
+        
+        NSString *card_key = [card_dict objectForKey:@"key"];
+        NSString *image_url = [card_dict objectForKey:@"image_url"];
+        NSDate *updated_at = [NSDate parseDateFromString:[card_dict objectForKey:@"updated_at"]];
+        
+        Card *existen_card = [repo findCardByKey: card_key];
+        
+        if (existen_card) {
+            [cardsToDelete removeObjectIdenticalTo:existen_card];
+  
+            if (![existen_card.updated_at isEqualToDate:updated_at]) {
+                Card *card = [Card createFromDictionary:card_dict];
+                
+                if (![existen_card.image_url isEqualToString:image_url]) {
+                    card.image = [self downloadImageByUrl:image_url];
+                } else {
+                    card.image = existen_card.image;
+                }
+                // Карточка existen замещается с card
+                existen_card = card;
+            }
+        } else {
+            // Создается новая карточка
+            Card *card = [Card createFromDictionary:card_dict];
+            card.image = [self downloadImageByUrl:card.image_url];
+        }
+    }];
+    
+    // Удалить все что остались в cardsBuffer
+    for (Card *card in cardsToDelete) {
+        [repo deleteCard: card];
+    }
+    
+    [repo saveData];
+    
+    [repo getAllCards];
+}
+
 
 #pragma mark -
 #pragma mark Load JSON file from web
@@ -53,30 +113,7 @@ static UpdateManager *sharedSingleton = NULL;
         NSArray *cardsArray = [jsonData objectForKey:@"cards"];
         if(cardsArray != nil)
         {
-            [[CardsRepository sharedRepository] updateCards:cardsArray];
-        }
-    }
-}
-
-#pragma mark -
-#pragma Load JSON file from resources
-
--(void) readJsonFromFile
-{
-    NSManagedObjectContext *context = [[CardsRepository sharedRepository] managerContext];
-    
-    NSError* err = nil;
-    NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"DataManifest" ofType:@"json"];
-    NSDictionary* jsonData = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
-                                                     options:kNilOptions
-                                                       error:&err];
-    
-    if (jsonData != nil)
-    {
-        NSArray *cardsArray = [jsonData objectForKey:@"cards"];
-        if(cardsArray != nil)
-        {
-            [[CardsRepository sharedRepository] updateCards:cardsArray];
+            [self updateCards:cardsArray];
         }
     }
 }
