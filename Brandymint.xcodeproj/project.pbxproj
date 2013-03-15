@@ -62,6 +62,11 @@
 		7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81924316E86D0B00B71598 /* CardViewController.xib */; };
 		83B2380B16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
 		83B2380C16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
+		83C5E33516F3035300700A8C /* Bloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33416F3035300700A8C /* Bloc.m */; };
+		83C5E33816F3037C00700A8C /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33716F3037C00700A8C /* Link.m */; };
+		83C5E33B16F3048800700A8C /* BlocsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33A16F3048700700A8C /* BlocsRepository.m */; };
+		83C5E33E16F304AD00700A8C /* LinksRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33D16F304AD00700A8C /* LinksRepository.m */; };
+		83C5E34216F3067100700A8C /* BaseRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E34116F3067100700A8C /* BaseRepository.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +146,16 @@
 		7C81924316E86D0B00B71598 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		83B2380916EF92E900AA4E46 /* ImageToDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageToDataTransformer.h; sourceTree = "<group>"; };
 		83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageToDataTransformer.m; sourceTree = "<group>"; };
+		83C5E33316F3035300700A8C /* Bloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bloc.h; path = Model/Bloc.h; sourceTree = "<group>"; };
+		83C5E33416F3035300700A8C /* Bloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bloc.m; path = Model/Bloc.m; sourceTree = "<group>"; };
+		83C5E33616F3037C00700A8C /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Link.h; path = Model/Link.h; sourceTree = "<group>"; };
+		83C5E33716F3037C00700A8C /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Link.m; path = Model/Link.m; sourceTree = "<group>"; };
+		83C5E33916F3048700700A8C /* BlocsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocsRepository.h; path = Model/BlocsRepository.h; sourceTree = "<group>"; };
+		83C5E33A16F3048700700A8C /* BlocsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocsRepository.m; path = Model/BlocsRepository.m; sourceTree = "<group>"; };
+		83C5E33C16F304AC00700A8C /* LinksRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinksRepository.h; path = Model/LinksRepository.h; sourceTree = "<group>"; };
+		83C5E33D16F304AD00700A8C /* LinksRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinksRepository.m; path = Model/LinksRepository.m; sourceTree = "<group>"; };
+		83C5E34016F3067100700A8C /* BaseRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseRepository.h; path = Model/BaseRepository.h; sourceTree = "<group>"; };
+		83C5E34116F3067100700A8C /* BaseRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseRepository.m; path = Model/BaseRepository.m; sourceTree = "<group>"; };
 		EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -174,6 +189,10 @@
 		7C19C05616F0AC6B003D6CDE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				83C5E33616F3037C00700A8C /* Link.h */,
+				83C5E33716F3037C00700A8C /* Link.m */,
+				83C5E33316F3035300700A8C /* Bloc.h */,
+				83C5E33416F3035300700A8C /* Bloc.m */,
 				7C19C05316F0A7DC003D6CDE /* Card.h */,
 				7C19C05416F0A7DC003D6CDE /* Card.m */,
 			);
@@ -344,8 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				7C19C05616F0AC6B003D6CDE /* Entities */,
-				7C19C04A16F09393003D6CDE /* CardsRepository.h */,
-				7C19C04B16F09393003D6CDE /* CardsRepository.m */,
+				83C5E33F16F304BE00700A8C /* Repositories */,
 				7C19C04716F09364003D6CDE /* UpdateManager.h */,
 				7C19C04816F09364003D6CDE /* UpdateManager.m */,
 				7C81920716E867A000B71598 /* Brandymint.xcdatamodeld */,
@@ -362,6 +380,21 @@
 				7C8191FF16E867A000B71598 /* AppDelegate.m */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		83C5E33F16F304BE00700A8C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7C19C04A16F09393003D6CDE /* CardsRepository.h */,
+				7C19C04B16F09393003D6CDE /* CardsRepository.m */,
+				83C5E33916F3048700700A8C /* BlocsRepository.h */,
+				83C5E33A16F3048700700A8C /* BlocsRepository.m */,
+				83C5E33C16F304AC00700A8C /* LinksRepository.h */,
+				83C5E33D16F304AD00700A8C /* LinksRepository.m */,
+				83C5E34016F3067100700A8C /* BaseRepository.h */,
+				83C5E34116F3067100700A8C /* BaseRepository.m */,
+			);
+			name = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +574,11 @@
 				7C19C04C16F09393003D6CDE /* CardsRepository.m in Sources */,
 				7C19C05516F0A7DC003D6CDE /* Card.m in Sources */,
 				7C61759F16F1B32900D57594 /* NSDate+external.m in Sources */,
+				83C5E33516F3035300700A8C /* Bloc.m in Sources */,
+				83C5E33816F3037C00700A8C /* Link.m in Sources */,
+				83C5E33B16F3048800700A8C /* BlocsRepository.m in Sources */,
+				83C5E33E16F304AD00700A8C /* LinksRepository.m in Sources */,
+				83C5E34216F3067100700A8C /* BaseRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

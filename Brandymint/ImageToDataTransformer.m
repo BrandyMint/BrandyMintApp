@@ -11,11 +11,16 @@
 
 @implementation ImageToDataTransformer
 
-+(BOOL)allowsReverseTransformation { return YES; }
-+(Class)transformedValueClass { return [NSData class]; }
++(BOOL)allowsReverseTransformation {
+    return YES;
+}
+
++(Class)transformedValueClass {
+    return [NSData class];
+}
 
 -(id)transformedValue:(id)value {
-//    NSData* coreDataImage = [NSData dataWithData:UIImagePNGRepresentation(value)];
+	//    NSData* coreDataImage = [NSData dataWithData:UIImagePNGRepresentation(value)];
     //return UIImagePNGRepresentation(value);
     return UIImageJPEGRepresentation(value, 1.0);
 }

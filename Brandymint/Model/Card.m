@@ -11,7 +11,6 @@
 #import "NSDate+external.h"
 #import "ImageToDataTransformer.h"
 
-
 @implementation Card
 
 @dynamic desc;
@@ -34,7 +33,9 @@
 
 +(Card *)createFromDictionary:(NSDictionary*)dict
 {
-    Card *card = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:[self.class managerContext]];
+    Card *card = [NSEntityDescription
+                  insertNewObjectForEntityForName:@"Card"
+                  inManagedObjectContext:[[CardsRepository sharedRepository] managerContext]];
     
     card.position = [NSNumber numberWithInteger:[[dict objectForKey:@"position"] integerValue]];
     card.title = [dict objectForKey:@"title"];
@@ -47,10 +48,6 @@
     card.image_url = [dict objectForKey:@"image_url"];
    
     return card;
-}
-
-+(NSManagedObjectContext *)managerContext {
-  return [[CardsRepository sharedRepository] managerContext];
 }
 
 @end
