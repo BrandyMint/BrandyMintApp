@@ -133,6 +133,25 @@ static BaseRepository *sharedSingleton = NULL;
    return @"Card"; // TODO abastract
 }
 
+-(Card *) findEntityByKey: (NSString *)key
+{
+    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
+    [fetch setEntity:[NSEntityDescription entityForName:self.entityName inManagedObjectContext:[self managerContext]]];
+    
+    NSPredicate* pred = [NSPredicate predicateWithFormat:@"key == %@", key];
+    [fetch setPredicate:pred];
+    
+    NSArray * found_entities = [[self managerContext] executeFetchRequest:fetch error:nil];
+    
+    if(found_entities.count > 0)
+    {
+        return [found_entities objectAtIndex:0];
+    }
+    
+    return nil;
+}
+
+
 //
 //#pragma mark Methods for get first cards from repository
 //
