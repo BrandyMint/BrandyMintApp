@@ -36,6 +36,9 @@
 		7C19C05516F0A7DC003D6CDE /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C19C05416F0A7DC003D6CDE /* Card.m */; };
 		7C3DC5AB16EF45D900C00066 /* OwnSectorsAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */; };
 		7C61759F16F1B32900D57594 /* NSDate+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C61759E16F1B32900D57594 /* NSDate+external.m */; };
+		7C80BF5A16F33D92004E9D37 /* NMCustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C80BF5716F33D92004E9D37 /* NMCustomLabel.m */; };
+		7C80BF5B16F33D92004E9D37 /* NMCustomLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C80BF5916F33D92004E9D37 /* NMCustomLabelStyle.m */; };
+		7C80BF5D16F33E1B004E9D37 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C80BF5C16F33E1B004E9D37 /* CoreText.framework */; };
 		7C80D77216F2ECFF007D5E3B /* UIImage+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C80D77116F2ECFF007D5E3B /* UIImage+external.m */; };
 		7C80D78116F2FBD1007D5E3B /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C80D77416F2FBD1007D5E3B /* Ubuntu-B.ttf */; };
 		7C80D78216F2FBD1007D5E3B /* Ubuntu-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C80D77516F2FBD1007D5E3B /* Ubuntu-BI.ttf */; };
@@ -128,6 +131,11 @@
 		7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnSectorsAnim.m; sourceTree = "<group>"; };
 		7C61759D16F1B32900D57594 /* NSDate+external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+external.h"; sourceTree = "<group>"; };
 		7C61759E16F1B32900D57594 /* NSDate+external.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+external.m"; sourceTree = "<group>"; };
+		7C80BF5616F33D92004E9D37 /* NMCustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCustomLabel.h; sourceTree = "<group>"; };
+		7C80BF5716F33D92004E9D37 /* NMCustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCustomLabel.m; sourceTree = "<group>"; };
+		7C80BF5816F33D92004E9D37 /* NMCustomLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCustomLabelStyle.h; sourceTree = "<group>"; };
+		7C80BF5916F33D92004E9D37 /* NMCustomLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCustomLabelStyle.m; sourceTree = "<group>"; };
+		7C80BF5C16F33E1B004E9D37 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7C80D77016F2ECFF007D5E3B /* UIImage+external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+external.h"; sourceTree = "<group>"; };
 		7C80D77116F2ECFF007D5E3B /* UIImage+external.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+external.m"; sourceTree = "<group>"; };
 		7C80D77416F2FBD1007D5E3B /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C80BF5D16F33E1B004E9D37 /* CoreText.framework in Frameworks */,
 				7C8191EE16E867A000B71598 /* UIKit.framework in Frameworks */,
 				7C8191F016E867A000B71598 /* Foundation.framework in Frameworks */,
 				7C8191F216E867A000B71598 /* CoreGraphics.framework in Frameworks */,
@@ -248,6 +257,25 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		7C80BF5416F33D67004E9D37 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				7C80BF5516F33D81004E9D37 /* CoreTextLabel */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		7C80BF5516F33D81004E9D37 /* CoreTextLabel */ = {
+			isa = PBXGroup;
+			children = (
+				7C80BF5616F33D92004E9D37 /* NMCustomLabel.h */,
+				7C80BF5716F33D92004E9D37 /* NMCustomLabel.m */,
+				7C80BF5816F33D92004E9D37 /* NMCustomLabelStyle.h */,
+				7C80BF5916F33D92004E9D37 /* NMCustomLabelStyle.m */,
+			);
+			path = CoreTextLabel;
+			sourceTree = "<group>";
+		};
 		7C80D77316F2FBB9007D5E3B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +300,7 @@
 		7C8191DE16E867A000B71598 = {
 			isa = PBXGroup;
 			children = (
+				7C80BF5C16F33E1B004E9D37 /* CoreText.framework */,
 				7C8191F516E867A000B71598 /* Brandymint */,
 				7C81921716E867A000B71598 /* BrandymintTests */,
 				7C8191EC16E867A000B71598 /* Frameworks */,
@@ -305,6 +334,7 @@
 		7C8191F516E867A000B71598 /* Brandymint */ = {
 			isa = PBXGroup;
 			children = (
+				7C80BF5416F33D67004E9D37 /* 3rdParty */,
 				7C61759C16F1B31400D57594 /* Common */,
 				7C3DC5A816EF453B00C00066 /* Animations */,
 				7C81922816E867FE00B71598 /* Controllers */,
@@ -646,6 +676,8 @@
 				83C5E33B16F3048800700A8C /* BlocsRepository.m in Sources */,
 				83C5E33E16F304AD00700A8C /* LinksRepository.m in Sources */,
 				83C5E34216F3067100700A8C /* BaseRepository.m in Sources */,
+				7C80BF5A16F33D92004E9D37 /* NMCustomLabel.m in Sources */,
+				7C80BF5B16F33D92004E9D37 /* NMCustomLabelStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

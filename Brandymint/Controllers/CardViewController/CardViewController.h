@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Card.h"
+#import "NMCustomLabel.h"
 
 @interface CardViewController : UIViewController
 {
@@ -17,7 +18,7 @@
 @property (nonatomic, assign) IBOutlet UIImageView *cardImageView;
 @property (nonatomic, assign) IBOutlet UILabel *cardTitleLabel;
 @property (nonatomic, assign) IBOutlet UILabel *cardSubtitleLabel;
-@property (nonatomic, assign) IBOutlet UILabel *cardDescLabel;
+@property (nonatomic, assign) IBOutlet NMCustomLabel *cardDescLabel;
 @property (nonatomic, assign) IBOutlet UILabel *cardLinkLabel;
 
 @property (nonatomic, retain) Card *card;

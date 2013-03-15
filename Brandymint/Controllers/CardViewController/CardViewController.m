@@ -55,16 +55,23 @@
 {
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.cardTitleLabel.font = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
-    self.cardSubtitleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:25];
-    self.cardDescLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:20];
-    self.cardLinkLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];
+    cardTitleLabel.font = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
+    cardSubtitleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:25];
+    cardDescLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:20];
+    cardLinkLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];
     
-    self.cardImageView.image = card.image;
-    self.cardTitleLabel.text = card.title;
-    self.cardSubtitleLabel.text = card.subtitle;
-    self.cardDescLabel.text = card.desc;
-    self.cardLinkLabel.text = card.link;
+    cardDescLabel.linkColor = [UIColor colorWithRed:0 green:102/255.0 blue:153/255.0 alpha:1];
+    [cardDescLabel setDefaultStyle:[NMCustomLabelStyle styleWithFont:[UIFont fontWithName:@"UbuntuCondensed-Regular" size:20] color:[UIColor whiteColor]]];
+	[cardDescLabel setStyle:[NMCustomLabelStyle styleWithFont:[UIFont fontWithName:@"Ubuntu-Bold" size:20] color:[UIColor whiteColor]] forKey:@"bold_style"];
+	[cardDescLabel setStyle:[NMCustomLabelStyle styleWithFont:[UIFont fontWithName:@"Ubuntu-Italic" size:20] color:[UIColor whiteColor]] forKey:@"ital_style"];
+    [cardDescLabel setStyle:[NMCustomLabelStyle styleWithFont:[UIFont fontWithName:@"UbuntuCondensed-Regular" size:20] color:[UIColor redColor]]forKey:@"color_red"];
+    [cardDescLabel setStyle:[NMCustomLabelStyle styleWithFont:[UIFont fontWithName:@"UbuntuCondensed-Regular" size:20] color:[UIColor greenColor]]forKey:@"color_green"];
+    
+    cardImageView.image = card.image;
+    cardTitleLabel.text = card.title;
+    cardSubtitleLabel.text = card.subtitle;
+    cardDescLabel.text = card.desc;
+    cardLinkLabel.text = card.link;
 }
 
 @end
