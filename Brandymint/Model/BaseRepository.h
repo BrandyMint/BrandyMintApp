@@ -10,10 +10,10 @@
 
 @interface BaseRepository : NSObject
 {
-    NSMutableArray *entitiesBuffer;
+    NSArray *entitiesBuffer;
 }
 
-@property (retain, readonly) NSMutableArray *entitiesBuffer;
+@property (retain, readonly) NSArray *entitiesBuffer;
 
 +(BaseRepository *) sharedRepository;
 
@@ -22,5 +22,7 @@
 -(NSArray*) getAllEntities;
 
 -(void) deleteEntity:(NSManagedObject *)entity;
+-(Card *) findEntityByKey: (NSString *)key;
+
 
 @end

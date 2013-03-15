@@ -40,11 +40,8 @@ static UpdateManager *sharedSingleton = NULL;
     return [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image_url]]];
 }
 
--(void) updateCards:(id)cardsArray  
+-(void) updateCards:(id)cardsArray withRepo:(BaseRepository*)repo
 {
-    //NSLog(@"%@", cardsArray);
-    
-    CardsRepository* repo = (CardsRepository*)CardsRepository.sharedRepository;
     
     NSMutableArray *cardsToDelete = [[NSMutableArray alloc]init];
     [cardsToDelete addObjectsFromArray:repo.entitiesBuffer];
@@ -55,7 +52,7 @@ static UpdateManager *sharedSingleton = NULL;
         NSString *image_url = [card_dict objectForKey:@"image_url"];
         NSDate *updated_at = [NSDate parseDateFromString:[card_dict objectForKey:@"updated_at"]];
         
-        Card *existen_card = [repo findCardByKey: card_key];
+        Card *existen_card = [repo findEntityByKey: card_key];
         
         if (existen_card) {
             //Если карточка обновлена, то мы создаем новую, а старую удалим
@@ -95,14 +92,11 @@ static UpdateManager *sharedSingleton = NULL;
 -(void) receiveJSONFromUrl:(NSString*)urlString
 {
     NSURL *url = [NSURL URLWithString:urlString];
-    /*dispatch_async(kBgQueue, ^{
-        NSData* data = [NSData dataWithContentsOfURL:url];
-        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
-    });*/
-    
     dispatch_sync(kBgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL:url];
-        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+        [self performSelectorOnMainThread: @selector(fetchedData:)
+                               withObject: data
+                            waitUntilDone: YES];
     });
 }
 
@@ -110,9 +104,9 @@ static UpdateManager *sharedSingleton = NULL;
     
     NSError* error;
     NSDictionary* jsonData = [NSJSONSerialization
-                          JSONObjectWithData:responseData
-                          options:kNilOptions
-                          error:&error];
+                              JSONObjectWithData:responseData
+                              options:kNilOptions
+                              error:&error];
     
     if (jsonData != nil)
     {
@@ -120,8 +114,10 @@ static UpdateManager *sharedSingleton = NULL;
         if(cardsArray != nil)
         {
             NSLog(@"JSON read from server");
-            [self updateCards:cardsArray];
+            [self updateCards:cardsArray withRepo: (CardsRepository*)CardsRepository.sharedRepository];
         }
+        
+        
     }
 }
 
