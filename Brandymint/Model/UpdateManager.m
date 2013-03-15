@@ -58,8 +58,7 @@ static UpdateManager *sharedSingleton = NULL;
         Card *existen_card = [repo findCardByKey: card_key];
         
         if (existen_card) {
-            [cardsToDelete removeObjectIdenticalTo:existen_card];
-  
+            //Если карточка обновлена, то мы создаем новую, а старую удалим
             if (![existen_card.updated_at isEqualToDate:updated_at]) {
                 Card *card = [Card createFromDictionary:card_dict];
                 
@@ -68,8 +67,9 @@ static UpdateManager *sharedSingleton = NULL;
                 } else {
                     card.image = existen_card.image;
                 }
-                // Карточка existen замещается с card
-                existen_card = card;
+            }
+            else    {   //Если карточка не обновлена то удаляем ее из очереди на удаление
+                [cardsToDelete removeObjectIdenticalTo:existen_card];
             }
         } else {
             // Создается новая карточка
