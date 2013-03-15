@@ -47,7 +47,6 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    backgroundImage.image = [UIImage imageNamed:@"background.jpg"];
     self.scrollCards.backgroundColor = [UIColor clearColor];
     
     [self.view showBrandymintLogo];
