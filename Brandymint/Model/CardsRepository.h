@@ -12,10 +12,4 @@
 
 @interface CardsRepository : BaseRepository
 
--(Card*) getFirstCard;
--(Card*) getNextCard:(Card*)prevCard;
--(Card*) getPreviousCard:(Card*)prevCard;
--(Card*) findCardByKey: (NSString *)key;
-
-
 @end
