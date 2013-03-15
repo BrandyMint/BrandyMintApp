@@ -34,6 +34,17 @@
 
 -(void) showAllFontsInConsole
 {
+    /*
+     Family name: Ubuntu
+     2013-03-15 15:38:06.762 Brandymint[95294:11603]     Font name: Ubuntu-MediumItalic
+     2013-03-15 15:38:06.762 Brandymint[95294:11603]     Font name: Ubuntu-LightItalic
+     2013-03-15 15:38:06.762 Brandymint[95294:11603]     Font name: Ubuntu-Italic
+     2013-03-15 15:38:06.762 Brandymint[95294:11603]     Font name: Ubuntu
+     2013-03-15 15:38:06.762 Brandymint[95294:11603]     Font name: Ubuntu-BoldItalic
+     2013-03-15 15:38:06.763 Brandymint[95294:11603]     Font name: Ubuntu-Medium
+     2013-03-15 15:38:06.763 Brandymint[95294:11603]     Font name: Ubuntu-Light
+     2013-03-15 15:38:06.763 Brandymint[95294:11603]     Font name: Ubuntu-Bold
+     */
     NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
     
     NSArray *fontNames;
