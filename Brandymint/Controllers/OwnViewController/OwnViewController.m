@@ -56,6 +56,7 @@
     self.scrollCards.backgroundColor = [UIColor clearColor];
     
     [self.view showBrandymintLogo];
+    [self.view showDevelopersLogo];
     [self.view showTopLine];
     
     [[UpdateManager updateManager] updateData];

@@ -33,19 +33,42 @@
 
 -(void) showDevelopersLogo
 {
+    UIImage *imgLogo = [UIImage imageNamed:@"brandymint_logo_white.png"];
     
+    UILabel *devLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    devLabel.tag = 2;
+    devLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:15];
+    devLabel.textColor = [UIColor whiteColor];
+    devLabel.backgroundColor = [UIColor clearColor];
+    devLabel.text = @"DEVELOPERS";
+    [devLabel sizeToFit];
+    devLabel.alpha = 0.0;
+    devLabel.frame = CGRectMake(OFFSET_X + imgLogo.size.width + 10, (OFFSET_Y + imgLogo.size.height) - devLabel.frame.size.height - 3, devLabel.frame.size.width, devLabel.frame.size.height);
+    [self insertSubview:devLabel atIndex:1];
+    
+    [UIView animateWithDuration:1.0
+                          delay:0.2
+                        options: nil
+                     animations:^{
+                         devLabel.alpha = 0.8;
+                     }
+                     completion:^(BOOL finished){
+                         //
+                     }];
 }
 
 -(void) showTopLine
 {
+    UILabel *devLabel = (UILabel*)[self viewWithTag:2];
+    
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0,0, 1,1)];
     line.backgroundColor = [UIColor whiteColor];
     line.alpha = 0.6f;
     [self insertSubview:line atIndex:1];
     
     CGRect rc = line.frame;
-    rc.origin.x = OFFSET_X;
-    rc.origin.y = OFFSET_Y;
+    rc.origin.x = devLabel.frame.origin.x + devLabel.frame.size.width + 25;
+    rc.origin.y = devLabel.frame.origin.y + (devLabel.frame.size.height/2);
     line.frame = rc;
     
     CGRect rcEnd = rc;
