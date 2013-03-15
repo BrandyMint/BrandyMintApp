@@ -111,11 +111,15 @@ static BaseRepository *sharedSingleton = NULL;
     NSManagedObjectContext *context = [self managerContext];
     
     NSEntityDescription *entityDescriptor = [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDescriptor];
     
-    //NSPredicate* pred = [NSPredicate predicateWithFormat:@"order == 1"];
-    //[request setPredicate:pred];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSSortDescriptor *sortByPosition = [[NSSortDescriptor alloc]
+                                        initWithKey:@"position"
+                                        ascending:YES];
+    NSArray* sortDescriptors = [[NSArray alloc] initWithObjects: sortByPosition, nil];
+
+    [request setSortDescriptors: sortDescriptors];
+    [request setEntity:entityDescriptor];
     
     NSError *error;
     entitiesBuffer = [context executeFetchRequest:request error:&error];
