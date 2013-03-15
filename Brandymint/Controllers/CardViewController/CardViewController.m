@@ -7,30 +7,7 @@
 //
 
 #import "CardViewController.h"
-
-@interface UIImage (Resize)
-- (UIImage*)scaleToSize:(CGSize)size;
-@end
-
-// Put this in UIImageResizing.m
-@implementation UIImage (Resize)
-
-- (UIImage*)scaleToSize:(CGSize)size {
-    UIGraphicsBeginImageContext(size);
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextTranslateCTM(context, 0.0, size.height);
-    CGContextScaleCTM(context, 1.0, -1.0);
-    
-    CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, size.width, size.height), self.CGImage);
-    
-    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    return scaledImage;
-}
-@end
+#import "UIImage+external.h"
 
 @interface CardViewController ()
 
@@ -38,11 +15,20 @@
 
 @implementation CardViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+@synthesize cardImageView;
+@synthesize cardTitleLabel;
+@synthesize cardSubtitleLabel;
+@synthesize cardDescLabel;
+@synthesize cardLinkLabel;
+@synthesize card;
+
+- (id)initCardController:(Card*)srcCard
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:@"CardViewController" bundle:[NSBundle mainBundle]];
     if (self) {
-        // Custom initialization
+        
+        self.card = srcCard;
+
     }
     return self;
 }
@@ -59,14 +45,13 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) reconfigurationView:(UIImage*)image
+-(void) viewWillAppear:(BOOL)animated
 {
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:[image scaleToSize:CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height)]];
-    
-    CGRect rect = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-    imgView.frame = rect;
-    
-    [self.view addSubview:imgView];
+    self.cardImageView.image = card.image;
+    self.cardTitleLabel.text = card.title;
+    self.cardSubtitleLabel.text = card.subtitle;
+    self.cardDescLabel.text = card.desc;
+    self.cardLinkLabel.text = card.link;
 }
 
 @end
