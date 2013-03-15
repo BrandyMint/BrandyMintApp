@@ -56,6 +56,7 @@
     self.scrollCards.backgroundColor = [UIColor clearColor];
     
     [self.view showBrandymintLogo];
+    [self.view showDevelopersLogo];
     [self.view showTopLine];
     
     [[UpdateManager updateManager] updateData];
@@ -78,7 +79,7 @@
     NSInteger scrollWidth = self.scrollCards.frame.size.width;
     NSInteger scrollHeight = self.scrollCards.frame.size.height;
     
-    int cardsCount = imagesName.count;
+    int cardsCount = [CardsRepository sharedRepository].cardsBuffer.count;
     
     for(int loop = 0; loop < cardsCount; loop++)
     {
@@ -116,13 +117,12 @@
         frame.size.width = dWidth;
         frame.size.height = dHeight;
      
-        CardViewController *card = [[CardViewController alloc]
-                                                initWithNibName:@"CardViewController" bundle:[NSBundle mainBundle]];
-        card.view.frame = frame;
+        Card *card = [[CardsRepository sharedRepository].cardsBuffer objectAtIndex:loop];
         
-        //[self.scrollCards addSubview:card.view];
+        CardViewController *cardController = [[CardViewController alloc] initCardController:card];
+        cardController.view.frame = frame;
         
-        [card reconfigurationView:image];
+        [self.scrollCards addSubview:cardController.view];
     }
     
     scrollCards.contentSize = CGSizeMake(scrollWidth * cardsCount, scrollHeight);

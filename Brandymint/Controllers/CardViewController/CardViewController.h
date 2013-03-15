@@ -7,9 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Card.h"
 
 @interface CardViewController : UIViewController
+{
+    Card *card;
+}
 
--(void) reconfigurationView:(UIImage*)image;
+@property (nonatomic, assign) IBOutlet UIImageView *cardImageView;
+@property (nonatomic, assign) IBOutlet UILabel *cardTitleLabel;
+@property (nonatomic, assign) IBOutlet UILabel *cardSubtitleLabel;
+@property (nonatomic, assign) IBOutlet UILabel *cardDescLabel;
+@property (nonatomic, assign) IBOutlet UILabel *cardLinkLabel;
+
+@property (nonatomic, retain) Card *card;
+
+- (id)initCardController:(Card*)srcCard;
+
+-(void) buildView;
 
 @end
