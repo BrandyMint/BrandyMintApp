@@ -9,6 +9,7 @@
 #import "Entity.h"
 #import "NSDate+external.h"
 #import "ImageToDataTransformer.h"
+#import "Image.h"
 
 @implementation Entity
 
@@ -23,11 +24,16 @@
 
 -(void)setSmartValue:(id) value forKey:(NSString *)key
 {
+    NSLog(@"Set smart value: %@ = %@", key, value);
+
     if ([value isKindOfClass:[NSNull class]]) {
         [self setValue:nil forKey:key];
         // TODO Определять по типу property, а не названию
     } else if ([key isEqualToString:@"updated_at"]) {
         [self setValue:[NSDate parseDateFromString:value] forKey:key];
+    } else if ([key isEqualToString:@"image_url"]) {
+        Image *image = [Image findOrDownloadByUrl:value withContext:self.managedObjectContext];
+        [self setValue:image forKey:@"image"];
     } else {
         [self setValue:value forKey:key];
     }
@@ -45,10 +51,6 @@
     }];
     
 
-    if ([self isKindOfClass:[Card class]])
-    {
-        [self setValue:[self downloadImageByUrl:[self valueForKey:@"image_url"]] forKey:@"image"];
-    }
 
 //
 //        //Если карточка обновлена, то мы создаем новую, а старую удалим
@@ -67,9 +69,5 @@
 //    }
 }
 
--(UIImage *) downloadImageByUrl: (NSString *)image_url
-{
-    return [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image_url]]];
-}
 
 @end

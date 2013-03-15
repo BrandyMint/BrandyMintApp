@@ -62,7 +62,6 @@ static BaseRepository *sharedSingleton = NULL;
     NSError *error;
     if (![[self managerContext] save:&error]) {
         
-        NSString *message = nil;
         if ([[error domain] isEqualToString:@"NSCocoaErrorDomain"]) {
             
             NSDictionary *userInfo = [error userInfo];

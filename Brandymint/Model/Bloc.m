@@ -21,12 +21,6 @@
 @dynamic updated_at;
 
 
-+ (void)initialize {
-    if (self == [Bloc class]) {
-        ImageToDataTransformer *transformer = [[ImageToDataTransformer alloc] init];
-        [NSValueTransformer setValueTransformer:transformer forName:@"ImageToDataTransformer"];
-    }
-}
 
 +(Bloc *)createFromDictionary:(NSDictionary*)dict
 {
