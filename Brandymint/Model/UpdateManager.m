@@ -44,10 +44,10 @@ static UpdateManager *sharedSingleton = NULL;
 {
     //NSLog(@"%@", cardsArray);
     
-    CardsRepository* repo = CardsRepository.sharedRepository;
+    CardsRepository* repo = (CardsRepository*)CardsRepository.sharedRepository;
     
     NSMutableArray *cardsToDelete = [[NSMutableArray alloc]init];
-    [cardsToDelete addObjectsFromArray:repo.cardsBuffer];
+    [cardsToDelete addObjectsFromArray:repo.entitiesBuffer];
     
     [cardsArray enumerateObjectsUsingBlock:^(id card_dict, NSUInteger idx, BOOL *stop) {
         
@@ -80,12 +80,12 @@ static UpdateManager *sharedSingleton = NULL;
     
     // Удалить все что остались в cardsBuffer
     for (Card *card in cardsToDelete) {
-        [repo deleteCard: card];
+        [repo deleteEntity: card];
     }
     
     [repo saveData];
     
-    [repo getAllCards];
+    [repo getAllEntities];
 }
 
 

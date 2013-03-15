@@ -8,24 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Card.h"
+#import "BaseRepository.h"
 
-@interface CardsRepository : NSObject
-{
-    NSMutableArray *cardsBuffer;
-}
-
-@property (retain, readonly) NSMutableArray *cardsBuffer;
-
-+(CardsRepository *) sharedRepository;
-
--(NSManagedObjectContext*) managerContext;
+@interface CardsRepository : BaseRepository
 
 -(Card*) getFirstCard;
 -(Card*) getNextCard:(Card*)prevCard;
 -(Card*) getPreviousCard:(Card*)prevCard;
 -(Card*) findCardByKey: (NSString *)key;
--(void) deleteCard:(Card*)card;
--(BOOL)saveData;
--(NSArray*) getAllCards;
+
 
 @end
