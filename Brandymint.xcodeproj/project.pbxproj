@@ -81,7 +81,6 @@
 		83C5E33B16F3048800700A8C /* BlocsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33A16F3048700700A8C /* BlocsRepository.m */; };
 		83C5E33E16F304AD00700A8C /* LinksRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33D16F304AD00700A8C /* LinksRepository.m */; };
 		83C5E34216F3067100700A8C /* BaseRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E34116F3067100700A8C /* BaseRepository.m */; };
-		83D5A76616F38DE6007D85AC /* Entity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83D5A76416F38DE6007D85AC /* Entity.xcdatamodeld */; };
 		83D5A76C16F38F53007D85AC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5A76B16F38F53007D85AC /* Card.m */; };
 		83D5A76F16F38FE5007D85AC /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5A76E16F38FE5007D85AC /* Image.m */; };
 /* End PBXBuildFile section */
@@ -188,7 +187,6 @@
 		83C5E33D16F304AD00700A8C /* LinksRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinksRepository.m; path = Model/LinksRepository.m; sourceTree = "<group>"; };
 		83C5E34016F3067100700A8C /* BaseRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseRepository.h; path = Model/BaseRepository.h; sourceTree = "<group>"; };
 		83C5E34116F3067100700A8C /* BaseRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseRepository.m; path = Model/BaseRepository.m; sourceTree = "<group>"; };
-		83D5A76516F38DE6007D85AC /* Entity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entity.xcdatamodel; sourceTree = "<group>"; };
 		83D5A76A16F38F53007D85AC /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
 		83D5A76B16F38F53007D85AC /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
 		83D5A76D16F38FE5007D85AC /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = Model/Image.h; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 				7C19C04716F09364003D6CDE /* UpdateManager.h */,
 				7C19C04816F09364003D6CDE /* UpdateManager.m */,
 				7C81920716E867A000B71598 /* Brandymint.xcdatamodeld */,
-				83D5A76416F38DE6007D85AC /* Entity.xcdatamodeld */,
 				83B2380916EF92E900AA4E46 /* ImageToDataTransformer.h */,
 				83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */,
 			);
@@ -659,7 +656,6 @@
 				83C5E33E16F304AD00700A8C /* LinksRepository.m in Sources */,
 				83C5E34216F3067100700A8C /* BaseRepository.m in Sources */,
 				8366B4D416F3513E00FE1490 /* Entity.m in Sources */,
-				83D5A76616F38DE6007D85AC /* Entity.xcdatamodeld in Sources */,
 				83D5A76C16F38F53007D85AC /* Card.m in Sources */,
 				83D5A76F16F38FE5007D85AC /* Image.m in Sources */,
 			);
@@ -860,17 +856,6 @@
 			);
 			currentVersion = 7C81920816E867A000B71598 /* Brandymint.xcdatamodel */;
 			path = Brandymint.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		83D5A76416F38DE6007D85AC /* Entity.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				83D5A76516F38DE6007D85AC /* Entity.xcdatamodel */,
-			);
-			currentVersion = 83D5A76516F38DE6007D85AC /* Entity.xcdatamodel */;
-			name = Entity.xcdatamodeld;
-			path = Model/Entity.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
