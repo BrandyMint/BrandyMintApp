@@ -31,7 +31,8 @@ static UpdateManager *sharedSingleton = NULL;
 
 -(void) updateData
 {
-  [self receiveJSONFromUrl:@"http://brandymint.ru/api/v1/app.json"];
+    NSLog(@"start connecting to server...");
+    [self receiveJSONFromUrl:@"http://brandymint.ru/api/v1/app.json"];
 }
 
 -(UIImage *) downloadImageByUrl: (NSString *)image_url
@@ -43,6 +44,8 @@ static UpdateManager *sharedSingleton = NULL;
 
 -(void) updateCards:(id)cardsArray  
 {
+    //NSLog(@"%@", cardsArray);
+    
     CardsRepository* repo = CardsRepository.sharedRepository;
     
     NSMutableArray *cardsToDelete = [[NSMutableArray alloc]init];
@@ -94,7 +97,12 @@ static UpdateManager *sharedSingleton = NULL;
 -(void) receiveJSONFromUrl:(NSString*)urlString
 {
     NSURL *url = [NSURL URLWithString:urlString];
-    dispatch_async(kBgQueue, ^{
+    /*dispatch_async(kBgQueue, ^{
+        NSData* data = [NSData dataWithContentsOfURL:url];
+        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+    });*/
+    
+    dispatch_sync(kBgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL:url];
         [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
     });
@@ -113,6 +121,7 @@ static UpdateManager *sharedSingleton = NULL;
         NSArray *cardsArray = [jsonData objectForKey:@"cards"];
         if(cardsArray != nil)
         {
+            NSLog(@"JSON read from server");
             [self updateCards:cardsArray];
         }
     }

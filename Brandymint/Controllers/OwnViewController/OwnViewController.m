@@ -60,9 +60,7 @@
     
     [[UpdateManager updateManager] updateData];
     
-    /*[[UpdateManager updateManager] readJsonFromFile];
-    
-    Card *card1 = [[CardsRepository sharedRepository] getFirstCard];
+    /*Card *card1 = [[CardsRepository sharedRepository] getFirstCard];
     NSLog(@"%@", card1);
     Card *card2 = [[CardsRepository sharedRepository] getNextCard:card1];
     NSLog(@"%@", card2);
