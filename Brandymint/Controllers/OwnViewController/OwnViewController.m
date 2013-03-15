@@ -42,11 +42,6 @@
 {
     [super viewDidLoad];
     
-    imagesName = [[NSArray alloc] initWithObjects:@"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl2.jpg", @"brandymint_2013_redesign_fnl3.jpg",
-                  @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg",
-                  @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg",
-                  @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg", @"brandymint_2013_redesign_fnl.jpg", nil];
-    
     [self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
 }
 
@@ -60,13 +55,6 @@
     [self.view showTopLine];
     
     [[UpdateManager updateManager] updateData];
-    
-    /*Card *card1 = [[CardsRepository sharedRepository] getFirstCard];
-    NSLog(@"%@", card1);
-    Card *card2 = [[CardsRepository sharedRepository] getNextCard:card1];
-    NSLog(@"%@", card2);
-    Card *card3 = [[CardsRepository sharedRepository] getPreviousCard:card2];
-    NSLog(@"%@", card3);*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,11 +74,7 @@
         UIImage *image = [[UIImage imageNamed:[imagesName objectAtIndex:loop]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) ];
         int imgWidth = image.size.width;
         int imgHeight = image.size.height;
-        
-        //NSLog(@"%@",[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"OWNTEST"]);
-        //image = [UIImage imageNamed:@"OWNTEST/1.jpg"];
-        //image = [UIImage imageWithContentsOfFile:GetFullPath(@"OWNTEST/1.jpg")];
-        
+
         int dx, dy = 0;
         int dWidth, dHeight = 0;
         if(imgWidth > scrollWidth)  {
