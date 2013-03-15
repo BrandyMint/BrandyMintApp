@@ -92,6 +92,7 @@ static CardsRepository *sharedSingleton = NULL;
         }
         return NO;
     }
+    NSLog(@"CoreData | Save data to DB");
     return YES;
 }
 

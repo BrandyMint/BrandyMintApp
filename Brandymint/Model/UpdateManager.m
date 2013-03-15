@@ -37,9 +37,7 @@ static UpdateManager *sharedSingleton = NULL;
 
 -(UIImage *) downloadImageByUrl: (NSString *)image_url
 {
-    UIImage* image = [UIImage imageNamed:@"icon-cloud.png"]; //[[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image_url]]];
-    
-    return image;
+    return [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image_url]]];
 }
 
 -(void) updateCards:(id)cardsArray  
