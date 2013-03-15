@@ -83,6 +83,8 @@
 		83C5E34216F3067100700A8C /* BaseRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E34116F3067100700A8C /* BaseRepository.m */; };
 		83D5A76C16F38F53007D85AC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5A76B16F38F53007D85AC /* Card.m */; };
 		83D5A76F16F38FE5007D85AC /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5A76E16F38FE5007D85AC /* Image.m */; };
+		83D5A77716F3A41F007D85AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */; };
+		83D5A77916F3A429007D85AC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77816F3A429007D85AC /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +193,8 @@
 		83D5A76B16F38F53007D85AC /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
 		83D5A76D16F38FE5007D85AC /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = Model/Image.h; sourceTree = "<group>"; };
 		83D5A76E16F38FE5007D85AC /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Image.m; path = Model/Image.m; sourceTree = "<group>"; };
+		83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		83D5A77816F3A429007D85AC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -199,6 +203,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D5A77916F3A429007D85AC /* MobileCoreServices.framework in Frameworks */,
+				83D5A77716F3A41F007D85AC /* SystemConfiguration.framework in Frameworks */,
 				7C8191EE16E867A000B71598 /* UIKit.framework in Frameworks */,
 				7C8191F016E867A000B71598 /* Foundation.framework in Frameworks */,
 				7C8191F216E867A000B71598 /* CoreGraphics.framework in Frameworks */,
@@ -282,6 +288,8 @@
 		7C8191DE16E867A000B71598 = {
 			isa = PBXGroup;
 			children = (
+				83D5A77816F3A429007D85AC /* MobileCoreServices.framework */,
+				83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */,
 				7C8191F516E867A000B71598 /* Brandymint */,
 				7C81921716E867A000B71598 /* BrandymintTests */,
 				7C8191EC16E867A000B71598 /* Frameworks */,
