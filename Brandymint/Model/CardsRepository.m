@@ -127,11 +127,12 @@ static CardsRepository *sharedSingleton = NULL;
 
 -(Card*) getFirstCard
 {
-    if( cardsBuffer == nil) {
+    if( cardsBuffer == nil || cardsBuffer.count == 0) {
         NSLog(@"Error in CardsRepository. cardsBuffer = nil");
         return nil;
     }
     
+    NSLog(@"get first card");
     return [cardsBuffer objectAtIndex:0];
 }
 
