@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="11G63" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bloc" representedClassName="Bloc" syncable="YES">
         <attribute name="content" attributeType="String" syncable="YES"/>
         <attribute name="icon" attributeType="Transformable" valueTransformerName="ImageToDataTransformer" syncable="YES"/>
         <attribute name="icon_url" attributeType="String" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="key"/>
+            </compoundIndex>
+        </compoundIndexes>
     </entity>
     <entity name="Card" representedClassName="Card" syncable="YES">
         <attribute name="desc" attributeType="String" syncable="YES"/>
         <attribute name="image" attributeType="Transformable" valueTransformerName="ImageToDataTransformer" syncable="YES"/>
         <attribute name="image_url" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="key" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="subtitle" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="url" attributeType="String" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="key"/>
+            </compoundIndex>
+        </compoundIndexes>
     </entity>
     <entity name="Link" representedClassName="Link" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="key"/>
+            </compoundIndex>
+        </compoundIndexes>
     </entity>
     <elements>
-        <element name="Bloc" positionX="160" positionY="192" width="128" height="135"/>
-        <element name="Card" positionX="-2954" positionY="-4839" width="128" height="195"/>
-        <element name="Link" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Bloc" positionX="160" positionY="192" width="128" height="148"/>
+        <element name="Card" positionX="-2954" positionY="-4839" width="128" height="193"/>
+        <element name="Link" positionX="160" positionY="192" width="128" height="118"/>
     </elements>
 </model>

@@ -11,6 +11,7 @@
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
 #import "NSDate+external.h"
+#import "Entity.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
@@ -35,53 +36,29 @@ static UpdateManager *sharedSingleton = NULL;
     [self receiveJSONFromUrl:@"http://brandymint.ru/api/v1/app.json"];
 }
 
--(UIImage *) downloadImageByUrl: (NSString *)image_url
-{
-    return [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image_url]]];
-}
 
--(void) updateCards:(id)cardsArray withRepo:(BaseRepository*)repo
+-(void) updateEnities:(id)entities withRepo:(BaseRepository*)repo
 {
     
-    NSMutableArray *cardsToDelete = [[NSMutableArray alloc]init];
-    [cardsToDelete addObjectsFromArray:repo.entitiesBuffer];
+    NSMutableArray *entitiesToDelete = [[NSMutableArray alloc]init];
+    [entitiesToDelete addObjectsFromArray: repo.entitiesBuffer];
     
-    [cardsArray enumerateObjectsUsingBlock:^(id card_dict, NSUInteger idx, BOOL *stop) {
+    [entities enumerateObjectsUsingBlock:^(id entity_dict, NSUInteger idx, BOOL *stop) {
+        Entity *entity = [repo findOrCreateEntityByKey: [entity_dict objectForKey:@"key"]];
         
-        NSString *card_key = [card_dict objectForKey:@"key"];
-        NSString *image_url = [card_dict objectForKey:@"image_url"];
-        NSDate *updated_at = [NSDate parseDateFromString:[card_dict objectForKey:@"updated_at"]];
+        [entitiesToDelete removeObjectIdenticalTo:entity];
         
-        Card *existen_card = [repo findEntityByKey: card_key];
-        
-        if (existen_card) {
-            //Если карточка обновлена, то мы создаем новую, а старую удалим
-            if (![existen_card.updated_at isEqualToDate:updated_at]) {
-                Card *card = [Card createFromDictionary:card_dict];
-                
-                if (![existen_card.image_url isEqualToString:image_url]) {
-                    card.image = [self downloadImageByUrl:image_url];
-                } else {
-                    card.image = existen_card.image;
-                }
-            }
-            else    {   //Если карточка не обновлена то удаляем ее из очереди на удаление
-                [cardsToDelete removeObjectIdenticalTo:existen_card];
-            }
-        } else {
-            // Создается новая карточка
-            Card *card = [Card createFromDictionary:card_dict];
-            card.image = [self downloadImageByUrl:card.image_url];
-        }
+        [entity updateFromDict: entity_dict];
+  
+
     }];
     
-    // Удалить все что остались в cardsBuffer
-    for (Card *card in cardsToDelete) {
-        [repo deleteEntity: card];
+    // Удалить все что остались
+    for (Entity *entity in entitiesToDelete) {
+        [repo deleteEntity: entity];
     }
     
     [repo saveData];
-    
     [repo getAllEntities];
 }
 
@@ -114,7 +91,7 @@ static UpdateManager *sharedSingleton = NULL;
         if(cardsArray != nil)
         {
             NSLog(@"JSON read from server");
-            [self updateCards:cardsArray withRepo: (CardsRepository*)CardsRepository.sharedRepository];
+            [self updateEnities:cardsArray withRepo: (CardsRepository*)CardsRepository.sharedRepository];
         }
         
         
@@ -122,3 +99,7 @@ static UpdateManager *sharedSingleton = NULL;
 }
 
 @end
+
+
+// Another examples
+// http://www.raywenderlich.com/15916/how-to-synchronize-core-data-with-a-web-service-part-1

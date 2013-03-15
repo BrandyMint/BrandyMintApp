@@ -9,7 +9,6 @@
 #import "Card.h"
 #import "CardsRepository.h"
 #import "NSDate+external.h"
-#import "ImageToDataTransformer.h"
 
 @implementation Card
 
@@ -24,12 +23,6 @@
 @dynamic updated_at;
 @dynamic key;           // Уникальный ключ
 
-+ (void)initialize {
-    if (self == [Card class]) {
-        ImageToDataTransformer *transformer = [[ImageToDataTransformer alloc] init];
-        [NSValueTransformer setValueTransformer:transformer forName:@"ImageToDataTransformer"];
-    }
-}
 
 +(Card *)createFromDictionary:(NSDictionary*)dict
 {

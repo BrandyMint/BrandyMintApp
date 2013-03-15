@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Entity.h"
 
-
-@interface Card : NSManagedObject
+@interface Card : Entity
 
 @property (nonatomic, retain) NSString * desc;
 @property (nonatomic, retain) UIImage * image;
@@ -22,8 +22,5 @@
 @property (nonatomic, retain) NSString * image_url;
 @property (nonatomic, retain) NSDate * updated_at;
 @property (nonatomic, retain) NSString * key;
-
-
-+(Card *)createFromDictionary:(NSDictionary*)dict;
 
 @end

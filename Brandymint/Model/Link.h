@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Link : NSManagedObject
+@interface Link : Entity
 
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * url;
