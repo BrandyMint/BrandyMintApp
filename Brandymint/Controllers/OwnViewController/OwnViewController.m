@@ -62,6 +62,12 @@
     [super didReceiveMemoryWarning];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+}
+
 -(void) initScrollCards
 {
     NSInteger scrollWidth = self.scrollCards.frame.size.width;
@@ -71,39 +77,15 @@
     
     for(int loop = 0; loop < cardsCount; loop++)
     {
-        UIImage *image = [[UIImage imageNamed:[imagesName objectAtIndex:loop]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) ];
-        int imgWidth = image.size.width;
-        int imgHeight = image.size.height;
-
-        int dx, dy = 0;
-        int dWidth, dHeight = 0;
-        if(imgWidth > scrollWidth)  {
-            dx = 0;
-            dWidth = scrollWidth;
-        }
-        else    {
-            dx = (scrollWidth - imgWidth)/2;
-            dWidth = imgWidth;
-        }
-        
-        if(imgHeight > scrollHeight) {
-            dy = 0;
-            dHeight = scrollHeight;
-        }
-        else    {
-            dy = (scrollHeight - imgHeight)/2;
-            dHeight = imgHeight;
-        }
+        Card *card = [[CardsRepository sharedRepository].entitiesBuffer objectAtIndex:loop];
+        CardViewController *cardController = [[CardViewController alloc] initCardController:card];
         
         CGRect frame;
-        frame.origin.x = (loop * scrollWidth) + dx;
-        frame.origin.y = dy;
-        frame.size.width = dWidth;
-        frame.size.height = dHeight;
-     
-        Card *card = [[CardsRepository sharedRepository].entitiesBuffer objectAtIndex:loop];
+        frame.origin.x = (loop * cardController.view.frame.size.width);
+        frame.origin.y = 0;
+        frame.size.width = cardController.view.frame.size.width;
+        frame.size.height = cardController.view.frame.size.height;
         
-        CardViewController *cardController = [[CardViewController alloc] initCardController:card];
         cardController.view.frame = frame;
         
         [self.scrollCards addSubview:cardController.view];
