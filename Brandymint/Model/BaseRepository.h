@@ -16,14 +16,12 @@
 
 @property (retain, readonly) NSArray *entitiesBuffer;
 
-+(BaseRepository *) sharedRepository;
-
 -(NSManagedObjectContext*) managerContext;
 -(BOOL)saveData;
 -(NSArray*) getAllEntities;
 
--(void) deleteEntity:(NSManagedObject *)entity;
 -(Entity *) findEntityByKey: (NSString *)key;
 -(Entity *) findOrCreateEntityByKey: (NSString *)key;
+-(void) deleteEntity:(Entity *)entity;
 
 @end

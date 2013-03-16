@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <Bloc.h>
 #import "BaseRepository.h"
+#import "CWLSynthesizeSingleton.h"
 
 @interface BlocsRepository : BaseRepository
-
+CWL_DECLARE_SINGLETON_FOR_CLASS(BlocsRepository)
 @end

@@ -11,5 +11,6 @@
 
 @implementation BlocsRepository
 
+CWL_SYNTHESIZE_SINGLETON_FOR_CLASS(BlocsRepository)
 
 @end

@@ -72,11 +72,11 @@
     NSInteger scrollWidth = self.scrollCards.frame.size.width;
     NSInteger scrollHeight = self.scrollCards.frame.size.height;
     
-    int cardsCount = [CardsRepository sharedRepository].entitiesBuffer.count;
+    int cardsCount = [CardsRepository sharedCardsRepository].entitiesBuffer.count;
     
     for(int loop = 0; loop < cardsCount; loop++)
     {
-        Card *card = [[CardsRepository sharedRepository].entitiesBuffer objectAtIndex:loop];
+        Card *card = [[CardsRepository sharedCardsRepository].entitiesBuffer objectAtIndex:loop];
         CardViewController *cardController = [[CardViewController alloc] initCardController:card];
         
         CGRect frame;

@@ -12,31 +12,11 @@
 
 @implementation BaseRepository
 
+
 @synthesize entitiesBuffer;
 
-static BaseRepository *sharedSingleton = NULL;
-
 // http://stackoverflow.com/questions/145154/what-should-my-objective-c-singleton-look-like
-//+ (void)initialize
-//{
-//    static BOOL initialized = NO;
-//    if(!initialized)
-//    {
-//        initialized = YES;
-//        sharedSingleton = [[MySingleton alloc] init];
-//    }
-//}
-//
-+(BaseRepository *) sharedRepository
-{
-    @synchronized(self) {
-        if(sharedSingleton == NULL) {
-            NSLog(@"BasesRepository init");
-            sharedSingleton = [[self.class alloc] init];
-        }
-    }
-    return (sharedSingleton);
-}
+
 
 -(id) init
 {
@@ -166,7 +146,7 @@ static BaseRepository *sharedSingleton = NULL;
 
 -(void) deleteEntity:(Entity *)entity
 {
-    [[[self.class sharedRepository] managerContext] deleteObject:entity];
+    [[self managerContext] deleteObject:entity];
 }
 
 

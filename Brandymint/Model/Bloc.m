@@ -21,20 +21,4 @@
 @dynamic updated_at;
 
 
-
-+(Bloc *)createFromDictionary:(NSDictionary*)dict
-{
-    Bloc *bloc = [NSEntityDescription
-                  insertNewObjectForEntityForName:@"Bloc"
-                  inManagedObjectContext:[[BlocsRepository sharedRepository] managerContext]];
-    
-    bloc.position = [NSNumber numberWithInteger:[[dict objectForKey:@"position"] integerValue]];
-    bloc.title = [dict objectForKey:@"title"];
-    bloc.content = [dict objectForKey:@"content"];
-    bloc.updated_at = [NSDate parseDateFromString:[dict objectForKey:@"updated_at"]];
-    bloc.icon_url = [dict objectForKey:@"icon_url"];
-    
-    return bloc;
-}
-
 @end
