@@ -1,5 +1,5 @@
 //
-//  Link.h
+//  Image.h
 //  Brandymint
 //
 //  Created by Danil Pismenny on 15.03.13.
@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Card;
 
-@interface Link : Entity
+@interface Image : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) UIImage * data;
 @property (nonatomic, retain) NSString * url;
-@property (nonatomic, retain) NSNumber * position;
-@property (nonatomic, retain) NSDate * updated_at;
+@property (nonatomic, retain) Card *card;
+
++(Image *) findOrDownloadByUrl: (NSString *)url withContext:(NSManagedObjectContext *)context;
 
 @end

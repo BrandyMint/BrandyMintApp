@@ -24,6 +24,4 @@
 
 - (id)initCardController:(Card*)srcCard;
 
--(void) buildView;
-
 @end
