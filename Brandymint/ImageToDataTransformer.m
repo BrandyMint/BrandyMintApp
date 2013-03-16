@@ -31,7 +31,8 @@
 
 @end
 
-// http://stackoverflow.com/questions/2681630/how-to-read-png-image-to-nsimage
+// Более обдуманный трансформер:
+// http://stackoverflow.com/questions/1598600/why-is-my-transformable-core-data-attribute-not-using-my-custom-nsvaluetransform
 // https://developer.apple.com/library/ios/#samplecode/PhotoLocations/Listings/Classes_UIImageToDataTransformer_m.html#//apple_ref/doc/uid/DTS40008909-Classes_UIImageToDataTransformer_m-DontLinkElementID_14
 // http://petermcintyre.com/topics/uiimage-in-core-data/
 // http://stackoverflow.com/questions/9383682/trouble-with-core-data-transformable-attributes-for-images

@@ -8,21 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <Bloc.h>
+#import "BaseRepository.h"
 
-@interface BlocsRepository : NSObject
-{
-    NSMutableArray *blocsBuffer;
-}
-
-@property (retain, readonly) NSMutableArray *blocsBuffer;
-
-+(BlocsRepository *) sharedRepository;
-
--(NSManagedObjectContext*) managerContext;
-
--(Card*) findBlocByTitle: (NSString *)title;
--(void) deleteBloc:(Bloc *)bloc;
--(BOOL)saveData;
--(NSArray*) getAllBlocs;
+@interface BlocsRepository : BaseRepository
 
 @end

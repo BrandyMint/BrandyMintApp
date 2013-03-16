@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Bloc : NSManagedObject
+@interface Bloc : Entity
 
 @property (nonatomic, retain) NSString * content;
 @property (nonatomic, retain) NSString * icon_url;

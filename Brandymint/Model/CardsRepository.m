@@ -10,12 +10,4 @@
 
 @implementation CardsRepository
 
-#pragma mark -
-#pragma mark find card by key
-
-
-#pragma mark create new card
-
-
-
 @end

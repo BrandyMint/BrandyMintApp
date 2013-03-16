@@ -16,6 +16,7 @@
 
 static BaseRepository *sharedSingleton = NULL;
 
+// http://stackoverflow.com/questions/145154/what-should-my-objective-c-singleton-look-like
 //+ (void)initialize
 //{
 //    static BOOL initialized = NO;
@@ -61,7 +62,6 @@ static BaseRepository *sharedSingleton = NULL;
     NSError *error;
     if (![[self managerContext] save:&error]) {
         
-        NSString *message = nil;
         if ([[error domain] isEqualToString:@"NSCocoaErrorDomain"]) {
             
             NSDictionary *userInfo = [error userInfo];
@@ -111,11 +111,15 @@ static BaseRepository *sharedSingleton = NULL;
     NSManagedObjectContext *context = [self managerContext];
     
     NSEntityDescription *entityDescriptor = [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDescriptor];
     
-    //NSPredicate* pred = [NSPredicate predicateWithFormat:@"order == 1"];
-    //[request setPredicate:pred];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSSortDescriptor *sortByPosition = [[NSSortDescriptor alloc]
+                                        initWithKey:@"position"
+                                        ascending:YES];
+    NSArray* sortDescriptors = [[NSArray alloc] initWithObjects: sortByPosition, nil];
+
+    [request setSortDescriptors: sortDescriptors];
+    [request setEntity:entityDescriptor];
     
     NSError *error;
     entitiesBuffer = [context executeFetchRequest:request error:&error];
@@ -130,91 +134,37 @@ static BaseRepository *sharedSingleton = NULL;
 }
 
 -(NSString *) entityName {
-   return @"Card"; // TODO abastract
+    return @"Card"; // TODO abastract
 }
 
--(Card *) findEntityByKey: (NSString *)key
+-(Entity *) findEntityByKey: (NSString *)key
 {
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
-    [fetch setEntity:[NSEntityDescription entityForName:self.entityName inManagedObjectContext:[self managerContext]]];
-    
     NSPredicate* pred = [NSPredicate predicateWithFormat:@"key == %@", key];
+    
+    [fetch setEntity:[NSEntityDescription entityForName:self.entityName inManagedObjectContext:[self managerContext]]];
     [fetch setPredicate:pred];
     
     NSArray * found_entities = [[self managerContext] executeFetchRequest:fetch error:nil];
     
-    if(found_entities.count > 0)
-    {
-        return [found_entities objectAtIndex:0];
-    }
+    return found_entities.count>0 ? [found_entities objectAtIndex:0] : nil;
     
-    return nil;
 }
 
+-(Entity *) findOrCreateEntityByKey: (NSString *)key
+{
+    Entity *entity = [self findEntityByKey:key];
+    
+    if (!entity) {
+        entity = [NSEntityDescription
+                  insertNewObjectForEntityForName:self.entityName
+                  inManagedObjectContext:self.managerContext];
+    }
+    
+    return entity;
+}
 
-//
-//#pragma mark Methods for get first cards from repository
-//
-//-(Card*) getFirstCard
-//{
-//    if( cardsBuffer == nil || cardsBuffer.count == 0) {
-//        NSLog(@"Error in CardsRepository. cardsBuffer = nil");
-//        return nil;
-//    }
-//    
-//    NSLog(@"get first card");
-//    return [cardsBuffer objectAtIndex:0];
-//}
-//
-//#pragma mark Methods for get next cards from repository
-//
-//-(Card*) getNextCard:(Card*)prevCard
-//{
-//    if( cardsBuffer == nil) {
-//        NSLog(@"Error in CardsRepository (getNextCard). cardsBuffer = nil");
-//        return nil;
-//    }
-//    
-//    NSInteger index = [cardsBuffer indexOfObject:prevCard];
-//    if(index == NSNotFound) {
-//        NSLog(@"Error in CardsRepository (getNextCard). indexOfObject = nil");
-//        return nil;
-//    }
-//    
-//    index += 1;
-//    if( index >= cardsBuffer.count )  {
-//        NSLog(@"Warning in CardsRepository (getNextCard). index out of range");
-//        return nil;
-//    }
-//    
-//    return [cardsBuffer objectAtIndex:index];
-//}
-//
-//#pragma mark Methods for get previous cards from repository
-//
-//-(Card*) getPreviousCard:(Card*)prevCard
-//{
-//    if( cardsBuffer == nil) {
-//        NSLog(@"Error in CardsRepository (getPreviousCard). cardsBuffer = nil");
-//        return nil;
-//    }
-//    
-//    NSInteger index = [cardsBuffer indexOfObject:prevCard];
-//    if(index == NSNotFound) {
-//        NSLog(@"Error in CardsRepository (getPreviousCard). indexOfObject = nil");
-//        return nil;
-//    }
-//    
-//    index -= 1;
-//    if( index < 0 )  {
-//        NSLog(@"Warning in CardsRepository (getPreviousCard). index out of range");
-//        return nil;
-//    }
-//    
-//    return [cardsBuffer objectAtIndex:index];
-//}
-
--(void) deleteEntity:(NSManagedObject *)entity
+-(void) deleteEntity:(Entity *)entity
 {
     [[[self.class sharedRepository] managerContext] deleteObject:entity];
 }

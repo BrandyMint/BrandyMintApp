@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entity.h"
 
 @interface BaseRepository : NSObject
 {
@@ -22,7 +23,7 @@
 -(NSArray*) getAllEntities;
 
 -(void) deleteEntity:(NSManagedObject *)entity;
--(Card *) findEntityByKey: (NSString *)key;
-
+-(Entity *) findEntityByKey: (NSString *)key;
+-(Entity *) findOrCreateEntityByKey: (NSString *)key;
 
 @end
