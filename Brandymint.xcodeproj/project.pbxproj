@@ -288,8 +288,6 @@
 		7C8191DE16E867A000B71598 = {
 			isa = PBXGroup;
 			children = (
-				83D5A77816F3A429007D85AC /* MobileCoreServices.framework */,
-				83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */,
 				7C8191F516E867A000B71598 /* Brandymint */,
 				7C81921716E867A000B71598 /* BrandymintTests */,
 				7C8191EC16E867A000B71598 /* Frameworks */,
@@ -310,6 +308,8 @@
 		7C8191EC16E867A000B71598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */,
+				83D5A77816F3A429007D85AC /* MobileCoreServices.framework */,
 				7C8191ED16E867A000B71598 /* UIKit.framework */,
 				7C8191EF16E867A000B71598 /* Foundation.framework */,
 				7C8191F116E867A000B71598 /* CoreGraphics.framework */,
