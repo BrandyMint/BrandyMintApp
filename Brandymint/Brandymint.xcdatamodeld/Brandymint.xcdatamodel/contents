@@ -7,7 +7,7 @@
         <attribute name="position" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="icon" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Image" syncable="YES"/>
+        <relationship name="icon" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="bloc" inverseEntity="Image" syncable="YES"/>
         <compoundIndexes>
             <compoundIndex>
                 <index value="key"/>
@@ -33,8 +33,9 @@
     </entity>
     <entity name="Entity" representedClassName="Entity" isAbstract="YES" syncable="YES"/>
     <entity name="Image" representedClassName="Image" syncable="YES">
-        <attribute name="data" attributeType="Transformable" valueTransformerName="ImageToDataTransformet" syncable="YES"/>
+        <attribute name="data" attributeType="Transformable" valueTransformerName="ImageToDataTransformer" syncable="YES"/>
         <attribute name="url" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="bloc" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bloc" inverseName="icon" inverseEntity="Bloc" syncable="YES"/>
         <relationship name="card" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Card" inverseName="image" inverseEntity="Card" syncable="YES"/>
         <compoundIndexes>
             <compoundIndex>
@@ -58,7 +59,7 @@
         <element name="Bloc" positionX="-2765" positionY="-4806" width="128" height="148"/>
         <element name="Card" positionX="-3008" positionY="-4839" width="137" height="193"/>
         <element name="Entity" positionX="-2799" positionY="-5047" width="128" height="43"/>
-        <element name="Image" positionX="-2826" positionY="-4588" width="128" height="88"/>
+        <element name="Image" positionX="-2826" positionY="-4588" width="128" height="103"/>
         <element name="Link" positionX="-2628" positionY="-4807" width="128" height="118"/>
     </elements>
 </model>

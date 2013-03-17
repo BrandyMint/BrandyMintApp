@@ -8,19 +8,12 @@
 
 #import "Entity.h"
 #import "NSDate+external.h"
-#import "ImageToDataTransformer.h"
 #import "Image.h"
 
 @implementation Entity
 
 @dynamic key;
 
-+ (void)initialize {
-    if (self == [Entity class]) {
-        ImageToDataTransformer *transformer = [[ImageToDataTransformer alloc] init];
-        [NSValueTransformer setValueTransformer:transformer forName:@"ImageToDataTransformer"];
-    }
-}
 
 -(void)setSmartValue:(id) value forKey:(NSString *)key
 {
