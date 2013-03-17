@@ -24,8 +24,7 @@
 
 -(void)setSmartValue:(id) value forKey:(NSString *)key
 {
-    NSLog(@"Set smart value: %@ = %@", key, value);
-
+    //NSLog(@"Set smart value: %@ = %@", key, value);
     if ([value isKindOfClass:[NSNull class]]) {
         [self setValue:nil forKey:key];
         // TODO Определять по типу property, а не названию
