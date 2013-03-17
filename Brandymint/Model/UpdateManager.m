@@ -13,6 +13,8 @@
 #import "NSDate+external.h"
 #import "Entity.h"
 
+#import "KGStatusBar.h"
+
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
 @implementation UpdateManager
@@ -33,7 +35,11 @@ static UpdateManager *sharedSingleton = NULL;
 -(void) updateData
 {
     NSLog(@"start connecting to server...");
+    [KGStatusBar showWithStatus:@"Loading"];
+
     [self receiveJSONFromUrl:@"http://brandymint.ru/api/v1/app.json"];
+    [KGStatusBar showSuccessWithStatus:@"Successfully synced"];
+
 }
 
 
