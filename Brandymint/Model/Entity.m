@@ -31,9 +31,6 @@
         // TODO Определять по типу property, а не названию
     } else if ([key isEqualToString:@"updated_at"]) {
         [self setValue:[NSDate parseDateFromString:value] forKey:key];
-    } else if ([key isEqualToString:@"image_url"]) {
-        Image *image = [Image findOrDownloadByUrl:value withContext:self.managedObjectContext];
-        [self setValue:image forKey:@"image"];
     } else {
         [self setValue:value forKey:key];
     }

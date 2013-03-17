@@ -13,4 +13,6 @@
 
 CWL_SYNTHESIZE_SINGLETON_FOR_CLASS(BlocsRepository)
 
+-(NSString *) entityName { return @"Bloc"; }
+
 @end

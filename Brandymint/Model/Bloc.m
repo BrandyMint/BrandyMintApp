@@ -20,5 +20,13 @@
 @dynamic position;
 @dynamic updated_at;
 
+- (void)didChangeValueForKey:(NSString *)key
+{
+    if ([key isEqualToString:@"icon_url"]) {
+        Image *image = [Image findOrDownloadByUrl:self.icon_url withContext:self.managedObjectContext];
+        [self setValue:image forKey:@"icon"];
+    }
+    [super didChangeValueForKey:key];
+}
 
 @end

@@ -12,4 +12,6 @@
 
 CWL_SYNTHESIZE_SINGLETON_FOR_CLASS(CardsRepository)
 
+-(NSString *) entityName { return @"Card"; }
+
 @end

@@ -18,10 +18,11 @@
 
 +(Image *) findOrDownloadByUrl:(NSString* )url withContext:(NSManagedObjectContext *)context
 {
-    NSLog(@"Find Or Download image by url: %@", url);
 
     Image *image = [self findImageByUrl:url withContext:context];
     if (!image) {
+        NSLog(@"Download image by url: %@", url);
+
         image = [NSEntityDescription
                  insertNewObjectForEntityForName: @"Image"
                  inManagedObjectContext: context];

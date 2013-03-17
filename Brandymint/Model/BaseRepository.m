@@ -114,7 +114,7 @@
 }
 
 -(NSString *) entityName {
-    return @"Card"; // TODO abastract
+    methodNotImplemented();
 }
 
 -(Entity *) findEntityByKey: (NSString *)key
