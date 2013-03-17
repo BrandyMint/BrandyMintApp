@@ -8,6 +8,7 @@
 
 #import "Image.h"
 #import "Card.h"
+#import "ImageToDataTransformer.h"
 
 
 @implementation Image
@@ -16,19 +17,18 @@
 @dynamic url;
 @dynamic card;
 
++ (void)initialize {
+    if (self == [Image class]) {
+        ImageToDataTransformer *transformer = [[ImageToDataTransformer alloc] init];
+        [NSValueTransformer setValueTransformer:transformer forName:@"ImageToDataTransformer"];
+    }
+}
+
 +(Image *) findOrDownloadByUrl:(NSString* )url withContext:(NSManagedObjectContext *)context
 {
-    NSLog(@"Find Or Download image by url: %@", url);
-
     Image *image = [self findImageByUrl:url withContext:context];
-    if (!image) {
-        image = [NSEntityDescription
-                 insertNewObjectForEntityForName: @"Image"
-                 inManagedObjectContext: context];
-        image.data = [image downloadImageByUrl:url];
-        image.url = url;
-    }
-    return image;
+    
+    return image ? image : [self downloadAandCreateByUrl:url withContext:context];
 }
 
 +(Image *) findImageByUrl:(NSString *)url withContext:(NSManagedObjectContext *)context
@@ -44,13 +44,26 @@
     return images.count>0 ? [images objectAtIndex:0] : nil;
 }
 
--(UIImage *) downloadImageByUrl: (NSString *)url
+
++(Image *) downloadAandCreateByUrl:(NSString *)url withContext:(NSManagedObjectContext *)context
 {
     NSLog(@"Download image by url: %@", url);
+    
+    Image *image = [NSEntityDescription
+                    insertNewObjectForEntityForName: @"Image"
+                    inManagedObjectContext: context];
+    image.data = [self downloadImageByUrl:url];
+    image.url = url;
+    
+    return image;
+}
 
++(UIImage *)downloadImageByUrl:(NSString *)url
+{
     return [[UIImage alloc]
             initWithData:[NSData
                           dataWithContentsOfURL:[NSURL URLWithString:url]]];
+    
 }
 
 @end

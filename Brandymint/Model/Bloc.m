@@ -20,21 +20,13 @@
 @dynamic position;
 @dynamic updated_at;
 
-
-
-+(Bloc *)createFromDictionary:(NSDictionary*)dict
+- (void)didChangeValueForKey:(NSString *)key
 {
-    Bloc *bloc = [NSEntityDescription
-                  insertNewObjectForEntityForName:@"Bloc"
-                  inManagedObjectContext:[[BlocsRepository sharedRepository] managerContext]];
-    
-    bloc.position = [NSNumber numberWithInteger:[[dict objectForKey:@"position"] integerValue]];
-    bloc.title = [dict objectForKey:@"title"];
-    bloc.content = [dict objectForKey:@"content"];
-    bloc.updated_at = [NSDate parseDateFromString:[dict objectForKey:@"updated_at"]];
-    bloc.icon_url = [dict objectForKey:@"icon_url"];
-    
-    return bloc;
+    if ([key isEqualToString:@"icon_url"]) {
+        Image *image = [Image findOrDownloadByUrl:self.icon_url withContext:self.managedObjectContext];
+        [self setValue:image forKey:@"icon"];
+    }
+    [super didChangeValueForKey:key];
 }
 
 @end

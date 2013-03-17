@@ -8,6 +8,9 @@
 
 #import "UpdateManager.h"
 #import "CardsRepository.h"
+#import "BlocsRepository.h"
+#import "LinksRepository.h"
+
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
 #import "NSDate+external.h"
@@ -79,6 +82,7 @@ static UpdateManager *sharedSingleton = NULL;
 
 - (void)fetchedData:(NSData *)responseData {
     
+    NSLog(@"JSON read from server");
     NSError* error;
     NSDictionary* jsonData = [NSJSONSerialization
                               JSONObjectWithData:responseData
@@ -87,14 +91,9 @@ static UpdateManager *sharedSingleton = NULL;
     
     if (jsonData != nil)
     {
-        NSArray *cardsArray = [jsonData objectForKey:@"cards"];
-        if(cardsArray != nil)
-        {
-            NSLog(@"JSON read from server");
-            [self updateEnities:cardsArray withRepo: (CardsRepository*)CardsRepository.sharedRepository];
-        }
-        
-        
+        [self updateEnities:[jsonData objectForKey:@"cards"] withRepo: CardsRepository.sharedCardsRepository];
+        [self updateEnities:[jsonData objectForKey:@"blocs"] withRepo: BlocsRepository.sharedBlocsRepository];
+        [self updateEnities:[jsonData objectForKey:@"links"] withRepo: LinksRepository.sharedLinksRepository];
     }
 }
 

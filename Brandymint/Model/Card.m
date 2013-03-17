@@ -19,7 +19,18 @@
 @dynamic subtitle;
 @dynamic title;
 @dynamic updated_at;
-@dynamic url;
 @dynamic image;
+@dynamic image_url;
+@dynamic url;
+
+
+- (void)didChangeValueForKey:(NSString *)key
+{
+    if ([key isEqualToString:@"image_url"]) {
+        Image *image = [Image findOrDownloadByUrl:self.image_url withContext:self.managedObjectContext];
+        [self setValue:image forKey:@"image"];
+    }
+    [super didChangeValueForKey:key];
+}
 
 @end
