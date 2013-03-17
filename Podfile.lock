@@ -7,5 +7,17 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+- CWLSynthesizeSingleton (0.0.1)
+- KGStatusBar (1.0)
+
+DEPENDENCIES:
+- AFNetworking
+- CWLSynthesizeSingleton
+- KGStatusBar
+
+SPEC CHECKSUMS:
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  CWLSynthesizeSingleton: 50ade66f768e4518c9fab5d16faec285cbf4c086
+  KGStatusBar: e47f19745f6aeb0fabe37e8360df26bf87b1e2ff
 
 COCOAPODS: 0.16.4
