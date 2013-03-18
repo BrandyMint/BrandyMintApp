@@ -11,6 +11,5 @@
 @interface OwnViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollCards;
-@property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end

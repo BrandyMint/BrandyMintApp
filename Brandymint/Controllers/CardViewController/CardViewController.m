@@ -28,7 +28,6 @@
     if (self) {
         
         self.card = srcCard;
-
     }
     return self;
 }

@@ -52,8 +52,7 @@ static UpdateManager *sharedSingleton = NULL;
         [entitiesToDelete removeObjectIdenticalTo:entity];
         
         [entity updateFromDict: entity_dict];
-  
-
+        
     }];
     
     // Удалить все что остались

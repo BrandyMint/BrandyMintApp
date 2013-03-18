@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18D721C116F73422001A1984 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D721BF16F73422001A1984 /* AboutViewController.m */; };
+		18D721C216F73422001A1984 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D721C016F73422001A1984 /* AboutViewController.xib */; };
 		7B0DBF926A2F48D9BC6513C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDD8401E13B4A509E9DBC6C /* libPods.a */; };
 		7C01D50516EE0B70004216EC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4EF16EE0B70004216EC /* background.jpg */; };
 		7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F016EE0B70004216EC /* background@2x.jpg */; };
@@ -99,6 +101,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18D721BE16F73422001A1984 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		18D721BF16F73422001A1984 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		18D721C016F73422001A1984 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		3FDD8401E13B4A509E9DBC6C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C01D4EF16EE0B70004216EC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		7C01D4F016EE0B70004216EC /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
@@ -229,6 +234,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18D721BD16F733F9001A1984 /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18D721BE16F73422001A1984 /* AboutViewController.h */,
+				18D721BF16F73422001A1984 /* AboutViewController.m */,
+				18D721C016F73422001A1984 /* AboutViewController.xib */,
+			);
+			path = AboutViewController;
+			sourceTree = "<group>";
+		};
 		7C19C05616F0AC6B003D6CDE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +387,7 @@
 		7C81922816E867FE00B71598 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				18D721BD16F733F9001A1984 /* AboutViewController */,
 				7C81922A16E8684100B71598 /* OwnViewController */,
 				7C81924016E86CF600B71598 /* CardViewController */,
 			);
@@ -590,6 +606,7 @@
 				7C80D78C16F2FBD1007D5E3B /* UbuntuMono-R.ttf in Resources */,
 				7C80D78D16F2FBD1007D5E3B /* UbuntuMono-RI.ttf in Resources */,
 				833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */,
+				18D721C216F73422001A1984 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +687,7 @@
 				8366B4D416F3513E00FE1490 /* Entity.m in Sources */,
 				83D5A76C16F38F53007D85AC /* Card.m in Sources */,
 				83D5A76F16F38FE5007D85AC /* Image.m in Sources */,
+				18D721C116F73422001A1984 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
