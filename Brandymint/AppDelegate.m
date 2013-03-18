@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
     ownViewController = [[OwnViewController alloc] initWithNibName:@"OwnViewController" bundle:[NSBundle mainBundle]];
@@ -37,7 +37,7 @@
     NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
     
     NSArray *fontNames;
-    NSInteger indFamily, indFont;
+    NSUInteger indFamily, indFont;
     for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
     {
         NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
