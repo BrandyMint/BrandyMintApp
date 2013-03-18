@@ -37,7 +37,7 @@
     NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
     
     NSArray *fontNames;
-    NSInteger indFamily, indFont;
+    NSUInteger indFamily, indFont;
     for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
     {
         NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);

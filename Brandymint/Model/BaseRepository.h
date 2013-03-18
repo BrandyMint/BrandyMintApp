@@ -14,7 +14,7 @@
     NSArray *entitiesBuffer;
 }
 
-@property (retain, readonly) NSArray *entitiesBuffer;
+@property (retain, readonly, atomic) NSArray *entitiesBuffer;
 
 -(NSManagedObjectContext*) managerContext;
 -(BOOL)saveData;
