@@ -48,7 +48,7 @@
     
     [UIView animateWithDuration:1.0
                           delay:0.2
-                        options: nil
+                        options: 0
                      animations:^{
                          devLabel.alpha = 0.8;
                      }
@@ -76,7 +76,7 @@
     
     [UIView animateWithDuration:0.7
                           delay:0.1
-                        options: UIViewAnimationCurveEaseOut
+                        options: UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          line.frame = rcEnd;
                      }
@@ -99,7 +99,7 @@
     
     [UIView animateWithDuration:0.7
                           delay:0.0
-                        options: UIViewAnimationCurveEaseIn
+                        options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          CGRect rcEnd = rc;
                          rcEnd.origin.x = OFFSET_X;
