@@ -7,6 +7,7 @@
 //
 
 #import "AboutViewController.h"
+#import "BlockView.h"
 
 @interface AboutViewController ()
 
@@ -53,23 +54,12 @@
     {
         Bloc *bloc = [blocs objectAtIndex:(NSUInteger)loop];
         
-        [self fillView:bloc index:loop];
+        BlockView * blockView = (BlockView*)[self.view viewWithTag:loop+1];
+        [blockView fillView:bloc];
     }
 }
 
--(void) fillView:(Bloc*)bloc index:(NSInteger)index
-{
-    UIView *block1 = (UIView*)[self.view viewWithTag:index];
-    
-    UIImageView *imageView = [[UIImageView alloc] init];
-    imageView = (UIImageView*)[block1 viewWithTag:IMAGETAG];
-    UILabel *title = (UILabel*)[block1 viewWithTag:TITLETAG];
-    UILabel *content = (UILabel*)[block1 viewWithTag:CONTENTTAG];
-    
-    imageView.image = bloc.icon.data;
-    title.text = bloc.title;
-    content.text = bloc.content;
-}
+
 
 
 @end

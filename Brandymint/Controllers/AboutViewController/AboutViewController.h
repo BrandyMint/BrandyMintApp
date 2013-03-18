@@ -9,12 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Bloc.h"
 
-enum {
-    IMAGETAG = 2,
-    TITLETAG,
-    CONTENTTAG
-};
-
 @interface AboutViewController : UIViewController
 {
     NSArray *blocs;

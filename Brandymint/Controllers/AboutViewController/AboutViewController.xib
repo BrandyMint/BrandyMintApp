@@ -36,70 +36,29 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIView" id="348031936">
+					<object class="IBUIView" id="993064612">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="49695441">
-								<reference key="NSNextResponder" ref="348031936"/>
+							<object class="IBUIImageView" id="743072473">
+								<reference key="NSNextResponder" ref="993064612"/>
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{20, 0}, {72, 72}}</string>
-								<reference key="NSSuperview" ref="348031936"/>
+								<reference key="NSSuperview" ref="993064612"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="303460743"/>
+								<reference key="NSNextKeyView" ref="840176003"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<int key="IBUITag">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
-							<object class="IBUILabel" id="303460743">
-								<reference key="NSNextResponder" ref="348031936"/>
+							<object class="IBUILabel" id="840176003">
+								<reference key="NSNextResponder" ref="993064612"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 0}, {338, 35}}</string>
-								<reference key="NSSuperview" ref="348031936"/>
+								<reference key="NSSuperview" ref="993064612"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="823897577"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<object class="NSColor" key="IBUIBackgroundColor">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC4zNzUyMTQwNDI4IDEgMC4zMDkzMDM2Njc2AA</bytes>
-								</object>
-								<bool key="IBUIOpaque">NO</bool>
-								<bool key="IBUIClipsSubviews">YES</bool>
-								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">2</int>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<string key="IBUIText">Potee</string>
-								<object class="NSColor" key="IBUITextColor" id="91348293">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MSAxIDEgMC42AA</bytes>
-									<string key="IBUIColorCocoaTouchKeyPath">lightTextColor</string>
-								</object>
-								<nil key="IBUIHighlightedColor"/>
-								<int key="IBUIBaselineAdjustment">0</int>
-								<int key="IBUINumberOfLines">3</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="350917680">
-									<string key="name">Helvetica</string>
-									<string key="family">Helvetica</string>
-									<int key="traits">0</int>
-									<double key="pointSize">32</double>
-								</object>
-								<object class="NSFont" key="IBUIFont" id="650753438">
-									<string key="NSName">Helvetica</string>
-									<double key="NSSize">32</double>
-									<int key="NSfFlags">16</int>
-								</object>
-								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
-								<double key="preferredMaxLayoutWidth">338</double>
-							</object>
-							<object class="IBUILabel" id="823897577">
-								<reference key="NSNextResponder" ref="348031936"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{121, 43}, {338, 111}}</string>
-								<reference key="NSSuperview" ref="348031936"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="170018489"/>
+								<reference key="NSNextKeyView" ref="567567161"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -111,18 +70,59 @@
 								<int key="IBUITag">3</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<string key="IBUIText">Potee</string>
+								<object class="NSColor" key="IBUITextColor" id="162116290">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MSAxIDEgMC42AA</bytes>
+									<string key="IBUIColorCocoaTouchKeyPath">lightTextColor</string>
+								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<int key="IBUINumberOfLines">4</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="727855864">
+								<int key="IBUINumberOfLines">0</int>
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="439073316">
+									<string key="name">Helvetica</string>
+									<string key="family">Helvetica</string>
+									<int key="traits">0</int>
+									<double key="pointSize">32</double>
+								</object>
+								<object class="NSFont" key="IBUIFont" id="979350759">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">32</double>
+									<int key="NSfFlags">16</int>
+								</object>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+								<double key="preferredMaxLayoutWidth">338</double>
+							</object>
+							<object class="IBUILabel" id="567567161">
+								<reference key="NSNextResponder" ref="993064612"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{121, 43}, {338, 111}}</string>
+								<reference key="NSSuperview" ref="993064612"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="139970422"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4zNzUyMTQwNDI4IDEgMC4zMDkzMDM2Njc2AA</bytes>
+								</object>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">7</int>
+								<int key="IBUITag">4</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
+								<reference key="IBUITextColor" ref="162116290"/>
+								<nil key="IBUIHighlightedColor"/>
+								<int key="IBUIBaselineAdjustment">0</int>
+								<int key="IBUINumberOfLines">0</int>
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="34687240">
 									<string key="name">Helvetica</string>
 									<string key="family">Helvetica</string>
 									<int key="traits">0</int>
 									<double key="pointSize">20</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="769593061">
+								<object class="NSFont" key="IBUIFont" id="632413613">
 									<string key="NSName">Helvetica</string>
 									<double key="NSSize">20</double>
 									<int key="NSfFlags">16</int>
@@ -134,38 +134,38 @@
 						<string key="NSFrame">{{20, 122}, {459, 154}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="49695441"/>
+						<reference key="NSNextKeyView" ref="743072473"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="790612114">
+						<object class="NSColor" key="IBUIBackgroundColor" id="293055998">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
 						<int key="IBUITag">1</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
-					<object class="IBUIView" id="985641106">
+					<object class="IBUIView" id="661138666">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="159203985">
-								<reference key="NSNextResponder" ref="985641106"/>
+							<object class="IBUIImageView" id="889101369">
+								<reference key="NSNextResponder" ref="661138666"/>
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{20, 0}, {72, 72}}</string>
-								<reference key="NSSuperview" ref="985641106"/>
+								<reference key="NSSuperview" ref="661138666"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="778959916"/>
+								<reference key="NSNextKeyView" ref="141133213"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<int key="IBUITag">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
-							<object class="IBUILabel" id="778959916">
-								<reference key="NSNextResponder" ref="985641106"/>
+							<object class="IBUILabel" id="141133213">
+								<reference key="NSNextResponder" ref="661138666"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 0}, {338, 35}}</string>
-								<reference key="NSSuperview" ref="985641106"/>
+								<reference key="NSSuperview" ref="661138666"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="59514106"/>
+								<reference key="NSNextKeyView" ref="147046784"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -178,20 +178,20 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">Potee</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="350917680"/>
-								<reference key="IBUIFont" ref="650753438"/>
+								<reference key="IBUIFontDescription" ref="439073316"/>
+								<reference key="IBUIFont" ref="979350759"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUILabel" id="59514106">
-								<reference key="NSNextResponder" ref="985641106"/>
+							<object class="IBUILabel" id="147046784">
+								<reference key="NSNextResponder" ref="661138666"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 43}, {338, 111}}</string>
-								<reference key="NSSuperview" ref="985641106"/>
+								<reference key="NSSuperview" ref="661138666"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="981884910"/>
+								<reference key="NSNextKeyView" ref="279761716"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -204,12 +204,12 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
-								<reference key="IBUIFontDescription" ref="727855864"/>
-								<reference key="IBUIFont" ref="769593061"/>
+								<reference key="IBUIFontDescription" ref="34687240"/>
+								<reference key="IBUIFont" ref="632413613"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">338</double>
 							</object>
@@ -217,35 +217,35 @@
 						<string key="NSFrame">{{20, 296}, {459, 154}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="159203985"/>
+						<reference key="NSNextKeyView" ref="889101369"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="790612114"/>
+						<reference key="IBUIBackgroundColor" ref="293055998"/>
 						<int key="IBUITag">2</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
-					<object class="IBUIView" id="981884910">
+					<object class="IBUIView" id="279761716">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="166218601">
-								<reference key="NSNextResponder" ref="981884910"/>
+							<object class="IBUIImageView" id="472097904">
+								<reference key="NSNextResponder" ref="279761716"/>
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{20, 0}, {72, 72}}</string>
-								<reference key="NSSuperview" ref="981884910"/>
+								<reference key="NSSuperview" ref="279761716"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="831119920"/>
+								<reference key="NSNextKeyView" ref="525215722"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<int key="IBUITag">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
-							<object class="IBUILabel" id="831119920">
-								<reference key="NSNextResponder" ref="981884910"/>
+							<object class="IBUILabel" id="525215722">
+								<reference key="NSNextResponder" ref="279761716"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 0}, {338, 35}}</string>
-								<reference key="NSSuperview" ref="981884910"/>
+								<reference key="NSSuperview" ref="279761716"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="558440700"/>
+								<reference key="NSNextKeyView" ref="963201976"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -258,20 +258,20 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">Potee</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="350917680"/>
-								<reference key="IBUIFont" ref="650753438"/>
+								<reference key="IBUIFontDescription" ref="439073316"/>
+								<reference key="IBUIFont" ref="979350759"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUILabel" id="558440700">
-								<reference key="NSNextResponder" ref="981884910"/>
+							<object class="IBUILabel" id="963201976">
+								<reference key="NSNextResponder" ref="279761716"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 43}, {338, 111}}</string>
-								<reference key="NSSuperview" ref="981884910"/>
+								<reference key="NSSuperview" ref="279761716"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="350426362"/>
+								<reference key="NSNextKeyView" ref="809147438"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -284,12 +284,12 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
-								<reference key="IBUIFontDescription" ref="727855864"/>
-								<reference key="IBUIFont" ref="769593061"/>
+								<reference key="IBUIFontDescription" ref="34687240"/>
+								<reference key="IBUIFont" ref="632413613"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">338</double>
 							</object>
@@ -297,35 +297,35 @@
 						<string key="NSFrame">{{20, 472}, {459, 154}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="166218601"/>
+						<reference key="NSNextKeyView" ref="472097904"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="790612114"/>
+						<reference key="IBUIBackgroundColor" ref="293055998"/>
 						<int key="IBUITag">3</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
-					<object class="IBUIView" id="170018489">
+					<object class="IBUIView" id="139970422">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="533118957">
-								<reference key="NSNextResponder" ref="170018489"/>
+							<object class="IBUIImageView" id="446181954">
+								<reference key="NSNextResponder" ref="139970422"/>
 								<int key="NSvFlags">274</int>
 								<string key="NSFrameSize">{72, 72}</string>
-								<reference key="NSSuperview" ref="170018489"/>
+								<reference key="NSSuperview" ref="139970422"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="511024500"/>
+								<reference key="NSNextKeyView" ref="1056200135"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<int key="IBUITag">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
-							<object class="IBUILabel" id="511024500">
-								<reference key="NSNextResponder" ref="170018489"/>
+							<object class="IBUILabel" id="1056200135">
+								<reference key="NSNextResponder" ref="139970422"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 0}, {338, 35}}</string>
-								<reference key="NSSuperview" ref="170018489"/>
+								<reference key="NSSuperview" ref="139970422"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="979147839"/>
+								<reference key="NSNextKeyView" ref="407470401"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -338,20 +338,20 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">Potee</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="350917680"/>
-								<reference key="IBUIFont" ref="650753438"/>
+								<reference key="IBUIFontDescription" ref="439073316"/>
+								<reference key="IBUIFont" ref="979350759"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUILabel" id="979147839">
-								<reference key="NSNextResponder" ref="170018489"/>
+							<object class="IBUILabel" id="407470401">
+								<reference key="NSNextResponder" ref="139970422"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 43}, {338, 29}}</string>
-								<reference key="NSSuperview" ref="170018489"/>
+								<reference key="NSSuperview" ref="139970422"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="272869499"/>
+								<reference key="NSNextKeyView" ref="565108493"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -364,22 +364,22 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
-								<reference key="IBUIFontDescription" ref="727855864"/>
-								<reference key="IBUIFont" ref="769593061"/>
+								<reference key="IBUIFontDescription" ref="34687240"/>
+								<reference key="IBUIFont" ref="632413613"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">338</double>
 							</object>
-							<object class="IBUILabel" id="272869499">
-								<reference key="NSNextResponder" ref="170018489"/>
+							<object class="IBUILabel" id="565108493">
+								<reference key="NSNextResponder" ref="139970422"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 80}, {338, 47}}</string>
-								<reference key="NSSuperview" ref="170018489"/>
+								<reference key="NSSuperview" ref="139970422"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="283142202"/>
+								<reference key="NSNextKeyView" ref="990274803"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -391,22 +391,22 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
-								<reference key="IBUIFontDescription" ref="727855864"/>
-								<reference key="IBUIFont" ref="769593061"/>
+								<reference key="IBUIFontDescription" ref="34687240"/>
+								<reference key="IBUIFont" ref="632413613"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">338</double>
 							</object>
-							<object class="IBUILabel" id="283142202">
-								<reference key="NSNextResponder" ref="170018489"/>
+							<object class="IBUILabel" id="990274803">
+								<reference key="NSNextResponder" ref="139970422"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 135}, {338, 29}}</string>
-								<reference key="NSSuperview" ref="170018489"/>
+								<reference key="NSSuperview" ref="139970422"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="985641106"/>
+								<reference key="NSNextKeyView" ref="661138666"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -418,17 +418,17 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="975606563">
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="408693680">
 									<string key="name">Helvetica-Bold</string>
 									<string key="family">Helvetica</string>
 									<int key="traits">2</int>
 									<double key="pointSize">20</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="725304032">
+								<object class="NSFont" key="IBUIFont" id="125797636">
 									<string key="NSName">Helvetica-Bold</string>
 									<double key="NSSize">20</double>
 									<int key="NSfFlags">16</int>
@@ -440,34 +440,34 @@
 						<string key="NSFrame">{{517, 122}, {439, 164}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="533118957"/>
+						<reference key="NSNextKeyView" ref="446181954"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="790612114"/>
+						<reference key="IBUIBackgroundColor" ref="293055998"/>
 						<int key="IBUITag">4</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
-					<object class="IBUIView" id="350426362">
+					<object class="IBUIView" id="809147438">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="462357731">
-								<reference key="NSNextResponder" ref="350426362"/>
+							<object class="IBUIImageView" id="170590948">
+								<reference key="NSNextResponder" ref="809147438"/>
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{0, 1}, {72, 72}}</string>
-								<reference key="NSSuperview" ref="350426362"/>
+								<reference key="NSSuperview" ref="809147438"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="916053591"/>
+								<reference key="NSNextKeyView" ref="173359304"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
-							<object class="IBUILabel" id="916053591">
-								<reference key="NSNextResponder" ref="350426362"/>
+							<object class="IBUILabel" id="173359304">
+								<reference key="NSNextResponder" ref="809147438"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 1}, {338, 35}}</string>
-								<reference key="NSSuperview" ref="350426362"/>
+								<reference key="NSSuperview" ref="809147438"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="619439394"/>
+								<reference key="NSNextKeyView" ref="387277328"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -479,20 +479,20 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">Potee</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="350917680"/>
-								<reference key="IBUIFont" ref="650753438"/>
+								<reference key="IBUIFontDescription" ref="439073316"/>
+								<reference key="IBUIFont" ref="979350759"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUILabel" id="619439394">
-								<reference key="NSNextResponder" ref="350426362"/>
+							<object class="IBUILabel" id="387277328">
+								<reference key="NSNextResponder" ref="809147438"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 44}, {338, 29}}</string>
-								<reference key="NSSuperview" ref="350426362"/>
+								<reference key="NSSuperview" ref="809147438"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="377273096"/>
+								<reference key="NSNextKeyView" ref="489372891"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -504,22 +504,22 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
-								<reference key="IBUIFontDescription" ref="727855864"/>
-								<reference key="IBUIFont" ref="769593061"/>
+								<reference key="IBUIFontDescription" ref="34687240"/>
+								<reference key="IBUIFont" ref="632413613"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">338</double>
 							</object>
-							<object class="IBUILabel" id="377273096">
-								<reference key="NSNextResponder" ref="350426362"/>
+							<object class="IBUILabel" id="489372891">
+								<reference key="NSNextResponder" ref="809147438"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 81}, {338, 47}}</string>
-								<reference key="NSSuperview" ref="350426362"/>
+								<reference key="NSSuperview" ref="809147438"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="402330719"/>
+								<reference key="NSNextKeyView" ref="304497467"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -531,21 +531,22 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
-								<reference key="IBUIFontDescription" ref="727855864"/>
-								<reference key="IBUIFont" ref="769593061"/>
+								<reference key="IBUIFontDescription" ref="34687240"/>
+								<reference key="IBUIFont" ref="632413613"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">338</double>
 							</object>
-							<object class="IBUILabel" id="402330719">
-								<reference key="NSNextResponder" ref="350426362"/>
+							<object class="IBUILabel" id="304497467">
+								<reference key="NSNextResponder" ref="809147438"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 136}, {338, 29}}</string>
-								<reference key="NSSuperview" ref="350426362"/>
+								<reference key="NSSuperview" ref="809147438"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -557,12 +558,12 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
-								<reference key="IBUITextColor" ref="91348293"/>
+								<reference key="IBUITextColor" ref="162116290"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
-								<reference key="IBUIFontDescription" ref="975606563"/>
-								<reference key="IBUIFont" ref="725304032"/>
+								<reference key="IBUIFontDescription" ref="408693680"/>
+								<reference key="IBUIFont" ref="125797636"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">338</double>
 							</object>
@@ -570,9 +571,9 @@
 						<string key="NSFrame">{{517, 323}, {439, 165}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="462357731"/>
+						<reference key="NSNextKeyView" ref="170590948"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="790612114"/>
+						<reference key="IBUIBackgroundColor" ref="293055998"/>
 						<int key="IBUITag">5</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
@@ -580,7 +581,7 @@
 				<string key="NSFrame">{{0, 20}, {1024, 748}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="348031936"/>
+				<reference key="NSNextKeyView" ref="993064612"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -633,188 +634,188 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="766721923"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="348031936"/>
-							<reference ref="985641106"/>
-							<reference ref="981884910"/>
-							<reference ref="170018489"/>
-							<reference ref="350426362"/>
+							<reference ref="993064612"/>
+							<reference ref="661138666"/>
+							<reference ref="279761716"/>
+							<reference ref="139970422"/>
+							<reference ref="809147438"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">27</int>
-						<reference key="object" ref="348031936"/>
+						<reference key="object" ref="993064612"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="49695441"/>
-							<reference ref="303460743"/>
-							<reference ref="823897577"/>
+							<reference ref="743072473"/>
+							<reference ref="840176003"/>
+							<reference ref="567567161"/>
 						</array>
 						<reference key="parent" ref="766721923"/>
 						<string key="objectName">View block 1</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="49695441"/>
+						<reference key="object" ref="743072473"/>
 						<array class="NSMutableArray" key="children"/>
-						<reference key="parent" ref="348031936"/>
+						<reference key="parent" ref="993064612"/>
 						<string key="objectName">image</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">38</int>
-						<reference key="object" ref="303460743"/>
+						<reference key="object" ref="840176003"/>
 						<array class="NSMutableArray" key="children"/>
-						<reference key="parent" ref="348031936"/>
+						<reference key="parent" ref="993064612"/>
 						<string key="objectName">title</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">47</int>
-						<reference key="object" ref="823897577"/>
+						<reference key="object" ref="567567161"/>
 						<array class="NSMutableArray" key="children"/>
-						<reference key="parent" ref="348031936"/>
+						<reference key="parent" ref="993064612"/>
 						<string key="objectName">content</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">60</int>
-						<reference key="object" ref="985641106"/>
+						<reference key="object" ref="661138666"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="59514106"/>
-							<reference ref="778959916"/>
-							<reference ref="159203985"/>
+							<reference ref="147046784"/>
+							<reference ref="141133213"/>
+							<reference ref="889101369"/>
 						</array>
 						<reference key="parent" ref="766721923"/>
 						<string key="objectName">View block 2</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">61</int>
-						<reference key="object" ref="59514106"/>
-						<reference key="parent" ref="985641106"/>
+						<reference key="object" ref="147046784"/>
+						<reference key="parent" ref="661138666"/>
 						<string key="objectName">content</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">62</int>
-						<reference key="object" ref="778959916"/>
-						<reference key="parent" ref="985641106"/>
+						<reference key="object" ref="141133213"/>
+						<reference key="parent" ref="661138666"/>
 						<string key="objectName">title</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">63</int>
-						<reference key="object" ref="159203985"/>
-						<reference key="parent" ref="985641106"/>
+						<reference key="object" ref="889101369"/>
+						<reference key="parent" ref="661138666"/>
 						<string key="objectName">image</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">64</int>
-						<reference key="object" ref="981884910"/>
+						<reference key="object" ref="279761716"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="558440700"/>
-							<reference ref="831119920"/>
-							<reference ref="166218601"/>
+							<reference ref="963201976"/>
+							<reference ref="525215722"/>
+							<reference ref="472097904"/>
 						</array>
 						<reference key="parent" ref="766721923"/>
 						<string key="objectName">View block 3</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">65</int>
-						<reference key="object" ref="558440700"/>
-						<reference key="parent" ref="981884910"/>
+						<reference key="object" ref="963201976"/>
+						<reference key="parent" ref="279761716"/>
 						<string key="objectName">content</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">66</int>
-						<reference key="object" ref="831119920"/>
-						<reference key="parent" ref="981884910"/>
+						<reference key="object" ref="525215722"/>
+						<reference key="parent" ref="279761716"/>
 						<string key="objectName">title</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">67</int>
-						<reference key="object" ref="166218601"/>
-						<reference key="parent" ref="981884910"/>
+						<reference key="object" ref="472097904"/>
+						<reference key="parent" ref="279761716"/>
 						<string key="objectName">image</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">68</int>
-						<reference key="object" ref="170018489"/>
+						<reference key="object" ref="139970422"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="979147839"/>
-							<reference ref="511024500"/>
-							<reference ref="533118957"/>
-							<reference ref="272869499"/>
-							<reference ref="283142202"/>
+							<reference ref="407470401"/>
+							<reference ref="1056200135"/>
+							<reference ref="446181954"/>
+							<reference ref="565108493"/>
+							<reference ref="990274803"/>
 						</array>
 						<reference key="parent" ref="766721923"/>
 						<string key="objectName">Contscts</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">69</int>
-						<reference key="object" ref="979147839"/>
-						<reference key="parent" ref="170018489"/>
+						<reference key="object" ref="407470401"/>
+						<reference key="parent" ref="139970422"/>
 						<string key="objectName">content</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">70</int>
-						<reference key="object" ref="511024500"/>
-						<reference key="parent" ref="170018489"/>
+						<reference key="object" ref="1056200135"/>
+						<reference key="parent" ref="139970422"/>
 						<string key="objectName">title</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">71</int>
-						<reference key="object" ref="533118957"/>
-						<reference key="parent" ref="170018489"/>
+						<reference key="object" ref="446181954"/>
+						<reference key="parent" ref="139970422"/>
 						<string key="objectName">image</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">72</int>
-						<reference key="object" ref="272869499"/>
-						<reference key="parent" ref="170018489"/>
+						<reference key="object" ref="565108493"/>
+						<reference key="parent" ref="139970422"/>
 						<string key="objectName">content</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">73</int>
-						<reference key="object" ref="283142202"/>
-						<reference key="parent" ref="170018489"/>
+						<reference key="object" ref="990274803"/>
+						<reference key="parent" ref="139970422"/>
 						<string key="objectName">content</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">74</int>
-						<reference key="object" ref="350426362"/>
+						<reference key="object" ref="809147438"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="402330719"/>
-							<reference ref="377273096"/>
-							<reference ref="462357731"/>
-							<reference ref="916053591"/>
-							<reference ref="619439394"/>
+							<reference ref="304497467"/>
+							<reference ref="489372891"/>
+							<reference ref="170590948"/>
+							<reference ref="173359304"/>
+							<reference ref="387277328"/>
 						</array>
 						<reference key="parent" ref="766721923"/>
 						<string key="objectName">Links</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">75</int>
-						<reference key="object" ref="402330719"/>
-						<reference key="parent" ref="350426362"/>
+						<reference key="object" ref="304497467"/>
+						<reference key="parent" ref="809147438"/>
 						<string key="objectName">content</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">76</int>
-						<reference key="object" ref="377273096"/>
-						<reference key="parent" ref="350426362"/>
+						<reference key="object" ref="489372891"/>
+						<reference key="parent" ref="809147438"/>
 						<string key="objectName">content</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">77</int>
-						<reference key="object" ref="462357731"/>
-						<reference key="parent" ref="350426362"/>
+						<reference key="object" ref="170590948"/>
+						<reference key="parent" ref="809147438"/>
 						<string key="objectName">image</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">78</int>
-						<reference key="object" ref="916053591"/>
-						<reference key="parent" ref="350426362"/>
+						<reference key="object" ref="173359304"/>
+						<reference key="parent" ref="809147438"/>
 						<string key="objectName">title</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">79</int>
-						<reference key="object" ref="619439394"/>
-						<reference key="parent" ref="350426362"/>
+						<reference key="object" ref="387277328"/>
+						<reference key="parent" ref="809147438"/>
 						<string key="objectName">content</string>
 					</object>
 				</array>
@@ -825,18 +826,22 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="27.CustomClassName">BlockView</string>
 				<string key="27.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="38.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="47.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="60.CustomClassName">BlockView</string>
 				<string key="60.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="61.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="62.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="63.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="64.CustomClassName">BlockView</string>
 				<string key="64.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="65.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="66.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="67.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="68.CustomClassName">BlockView</string>
 				<string key="68.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="69.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="70.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -864,6 +869,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/AboutViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">BlockView</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/BlockView.h</string>
 					</object>
 				</object>
 			</array>
