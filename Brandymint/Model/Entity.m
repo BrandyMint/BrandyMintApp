@@ -8,32 +8,21 @@
 
 #import "Entity.h"
 #import "NSDate+external.h"
-#import "ImageToDataTransformer.h"
 #import "Image.h"
 
 @implementation Entity
 
 @dynamic key;
 
-+ (void)initialize {
-    if (self == [Entity class]) {
-        ImageToDataTransformer *transformer = [[ImageToDataTransformer alloc] init];
-        [NSValueTransformer setValueTransformer:transformer forName:@"ImageToDataTransformer"];
-    }
-}
 
 -(void)setSmartValue:(id) value forKey:(NSString *)key
 {
-    NSLog(@"Set smart value: %@ = %@", key, value);
-
+    //NSLog(@"Set smart value: %@ = %@", key, value);
     if ([value isKindOfClass:[NSNull class]]) {
         [self setValue:nil forKey:key];
         // TODO Определять по типу property, а не названию
     } else if ([key isEqualToString:@"updated_at"]) {
         [self setValue:[NSDate parseDateFromString:value] forKey:key];
-    } else if ([key isEqualToString:@"image_url"]) {
-        Image *image = [Image findOrDownloadByUrl:value withContext:self.managedObjectContext];
-        [self setValue:image forKey:@"image"];
     } else {
         [self setValue:value forKey:key];
     }

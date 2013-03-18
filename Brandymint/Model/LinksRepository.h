@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CWLSynthesizeSingleton.h"
 
-@interface LinksRepository : NSObject
-
+@interface LinksRepository : BaseRepository
+CWL_DECLARE_SINGLETON_FOR_CLASS(LinksRepository)
 @end

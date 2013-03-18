@@ -14,7 +14,7 @@
 
 @property (nonatomic, retain) NSString * content;
 @property (nonatomic, retain) NSString * icon_url;
-@property (nonatomic, retain) UIImage  * icon;
+@property (nonatomic, retain) Image *icon;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * position;
 @property (nonatomic, retain) NSDate * updated_at;

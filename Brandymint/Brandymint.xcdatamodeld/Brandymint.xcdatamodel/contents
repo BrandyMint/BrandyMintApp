@@ -2,12 +2,12 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bloc" representedClassName="Bloc" parentEntity="Entity" syncable="YES">
         <attribute name="content" attributeType="String" syncable="YES"/>
-        <attribute name="icon" attributeType="Transformable" valueTransformerName="ImageToDataTransformer" syncable="YES"/>
         <attribute name="icon_url" attributeType="String" syncable="YES"/>
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="icon" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="bloc" inverseEntity="Image" syncable="YES"/>
         <compoundIndexes>
             <compoundIndex>
                 <index value="key"/>
@@ -16,13 +16,14 @@
     </entity>
     <entity name="Card" representedClassName="Card" parentEntity="Entity" syncable="YES">
         <attribute name="desc" attributeType="String" syncable="YES"/>
+        <attribute name="image_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="subtitle" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="url" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="image" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="card" inverseEntity="Image" syncable="YES"/>
         <compoundIndexes>
             <compoundIndex>
@@ -32,8 +33,9 @@
     </entity>
     <entity name="Entity" representedClassName="Entity" isAbstract="YES" syncable="YES"/>
     <entity name="Image" representedClassName="Image" syncable="YES">
-        <attribute name="data" attributeType="Transformable" valueTransformerName="ImageToDataTransformet" syncable="YES"/>
+        <attribute name="data" attributeType="Transformable" valueTransformerName="ImageToDataTransformer" syncable="YES"/>
         <attribute name="url" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="bloc" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bloc" inverseName="icon" inverseEntity="Bloc" syncable="YES"/>
         <relationship name="card" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Card" inverseName="image" inverseEntity="Card" syncable="YES"/>
         <compoundIndexes>
             <compoundIndex>
@@ -54,10 +56,10 @@
         </compoundIndexes>
     </entity>
     <elements>
-        <element name="Bloc" positionX="-2970" positionY="-4639" width="128" height="148"/>
-        <element name="Card" positionX="-2954" positionY="-4839" width="137" height="178"/>
-        <element name="Link" positionX="-2666" positionY="-4671" width="128" height="118"/>
-        <element name="Image" positionX="-2682" positionY="-4797" width="128" height="88"/>
-        <element name="Entity" positionX="-2801" positionY="-4525" width="128" height="43"/>
+        <element name="Bloc" positionX="-2765" positionY="-4806" width="128" height="148"/>
+        <element name="Card" positionX="-3008" positionY="-4839" width="137" height="193"/>
+        <element name="Entity" positionX="-2799" positionY="-5047" width="128" height="43"/>
+        <element name="Image" positionX="-2826" positionY="-4588" width="128" height="103"/>
+        <element name="Link" positionX="-2628" positionY="-4807" width="128" height="118"/>
     </elements>
 </model>
