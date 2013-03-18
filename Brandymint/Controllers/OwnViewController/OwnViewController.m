@@ -72,7 +72,7 @@
     NSInteger scrollWidth = (NSInteger)self.scrollCards.frame.size.width;
     NSInteger scrollHeight = (NSInteger)self.scrollCards.frame.size.height;
     
-    NSUInteger cardsCount = [CardsRepository sharedRepository].entitiesBuffer.count;
+    NSUInteger cardsCount = [CardsRepository sharedCardsRepository].entitiesBuffer.count;
     
     for(NSUInteger loop = 0; loop < cardsCount; loop++)
     {

@@ -23,9 +23,9 @@
     
     ownViewController = [[OwnViewController alloc] initWithNibName:@"OwnViewController" bundle:[NSBundle mainBundle]];
     
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = ownViewController;
-    [self.window makeKeyAndVisible];
+    window.backgroundColor = [UIColor whiteColor];
+    window.rootViewController = ownViewController;
+    [window makeKeyAndVisible];
     
     //[self showAllFontsInConsole];
     
@@ -132,15 +132,15 @@
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Brandymint.sqlite"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
-        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Brandymint" ofType:@"sqlite"]];
-        NSError* err = nil;
-        
-        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
-            NSLog(@"Oops, could copy preloaded data");
-        }
-    }
+//    
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+//        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Brandymint" ofType:@"sqlite"]];
+//        NSError* err = nil;
+//        
+//        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
+//            NSLog(@"Oops, could copy preloaded data");
+//        }
+//    }
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

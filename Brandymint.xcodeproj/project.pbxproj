@@ -73,6 +73,7 @@
 		7C81923F16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C81923C16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg */; };
 		7C81924416E86D0B00B71598 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C81924216E86D0B00B71598 /* CardViewController.m */; };
 		7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81924316E86D0B00B71598 /* CardViewController.xib */; };
+		8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326873116F73E3B000351BC /* BMCoreTextLabel.m */; };
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
 		8366B4D416F3513E00FE1490 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8366B4D316F3513E00FE1490 /* Entity.m */; };
 		83B2380B16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
@@ -176,6 +177,8 @@
 		7C81924116E86D0B00B71598 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		7C81924216E86D0B00B71598 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		7C81924316E86D0B00B71598 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
+		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
 		8366B4D216F3513E00FE1490 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Model/Entity.h; sourceTree = "<group>"; };
 		8366B4D316F3513E00FE1490 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Model/Entity.m; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 		7C61759C16F1B31400D57594 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8326873016F73E3B000351BC /* BMCoreTextLabel.h */,
+				8326873116F73E3B000351BC /* BMCoreTextLabel.m */,
 				7C61759D16F1B32900D57594 /* NSDate+external.h */,
 				7C61759E16F1B32900D57594 /* NSDate+external.m */,
 				7C80D77016F2ECFF007D5E3B /* UIImage+external.h */,
@@ -670,6 +675,7 @@
 				8366B4D416F3513E00FE1490 /* Entity.m in Sources */,
 				83D5A76C16F38F53007D85AC /* Card.m in Sources */,
 				83D5A76F16F38FE5007D85AC /* Image.m in Sources */,
+				8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
