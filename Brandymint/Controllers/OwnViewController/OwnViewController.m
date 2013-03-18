@@ -53,7 +53,6 @@
     [self.view showDevelopersLogo];
     [self.view showTopLine];
     
-    [[UpdateManager updateManager] updateData];
 }
 
 - (void)didReceiveMemoryWarning

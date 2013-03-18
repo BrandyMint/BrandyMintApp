@@ -71,6 +71,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [[UpdateManager updateManager] updateData];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -132,15 +133,15 @@
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Brandymint.sqlite"];
-//    
-//    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
-//        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Brandymint" ofType:@"sqlite"]];
-//        NSError* err = nil;
-//        
-//        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
-//            NSLog(@"Oops, could copy preloaded data");
-//        }
-//    }
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Brandymint" ofType:@"sqlite"]];
+        NSError* err = nil;
+        
+        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
+            NSLog(@"Oops, could copy preloaded data");
+        }
+    }
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -172,11 +173,11 @@
          If you encounter schema incompatibility errors during development, you can reduce their frequency by:
                 * Simply deleting the existing store:
          */
+        NSLog(@"Core Data Unresolved error %@, %@", error, [error userInfo]);
         
         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
 
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        //abort();
     }    
     
     return _persistentStoreCoordinator;
