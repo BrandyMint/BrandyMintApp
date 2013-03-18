@@ -52,8 +52,7 @@ static UpdateManager *sharedSingleton = NULL;
         [entitiesToDelete removeObjectIdenticalTo:entity];
         
         [entity updateFromDict: entity_dict];
-  
-
+        
     }];
     
     // Удалить все что остались
@@ -88,7 +87,7 @@ static UpdateManager *sharedSingleton = NULL;
                               JSONObjectWithData:responseData
                               options:kNilOptions
                               error:&error];
-    
+
     if (jsonData != nil)
     {
         [self updateEnities:[jsonData objectForKey:@"cards"] withRepo: CardsRepository.sharedCardsRepository];
