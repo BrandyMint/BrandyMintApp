@@ -12,8 +12,7 @@
 
 @implementation BaseRepository
 
-
-@synthesize entitiesBuffer;
+@synthesize entitiesBuffer = _entitiesBuffer;
 
 // http://stackoverflow.com/questions/145154/what-should-my-objective-c-singleton-look-like
 
@@ -102,15 +101,15 @@
     [request setEntity:entityDescriptor];
     
     NSError *error;
-    entitiesBuffer = [context executeFetchRequest:request error:&error];
+    _entitiesBuffer = [context executeFetchRequest:request error:&error];
     
-    if(entitiesBuffer == nil)
+    if(_entitiesBuffer == nil)
     {
         NSLog(@"Error while reading %@", ([error localizedDescription] != nil) ? [error localizedDescription] : @"Unknown Error");
         return nil;
     }
     
-    return entitiesBuffer;
+    return _entitiesBuffer;
 }
 
 -(NSString *) entityName {

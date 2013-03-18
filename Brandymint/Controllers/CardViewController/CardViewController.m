@@ -8,6 +8,7 @@
 
 #import "CardViewController.h"
 #import "UIImage+external.h"
+#import "NMCustomLabel.h"
 
 @interface CardViewController ()
 
@@ -26,9 +27,7 @@
 {
     self = [super initWithNibName:@"CardViewController" bundle:[NSBundle mainBundle]];
     if (self) {
-        
         self.card = srcCard;
-
     }
     return self;
 }
@@ -37,6 +36,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // self.cardDescLabel = [[NMCustomLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+
 }
 
 - (void)didReceiveMemoryWarning
