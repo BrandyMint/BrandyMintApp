@@ -8,6 +8,7 @@
 
 #import "CardViewController.h"
 #import "UIImage+external.h"
+#import "NMCustomLabel.h"
 
 @interface CardViewController ()
 
@@ -26,9 +27,7 @@
 {
     self = [super initWithNibName:@"CardViewController" bundle:[NSBundle mainBundle]];
     if (self) {
-        
         self.card = srcCard;
-
     }
     return self;
 }
@@ -37,6 +36,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // self.cardDescLabel = [[NMCustomLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,16 +57,16 @@
 {
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.cardTitleLabel.font = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
+    self.cardTitleLabel.font    = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
     self.cardSubtitleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:25];
-    self.cardDescLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:20];
-    self.cardLinkLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];
+    self.cardDescLabel.font     = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:20];
+    self.cardLinkLabel.font     = [UIFont fontWithName:@"Ubuntu-Light" size:23];
     
-    self.cardImageView.image = card.image.data;
-    self.cardTitleLabel.text = card.title;
+    self.cardImageView.image    = card.image.data;
+    self.cardTitleLabel.text    = card.title;
     self.cardSubtitleLabel.text = card.subtitle;
-    self.cardDescLabel.text = card.desc;
-    self.cardLinkLabel.text = card.link;
+    self.cardDescLabel.text     = card.desc;
+    self.cardLinkLabel.text     = card.link;
 }
 
 @end
