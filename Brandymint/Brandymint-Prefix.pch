@@ -17,4 +17,5 @@
 #endif
 
 #import "CardsRepository.h"
+#import "BlocsRepository.h"
 #import "UpdateManager.h"
