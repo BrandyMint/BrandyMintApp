@@ -76,6 +76,11 @@
 		81269991E3B6413FBFA658D5 /* libPods-UnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE38750861049C6ACA269DD /* libPods-UnitTests.a */; };
 		8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326873116F73E3B000351BC /* BMCoreTextLabel.m */; };
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
+		835303ED16F865CE009E3A1A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835303EC16F865CE009E3A1A /* CoreText.framework */; };
+		835303EE16F865ED009E3A1A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77816F3A429007D85AC /* MobileCoreServices.framework */; };
+		835303EF16F8662F009E3A1A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */; };
+		835303F016F86648009E3A1A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */; };
+		835303F116F8664D009E3A1A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77816F3A429007D85AC /* MobileCoreServices.framework */; };
 		8362470416F83C44004AAEDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8362470316F83C44004AAEDD /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		8362470516F83E11004AAEDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
 		8366B4D416F3513E00FE1490 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8366B4D316F3513E00FE1490 /* Entity.m */; };
@@ -183,6 +188,7 @@
 		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
+		835303EC16F865CE009E3A1A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		8362470316F83C44004AAEDD /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		8366B4D216F3513E00FE1490 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Model/Entity.h; sourceTree = "<group>"; };
 		8366B4D316F3513E00FE1490 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Model/Entity.m; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835303F116F8664D009E3A1A /* MobileCoreServices.framework in Frameworks */,
+				835303F016F86648009E3A1A /* SystemConfiguration.framework in Frameworks */,
 				7C8191EE16E867A000B71598 /* UIKit.framework in Frameworks */,
 				7C8191F016E867A000B71598 /* Foundation.framework in Frameworks */,
 				7C8191F216E867A000B71598 /* CoreGraphics.framework in Frameworks */,
@@ -224,6 +232,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835303EF16F8662F009E3A1A /* SystemConfiguration.framework in Frameworks */,
+				835303EE16F865ED009E3A1A /* MobileCoreServices.framework in Frameworks */,
+				835303ED16F865CE009E3A1A /* CoreText.framework in Frameworks */,
 				8362470516F83E11004AAEDD /* CoreGraphics.framework in Frameworks */,
 				7C81921116E867A000B71598 /* SenTestingKit.framework in Frameworks */,
 				7C81921216E867A000B71598 /* UIKit.framework in Frameworks */,
@@ -300,6 +311,7 @@
 		7C8191DE16E867A000B71598 = {
 			isa = PBXGroup;
 			children = (
+				835303EC16F865CE009E3A1A /* CoreText.framework */,
 				7C8191F516E867A000B71598 /* Brandymint */,
 				7C81921716E867A000B71598 /* BrandymintTests */,
 				7C8191EC16E867A000B71598 /* Frameworks */,
