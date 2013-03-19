@@ -8,9 +8,11 @@
 
 #import "OwnViewController.h"
 #import "CardViewController.h"
+#import "AboutViewController.h"
 #import "OwnSectorsAnim.h"
 #import "Card.h"
 #import "CardsRepository.h"
+#import "Bloc.h"
 
 //
 //
@@ -28,7 +30,6 @@
 }
 
 @synthesize scrollCards;
-@synthesize backgroundImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,23 +75,35 @@
     
     NSUInteger cardsCount = [CardsRepository sharedCardsRepository].entitiesBuffer.count;
     
-    for(NSUInteger loop = 0; loop < cardsCount; loop++)
+    NSUInteger current_pos = 0;
+    
+    for(NSUInteger loop = 0; loop < cardsCount; loop++, current_pos++)
     {
         Card *card = [[CardsRepository sharedCardsRepository].entitiesBuffer objectAtIndex:loop];
         CardViewController *cardController = [[CardViewController alloc] initCardController:card];
         
-        CGRect frame;
-        frame.origin.x = (loop * cardController.view.frame.size.width);
-        frame.origin.y = 0;
-        frame.size.width = cardController.view.frame.size.width;
-        frame.size.height = cardController.view.frame.size.height;
-        
-        cardController.view.frame = frame;
-        
-        [self.scrollCards addSubview:cardController.view];
+        [self addViewToIndexScrollView:cardController.view position:current_pos];
     }
     
-    scrollCards.contentSize = CGSizeMake(scrollWidth * cardsCount, scrollHeight);
+    NSArray *blocArray = [BlocsRepository sharedBlocsRepository].entitiesBuffer;
+    AboutViewController *aboutController = [[AboutViewController alloc] initAboutController:blocArray];
+    [self addViewToIndexScrollView:aboutController.view position:current_pos];
+    current_pos++;
+
+    scrollCards.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
+}
+
+-(void) addViewToIndexScrollView:(UIView*)view position:(NSUInteger)index
+{
+    CGRect frame;
+    frame.origin.x = (index * view.frame.size.width);
+    frame.origin.y = 0;
+    frame.size.width = view.frame.size.width;
+    frame.size.height = view.frame.size.height;
+    
+    view.frame = frame;
+    
+    [self.scrollCards addSubview:view];
 }
 
 @end
