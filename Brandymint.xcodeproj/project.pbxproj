@@ -181,7 +181,7 @@
 		7C81920316E867A000B71598 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7C81920516E867A000B71598 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7C81920816E867A000B71598 /* Brandymint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Brandymint.xcdatamodel; sourceTree = "<group>"; };
-		7C81920F16E867A000B71598 /* BrandymintTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BrandymintTests.octest; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C81920F16E867A000B71598 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C81921016E867A000B71598 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7C81921916E867A000B71598 /* BrandymintTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrandymintTests-Info.plist"; sourceTree = "<group>"; };
 		7C81921B16E867A000B71598 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -363,7 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				7C8191E916E867A000B71598 /* Brandymint.app */,
-				7C81920F16E867A000B71598 /* BrandymintTests.octest */,
+				7C81920F16E867A000B71598 /* UnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -577,7 +577,7 @@
 			);
 			name = UnitTests;
 			productName = BrandymintTests;
-			productReference = 7C81920F16E867A000B71598 /* BrandymintTests.octest */;
+			productReference = 7C81920F16E867A000B71598 /* UnitTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
