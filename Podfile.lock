@@ -10,15 +10,25 @@ DEPENDENCIES:
   - GHUnitIOS
   - NMCustomLabel (from `git://github.com/BrandyMint/NMCustomLabel.git`, tag `0.1.1`)
 
-EXTERNAL SOURCES:
-  NMCustomLabel:
-    :git: git://github.com/BrandyMint/NMCustomLabel.git
-    :tag: 0.1.1
+COCOAPODS: 0.16.4
 
-SPEC CHECKSUMS:
-  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+SPEC CHECKSUMS: 
   CWLSynthesizeSingleton: 50ade66f768e4518c9fab5d16faec285cbf4c086
   GHUnitIOS: bf149b2c44084eee2785ce4ac3675c3a699e509d
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
   NMCustomLabel: 20f5c45e29013a2a77b3d7fac63bc9a8c25c680e
 
-COCOAPODS: 0.17.0.rc5
+PODS: 
+- AFNetworking (1.1.0)
+- CWLSynthesizeSingleton (0.0.1)
+- NMCustomLabel (0.1.1)
+
+DEPENDENCIES: 
+- AFNetworking
+- CWLSynthesizeSingleton
+- NMCustomLabel (from `git://github.com/BrandyMint/NMCustomLabel.git', tag `0.1.1')
+
+EXTERNAL SOURCES: 
+  NMCustomLabel: 
+    :tag: 0.1.1
+    :git: git://github.com/BrandyMint/NMCustomLabel.git
