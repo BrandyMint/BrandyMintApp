@@ -88,8 +88,6 @@
 		83C5E34216F3067100700A8C /* BaseRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E34116F3067100700A8C /* BaseRepository.m */; };
 		83D5A76C16F38F53007D85AC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5A76B16F38F53007D85AC /* Card.m */; };
 		83D5A76F16F38FE5007D85AC /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5A76E16F38FE5007D85AC /* Image.m */; };
-		83D5A77716F3A41F007D85AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */; };
-		83D5A77916F3A429007D85AC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77816F3A429007D85AC /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,8 +212,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83D5A77916F3A429007D85AC /* MobileCoreServices.framework in Frameworks */,
-				83D5A77716F3A41F007D85AC /* SystemConfiguration.framework in Frameworks */,
 				7C8191EE16E867A000B71598 /* UIKit.framework in Frameworks */,
 				7C8191F016E867A000B71598 /* Foundation.framework in Frameworks */,
 				7C8191F216E867A000B71598 /* CoreGraphics.framework in Frameworks */,
