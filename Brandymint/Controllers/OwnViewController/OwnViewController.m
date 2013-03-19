@@ -54,7 +54,6 @@
     [self.view showBrandymintLogo];
     [self.view showDevelopersLogo];
     [self.view showTopLine];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,8 +84,7 @@
         [self addViewToIndexScrollView:cardController.view position:current_pos];
     }
     
-    NSArray *blocArray = [BlocsRepository sharedBlocsRepository].entitiesBuffer;
-    AboutViewController *aboutController = [[AboutViewController alloc] initAboutController:blocArray];
+    AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
     [self addViewToIndexScrollView:aboutController.view position:current_pos];
     current_pos++;
 

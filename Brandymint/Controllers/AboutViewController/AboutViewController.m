@@ -15,15 +15,11 @@
 
 @implementation AboutViewController
 
-@synthesize blocs;
-
-- (id)initAboutController:(NSArray*)blocArray
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        self.blocs = blocArray;
-        
+        // init
     }
     return self;
 }
@@ -49,12 +45,16 @@
 {
     self.view.backgroundColor = [UIColor clearColor];
     
-    for(NSInteger loop = 0; loop < blocs.count; loop++)
+    NSUInteger blocsCount = [BlocsRepository sharedBlocsRepository].entitiesBuffer.count;
+    
+    for(NSInteger loop = 0; loop < blocsCount; loop++)
     {
-        Bloc *bloc = [blocs objectAtIndex: (NSUInteger)loop ];
+        Bloc *bloc = [[BlocsRepository sharedBlocsRepository].entitiesBuffer objectAtIndex: (NSUInteger)loop ];
         
         BlockView * blockView = (BlockView*)[self.view viewWithTag: loop+1 ];
-        [blockView fillView:bloc];
+        if([blockView isKindOfClass:[BlockView class]])  {
+            [blockView fillView:bloc];
+        }
     }
 }
 

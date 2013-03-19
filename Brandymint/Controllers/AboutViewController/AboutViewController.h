@@ -10,12 +10,5 @@
 #import "Bloc.h"
 
 @interface AboutViewController : UIViewController
-{
-    NSArray *blocs;
-}
-
-@property (nonatomic, retain) NSArray *blocs;
-
-- (id)initAboutController:(NSArray*)blocArray;
 
 @end
