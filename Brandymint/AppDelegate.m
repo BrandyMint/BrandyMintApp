@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "UpdateManager.h"
+
 
 @implementation AppDelegate
 

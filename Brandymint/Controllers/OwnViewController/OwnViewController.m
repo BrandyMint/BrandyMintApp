@@ -10,6 +10,7 @@
 #import "CardViewController.h"
 #import "OwnSectorsAnim.h"
 #import "Card.h"
+#import "CardsRepository.h"
 
 //
 //

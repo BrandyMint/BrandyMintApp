@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-
+#import "Entity.h"
+#import "Image.h"
 
 @interface Bloc : Entity
 

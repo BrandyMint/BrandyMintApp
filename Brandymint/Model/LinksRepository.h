@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CWLSynthesizeSingleton.h"
+#import "BaseRepository.h"
 
 @interface LinksRepository : BaseRepository
 CWL_DECLARE_SINGLETON_FOR_CLASS(LinksRepository)
