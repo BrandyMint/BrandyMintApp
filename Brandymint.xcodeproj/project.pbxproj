@@ -75,6 +75,8 @@
 		7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81924316E86D0B00B71598 /* CardViewController.xib */; };
 		8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326873116F73E3B000351BC /* BMCoreTextLabel.m */; };
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
+		8362470416F83C44004AAEDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8362470316F83C44004AAEDD /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		8362470516F83E11004AAEDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
 		8366B4D416F3513E00FE1490 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8366B4D316F3513E00FE1490 /* Entity.m */; };
 		83B2380B16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
 		83B2380C16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
@@ -180,6 +182,7 @@
 		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
+		8362470316F83C44004AAEDD /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		8366B4D216F3513E00FE1490 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Model/Entity.h; sourceTree = "<group>"; };
 		8366B4D316F3513E00FE1490 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Model/Entity.m; sourceTree = "<group>"; };
 		83B2380916EF92E900AA4E46 /* ImageToDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageToDataTransformer.h; sourceTree = "<group>"; };
@@ -222,10 +225,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8362470516F83E11004AAEDD /* CoreGraphics.framework in Frameworks */,
 				7C81921116E867A000B71598 /* SenTestingKit.framework in Frameworks */,
 				7C81921216E867A000B71598 /* UIKit.framework in Frameworks */,
 				7C81921316E867A000B71598 /* Foundation.framework in Frameworks */,
 				7C81921416E867A000B71598 /* CoreData.framework in Frameworks */,
+				8362470416F83C44004AAEDD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +304,6 @@
 				7C81921716E867A000B71598 /* BrandymintTests */,
 				7C8191EC16E867A000B71598 /* Frameworks */,
 				7C8191EA16E867A000B71598 /* Products */,
-				EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,6 +327,8 @@
 				7C8191F316E867A000B71598 /* CoreData.framework */,
 				7C81921016E867A000B71598 /* SenTestingKit.framework */,
 				3FDD8401E13B4A509E9DBC6C /* libPods.a */,
+				8362470316F83C44004AAEDD /* libPods.a */,
+				EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -824,6 +830,7 @@
 		};
 		7C81922616E867A000B71598 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Brandymint.app/Brandymint";
 				FRAMEWORK_SEARCH_PATHS = (
