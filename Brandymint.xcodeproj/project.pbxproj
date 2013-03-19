@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5916F885D500B5FF97 /* AboutViewController.m */; };
+		18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */; };
+		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
+		18CE3B6416F885D500B5FF97 /* LinksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B6016F885D500B5FF97 /* LinksView.m */; };
 		7B0DBF926A2F48D9BC6513C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDD8401E13B4A509E9DBC6C /* libPods.a */; };
 		7C01D50516EE0B70004216EC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4EF16EE0B70004216EC /* background.jpg */; };
 		7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F016EE0B70004216EC /* background@2x.jpg */; };
@@ -107,6 +111,13 @@
 
 /* Begin PBXFileReference section */
 		0FE38750861049C6ACA269DD /* libPods-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CE3B5816F885D500B5FF97 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		18CE3B5916F885D500B5FF97 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		18CE3B5C16F885D500B5FF97 /* BlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockView.h; sourceTree = "<group>"; };
+		18CE3B5D16F885D500B5FF97 /* BlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockView.m; sourceTree = "<group>"; };
+		18CE3B5F16F885D500B5FF97 /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinksView.h; sourceTree = "<group>"; };
+		18CE3B6016F885D500B5FF97 /* LinksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinksView.m; sourceTree = "<group>"; };
 		1B7E7B0A12FB44ADA56C1FDF /* Pods-UnitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.xcconfig"; path = "Pods/Pods-UnitTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3FDD8401E13B4A509E9DBC6C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C01D4EF16EE0B70004216EC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -248,6 +259,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18CE3B5716F885D500B5FF97 /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18CE3B5816F885D500B5FF97 /* AboutViewController.h */,
+				18CE3B5916F885D500B5FF97 /* AboutViewController.m */,
+				18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */,
+			);
+			path = AboutViewController;
+			sourceTree = "<group>";
+		};
+		18CE3B5B16F885D500B5FF97 /* BlockView */ = {
+			isa = PBXGroup;
+			children = (
+				18CE3B5C16F885D500B5FF97 /* BlockView.h */,
+				18CE3B5D16F885D500B5FF97 /* BlockView.m */,
+			);
+			path = BlockView;
+			sourceTree = "<group>";
+		};
+		18CE3B5E16F885D500B5FF97 /* LinksView */ = {
+			isa = PBXGroup;
+			children = (
+				18CE3B5F16F885D500B5FF97 /* LinksView.h */,
+				18CE3B6016F885D500B5FF97 /* LinksView.m */,
+			);
+			path = LinksView;
+			sourceTree = "<group>";
+		};
 		7C19C05616F0AC6B003D6CDE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +436,9 @@
 		7C81922816E867FE00B71598 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				18CE3B5716F885D500B5FF97 /* AboutViewController */,
+				18CE3B5B16F885D500B5FF97 /* BlockView */,
+				18CE3B5E16F885D500B5FF97 /* LinksView */,
 				7C81922A16E8684100B71598 /* OwnViewController */,
 				7C81924016E86CF600B71598 /* CardViewController */,
 			);
@@ -616,6 +658,7 @@
 				7C80D78C16F2FBD1007D5E3B /* UbuntuMono-R.ttf in Resources */,
 				7C80D78D16F2FBD1007D5E3B /* UbuntuMono-RI.ttf in Resources */,
 				833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */,
+				18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +754,9 @@
 				83D5A76C16F38F53007D85AC /* Card.m in Sources */,
 				83D5A76F16F38FE5007D85AC /* Image.m in Sources */,
 				8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */,
+				18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */,
+				18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */,
+				18CE3B6416F885D500B5FF97 /* LinksView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
