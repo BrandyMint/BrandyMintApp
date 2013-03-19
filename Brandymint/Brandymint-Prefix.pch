@@ -18,4 +18,5 @@
 
 #import "CardsRepository.h"
 #import "BlocsRepository.h"
+#import "LinksRepository.h"
 #import "UpdateManager.h"

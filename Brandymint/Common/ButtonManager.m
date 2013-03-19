@@ -15,10 +15,12 @@
     UIButton* anotherButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [anotherButton setTitle:text forState:UIControlStateNormal];
     
-    anotherButton.titleLabel.font = [UIFont boldSystemFontOfSize:12];
-    anotherButton.titleLabel.textAlignment = UITextAlignmentCenter;
+    anotherButton.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:32];
+    anotherButton.titleLabel.textAlignment = UITextAlignmentLeft;
     anotherButton.titleLabel.shadowColor = [UIColor blackColor];
     anotherButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
+    
+    anotherButton.backgroundColor = [UIColor clearColor];
     
     return anotherButton;
 }

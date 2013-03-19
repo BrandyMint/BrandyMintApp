@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18CE3B5616F86B3E00B5FF97 /* LinksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5516F86B3E00B5FF97 /* LinksView.m */; };
 		18D721C116F73422001A1984 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D721BF16F73422001A1984 /* AboutViewController.m */; };
 		18D721C216F73422001A1984 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D721C016F73422001A1984 /* AboutViewController.xib */; };
 		18D721C616F75467001A1984 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D721C516F75467001A1984 /* BlockView.m */; };
@@ -103,6 +104,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18CE3B5416F86B3E00B5FF97 /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinksView.h; path = Brandymint/Controllers/LinksView/LinksView.h; sourceTree = SOURCE_ROOT; };
+		18CE3B5516F86B3E00B5FF97 /* LinksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinksView.m; path = Brandymint/Controllers/LinksView/LinksView.m; sourceTree = SOURCE_ROOT; };
 		18D721BE16F73422001A1984 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		18D721BF16F73422001A1984 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		18D721C016F73422001A1984 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -240,6 +243,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18CE3B5316F86AE700B5FF97 /* LinksView */ = {
+			isa = PBXGroup;
+			children = (
+				18CE3B5416F86B3E00B5FF97 /* LinksView.h */,
+				18CE3B5516F86B3E00B5FF97 /* LinksView.m */,
+			);
+			name = LinksView;
+			path = LinksViewController;
+			sourceTree = "<group>";
+		};
 		18D721BD16F733F9001A1984 /* AboutViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +417,7 @@
 		7C81922816E867FE00B71598 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				18CE3B5316F86AE700B5FF97 /* LinksView */,
 				18D721C316F75454001A1984 /* BlockView */,
 				18D721BD16F733F9001A1984 /* AboutViewController */,
 				7C81922A16E8684100B71598 /* OwnViewController */,
@@ -708,6 +722,7 @@
 				18D721C116F73422001A1984 /* AboutViewController.m in Sources */,
 				18D721C616F75467001A1984 /* BlockView.m in Sources */,
 				18D721CA16F83A33001A1984 /* ButtonManager.m in Sources */,
+				18CE3B5616F86B3E00B5FF97 /* LinksView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

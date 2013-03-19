@@ -8,6 +8,7 @@
 
 #import "AboutViewController.h"
 #import "BlockView.h"
+#import "LinksView.h"
 
 @interface AboutViewController ()
 
@@ -32,12 +33,10 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
@@ -57,8 +56,5 @@
         }
     }
 }
-
-
-
 
 @end

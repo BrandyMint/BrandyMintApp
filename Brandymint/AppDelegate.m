@@ -12,6 +12,7 @@
 
 @implementation AppDelegate
 
+@synthesize window;
 @synthesize ownViewController;
 
 @synthesize managedObjectContext = _managedObjectContext;

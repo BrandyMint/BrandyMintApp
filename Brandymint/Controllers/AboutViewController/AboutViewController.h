@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Bloc.h"
+#import "Link.h"
 
 @interface AboutViewController : UIViewController
 
