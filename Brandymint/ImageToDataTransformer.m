@@ -36,3 +36,4 @@
 // https://developer.apple.com/library/ios/#samplecode/PhotoLocations/Listings/Classes_UIImageToDataTransformer_m.html#//apple_ref/doc/uid/DTS40008909-Classes_UIImageToDataTransformer_m-DontLinkElementID_14
 // http://petermcintyre.com/topics/uiimage-in-core-data/
 // http://stackoverflow.com/questions/9383682/trouble-with-core-data-transformable-attributes-for-images
+

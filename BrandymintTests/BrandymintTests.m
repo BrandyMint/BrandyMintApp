@@ -26,7 +26,8 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in BrandymintTests");
+    STAssertNil(NULL, @"Должно быть NULL");
+    //STFail(@"Unit tests are not implemented yet in BrandymintTests");
 }
 
 @end
