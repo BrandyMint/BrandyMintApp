@@ -27,7 +27,7 @@
         rootView = mainView;
         aboveView = topView;
         
-        [self showAboutView];
+        //[self showAboutView];
     }
     return self;
 }
@@ -66,12 +66,42 @@
 
 -(void) showAboutView
 {
+    CGRect aboutViewFrame = self.view.frame;
+    aboutViewFrame.origin.y = self.view.frame.size.height;
+    self.view.frame = aboutViewFrame;
+    
     [rootView insertSubview:self.view aboveSubview:aboveView];
+    
+    [UIView animateWithDuration:0.2
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         CGRect rect = aboutViewFrame;
+                         rect.origin.y = 0;
+                         self.view.frame = rect;
+                     }
+                     completion:^(BOOL finished){
+                        //
+                     }];
 }
 
 -(void) hideAboutView
 {
-    [self.view removeFromSuperview];
+    CGRect aboutViewFrame = self.view.frame;
+    
+    [rootView insertSubview:self.view aboveSubview:aboveView];
+    
+    [UIView animateWithDuration:0.2
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         CGRect rect = aboutViewFrame;
+                         rect.origin.y = aboutViewFrame.size.height;
+                         self.view.frame = rect;
+                     }
+                     completion:^(BOOL finished){
+                         [self.view removeFromSuperview];
+                     }];
 }
 
 @end
