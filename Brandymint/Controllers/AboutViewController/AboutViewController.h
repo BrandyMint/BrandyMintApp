@@ -12,4 +12,9 @@
 
 @interface AboutViewController : UIViewController
 
+- (id)initWithView:(UIView*)mainView above:(UIView*)topView;
+
+-(void) showAboutView;
+-(void) hideAboutView;
+
 @end
