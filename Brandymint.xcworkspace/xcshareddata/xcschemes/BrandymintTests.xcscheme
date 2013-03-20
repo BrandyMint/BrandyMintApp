@@ -18,11 +18,20 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C81920E16E867A000B71598"
                BuildableName = "UnitTests.octest"
-               BlueprintName = "UnitTests"
+               BlueprintName = "LogicTests"
                ReferencedContainer = "container:Brandymint.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7C8191E816E867A000B71598"
+            BuildableName = "Brandymint.app"
+            BlueprintName = "Brandymint"
+            ReferencedContainer = "container:Brandymint.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -33,6 +42,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7C8191E816E867A000B71598"
+            BuildableName = "Brandymint.app"
+            BlueprintName = "Brandymint"
+            ReferencedContainer = "container:Brandymint.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

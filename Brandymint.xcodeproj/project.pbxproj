@@ -181,7 +181,7 @@
 		7C81920316E867A000B71598 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7C81920516E867A000B71598 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7C81920816E867A000B71598 /* Brandymint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Brandymint.xcdatamodel; sourceTree = "<group>"; };
-		7C81920F16E867A000B71598 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C81920F16E867A000B71598 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C81921016E867A000B71598 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7C81921916E867A000B71598 /* BrandymintTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrandymintTests-Info.plist"; sourceTree = "<group>"; };
 		7C81921B16E867A000B71598 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -366,7 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				7C8191E916E867A000B71598 /* Brandymint.app */,
-				7C81920F16E867A000B71598 /* UnitTests.octest */,
+				7C81920F16E867A000B71598 /* LogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -564,9 +564,9 @@
 			productReference = 7C8191E916E867A000B71598 /* Brandymint.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7C81920E16E867A000B71598 /* UnitTests */ = {
+		7C81920E16E867A000B71598 /* LogicTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C81922516E867A000B71598 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildConfigurationList = 7C81922516E867A000B71598 /* Build configuration list for PBXNativeTarget "LogicTests" */;
 			buildPhases = (
 				7C81920A16E867A000B71598 /* Sources */,
 				7C81920B16E867A000B71598 /* Frameworks */,
@@ -579,9 +579,9 @@
 			dependencies = (
 				7C81921616E867A000B71598 /* PBXTargetDependency */,
 			);
-			name = UnitTests;
+			name = LogicTests;
 			productName = BrandymintTests;
-			productReference = 7C81920F16E867A000B71598 /* UnitTests.octest */;
+			productReference = 7C81920F16E867A000B71598 /* LogicTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -606,7 +606,7 @@
 			projectRoot = "";
 			targets = (
 				7C8191E816E867A000B71598 /* Brandymint */,
-				7C81920E16E867A000B71598 /* UnitTests */,
+				7C81920E16E867A000B71598 /* LogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -917,6 +917,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				INFOPLIST_FILE = "Brandymint/Brandymint-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C92684D1-5DDC-4AF7-ACFF-FE822905D4D0";
 				WRAPPER_EXTENSION = app;
@@ -962,6 +963,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Brandymint/Brandymint-Prefix.pch";
 				INFOPLIST_FILE = "BrandymintTests/BrandymintTests-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1009,7 +1011,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C81922516E867A000B71598 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+		7C81922516E867A000B71598 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C81922616E867A000B71598 /* Debug */,
