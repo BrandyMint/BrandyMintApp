@@ -8,15 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-// оффсет чего?
-#define OFFSET_X    70
-#define OFFSET_Y    50
-
 @interface UIView (OwnSectorsAnim)
 
 -(void) showBrandymintLogo;
 -(void) showDevelopersLogo;
 -(void) showTopLine;
+
 -(void) showBottomLine;
+-(void) hideBottomLine:(void(^)(BOOL finished))finishBlock;
 
 @end

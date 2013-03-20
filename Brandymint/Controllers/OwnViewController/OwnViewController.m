@@ -84,7 +84,6 @@
     /*AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
     [self addViewToIndexScrollView:aboutController.view position:current_pos];
     current_pos++;*/
-    
     scrollCards.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
 }
 
@@ -108,15 +107,29 @@
     UIButton *cloudBtn = (UIButton*)sender;
     
     if(aboutController == nil)  {
-        self.scrollCards.hidden = YES;
+        cloudBtn.highlighted = YES;
         
-        aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
+        self.scrollCards.alpha = 0.0f;
+        
+        [self.view hideBottomLine:^(BOOL finished)  {
+           aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
+            
+            [aboutController showAboutView];
+        }];
     }
     else    {
-        self.scrollCards.hidden = NO;
+        cloudBtn.highlighted = NO;
+        
+        self.scrollCards.alpha = 0.0f;
         
         [aboutController hideAboutView];
         aboutController = nil;
+        
+        [UIView animateWithDuration:0.4 animations:^(void)  {
+            self.scrollCards.alpha = 1.0f;
+        }];
+        
+        [self.view showBottomLine];
     }
 }
 
