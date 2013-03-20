@@ -10,10 +10,10 @@
 #import "Entity.h"
 
 @interface BaseRepository : NSObject
+{
+    NSArray *_entitiesBuffer;
+}
 
-@property (retain, nonatomic, readonly) NSArray *entitiesBuffer;
-
--(NSManagedObjectContext*) managerContext;
 -(BOOL)saveData;
 -(NSArray*) getAllEntities;
 

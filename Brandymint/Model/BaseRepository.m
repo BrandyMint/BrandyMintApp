@@ -12,31 +12,23 @@
 
 @implementation BaseRepository
 
-@synthesize entitiesBuffer = _entitiesBuffer;
-
 // http://stackoverflow.com/questions/145154/what-should-my-objective-c-singleton-look-like
 
-
--(id) init
+-(void) showAlertWithError:(NSError *)error
 {
-    self = [super init];
-    if(self)
-    {
-        [self getAllEntities];
-    }
-    return self;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:[error localizedDescription]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
-#pragma mark -
-#pragma mark Get database manager context
 -(NSManagedObjectContext*) managerContext
 {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     return [appDelegate managedObjectContext];
 }
 
-#pragma mark -
-#pragma mark Save context
 - (BOOL)saveData {
     NSError *error;
     if (![[self managerContext] save:&error]) {
@@ -85,7 +77,54 @@
     return YES;
 }
 
--(NSArray*) getAllEntities
+
+-(NSArray*)entitiesBuffer {
+    
+    [self loadData];
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName: self.entityName];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"position" ascending:NO];
+    fetchRequest.sortDescriptors = @[descriptor];
+    
+    // Setup fetched results
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                                               managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext
+                                                                                                 sectionNameKeyPath:nil
+                                                                                                          cacheName:nil];
+    //[fetchedResultsController setDelegate:self];
+    NSError *error = nil;
+    BOOL fetchSuccessful = [fetchedResultsController performFetch:&error];
+    NSLog(@"Fetched count %lu", (unsigned long)[[fetchedResultsController fetchedObjects] count]);
+    //NSAssert([[fetchedResultsController fetchedObjects] count], @"Seeding didn't work...");
+    if (! fetchSuccessful) {
+        [self showAlertWithError: error];
+    }
+    
+    return  [fetchedResultsController fetchedObjects];
+}
+
+- (void)loadData
+{
+    // Load the object model via RestKit
+    [[RKObjectManager sharedManager] getObjectsAtPath:self.restPath parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        RKLogInfo(@"Load complete: Table should refresh...");
+        
+        //[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"key"];
+        //[[NSUserDefaults standardUserDefaults] synchronize];
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        RKLogError(@"Load failed with error: %@", error);
+        
+        [self showAlertWithError: error];
+    }];
+}
+
+-(NSString*) restPath
+{
+    return [[self.entityName lowercaseString] stringByAppendingString:@"s"];
+}
+
+
+-(NSArray*) getAllEntities_old
 {
     NSManagedObjectContext *context = [self managerContext];
     

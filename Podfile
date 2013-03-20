@@ -8,5 +8,5 @@ target :UnitTests, :exclusive => true do
    pod 'GHUnitIOS'
 end
 
-#pod 'RestKit', '0.10.1'
+pod 'RestKit'
 #pod 'OHAttributedLabel'
