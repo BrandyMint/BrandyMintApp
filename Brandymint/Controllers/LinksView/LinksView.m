@@ -27,11 +27,9 @@
 
 -(void) layoutSubviews
 {
-    int loop = 0;
-    
     for (Link *link in [[LinksRepository sharedLinksRepository] entitiesBuffer])
     {
-        UIButton * btnLink = (UIButton*)[buttonsContainer viewWithTag: ++loop ];
+        UIButton * btnLink = (UIButton*)[buttonsContainer viewWithTag: link.position.integerValue ];
         if([btnLink isKindOfClass:[UIButton class]])  {
             
             [btnLink setTitle:link.title forState:UIControlStateNormal];

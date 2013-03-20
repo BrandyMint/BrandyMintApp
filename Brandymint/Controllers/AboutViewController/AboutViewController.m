@@ -50,16 +50,12 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     self.view.backgroundColor = [UIColor clearColor];
-    
-    NSUInteger blocsCount = [BlocsRepository sharedBlocsRepository].entitiesBuffer.count;
-    
-    for(NSInteger loop = 0; loop < blocsCount; loop++)
+
+    for (Bloc *bloc in [[BlocsRepository sharedBlocsRepository] entitiesBuffer])
     {
-        Bloc *bloc = [[BlocsRepository sharedBlocsRepository].entitiesBuffer objectAtIndex: (NSUInteger)loop ];
-        
-        BlockView * blockView = (BlockView*)[self.view viewWithTag: loop+1 ];
+        BlockView * blockView = (BlockView*)[self.view viewWithTag: bloc.position.integerValue ];
         if([blockView isKindOfClass:[BlockView class]])  {
-            [blockView fillView:bloc];
+            [blockView fillView: bloc];
         }
     }
 }
