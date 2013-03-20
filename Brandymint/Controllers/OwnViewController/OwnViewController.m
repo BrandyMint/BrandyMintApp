@@ -84,7 +84,6 @@
     /*AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
     [self addViewToIndexScrollView:aboutController.view position:current_pos];
     current_pos++;*/
-    
     scrollCards.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
 }
 
