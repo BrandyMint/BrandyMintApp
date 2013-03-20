@@ -12,6 +12,7 @@
 
 @interface Link : Entity
 
+@property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) NSNumber * position;

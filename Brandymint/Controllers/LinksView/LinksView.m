@@ -27,13 +27,11 @@
 
 -(void) layoutSubviews
 {
-    NSUInteger linksCount = [LinksRepository sharedLinksRepository].entitiesBuffer.count;
-
-    for(NSInteger loop = 0; loop < linksCount; loop++)
+    int loop = 0;
+    
+    for (Link *link in [[LinksRepository sharedLinksRepository] entitiesBuffer])
     {
-        Link *link = [[LinksRepository sharedLinksRepository].entitiesBuffer objectAtIndex: (NSUInteger)loop ];
-        
-        UIButton * btnLink = (UIButton*)[buttonsContainer viewWithTag: loop+1 ];
+        UIButton * btnLink = (UIButton*)[buttonsContainer viewWithTag: ++loop ];
         if([btnLink isKindOfClass:[UIButton class]])  {
             
             [btnLink setTitle:link.title forState:UIControlStateNormal];

@@ -72,22 +72,19 @@
     NSInteger scrollWidth = (NSInteger)self.scrollCards.frame.size.width;
     NSInteger scrollHeight = (NSInteger)self.scrollCards.frame.size.height;
     
-    NSUInteger cardsCount = [CardsRepository sharedCardsRepository].entitiesBuffer.count;
+    unsigned int current_pos = 0;
     
-    NSUInteger current_pos = 0;
-    
-    for(NSUInteger loop = 0; loop < cardsCount; loop++, current_pos++)
+    for (Card *card in [[CardsRepository sharedCardsRepository] entitiesBuffer])
     {
-        Card *card = [[CardsRepository sharedCardsRepository].entitiesBuffer objectAtIndex:loop];
         CardViewController *cardController = [[CardViewController alloc] initCardController:card];
         
-        [self addViewToIndexScrollView:cardController.view position:current_pos];
+        [self addViewToIndexScrollView:cardController.view position:current_pos++];
     }
     
     AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
     [self addViewToIndexScrollView:aboutController.view position:current_pos];
     current_pos++;
-
+    
     scrollCards.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
 }
 

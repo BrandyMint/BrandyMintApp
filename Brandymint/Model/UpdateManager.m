@@ -40,20 +40,21 @@ static UpdateManager *sharedSingleton = NULL;
 }
 
 
--(void) updateEnities:(id)entities withRepo:(BaseRepository*)repo
+-(void) updateEnities:(NSArray *)entities withRepo:(BaseRepository*)repo
 {
     
     NSMutableArray *entitiesToDelete = [[NSMutableArray alloc]init];
+    [repo getAllEntities];
     [entitiesToDelete addObjectsFromArray: repo.entitiesBuffer];
     
-    [entities enumerateObjectsUsingBlock:^(id entity_dict, NSUInteger idx, BOOL *stop) {
+    for (NSDictionary *entity_dict in entities) {
         Entity *entity = [repo findOrCreateEntityByKey: [entity_dict objectForKey:@"key"]];
         
         [entitiesToDelete removeObjectIdenticalTo:entity];
         
         [entity updateFromDict: entity_dict];
         
-    }];
+    };
     
     // Удалить все что остались
     for (Entity *entity in entitiesToDelete) {

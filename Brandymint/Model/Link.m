@@ -11,6 +11,7 @@
 
 @implementation Link
 
+@dynamic key;
 @dynamic title;
 @dynamic url;
 @dynamic position;
