@@ -8,6 +8,11 @@
 
 #import "OwnSectorsAnim.h"
 
+const int TAG_BOTTOM_LINE = 100;
+
+const int  OFFSET_X_FROM_LEFT_SIDE = 70;
+const int  OFFSET_Y_FROM_TOP_SIDE = 50;
+
 @implementation UIView (OwnSectorsAnim)
 
 -(void) showBrandymintLogo
@@ -16,8 +21,8 @@
     UIImageView *logo = [[UIImageView alloc] initWithImage:imgLogo];
     logo.alpha = 0.0;
     CGRect rc = logo.frame;
-    rc.origin.x = OFFSET_X;
-    rc.origin.y = OFFSET_Y;
+    rc.origin.x = OFFSET_X_FROM_LEFT_SIDE;
+    rc.origin.y = OFFSET_Y_FROM_TOP_SIDE;
     logo.frame = rc;
     [self insertSubview:logo atIndex:1];
     
@@ -43,7 +48,7 @@
     devLabel.text = @"DEVELOPERS";
     [devLabel sizeToFit];
     devLabel.alpha = 0.0;
-    devLabel.frame = CGRectMake(OFFSET_X + imgLogo.size.width + 10, (OFFSET_Y + imgLogo.size.height) - devLabel.frame.size.height - 3, devLabel.frame.size.width, devLabel.frame.size.height);
+    devLabel.frame = CGRectMake(OFFSET_X_FROM_LEFT_SIDE + imgLogo.size.width + 10, (OFFSET_Y_FROM_TOP_SIDE + imgLogo.size.height) - devLabel.frame.size.height - 3, devLabel.frame.size.width, devLabel.frame.size.height);
     [self insertSubview:devLabel atIndex:1];
     
     [UIView animateWithDuration:1.0
@@ -72,7 +77,7 @@
     line.frame = rc;
     
     CGRect rcEnd = rc;
-    rcEnd.size.width = self.frame.size.height - OFFSET_X - rc.origin.x;
+    rcEnd.size.width = self.frame.size.height - OFFSET_X_FROM_LEFT_SIDE - rc.origin.x;
     
     [UIView animateWithDuration:0.7
                           delay:0.1
@@ -90,25 +95,51 @@
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0,0, 1,1)];
     line.backgroundColor = [UIColor whiteColor];
     line.alpha = 0.6f;
+    line.tag = TAG_BOTTOM_LINE;
     [self insertSubview:line atIndex:1];
     
     CGRect rc = line.frame;
-    rc.origin.x = self.frame.size.height - OFFSET_X - rc.origin.x;
-    rc.origin.y = self.frame.size.width - OFFSET_Y;
+    rc.origin.x = self.frame.size.height - OFFSET_X_FROM_LEFT_SIDE - rc.origin.x;
+    rc.origin.y = self.frame.size.width - OFFSET_Y_FROM_TOP_SIDE;
     line.frame = rc;
     
-    [UIView animateWithDuration:0.7
+    [UIView animateWithDuration:0.5
                           delay:0.0
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          CGRect rcEnd = rc;
-                         rcEnd.origin.x = OFFSET_X;
-                         rcEnd.size.width = self.frame.size.height - OFFSET_X*2;
+                         rcEnd.origin.x = OFFSET_X_FROM_LEFT_SIDE;
+                         rcEnd.size.width = self.frame.size.height - OFFSET_Y_FROM_TOP_SIDE*2;
                          line.frame = rcEnd;
                      }
                      completion:^(BOOL finished){
                          //
                      }];
+}
+
+-(void) hideBottomLine:(void(^)(BOOL finished))finishBlock
+{
+    UIView *line = [self viewWithTag:TAG_BOTTOM_LINE];
+    
+    if(line != nil)
+    {
+        CGRect rc = line.frame;
+        
+        [UIView animateWithDuration:0.2
+                              delay:0.0
+                            options: UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             CGRect rcEnd = rc;
+                             rcEnd.origin.x = self.frame.size.height - OFFSET_X_FROM_LEFT_SIDE - rc.origin.x;
+                             rcEnd.size.width = 0;
+                             line.frame = rcEnd;
+                         }
+                         completion:^(BOOL finished){
+                             [line removeFromSuperview];
+                             
+                             finishBlock(finished);
+                         }];
+    }
 }
 
 @end
