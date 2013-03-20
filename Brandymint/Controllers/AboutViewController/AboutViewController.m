@@ -15,12 +15,19 @@
 @end
 
 @implementation AboutViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    UIView *rootView;
+    UIView *aboveView;
+}
+
+- (id)initWithView:(UIView*)mainView above:(UIView*)topView
+{
+    self = [super initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
     if (self) {
-        // init
+        rootView = mainView;
+        aboveView = topView;
+        
+        [self showAboutView];
     }
     return self;
 }
@@ -55,6 +62,16 @@
             [blockView fillView:bloc];
         }
     }
+}
+
+-(void) showAboutView
+{
+    [rootView insertSubview:self.view aboveSubview:aboveView];
+}
+
+-(void) hideAboutView
+{
+    [self.view removeFromSuperview];
 }
 
 @end

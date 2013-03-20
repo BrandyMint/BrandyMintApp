@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollCards;
 
+-(IBAction) onCloudClick:(id)sender;
+
 @end
