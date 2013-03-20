@@ -81,9 +81,9 @@
         [self addViewToIndexScrollView:cardController.view position:current_pos++];
     }
     
-    AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
+    /*AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
     [self addViewToIndexScrollView:aboutController.view position:current_pos];
-    current_pos++;
+    current_pos++;*/
     
     scrollCards.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
 }
@@ -100,5 +100,26 @@
     
     [self.scrollCards addSubview:view];
 }
+
+-(void) onCloudClick:(id)sender
+{
+    static AboutViewController *aboutController = nil;
+    
+    UIButton *cloudBtn = (UIButton*)sender;
+    
+    if(aboutController == nil)  {
+        self.scrollCards.hidden = YES;
+        
+        aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
+    }
+    else    {
+        self.scrollCards.hidden = NO;
+        
+        [aboutController hideAboutView];
+        aboutController = nil;
+    }
+}
+
+
 
 @end
