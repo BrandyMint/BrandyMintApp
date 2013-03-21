@@ -50,14 +50,30 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     self.view.backgroundColor = [UIColor clearColor];
+    
+    NSArray *blockSubviews = self.view.subviews;
 
     for (Bloc *bloc in [[BlocsRepository sharedBlocsRepository] entitiesBuffer])
     {
-        BlockView * blockView = (BlockView*)[self.view viewWithTag: bloc.position.integerValue ];
+        /*TODO: To search for a tagged view, use the viewWithTag: method of UIView. This method performs a depth-first search of the receiver and its subviews. It does not search superviews or other parts of the view hierarchy. Thus, calling this method from the root view of a hierarchy searches all views in the hierarchy but calling it from a specific subview searches only a subset of views.*/
+        
+        //(BlockView*)[self.view viewWithTag: bloc.position.integerValue ];
+        BlockView * blockView = [self blockWithTag:blockSubviews :bloc.position.integerValue];
+        
         if([blockView isKindOfClass:[BlockView class]])  {
             [blockView fillView: bloc];
         }
     }
+}
+
+-(BlockView*) blockWithTag:(NSArray*)blocksView :(NSInteger)tag
+{
+    for(UIView *view in blocksView)
+    {
+        if(view.tag == tag)
+            return (BlockView*)view;
+    }
+    return nil;
 }
 
 -(void) showAboutView
