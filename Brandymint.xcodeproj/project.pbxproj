@@ -81,7 +81,6 @@
 		838F22ED16FB0798000A3EEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191EF16E867A000B71598 /* Foundation.framework */; };
 		838F22FB16FB0C2C000A3EEE /* BrandyMintUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 838F22DD16FB06A6000A3EEE /* BrandyMintUnitTests.m */; };
 		838F230316FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */; };
-		838F230416FB0E92000A3EEE /* BrandyMintUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 838F230016FB0E92000A3EEE /* BrandyMintUnitTests.m */; };
 		838F230516FB0E92000A3EEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 838F230116FB0E92000A3EEE /* InfoPlist.strings */; };
 		83B2380B16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
 		83C5E33516F3035300700A8C /* Bloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33416F3035300700A8C /* Bloc.m */; };
@@ -753,7 +752,6 @@
 				18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */,
 				18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */,
 				18CE3B6416F885D500B5FF97 /* LinksView.m in Sources */,
-				838F230416FB0E92000A3EEE /* BrandyMintUnitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,6 +998,7 @@
 				838F22FA16FB0798000A3EEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
