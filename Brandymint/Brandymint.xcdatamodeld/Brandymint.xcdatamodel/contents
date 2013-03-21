@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="11G63b" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bloc" representedClassName="Bloc" parentEntity="Entity" syncable="YES">
         <attribute name="content" attributeType="String" syncable="YES"/>
         <attribute name="icon_url" attributeType="String" syncable="YES"/>
@@ -24,7 +24,7 @@
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="image" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="card" inverseEntity="Image" syncable="YES"/>
+        <relationship name="image" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Image" inverseName="card" inverseEntity="Image" syncable="YES"/>
         <compoundIndexes>
             <compoundIndex>
                 <index value="key"/>
@@ -57,9 +57,9 @@
     </entity>
     <elements>
         <element name="Bloc" positionX="-2765" positionY="-4806" width="128" height="148"/>
-        <element name="Card" positionX="-3008" positionY="-4839" width="137" height="193"/>
+        <element name="Card" positionX="-3008" positionY="-4839" width="137" height="195"/>
         <element name="Entity" positionX="-2799" positionY="-5047" width="128" height="43"/>
-        <element name="Image" positionX="-2826" positionY="-4588" width="128" height="103"/>
+        <element name="Image" positionX="-2826" positionY="-4588" width="128" height="105"/>
         <element name="Link" positionX="-2628" positionY="-4807" width="128" height="118"/>
     </elements>
 </model>
