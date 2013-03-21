@@ -10,7 +10,6 @@
 #import "CardsRepository.h"
 #import "BlocsRepository.h"
 #import "LinksRepository.h"
-#import "ImagesRepository.h"
 
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
@@ -95,8 +94,6 @@ static UpdateManager *sharedSingleton = NULL;
         [self updateEnities:[jsonData objectForKey:@"cards"] withRepo: CardsRepository.sharedCardsRepository];
         [self updateEnities:[jsonData objectForKey:@"blocs"] withRepo: BlocsRepository.sharedBlocsRepository];
         [self updateEnities:[jsonData objectForKey:@"links"] withRepo: LinksRepository.sharedLinksRepository];
-        
-        [[ImagesRepository sharedImagesRepository] printCountImagesFromDB];
     }
 }
 

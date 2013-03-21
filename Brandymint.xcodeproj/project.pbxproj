@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1834C67C16FB14530021A07F /* ImagesRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834C67B16FB14530021A07F /* ImagesRepository.m */; };
 		18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5916F885D500B5FF97 /* AboutViewController.m */; };
 		18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */; };
 		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
@@ -128,8 +127,6 @@
 
 /* Begin PBXFileReference section */
 		0FE38750861049C6ACA269DD /* libPods-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1834C67A16FB14530021A07F /* ImagesRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagesRepository.h; path = Model/ImagesRepository.h; sourceTree = "<group>"; };
-		1834C67B16FB14530021A07F /* ImagesRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagesRepository.m; path = Model/ImagesRepository.m; sourceTree = "<group>"; };
 		18CE3B5816F885D500B5FF97 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		18CE3B5916F885D500B5FF97 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -631,8 +628,6 @@
 		83C5E33F16F304BE00700A8C /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				1834C67A16FB14530021A07F /* ImagesRepository.h */,
-				1834C67B16FB14530021A07F /* ImagesRepository.m */,
 				7C19C04A16F09393003D6CDE /* CardsRepository.h */,
 				7C19C04B16F09393003D6CDE /* CardsRepository.m */,
 				83C5E33916F3048700700A8C /* BlocsRepository.h */,
