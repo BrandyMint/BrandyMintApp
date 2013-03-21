@@ -30,7 +30,7 @@
     window.rootViewController = ownViewController;
     [window makeKeyAndVisible];
     
-    //[self showAllFontsInConsole];
+    [self showAllFontsInConsole];
     
     return YES;
 }

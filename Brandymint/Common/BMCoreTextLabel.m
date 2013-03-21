@@ -13,14 +13,14 @@
 
 -(void)setDefaults {
     [super setDefaults];
-    
+            
     [self setStyle:[NMCustomLabelStyle
-                    styleWithFont:[UIFont fontWithName:@"Ubuntu-Bold" size:self.font.pointSize]
+                    styleWithFont:[[ThemeProvider sharedThemeProvider] boldFont:self.font.pointSize]
                     color:self.textColor]
             forKey:@"bold_style"];
 
     [self setStyle:[NMCustomLabelStyle
-                    styleWithFont:[UIFont fontWithName:@"Ubuntu-Italic" size:self.font.pointSize]
+                    styleWithFont:[[ThemeProvider sharedThemeProvider] italicFont:self.font.pointSize]
                     color:self.textColor]
             forKey:@"ital_style"];
 

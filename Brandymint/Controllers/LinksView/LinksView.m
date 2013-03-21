@@ -33,7 +33,7 @@
         if([btnLink isKindOfClass:[UIButton class]])  {
             
             [btnLink setTitle:link.title forState:UIControlStateNormal];
-            btnLink.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:32];
+            btnLink.titleLabel.font = [[ThemeProvider sharedThemeProvider] lightFont:32];
             btnLink.titleLabel.textAlignment = UITextAlignmentLeft;
             btnLink.titleLabel.shadowColor = [UIColor blackColor];
             btnLink.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);

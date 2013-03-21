@@ -57,10 +57,10 @@
 {
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.cardTitleLabel.font    = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
-    self.cardSubtitleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:25];
-    self.cardDescLabel.font     = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:20];
-    self.cardLinkLabel.font     = [UIFont fontWithName:@"Ubuntu-Light" size:23];
+    self.cardTitleLabel.font    = [[ThemeProvider sharedThemeProvider] boldFont:32];
+    self.cardSubtitleLabel.font = [[ThemeProvider sharedThemeProvider] lightFont:25];
+    self.cardDescLabel.font     = [[ThemeProvider sharedThemeProvider] condensedRegularFont:20];
+    self.cardLinkLabel.font     = [[ThemeProvider sharedThemeProvider] lightFont:23];
     
     self.cardImageView.image    = card.image.data;
     self.cardTitleLabel.text    = card.title;

@@ -42,7 +42,7 @@ const int  OFFSET_Y_FROM_TOP_SIDE = 50;
     
     UILabel *devLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     devLabel.tag = 2;
-    devLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:15];
+    devLabel.font = [[ThemeProvider sharedThemeProvider] lightFont:15];
     devLabel.textColor = [UIColor whiteColor];
     devLabel.backgroundColor = [UIColor clearColor];
     devLabel.text = @"DEVELOPERS";
