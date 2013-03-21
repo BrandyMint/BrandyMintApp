@@ -27,9 +27,13 @@
 @implementation OwnViewController
 {
     NSArray *imagesName;
+    
+    UIImage *btnImageDefault;
+    UIImage *btnImageHighlighted;
 }
 
 @synthesize scrollCards;
+@synthesize cloudBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,6 +53,9 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
+    btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
+    btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
+    
     self.scrollCards.backgroundColor = [UIColor clearColor];
     
     [self.view showBrandymintLogo];
@@ -104,10 +111,10 @@
 {
     static AboutViewController *aboutController = nil;
     
-    UIButton *cloudBtn = (UIButton*)sender;
+    cloudBtn.selected = !cloudBtn.selected;
+    cloudBtn.highlighted = !cloudBtn.highlighted;
     
     if(aboutController == nil)  {
-        cloudBtn.highlighted = YES;
         
         self.scrollCards.alpha = 0.0f;
         
@@ -118,7 +125,6 @@
         }];
     }
     else    {
-        cloudBtn.highlighted = NO;
         
         self.scrollCards.alpha = 0.0f;
         
