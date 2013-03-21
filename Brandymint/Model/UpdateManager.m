@@ -97,6 +97,11 @@ static UpdateManager *sharedSingleton = NULL;
     }
 }
 
+- (void)printCountImagesFromDB
+{
+    
+}
+
 @end
 
 
