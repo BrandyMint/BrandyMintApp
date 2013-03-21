@@ -695,6 +695,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			showEnvVarsInLog = 0;
 		};
 		BA7DC43C4C2E4809B6772A37 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -911,6 +912,7 @@
 		};
 		838F22F916FB0798000A3EEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -933,6 +935,7 @@
 		};
 		838F22FA16FB0798000A3EEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;

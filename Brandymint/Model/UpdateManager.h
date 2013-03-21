@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ABMultiton.h"
+#import "ABMultitonProtocol.h"
 
-@interface UpdateManager : NSObject
-
-+(UpdateManager *) updateManager;
+@interface UpdateManager : NSObject <ABMultitonProtocol>
 
 -(void) updateData;
 

@@ -20,17 +20,9 @@
 
 @implementation UpdateManager
 
-static UpdateManager *sharedSingleton = NULL;
-
-+(UpdateManager *) updateManager
++ (id)sharedInstance
 {
-    @synchronized(self) {
-        if(sharedSingleton == NULL) {
-            NSLog(@"UpdateManager init");
-            sharedSingleton = [[self alloc] init];
-        }
-    }
-    return (sharedSingleton);
+    return [ABMultiton sharedInstanceOfClass:[self class]];
 }
 
 -(void) updateData
