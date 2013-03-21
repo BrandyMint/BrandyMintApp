@@ -46,9 +46,9 @@
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{20, 0}, {72, 72}}</string>
 								<reference key="NSSuperview" ref="993064612"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="840176003"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<int key="IBUITag">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
@@ -57,6 +57,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 0}, {338, 35}}</string>
 								<reference key="NSSuperview" ref="993064612"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="567567161"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -66,7 +67,6 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">3</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">Potee</string>
@@ -97,6 +97,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 43}, {338, 111}}</string>
 								<reference key="NSSuperview" ref="993064612"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="139970422"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -106,7 +107,6 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">4</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
@@ -131,6 +131,7 @@
 						</array>
 						<string key="NSFrame">{{20, 122}, {459, 154}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="743072473"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor" id="293055998">
@@ -149,9 +150,9 @@
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{20, 0}, {72, 72}}</string>
 								<reference key="NSSuperview" ref="661138666"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="141133213"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<int key="IBUITag">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
@@ -160,6 +161,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 0}, {338, 35}}</string>
 								<reference key="NSSuperview" ref="661138666"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="147046784"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -169,7 +171,6 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">3</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">Potee</string>
@@ -185,6 +186,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 43}, {338, 111}}</string>
 								<reference key="NSSuperview" ref="661138666"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="279761716"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -194,7 +196,6 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">4</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
@@ -210,6 +211,7 @@
 						</array>
 						<string key="NSFrame">{{20, 296}, {459, 154}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="889101369"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="293055998"/>
@@ -225,9 +227,9 @@
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{20, 0}, {72, 72}}</string>
 								<reference key="NSSuperview" ref="279761716"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="525215722"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<int key="IBUITag">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
@@ -236,6 +238,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 0}, {338, 35}}</string>
 								<reference key="NSSuperview" ref="279761716"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="963201976"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -245,7 +248,6 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">3</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">Potee</string>
@@ -261,6 +263,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{121, 43}, {338, 111}}</string>
 								<reference key="NSSuperview" ref="279761716"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="809147438"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -270,7 +273,6 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">4</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
@@ -286,6 +288,7 @@
 						</array>
 						<string key="NSFrame">{{20, 472}, {459, 154}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="472097904"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="293055998"/>
@@ -301,9 +304,9 @@
 								<int key="NSvFlags">274</int>
 								<string key="NSFrameSize">{72, 72}</string>
 								<reference key="NSSuperview" ref="139970422"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1056200135"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<int key="IBUITag">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
@@ -312,6 +315,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 0}, {338, 35}}</string>
 								<reference key="NSSuperview" ref="139970422"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="407470401"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -321,7 +325,6 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">3</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">Potee</string>
@@ -337,6 +340,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 43}, {338, 29}}</string>
 								<reference key="NSSuperview" ref="139970422"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="565108493"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -346,7 +350,6 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
-								<int key="IBUITag">4</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
@@ -364,6 +367,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 80}, {338, 47}}</string>
 								<reference key="NSSuperview" ref="139970422"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="990274803"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -390,6 +394,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{101, 135}, {338, 29}}</string>
 								<reference key="NSSuperview" ref="139970422"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="661138666"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -423,6 +428,7 @@
 						</array>
 						<string key="NSFrame">{{517, 122}, {439, 164}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="446181954"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="293055998"/>
@@ -438,6 +444,7 @@
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{0, 1}, {72, 72}}</string>
 								<reference key="NSSuperview" ref="809147438"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="147072073"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -452,6 +459,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrameSize">{330, 44}</string>
 										<reference key="NSSuperview" ref="147072073"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="746865162"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
@@ -485,6 +493,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{0, 51}, {330, 44}}</string>
 										<reference key="NSSuperview" ref="147072073"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="328376812"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
@@ -505,6 +514,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{0, 102}, {330, 44}}</string>
 										<reference key="NSSuperview" ref="147072073"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="424947885"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
@@ -525,6 +535,8 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{0, 153}, {330, 44}}</string>
 										<reference key="NSSuperview" ref="147072073"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<int key="IBUITag">4</int>
@@ -542,6 +554,7 @@
 								</array>
 								<string key="NSFrame">{{109, 0}, {330, 204}}</string>
 								<reference key="NSSuperview" ref="809147438"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="567556904"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="293055998"/>
@@ -550,6 +563,7 @@
 						</array>
 						<string key="NSFrame">{{517, 323}, {439, 204}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="170590948"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="293055998"/>
@@ -559,6 +573,7 @@
 				</array>
 				<string key="NSFrame">{{0, 20}, {1024, 748}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="993064612"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -990,7 +1005,87 @@
 			<nil key="sourceID"/>
 			<int key="maxID">114</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">AboutViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/AboutViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">BlockView</string>
+					<string key="superclassName">UIView</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="contentLabel">UILabel</string>
+						<string key="icon">UIImageView</string>
+						<string key="titleLabel">UILabel</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="contentLabel">
+							<string key="name">contentLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="icon">
+							<string key="name">icon</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="titleLabel">
+							<string key="name">titleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/BlockView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">LinksView</string>
+					<string key="superclassName">UIView</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="btn1">UIButton</string>
+						<string key="btn2">UIButton</string>
+						<string key="btn3">UIButton</string>
+						<string key="btn4">UIButton</string>
+						<string key="buttonsContainer">UIView</string>
+						<string key="icon">UIImageView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="btn1">
+							<string key="name">btn1</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="btn2">
+							<string key="name">btn2</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="btn3">
+							<string key="name">btn3</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="btn4">
+							<string key="name">btn4</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="buttonsContainer">
+							<string key="name">buttonsContainer</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="icon">
+							<string key="name">icon</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/LinksView.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
