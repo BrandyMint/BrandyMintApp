@@ -102,3 +102,6 @@ Pods/
 # Cocoapods
 Pods
 Podfile.lock
+
+sloccount*
+test-reports/*
