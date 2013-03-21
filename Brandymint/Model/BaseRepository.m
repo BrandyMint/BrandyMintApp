@@ -9,13 +9,16 @@
 #import "BaseRepository.h"
 #import "AppDelegate.h"
 
-
 @implementation BaseRepository
 
 @synthesize entitiesBuffer = _entitiesBuffer;
 
 // http://stackoverflow.com/questions/145154/what-should-my-objective-c-singleton-look-like
 
++ (id)sharedInstance
+{
+    return [ABMultiton sharedInstanceOfClass:[self class]];
+}
 
 -(id) init
 {

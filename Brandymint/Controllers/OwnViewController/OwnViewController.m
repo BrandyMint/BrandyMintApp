@@ -81,7 +81,7 @@
     
     unsigned int current_pos = 0;
     
-    for (Card *card in [[CardsRepository sharedCardsRepository] entitiesBuffer])
+    for (Card *card in [[CardsRepository sharedInstance] entitiesBuffer])
     {
         CardViewController *cardController = [[CardViewController alloc] initCardController:card];
         
