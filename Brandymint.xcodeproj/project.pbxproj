@@ -75,13 +75,15 @@
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
 		835303F016F86648009E3A1A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */; };
 		835303F116F8664D009E3A1A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77816F3A429007D85AC /* MobileCoreServices.framework */; };
+		8364459316FB79E8001D859D /* EntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8364459216FB79E8001D859D /* EntityTest.m */; };
+		8364459416FB7ACC001D859D /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8366B4D316F3513E00FE1490 /* Entity.m */; };
+		8364459516FB7AE9001D859D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F316E867A000B71598 /* CoreData.framework */; };
 		8366B4D416F3513E00FE1490 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8366B4D316F3513E00FE1490 /* Entity.m */; };
 		838F22EB16FB0798000A3EEE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C81921016E867A000B71598 /* SenTestingKit.framework */; };
 		838F22EC16FB0798000A3EEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191ED16E867A000B71598 /* UIKit.framework */; };
 		838F22ED16FB0798000A3EEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191EF16E867A000B71598 /* Foundation.framework */; };
 		838F22FB16FB0C2C000A3EEE /* BrandyMintUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 838F22DD16FB06A6000A3EEE /* BrandyMintUnitTests.m */; };
 		838F230316FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */; };
-		838F230516FB0E92000A3EEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 838F230116FB0E92000A3EEE /* InfoPlist.strings */; };
 		83B2380B16EF92E900AA4E46 /* ImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */; };
 		83C5E33516F3035300700A8C /* Bloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33416F3035300700A8C /* Bloc.m */; };
 		83C5E33816F3037C00700A8C /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E33716F3037C00700A8C /* Link.m */; };
@@ -176,21 +178,20 @@
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
 		835303EC16F865CE009E3A1A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		8364459116FB79E8001D859D /* EntityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityTest.h; sourceTree = "<group>"; };
+		8364459216FB79E8001D859D /* EntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityTest.m; sourceTree = "<group>"; };
 		8366B4D216F3513E00FE1490 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Model/Entity.h; sourceTree = "<group>"; };
 		8366B4D316F3513E00FE1490 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Model/Entity.m; sourceTree = "<group>"; };
 		838F22D016FB06A6000A3EEE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		838F22D316FB06A6000A3EEE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		838F22D416FB06A6000A3EEE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		838F22D516FB06A6000A3EEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		838F22D816FB06A6000A3EEE /* BrandyMintUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrandyMintUnitTests-Info.plist"; sourceTree = "<group>"; };
 		838F22DA16FB06A6000A3EEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		838F22DC16FB06A6000A3EEE /* BrandyMintUnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandyMintUnitTests.h; sourceTree = "<group>"; };
 		838F22DD16FB06A6000A3EEE /* BrandyMintUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrandyMintUnitTests.m; sourceTree = "<group>"; };
 		838F22DF16FB06A6000A3EEE /* BrandyMintUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BrandyMintUnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		838F22EA16FB0798000A3EEE /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BrandyMintUnitTests-Info.plist"; sourceTree = "<group>"; };
-		838F22FE16FB0E92000A3EEE /* BrandyMintUnitTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BrandyMintUnitTests-Prefix.pch"; sourceTree = "<group>"; };
-		838F230216FB0E92000A3EEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83B2380916EF92E900AA4E46 /* ImageToDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageToDataTransformer.h; sourceTree = "<group>"; };
 		83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageToDataTransformer.m; sourceTree = "<group>"; };
 		83C5E33316F3035300700A8C /* Bloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bloc.h; path = Model/Bloc.h; sourceTree = "<group>"; };
@@ -231,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8364459516FB7AE9001D859D /* CoreData.framework in Frameworks */,
 				838F22EB16FB0798000A3EEE /* SenTestingKit.framework in Frameworks */,
 				838F22EC16FB0798000A3EEE /* UIKit.framework in Frameworks */,
 				838F22ED16FB0798000A3EEE /* Foundation.framework in Frameworks */,
@@ -476,11 +478,10 @@
 		838F22D616FB06A6000A3EEE /* BrandyMintUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */,
-				838F22FE16FB0E92000A3EEE /* BrandyMintUnitTests-Prefix.pch */,
+				8364459116FB79E8001D859D /* EntityTest.h */,
+				8364459216FB79E8001D859D /* EntityTest.m */,
 				838F22DC16FB06A6000A3EEE /* BrandyMintUnitTests.h */,
 				838F22DD16FB06A6000A3EEE /* BrandyMintUnitTests.m */,
-				838F230116FB0E92000A3EEE /* InfoPlist.strings */,
 				838F22D716FB06A6000A3EEE /* Supporting Files */,
 			);
 			path = BrandyMintUnitTests;
@@ -489,7 +490,7 @@
 		838F22D716FB06A6000A3EEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				838F22D816FB06A6000A3EEE /* BrandyMintUnitTests-Info.plist */,
+				838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */,
 				838F22D916FB06A6000A3EEE /* InfoPlist.strings */,
 				838F22DF16FB06A6000A3EEE /* BrandyMintUnitTests-Prefix.pch */,
 			);
@@ -655,7 +656,6 @@
 				833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */,
 				18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */,
 				838F230316FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist in Resources */,
-				838F230516FB0E92000A3EEE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,7 +747,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8364459416FB7ACC001D859D /* Entity.m in Sources */,
 				838F22FB16FB0C2C000A3EEE /* BrandyMintUnitTests.m in Sources */,
+				8364459316FB79E8001D859D /* EntityTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,14 +768,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				838F22DA16FB06A6000A3EEE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		838F230116FB0E92000A3EEE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				838F230216FB0E92000A3EEE /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
