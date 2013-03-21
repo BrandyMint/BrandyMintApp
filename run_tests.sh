@@ -1,14 +1,22 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
+pwd
 
+echo "Install bundle"
 bundle install
 bundle exec pod repo update
 bundle exec pod install
 
 #DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 
-
+echo "Run xbuild"
 xcodebuild -workspace Brandymint.xcworkspace -scheme BrandymintTests -sdk iphonesimulator6.1  -configuration Debug clean build 2>&1 | bundle exec ocunit2junit
+
+# Так пускает jenkins
+# xcodebuild -alltargets
+# -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+# -configuration Release clean build
+
 
 # Reads
 # http://9elements.com/io/index.php/continuous-integration-of-ios-projects-using-jenkins-cocoapods-and-kiwi/

@@ -4,7 +4,7 @@ pod 'NMCustomLabel', :git => 'git://github.com/BrandyMint/NMCustomLabel.git', :t
 pod 'AFNetworking' #, '>= 0.5.1'
 pod 'CWLSynthesizeSingleton'
 
-target :UnitTests, :exclusive => true do
+target :LogicTests, :exclusive => true do
    pod 'GHUnitIOS'
 end
 

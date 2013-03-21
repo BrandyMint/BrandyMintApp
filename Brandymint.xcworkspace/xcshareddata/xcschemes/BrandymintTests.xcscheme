@@ -17,7 +17,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C81920E16E867A000B71598"
-               BuildableName = "UnitTests.octest"
+               BuildableName = "LogicTests.octest"
                BlueprintName = "LogicTests"
                ReferencedContainer = "container:Brandymint.xcodeproj">
             </BuildableReference>
