@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "Entity.h"
+#import "ABMultiton.h"
+#import "ABMultitonProtocol.h"
 
-@interface BaseRepository : NSObject
+@interface BaseRepository : NSObject <ABMultitonProtocol>
 
 @property (retain, nonatomic, readonly) NSArray *entitiesBuffer;
 

@@ -91,9 +91,9 @@ static UpdateManager *sharedSingleton = NULL;
     
     if (jsonData != nil)
     {
-        [self updateEnities:[jsonData objectForKey:@"cards"] withRepo: CardsRepository.sharedCardsRepository];
-        [self updateEnities:[jsonData objectForKey:@"blocs"] withRepo: BlocsRepository.sharedBlocsRepository];
-        [self updateEnities:[jsonData objectForKey:@"links"] withRepo: LinksRepository.sharedLinksRepository];
+        [self updateEnities:[jsonData objectForKey:@"cards"] withRepo: CardsRepository.sharedInstance];
+        [self updateEnities:[jsonData objectForKey:@"blocs"] withRepo: BlocsRepository.sharedInstance];
+        [self updateEnities:[jsonData objectForKey:@"links"] withRepo: LinksRepository.sharedInstance];
     }
 }
 
