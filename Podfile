@@ -5,7 +5,7 @@ pod 'AFNetworking' #, '>= 0.5.1'
 pod 'CWLSynthesizeSingleton'
 
 target :LogicTests, :exclusive => true do
-   pod 'GHUnitIOS'
+   # pod 'GHUnitIOS'
 end
 
 #pod 'RestKit', '0.10.1'

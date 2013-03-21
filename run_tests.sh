@@ -10,7 +10,13 @@ bundle exec pod install
 #DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 
 echo "Run xbuild"
-xcodebuild -workspace Brandymint.xcworkspace -scheme BrandymintTests -sdk iphonesimulator6.1  -configuration Debug clean build 2>&1 | bundle exec ocunit2junit
+xcodebuild -target LogicTests -sdk iphonesimulator6.1 -configuration Debug TEST_AFTER_BUILD=YES clean build 2>&1 | bundle exec ocunit2junit
+
+
+# xcodebuild -workspace Brandymint.xcworkspace -scheme BrandymintTests -sdk iphonesimulator6.1  -configuration Debug TEST_AFTER_BUILD=YES clean build
+
+
+# TEST_AFTER_BUILD=YES
 
 # Так пускает jenkins
 # xcodebuild -alltargets
