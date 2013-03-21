@@ -88,7 +88,7 @@ static UpdateManager *sharedSingleton = NULL;
                               JSONObjectWithData:responseData
                               options:kNilOptions
                               error:&error];
-    
+    NSLog(@"==>%@", jsonData);
     if (jsonData != nil)
     {
         [self updateEnities:[jsonData objectForKey:@"cards"] withRepo: CardsRepository.sharedCardsRepository];
