@@ -26,7 +26,6 @@
     if (self) {
         rootView = mainView;
         aboveView = topView;
-        
         //[self showAboutView];
     }
     return self;

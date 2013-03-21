@@ -20,3 +20,4 @@
 #import "BlocsRepository.h"
 #import "LinksRepository.h"
 #import "UpdateManager.h"
+#import "ThemeProvider.h"
