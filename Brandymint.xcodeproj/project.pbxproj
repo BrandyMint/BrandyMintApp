@@ -190,8 +190,6 @@
 		838F22EA16FB0798000A3EEE /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BrandyMintUnitTests-Info.plist"; sourceTree = "<group>"; };
 		838F22FE16FB0E92000A3EEE /* BrandyMintUnitTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BrandyMintUnitTests-Prefix.pch"; sourceTree = "<group>"; };
-		838F22FF16FB0E92000A3EEE /* BrandyMintUnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandyMintUnitTests.h; sourceTree = "<group>"; };
-		838F230016FB0E92000A3EEE /* BrandyMintUnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandyMintUnitTests.m; sourceTree = "<group>"; };
 		838F230216FB0E92000A3EEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83B2380916EF92E900AA4E46 /* ImageToDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageToDataTransformer.h; sourceTree = "<group>"; };
 		83B2380A16EF92E900AA4E46 /* ImageToDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageToDataTransformer.m; sourceTree = "<group>"; };
@@ -478,9 +476,11 @@
 		838F22D616FB06A6000A3EEE /* BrandyMintUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				838F22FC16FB0E92000A3EEE /* BrandyMintUnitTests */,
+				838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */,
+				838F22FE16FB0E92000A3EEE /* BrandyMintUnitTests-Prefix.pch */,
 				838F22DC16FB06A6000A3EEE /* BrandyMintUnitTests.h */,
 				838F22DD16FB06A6000A3EEE /* BrandyMintUnitTests.m */,
+				838F230116FB0E92000A3EEE /* InfoPlist.strings */,
 				838F22D716FB06A6000A3EEE /* Supporting Files */,
 			);
 			path = BrandyMintUnitTests;
@@ -494,18 +494,6 @@
 				838F22DF16FB06A6000A3EEE /* BrandyMintUnitTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		838F22FC16FB0E92000A3EEE /* BrandyMintUnitTests */ = {
-			isa = PBXGroup;
-			children = (
-				838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */,
-				838F22FE16FB0E92000A3EEE /* BrandyMintUnitTests-Prefix.pch */,
-				838F22FF16FB0E92000A3EEE /* BrandyMintUnitTests.h */,
-				838F230016FB0E92000A3EEE /* BrandyMintUnitTests.m */,
-				838F230116FB0E92000A3EEE /* InfoPlist.strings */,
-			);
-			name = BrandyMintUnitTests;
 			sourceTree = "<group>";
 		};
 		8392726916EF9B2900C9D303 /* Models */ = {
