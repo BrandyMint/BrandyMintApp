@@ -51,7 +51,7 @@
 {
     self.view.backgroundColor = [UIColor clearColor];
 
-    for (Bloc *bloc in [[BlocsRepository sharedBlocsRepository] entitiesBuffer])
+    for (Bloc *bloc in [[BlocsRepository sharedInstance] entitiesBuffer])
     {
         BlockView * blockView = (BlockView*)[self.view viewWithTag: bloc.position.integerValue ];
         if([blockView isKindOfClass:[BlockView class]])  {

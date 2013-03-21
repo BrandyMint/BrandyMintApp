@@ -27,7 +27,7 @@
 
 -(void) layoutSubviews
 {
-    for (Link *link in [[LinksRepository sharedLinksRepository] entitiesBuffer])
+    for (Link *link in [[LinksRepository sharedInstance] entitiesBuffer])
     {
         UIButton * btnLink = (UIButton*)[buttonsContainer viewWithTag: link.position.integerValue ];
         if([btnLink isKindOfClass:[UIButton class]])  {
