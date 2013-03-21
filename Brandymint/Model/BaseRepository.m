@@ -53,7 +53,6 @@
                 for (NSError *anError in errors) {
                     
                     NSDictionary *subUserInfo = [anError userInfo];
-                    subUserInfo = [anError userInfo];
                     
                     NSLog(@"Core Data Save Error\n\n \
                           NSValidationErrorKey\n%@\n\n \
