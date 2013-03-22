@@ -9,7 +9,12 @@ pod 'AFNetworking' #, '>= 0.5.1'
 pod 'ABMultiton'
 
 target :LogicTests, :exclusive => true do
-   # pod 'GHUnitIOS'
+  # OCMock, mock objects framework.
+  # OCHamcrest, pattern matchers library.
+  # OCMockito, another mock object framework.
+  # Stubbilino, and library for method stubbing and swizzling.
+  # Kiwi, a behavioural driven development library.
+  pod 'OCMock'
 end
 
 #pod 'RestKit', '0.10.1'

@@ -11,6 +11,7 @@
 		18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */; };
 		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
 		18CE3B6416F885D500B5FF97 /* LinksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B6016F885D500B5FF97 /* LinksView.m */; };
+		25C501D0A98E4997BC43689D /* libPods-LogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6213BC4BE3A643C2B0A89E5F /* libPods-LogicTests.a */; };
 		7B0DBF926A2F48D9BC6513C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDD8401E13B4A509E9DBC6C /* libPods.a */; };
 		7C01D50516EE0B70004216EC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4EF16EE0B70004216EC /* background.jpg */; };
 		7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F016EE0B70004216EC /* background@2x.jpg */; };
@@ -103,6 +104,8 @@
 		18CE3B5F16F885D500B5FF97 /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinksView.h; sourceTree = "<group>"; };
 		18CE3B6016F885D500B5FF97 /* LinksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinksView.m; sourceTree = "<group>"; };
 		3FDD8401E13B4A509E9DBC6C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E6F91EC0C014FE8B93977D4 /* Pods-LogicTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogicTests.xcconfig"; path = "Pods/Pods-LogicTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		6213BC4BE3A643C2B0A89E5F /* libPods-LogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C01D4EF16EE0B70004216EC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		7C01D4F016EE0B70004216EC /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		7C01D4F116EE0B70004216EC /* brandymint_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brandymint_logo_white.png; sourceTree = "<group>"; };
@@ -236,6 +239,7 @@
 				838F22EB16FB0798000A3EEE /* SenTestingKit.framework in Frameworks */,
 				838F22EC16FB0798000A3EEE /* UIKit.framework in Frameworks */,
 				838F22ED16FB0798000A3EEE /* Foundation.framework in Frameworks */,
+				25C501D0A98E4997BC43689D /* libPods-LogicTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +371,7 @@
 				EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */,
 				838F22D016FB06A6000A3EEE /* Cocoa.framework */,
 				838F22D216FB06A6000A3EEE /* Other Frameworks */,
+				6213BC4BE3A643C2B0A89E5F /* libPods-LogicTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -491,8 +496,9 @@
 			isa = PBXGroup;
 			children = (
 				838F22FD16FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist */,
-				838F22D916FB06A6000A3EEE /* InfoPlist.strings */,
 				838F22DF16FB06A6000A3EEE /* BrandyMintUnitTests-Prefix.pch */,
+				838F22D916FB06A6000A3EEE /* InfoPlist.strings */,
+				5E6F91EC0C014FE8B93977D4 /* Pods-LogicTests.xcconfig */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 				838F22E616FB0798000A3EEE /* Frameworks */,
 				838F22E716FB0798000A3EEE /* Resources */,
 				838F22E816FB0798000A3EEE /* ShellScript */,
+				CB5AAE26D73945C39895B080 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -710,6 +717,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		CB5AAE26D73945C39895B080 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-LogicTests-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -912,7 +933,7 @@
 		};
 		838F22F916FB0798000A3EEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */;
+			baseConfigurationReference = 5E6F91EC0C014FE8B93977D4 /* Pods-LogicTests.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -935,7 +956,7 @@
 		};
 		838F22FA16FB0798000A3EEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */;
+			baseConfigurationReference = 5E6F91EC0C014FE8B93977D4 /* Pods-LogicTests.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
