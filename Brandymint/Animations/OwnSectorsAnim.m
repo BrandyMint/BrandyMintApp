@@ -103,7 +103,7 @@ const int  OFFSET_Y_FROM_TOP_SIDE = 50;
     rc.origin.y = self.frame.size.width - OFFSET_Y_FROM_TOP_SIDE;
     line.frame = rc;
     
-    [UIView animateWithDuration:0.5
+      [UIView animateWithDuration:0.5
                           delay:0.0
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
