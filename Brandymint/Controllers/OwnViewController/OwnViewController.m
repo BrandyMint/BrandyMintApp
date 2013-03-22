@@ -118,11 +118,9 @@
         
         self.scrollCards.alpha = 0.0f;
         
-        [self.view hideBottomLine:^(BOOL finished)  {
-           aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
-            
-            [aboutController showAboutView];
-        }];
+        aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
+        [aboutController showAboutView];
+        
     }
     else    {
         
@@ -134,8 +132,6 @@
         [UIView animateWithDuration:0.4 animations:^(void)  {
             self.scrollCards.alpha = 1.0f;
         }];
-        
-        [self.view showBottomLine];
     }
 }
 

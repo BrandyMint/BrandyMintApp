@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BlockView.h"
 #import "Bloc.h"
 #import "Link.h"
 
 @interface AboutViewController : UIViewController
+
+@property (nonatomic, retain) IBOutlet BlockView *blockView;
 
 - (id)initWithView:(UIView*)mainView above:(UIView*)topView;
 
