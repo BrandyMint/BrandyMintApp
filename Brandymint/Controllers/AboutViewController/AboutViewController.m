@@ -50,16 +50,15 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     self.view.backgroundColor = [UIColor clearColor];
-
+    
     for (Bloc *bloc in [[BlocsRepository sharedInstance] entitiesBuffer])
     {
-        /*TODO: To search for a tagged view, use the viewWithTag: method of UIView. This method performs a depth-first search of the receiver and its subviews. It does not search superviews or other parts of the view hierarchy. Thus, calling this method from the root view of a hierarchy searches all views in the hierarchy but calling it from a specific subview searches only a subset of views.*/
-    
-        BlockView * blockView = (BlockView*)[self.view viewWithTag: bloc.position.integerValue ];
+        UIView * blockContainer = (UIView*)[self.view viewWithTag: bloc.position.integerValue ];
         
-        if([blockView isKindOfClass:[BlockView class]])  {
-            [blockView fillView: bloc];
-        }
+        BlockView *blockView = [[[NSBundle mainBundle] loadNibNamed:@"BlockView" owner:self options:nil] objectAtIndex:0];
+        [blockView fillView: bloc];
+        
+        [blockContainer addSubview: blockView];
     }
 }
 

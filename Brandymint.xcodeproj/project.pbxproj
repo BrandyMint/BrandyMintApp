@@ -3568,6 +3568,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 		7C19C04C16F09393003D6CDE /* CardsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C19C04B16F09393003D6CDE /* CardsRepository.m */; };
 		7C19C04F16F0966D003D6CDE /* DataManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C19C04E16F0966D003D6CDE /* DataManifest.json */; };
 		7C37CC5B16FC789C00C01127 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C37CC5A16FC789C00C01127 /* CardViewController.xib */; };
+		7C37CC5E16FC858B00C01127 /* BlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C37CC5D16FC858B00C01127 /* BlockView.xib */; };
 		7C3DC5AB16EF45D900C00066 /* OwnSectorsAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */; };
 		7C61759F16F1B32900D57594 /* NSDate+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C61759E16F1B32900D57594 /* NSDate+external.m */; };
 		7C80D77216F2ECFF007D5E3B /* UIImage+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C80D77116F2ECFF007D5E3B /* UIImage+external.m */; };
@@ -3665,6 +3666,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 		7C19C04B16F09393003D6CDE /* CardsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardsRepository.m; path = Model/CardsRepository.m; sourceTree = "<group>"; };
 		7C19C04E16F0966D003D6CDE /* DataManifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataManifest.json; sourceTree = "<group>"; };
 		7C37CC5A16FC789C00C01127 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardViewController.xib; path = ../../../../../../denisdbv/Documents/BrandyMintApp/Brandymint/Controllers/CardViewController/CardViewController.xib; sourceTree = "<group>"; };
+		7C37CC5D16FC858B00C01127 /* BlockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlockView.xib; path = ../../../../../../denisdbv/Documents/BrandyMintApp/Brandymint/Controllers/BlockView/BlockView.xib; sourceTree = "<group>"; };
 		7C3DC5A916EF45D900C00066 /* OwnSectorsAnim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnSectorsAnim.h; sourceTree = "<group>"; };
 		7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnSectorsAnim.m; sourceTree = "<group>"; };
 		7C61759D16F1B32900D57594 /* NSDate+external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+external.h"; sourceTree = "<group>"; };
@@ -3793,6 +3795,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 			children = (
 				18CE3B5C16F885D500B5FF97 /* BlockView.h */,
 				18CE3B5D16F885D500B5FF97 /* BlockView.m */,
+				7C37CC5D16FC858B00C01127 /* BlockView.xib */,
 			);
 			path = BlockView;
 			sourceTree = "<group>";
@@ -4197,6 +4200,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 				18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */,
 				838F230316FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist in Resources */,
 				7C37CC5B16FC789C00C01127 /* CardViewController.xib in Resources */,
+				7C37CC5E16FC858B00C01127 /* BlockView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
