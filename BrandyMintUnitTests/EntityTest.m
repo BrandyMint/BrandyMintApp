@@ -17,6 +17,7 @@
     _entity = [[Entity alloc] init];
     
     STAssertNotNil(_entity, @"Сущность существует");
+    STAssertTrue([_entity isKindOfClass:[Entity class]], @"Сущность типа Entity");
 }
 
 - (void)tearDown
@@ -26,9 +27,20 @@
     [super tearDown];
 }
 
-- (void)testEntityClass
+- (void)test_updateFromDict
 {
-    STAssertTrue([_entity isKindOfClass:[Entity class]], @"Сущность типа Entity");
+    // мы ожидаем что метод updateFromDict класса UpdateManager
+    // вызовет у входого параметра метод enumerateKeysAndObjectsUsingBlock
+    id dict = [OCMockObject mockForClass:[NSDictionary class]];
+ 
+    [[dict expect] enumerateKeysAndObjectsUsingBlock:[OCMArg any]];
+    
+    [_entity updateFromDict:dict];
+    
+    [dict verify];
 }
 
 @end
+
+// Хороший пример мокинга
+// http://stackoverflow.com/questions/5477219/objective-c-unit-testing-mocking-objects

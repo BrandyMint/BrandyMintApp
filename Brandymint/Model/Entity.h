@@ -16,8 +16,4 @@
 
 -(void)updateFromDict:(NSDictionary* )dict;
 
-
-//+(Card *)createFromDictionary:(NSDictionary*)dict;
-
-
 @end
