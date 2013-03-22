@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollCards;
 
+@property (nonatomic, strong) IBOutlet UIImageView *logo;
 @property (nonatomic, strong) IBOutlet UIButton *cloudBtn;
 -(IBAction) onCloudClick:(id)sender;
 
