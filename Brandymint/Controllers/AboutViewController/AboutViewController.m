@@ -20,6 +20,9 @@
     UIView *aboveView;
 }
 
+@synthesize blockView;
+@synthesize linksView;
+
 - (id)initWithView:(UIView*)mainView above:(UIView*)topView
 {
     self = [super initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
@@ -55,11 +58,15 @@
     {
         UIView * blockContainer = (UIView*)[self.view viewWithTag: bloc.position.integerValue ];
         
-        BlockView *blockView = [[[NSBundle mainBundle] loadNibNamed:@"BlockView" owner:self options:nil] objectAtIndex:0];
+        blockView = [[[NSBundle mainBundle] loadNibNamed:@"BlockView" owner:self options:nil] objectAtIndex:0];
         [blockView fillView: bloc];
         
         [blockContainer addSubview: blockView];
     }
+    
+    UIView * linksContainer = (UIView*)[self.view viewWithTag: 5 ];
+    linksView = [[[NSBundle mainBundle] loadNibNamed:@"LinksView" owner:self options:nil] objectAtIndex:0];
+    [linksContainer addSubview: linksView];
 }
 
 -(void) showAboutView
