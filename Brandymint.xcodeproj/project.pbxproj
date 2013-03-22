@@ -11,7 +11,7 @@
 		18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */; };
 		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
 		18CE3B6416F885D500B5FF97 /* LinksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B6016F885D500B5FF97 /* LinksView.m */; };
-		25C501D0A98E4997BC43689D /* libPods-LogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6213BC4BE3A643C2B0A89E5F /* libPods-LogicTests.a */; };
+		25C501D0A98E4997BC43689D /* libPods-LogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6213BC4BE3A643C2B0A89E5F /* libPods-LogicTests.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		7B0DBF926A2F48D9BC6513C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDD8401E13B4A509E9DBC6C /* libPods.a */; };
 		7C01D50516EE0B70004216EC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4EF16EE0B70004216EC /* background.jpg */; };
 		7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F016EE0B70004216EC /* background@2x.jpg */; };
@@ -38,6 +38,7 @@
 		7C19C04916F09364003D6CDE /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C19C04816F09364003D6CDE /* UpdateManager.m */; };
 		7C19C04C16F09393003D6CDE /* CardsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C19C04B16F09393003D6CDE /* CardsRepository.m */; };
 		7C19C04F16F0966D003D6CDE /* DataManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C19C04E16F0966D003D6CDE /* DataManifest.json */; };
+		7C37CC5B16FC789C00C01127 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C37CC5A16FC789C00C01127 /* CardViewController.xib */; };
 		7C3DC5AB16EF45D900C00066 /* OwnSectorsAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */; };
 		7C61759F16F1B32900D57594 /* NSDate+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C61759E16F1B32900D57594 /* NSDate+external.m */; };
 		7C80D77216F2ECFF007D5E3B /* UIImage+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C80D77116F2ECFF007D5E3B /* UIImage+external.m */; };
@@ -71,7 +72,6 @@
 		7C81923E16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C81923B16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg */; };
 		7C81923F16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C81923C16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg */; };
 		7C81924416E86D0B00B71598 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C81924216E86D0B00B71598 /* CardViewController.m */; };
-		7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81924316E86D0B00B71598 /* CardViewController.xib */; };
 		8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326873116F73E3B000351BC /* BMCoreTextLabel.m */; };
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
 		835303F016F86648009E3A1A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5A77616F3A41F007D85AC /* SystemConfiguration.framework */; };
@@ -133,6 +133,7 @@
 		7C19C04A16F09393003D6CDE /* CardsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardsRepository.h; path = Model/CardsRepository.h; sourceTree = "<group>"; };
 		7C19C04B16F09393003D6CDE /* CardsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardsRepository.m; path = Model/CardsRepository.m; sourceTree = "<group>"; };
 		7C19C04E16F0966D003D6CDE /* DataManifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataManifest.json; sourceTree = "<group>"; };
+		7C37CC5A16FC789C00C01127 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardViewController.xib; path = ../../../../../../denisdbv/Documents/BrandyMintApp/Brandymint/Controllers/CardViewController/CardViewController.xib; sourceTree = "<group>"; };
 		7C3DC5A916EF45D900C00066 /* OwnSectorsAnim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnSectorsAnim.h; sourceTree = "<group>"; };
 		7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnSectorsAnim.m; sourceTree = "<group>"; };
 		7C61759D16F1B32900D57594 /* NSDate+external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+external.h"; sourceTree = "<group>"; };
@@ -176,7 +177,6 @@
 		7C81923C16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brandymint_2013_redesign_fnl3.jpg; sourceTree = "<group>"; };
 		7C81924116E86D0B00B71598 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		7C81924216E86D0B00B71598 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
-		7C81924316E86D0B00B71598 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
@@ -465,7 +465,7 @@
 			children = (
 				7C81924116E86D0B00B71598 /* CardViewController.h */,
 				7C81924216E86D0B00B71598 /* CardViewController.m */,
-				7C81924316E86D0B00B71598 /* CardViewController.xib */,
+				7C37CC5A16FC789C00C01127 /* CardViewController.xib */,
 			);
 			path = CardViewController;
 			sourceTree = "<group>";
@@ -623,7 +623,6 @@
 				7C81923D16E86B1400B71598 /* brandymint_2013_redesign_fnl.jpg in Resources */,
 				7C81923E16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg in Resources */,
 				7C81923F16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg in Resources */,
-				7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */,
 				7C01D50516EE0B70004216EC /* background.jpg in Resources */,
 				7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */,
 				7C01D50716EE0B70004216EC /* brandymint_logo_white.png in Resources */,
@@ -663,6 +662,7 @@
 				833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */,
 				18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */,
 				838F230316FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist in Resources */,
+				7C37CC5B16FC789C00C01127 /* CardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
