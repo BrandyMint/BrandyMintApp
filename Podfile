@@ -8,7 +8,7 @@ pod 'AFNetworking' #, '>= 0.5.1'
 
 pod 'ABMultiton'
 
-target :LogicTests, :exclusive => true do
+target :LogicTests do
   # OCMock, mock objects framework.
   # OCHamcrest, pattern matchers library.
   # OCMockito, another mock object framework.
@@ -19,3 +19,9 @@ end
 
 #pod 'RestKit', '0.10.1'
 #pod 'OHAttributedLabel'
+
+post_install do |installer|
+  installer.project.targets.each do |target|
+    puts "#{target.name}"
+  end
+end
