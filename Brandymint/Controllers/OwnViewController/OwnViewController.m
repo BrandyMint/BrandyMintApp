@@ -97,7 +97,7 @@
 -(void) addViewToIndexScrollView:(UIView*)view position:(NSUInteger)index
 {
     CGRect frame;
-    frame.origin.x = (index * view.frame.size.width);
+    frame.origin.x = (index * self.scrollCards.frame.size.width);
     frame.origin.y = 0;
     frame.size.width = view.frame.size.width;
     frame.size.height = view.frame.size.height;
