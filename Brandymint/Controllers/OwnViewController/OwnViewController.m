@@ -32,6 +32,8 @@
     UIImage *btnImageHighlighted;
 }
 
+static AboutViewController *aboutController = nil;
+
 @synthesize scrollCards;
 @synthesize cloudBtn;
 
@@ -53,6 +55,8 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
+    [self setHookOnLogoClick];
+    
     btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
     btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
     
@@ -61,6 +65,15 @@
     //[self.view showBrandymintLogo];
     //[self.view showDevelopersLogo];
     //[self.view showTopLine];
+}
+
+-(void) setHookOnLogoClick
+{
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(logoTaped:)];
+    singleTap.numberOfTapsRequired = 1;
+    singleTap.numberOfTouchesRequired = 1;
+    [self.logo addGestureRecognizer:singleTap];
+    [self.logo setUserInteractionEnabled:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,32 +122,53 @@
 
 -(void) onCloudClick:(id)sender
 {
-    static AboutViewController *aboutController = nil;
-    
     cloudBtn.selected = !cloudBtn.selected;
     cloudBtn.highlighted = !cloudBtn.highlighted;
     
     if(aboutController == nil)  {
-        
-        self.scrollCards.alpha = 0.0f;
-        
-        aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
-        [aboutController showAboutView];
-        
+        [self showAboutController];
     }
     else    {
-        
-        self.scrollCards.alpha = 0.0f;
-        
-        [aboutController hideAboutView];
-        aboutController = nil;
-        
-        [UIView animateWithDuration:0.4 animations:^(void)  {
-            self.scrollCards.alpha = 1.0f;
-        }];
+        [self hideAboutController];
     }
 }
 
+-(void) showAboutController
+{
+    self.scrollCards.alpha = 0.0f;
+    
+    aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
+    [aboutController showAboutView];
+}
 
+-(void) hideAboutController
+{
+    self.scrollCards.alpha = 0.0f;
+    
+    [aboutController hideAboutView];
+    aboutController = nil;
+    
+    [UIView animateWithDuration:0.4 animations:^(void)  {
+        self.scrollCards.alpha = 1.0f;
+    }];
+}
+
+-(void) logoTaped:(id)sender
+{
+    if(aboutController != nil)
+    {
+        cloudBtn.highlighted = !cloudBtn.highlighted;
+        
+        [self hideAboutController];
+        
+        [self scrollToFirstPage];
+    }
+}
+
+-(void) scrollToFirstPage
+{
+    CGRect scrollRect = self.scrollCards.frame;
+    [self.scrollCards scrollRectToVisible:CGRectMake(0,0, scrollRect.size.width,scrollRect.size.height) animated:YES];
+}
 
 @end

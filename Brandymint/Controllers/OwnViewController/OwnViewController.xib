@@ -43,7 +43,7 @@
 						<string key="NSFrame">{{-16, -35}, {1056, 817}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="214724955"/>
+						<reference key="NSNextKeyView" ref="679235571"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -52,23 +52,7 @@
 							<string key="NSResourceName">background.jpg</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="214724955">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 51}, {189, 46}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="742619331"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<int key="IBUIContentMode">9</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">brandymint_logo_white.png</string>
-						</object>
-					</object>
-					<object class="IBUIView" id="742619331">
+					<object class="IBUIView" id="975685946">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{217, 81}, {705, 1}}</string>
@@ -79,13 +63,13 @@
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="875799364">
+							<object class="NSColorSpace" key="NSCustomColorSpace" id="763300627">
 								<int key="NSID">2</int>
 							</object>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
-					<object class="IBUIView" id="486831597">
+					<object class="IBUIView" id="875755543">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{51, 707}, {922, 1}}</string>
@@ -95,7 +79,7 @@
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<reference key="NSCustomColorSpace" ref="875799364"/>
+							<reference key="NSCustomColorSpace" ref="763300627"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
@@ -120,7 +104,7 @@
 						<string key="NSFrame">{{924, 47}, {80, 69}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="486831597"/>
+						<reference key="NSNextKeyView" ref="875755543"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUIContentMode">9</int>
@@ -158,6 +142,22 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
+					<object class="IBUIImageView" id="679235571">
+						<reference key="NSNextResponder" ref="766721923"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{20, 51}, {189, 46}}</string>
+						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="975685946"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<int key="IBUIContentMode">9</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">brandymint_logo_white.png</string>
+						</object>
+					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {1024, 748}}</string>
 				<reference key="NSSuperview"/>
@@ -166,7 +166,7 @@
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
-					<reference key="NSCustomColorSpace" ref="875799364"/>
+					<reference key="NSCustomColorSpace" ref="763300627"/>
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
@@ -206,6 +206,14 @@
 					<int key="connectionID">14</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">logo</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="679235571"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">onCloudClick:</string>
 						<reference key="source" ref="1002856574"/>
@@ -238,11 +246,11 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="766721923"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="742619331"/>
+							<reference ref="975685946"/>
 							<reference ref="958163345"/>
-							<reference ref="214724955"/>
 							<reference ref="165601862"/>
-							<reference ref="486831597"/>
+							<reference ref="875755543"/>
+							<reference ref="679235571"/>
 							<reference ref="1002856574"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -268,22 +276,22 @@
 						<string key="objectName">Button-Cloud</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">15</int>
-						<reference key="object" ref="214724955"/>
-						<reference key="parent" ref="766721923"/>
-						<string key="objectName">ImageView-Logo</string>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
-						<reference key="object" ref="742619331"/>
+						<reference key="object" ref="975685946"/>
 						<reference key="parent" ref="766721923"/>
 						<string key="objectName">View-TopLine</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
-						<reference key="object" ref="486831597"/>
+						<reference key="object" ref="875755543"/>
 						<reference key="parent" ref="766721923"/>
 						<string key="objectName">View-BottomLine</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">15</int>
+						<reference key="object" ref="679235571"/>
+						<reference key="parent" ref="766721923"/>
+						<string key="objectName">ImageView-Logo</string>
 					</object>
 				</array>
 			</object>
@@ -306,7 +314,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -326,12 +334,17 @@
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="cloudBtn">UIButton</string>
+						<string key="logo">UIImageView</string>
 						<string key="scrollCards">UIScrollView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="cloudBtn">
 							<string key="name">cloudBtn</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="logo">
+							<string key="name">logo</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="scrollCards">
 							<string key="name">scrollCards</string>
