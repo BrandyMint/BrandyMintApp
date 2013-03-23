@@ -103,5 +103,7 @@ Pods/
 Pods
 Podfile.lock
 
+Coverage
+
 sloccount*
 test-reports/*

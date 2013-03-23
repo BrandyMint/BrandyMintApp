@@ -1,3 +1,9 @@
 [submodule "XcodeCoverage"]
 	path = XcodeCoverage
 	url = git://github.com/jonreid/XcodeCoverage.git
+[submodule "tools/gcovr"]
+	path = tools/gcovr
+	url = git://github.com/rpetrich/gcovr.git
+[submodule "tools/lcov"]
+	path = tools/lcov
+	url = git://github.com/lawrancej/lcov.git

@@ -5,7 +5,7 @@
 echo "Run xbuild"
 
 xcodebuild -scheme LogicTests -workspace Brandymint.xcworkspace \
-  -sdk iphonesimulator6.1 -configuration Debug \
+  -sdk iphonesimulator6.1 -configuration Coverage \
   TEST_AFTER_BUILD=YES TEST_HOST= ONLY_ACTIVE_ARCH=NO clean build 2>&1 | bundle exec ocunit2junit
 
 # Reads
