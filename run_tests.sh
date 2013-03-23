@@ -3,7 +3,10 @@
 #DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 
 echo "Run xbuild"
-xcodebuild -target LogicTests -sdk iphonesimulator6.1 -configuration Debug TEST_AFTER_BUILD=YES clean build 2>&1 | bundle exec ocunit2junit
+
+xcodebuild -scheme LogicTests -workspace Brandymint.xcworkspace -sdk iphonesimulator6.1 -configuration Debug TEST_AFTER_BUILD=YES TEST_HOST= ONLY_ACTIVE_ARCH=NO clean build
+
+#xcodebuild -target LogicTests -sdk iphonesimulator6.1 -configuration Debug TEST_AFTER_BUILD=YES clean build 2>&1 | bundle exec ocunit2junit
 
 
 # xcodebuild -workspace Brandymint.xcworkspace -scheme BrandymintTests -sdk iphonesimulator6.1  -configuration Debug TEST_AFTER_BUILD=YES clean build

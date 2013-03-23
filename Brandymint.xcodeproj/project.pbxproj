@@ -178,7 +178,7 @@
 		7C81924116E86D0B00B71598 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		7C81924216E86D0B00B71598 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		7C81924316E86D0B00B71598 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
-		8303415E16FC7EAE0057FAD8 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		8303415E16FC7EAE0057FAD8 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
@@ -340,7 +340,6 @@
 		7C8191DE16E867A000B71598 = {
 			isa = PBXGroup;
 			children = (
-				8303415E16FC7EAE0057FAD8 /* libPods.a */,
 				7C8191F516E867A000B71598 /* Brandymint */,
 				838F22D616FB06A6000A3EEE /* BrandyMintUnitTests */,
 				7C8191EC16E867A000B71598 /* Frameworks */,
@@ -372,6 +371,7 @@
 				7C8191F316E867A000B71598 /* CoreData.framework */,
 				7C81921016E867A000B71598 /* SenTestingKit.framework */,
 				3FDD8401E13B4A509E9DBC6C /* libPods.a */,
+				8303415E16FC7EAE0057FAD8 /* libPods.a */,
 				EE832F4F9DB24A7F935CD76D /* Pods.xcconfig */,
 				838F22D016FB06A6000A3EEE /* Cocoa.framework */,
 				838F22D216FB06A6000A3EEE /* Other Frameworks */,
@@ -575,8 +575,8 @@
 				838F22E516FB0798000A3EEE /* Sources */,
 				838F22E616FB0798000A3EEE /* Frameworks */,
 				838F22E716FB0798000A3EEE /* Resources */,
-				838F22E816FB0798000A3EEE /* ShellScript */,
 				CB5AAE26D73945C39895B080 /* Copy Pods Resources */,
+				838F22E816FB0798000A3EEE /* ShellScript */,
 			);
 			buildRules = (
 			);
