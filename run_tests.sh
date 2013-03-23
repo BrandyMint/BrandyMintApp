@@ -4,21 +4,9 @@
 
 echo "Run xbuild"
 
-xcodebuild -scheme LogicTests -workspace Brandymint.xcworkspace -sdk iphonesimulator6.1 -configuration Debug TEST_AFTER_BUILD=YES TEST_HOST= ONLY_ACTIVE_ARCH=NO clean build
-
-#xcodebuild -target LogicTests -sdk iphonesimulator6.1 -configuration Debug TEST_AFTER_BUILD=YES clean build 2>&1 | bundle exec ocunit2junit
-
-
-# xcodebuild -workspace Brandymint.xcworkspace -scheme BrandymintTests -sdk iphonesimulator6.1  -configuration Debug TEST_AFTER_BUILD=YES clean build
-
-
-# TEST_AFTER_BUILD=YES
-
-# Так пускает jenkins
-# xcodebuild -alltargets
-# -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
-# -configuration Release clean build
-
+xcodebuild -scheme LogicTests -workspace Brandymint.xcworkspace \
+  -sdk iphonesimulator6.1 -configuration Debug \
+  TEST_AFTER_BUILD=YES TEST_HOST= ONLY_ACTIVE_ARCH=NO clean build 2>&1 | bundle exec ocunit2junit
 
 # Reads
 # http://9elements.com/io/index.php/continuous-integration-of-ios-projects-using-jenkins-cocoapods-and-kiwi/
