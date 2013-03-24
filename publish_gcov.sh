@@ -1,4 +1,6 @@
+#!/usr/bin/env bash
 
+echo "Publish coverage"
 
 # Run gcov on the framework getting tested
 #if [ "${CONFIGURATION}" = 'Coverage' ]; then
@@ -11,4 +13,18 @@
 #fi
 
 [ ! -d Coverage ] && mkdir Coverage
-./tools/gcovr/scripts/gcovr --xml > ./Coverage/cobertura.xml
+
+ROOT_DIR=`pwd`
+OBJ_DIR=`echo $LINK_FILE_LIST_normal_i386 | sed -e 's/LogicTests.LinkFileList//'`
+
+#echo "Root dir ${ROOT_DIR}"
+#echo "Obj dir ${OBJ_DIR}"
+
+xml="${ROOT_DIR}/Coverage/coverage.xml"
+
+echo "Export GCOV coverage into ${xml}"
+
+# /usr/local/share/python/gcovr
+pushd ${OBJ_DIR}
+/usr/local/share/python/gcovr -r $ROOT_DIR --xml > $xml
+popd

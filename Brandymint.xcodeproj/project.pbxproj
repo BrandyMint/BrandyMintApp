@@ -4237,6 +4237,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			showEnvVarsInLog = 0;
 		};
 		83ABD91516FEF28E003CAC3A /* Publish gcov */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4251,6 +4252,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = ./publish_gcov.sh;
+			showEnvVarsInLog = 0;
 		};
 		83C2B38716FE1CFE00AF0B60 /* Export env for XCodeCoverage */ = {
 			isa = PBXShellScriptBuildPhase;
