@@ -47,7 +47,7 @@ build/
 #     throw away ALL personal settings (including custom schemes!
 #     - unless they are "shared")
 # NB: this is exclusive with OPTION 2 below
-xcuserdata
+#xcuserdata
 # OPTION 2: ---------------------------------
 #     get rid of ALL personal settings, but KEEP SOME OF THEM
 #     - NB: you must manually uncomment the bits you want to keep
