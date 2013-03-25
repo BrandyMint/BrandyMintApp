@@ -14,11 +14,9 @@
 @synthesize titleLabel;
 @synthesize contentLabel;
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // init
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    if ((self = [super initWithCoder:aDecoder])){
+        
     }
     return self;
 }
