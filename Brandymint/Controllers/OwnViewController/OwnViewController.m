@@ -30,6 +30,8 @@
     
     UIImage *btnImageDefault;
     UIImage *btnImageHighlighted;
+  
+    NSMutableArray *cardControllersArray;
 }
 
 static AboutViewController *aboutController = nil;
@@ -94,10 +96,12 @@ static AboutViewController *aboutController = nil;
     NSInteger scrollHeight = (NSInteger)self.cardsScrollView.frame.size.height;
     
     unsigned int current_pos = 0;
+    cardControllersArray = [[NSMutableArray alloc] init];
     
     for (Card *card in [[CardsRepository sharedInstance] entitiesBuffer])
     {
         CardViewController *cardController = [[CardViewController alloc] initCardController:card];
+        [cardControllersArray addObject:cardController];
         
         [self addViewToIndexScrollView:cardController.view position:current_pos++];
     }
