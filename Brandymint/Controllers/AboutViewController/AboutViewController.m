@@ -82,6 +82,7 @@
   
     recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hideAboutViewToDown:)];
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+  
     [[self view] addGestureRecognizer:recognizer];
 }
 
@@ -108,10 +109,10 @@
 
 -(void) hideAboutView
 {
-    [self hideAboutViewToDirection:NO];
+    [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionDown];
 }
 
--(void) hideAboutViewToDirection:(BOOL)isTop
+-(void) hideAboutViewToDirection:(UISwipeGestureRecognizerDirection)direction
 {
     CGRect aboutViewFrame = self.view.frame;
     
@@ -121,7 +122,7 @@
                      animations:^{
                          CGRect rect = aboutViewFrame;
                        
-                         if(isTop)
+                         if(direction == UISwipeGestureRecognizerDirectionUp)
                            rect.origin.y = -rootView.frame.size.height;
                          else
                            rect.origin.y = rootView.frame.size.height;
@@ -140,12 +141,12 @@
 
 -(void) hideAboutViewToDown:(UISwipeGestureRecognizer *)recognizer
 {
-    [self hideAboutViewToDirection:NO];
+    [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionDown];
 }
 
 -(void) hideAboutViewToUp:(UISwipeGestureRecognizer *)recognizer
 {
-    [self hideAboutViewToDirection:YES];
+    [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionUp];
 }
 
 @end

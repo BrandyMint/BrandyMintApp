@@ -15,8 +15,8 @@
 
 @interface OwnViewController : UIViewController <RootViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UIView *scrollContainer;
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollCards;
+@property (strong, nonatomic) IBOutlet UIView *contextContainerView;
+@property (strong, nonatomic) IBOutlet UIScrollView *cardsScrollView;
 @property (nonatomic, strong) IBOutlet UIImageView *logo;
 
 @property (nonatomic, strong) IBOutlet UIButton *cloudBtn;
