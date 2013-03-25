@@ -8,13 +8,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Brandymint/Controllers/OwnViewController/OwnViewController.m"
-         timestampString = "385893976.467251"
+         timestampString = "385908602.092603"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "126"
-         endingLineNumber = "126"
+         startingLineNumber = "135"
+         endingLineNumber = "135"
          landmarkName = "-onCloudClick:"
          landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Brandymint/Controllers/CardViewController/CardViewController.m"
+         timestampString = "385908602.092603"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "121"
+         endingLineNumber = "121">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
