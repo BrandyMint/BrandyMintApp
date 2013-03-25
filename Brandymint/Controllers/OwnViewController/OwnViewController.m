@@ -102,9 +102,6 @@ static AboutViewController *aboutController = nil;
         [self addViewToIndexScrollView:cardController.view position:current_pos++];
     }
     
-    /*AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
-    [self addViewToIndexScrollView:aboutController.view position:current_pos];
-    current_pos++;*/
     scrollCards.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
 }
 
@@ -134,36 +131,41 @@ static AboutViewController *aboutController = nil;
     }
 }
 
+-(void) logoTaped:(id)sender
+{
+    if(aboutController != nil)
+    {
+        [self hideAboutController];
+        [self scrollToFirstPage];
+    }
+}
+
 -(void) showAboutController
 {
     self.scrollCards.alpha = 0.0f;
 
     aboutController = [[AboutViewController alloc] initWithView:self.scrollContainer above:self.scrollCards];
-
+    aboutController.delegate = self;
     [aboutController showAboutView];
 }
 
 -(void) hideAboutController
 {
-    self.scrollCards.alpha = 0.0f;
-
     [aboutController hideAboutView];
-
     aboutController = nil;
-
-    [UIView animateWithDuration:0.4 animations:^(void)  {
-           self.scrollCards.alpha = 1.0f;
-    }];
+  
+    [self willAboutViewHide];
 }
 
--(void) logoTaped:(id)sender
+-(void) willAboutViewHide
 {
-    if(aboutController != nil)
-    {
-        cloudBtn.highlighted = !cloudBtn.highlighted;
-        [self hideAboutController];
-        [self scrollToFirstPage];
-    }
+    aboutController = nil;
+  
+    self.scrollCards.alpha = 0.0f;
+    
+    [UIView animateWithDuration:0.4 animations:^(void)  {
+      self.scrollCards.alpha = 1.0f;
+    }];
 }
 
 -(void) scrollToFirstPage
