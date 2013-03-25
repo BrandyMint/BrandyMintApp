@@ -19,10 +19,12 @@
 @property (nonatomic, assign) IBOutlet UILabel *cardTitleLabel;
 @property (nonatomic, assign) IBOutlet UILabel *cardSubtitleLabel;
 @property (nonatomic, assign) IBOutlet BMCoreTextLabel *cardDescLabel;
-@property (nonatomic, assign) IBOutlet UILabel *cardLinkLabel;
+@property (nonatomic, assign) IBOutlet UIButton *cardLinkButton;
 
 @property (nonatomic, retain) Card *card;
 
 - (id)initCardController:(Card*)srcCard;
+
+-(IBAction) openLinkInApp:(id)sender;
 
 @end
