@@ -22,6 +22,7 @@
 
 @synthesize blockView;
 @synthesize linksView;
+@synthesize delegate;
 
 - (id)initWithView:(UIView*)mainView above:(UIView*)topView
 {
@@ -52,6 +53,8 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
+    [self setHookOnMovingFinger];
+  
     self.view.backgroundColor = [UIColor clearColor];
     
     for (Bloc *bloc in [[BlocsRepository sharedInstance] entitiesBuffer])
@@ -69,14 +72,28 @@
     [linksContainer addSubview: linksView];
 }
 
+-(void) setHookOnMovingFinger
+{
+    UISwipeGestureRecognizer *recognizer;
+  
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hideAboutViewToUp:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
+    [[self view] addGestureRecognizer:recognizer];
+  
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hideAboutViewToDown:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+  
+    [[self view] addGestureRecognizer:recognizer];
+}
+
 -(void) showAboutView
 {
     CGRect aboutViewFrame = self.view.frame;
-    aboutViewFrame.origin.y = self.view.frame.size.height;
+    aboutViewFrame.origin.y = rootView.frame.size.height;
     self.view.frame = aboutViewFrame;
     
-    [rootView insertSubview:self.view aboveSubview:aboveView];
-    
+    [rootView addSubview:self.view];
+  
     [UIView animateWithDuration:0.2
                           delay:0.0
                         options: UIViewAnimationOptionCurveEaseIn
@@ -92,21 +109,44 @@
 
 -(void) hideAboutView
 {
+    [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionDown];
+}
+
+-(void) hideAboutViewToDirection:(UISwipeGestureRecognizerDirection)direction
+{
     CGRect aboutViewFrame = self.view.frame;
-    
-    [rootView insertSubview:self.view aboveSubview:aboveView];
     
     [UIView animateWithDuration:0.2
                           delay:0.0
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          CGRect rect = aboutViewFrame;
-                         rect.origin.y = aboutViewFrame.size.height;
+                       
+                         if(direction == UISwipeGestureRecognizerDirectionUp)
+                           rect.origin.y = -rootView.frame.size.height;
+                         else
+                           rect.origin.y = rootView.frame.size.height;
+                       
                          self.view.frame = rect;
                      }
                      completion:^(BOOL finished){
                          [self.view removeFromSuperview];
                      }];
+  
+    if([delegate respondsToSelector:@selector(willAboutViewHide)])
+    {
+        [delegate willAboutViewHide];
+    }
+}
+
+-(void) hideAboutViewToDown:(UISwipeGestureRecognizer *)recognizer
+{
+    [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionDown];
+}
+
+-(void) hideAboutViewToUp:(UISwipeGestureRecognizer *)recognizer
+{
+    [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionUp];
 }
 
 @end

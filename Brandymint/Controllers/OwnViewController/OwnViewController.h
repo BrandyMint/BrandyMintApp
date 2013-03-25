@@ -8,12 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OwnViewController : UIViewController
+@protocol RootViewDelegate
+@optional
+-(void)willAboutViewHide;
+@end
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollCards;
+@interface OwnViewController : UIViewController <RootViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIView *contextContainerView;
+@property (strong, nonatomic) IBOutlet UIScrollView *cardsScrollView;
 @property (nonatomic, strong) IBOutlet UIImageView *logo;
 
 @property (nonatomic, strong) IBOutlet UIButton *cloudBtn;
+
 -(IBAction) onCloudClick:(id)sender;
 
 @end

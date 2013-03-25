@@ -34,8 +34,10 @@
 
 static AboutViewController *aboutController = nil;
 
-@synthesize scrollCards;
+@synthesize contextContainerView;
+@synthesize cardsScrollView;
 @synthesize cloudBtn;
+@synthesize logo;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,7 +62,7 @@ static AboutViewController *aboutController = nil;
     btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
     btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
     
-    self.scrollCards.backgroundColor = [UIColor clearColor];
+    self.cardsScrollView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,8 +90,8 @@ static AboutViewController *aboutController = nil;
 
 -(void) initScrollCards
 {
-    NSInteger scrollWidth = (NSInteger)self.scrollCards.frame.size.width;
-    NSInteger scrollHeight = (NSInteger)self.scrollCards.frame.size.height;
+    NSInteger scrollWidth = (NSInteger)self.cardsScrollView.frame.size.width;
+    NSInteger scrollHeight = (NSInteger)self.cardsScrollView.frame.size.height;
     
     unsigned int current_pos = 0;
     
@@ -100,23 +102,20 @@ static AboutViewController *aboutController = nil;
         [self addViewToIndexScrollView:cardController.view position:current_pos++];
     }
     
-    /*AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:[NSBundle mainBundle]];
-    [self addViewToIndexScrollView:aboutController.view position:current_pos];
-    current_pos++;*/
-    scrollCards.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
+    cardsScrollView.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
 }
 
 -(void) addViewToIndexScrollView:(UIView*)view position:(NSUInteger)index
 {
     CGRect frame;
-    frame.origin.x = (index * self.scrollCards.frame.size.width);
+    frame.origin.x = (index * self.cardsScrollView.frame.size.width);
     frame.origin.y = 0;
     frame.size.width = view.frame.size.width;
     frame.size.height = view.frame.size.height;
     
     view.frame = frame;
     
-    [self.scrollCards addSubview:view];
+    [self.cardsScrollView addSubview:view];
 }
 
 -(void) onCloudClick:(id)sender
@@ -132,44 +131,48 @@ static AboutViewController *aboutController = nil;
     }
 }
 
--(void) showAboutController
-{
-    self.scrollCards.alpha = 0.0f;
-
-    aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
-
-    [aboutController showAboutView];
-}
-
--(void) hideAboutController
-{
-    self.scrollCards.alpha = 0.0f;
-
-    [aboutController hideAboutView];
-
-    aboutController = nil;
-
-    [UIView animateWithDuration:0.4 animations:^(void)  {
-           self.scrollCards.alpha = 1.0f;
-    }];
-}
-
 -(void) logoTaped:(id)sender
 {
     if(aboutController != nil)
     {
-        cloudBtn.highlighted = !cloudBtn.highlighted;
         [self hideAboutController];
         [self scrollToFirstPage];
     }
 }
 
--(void) scrollToFirstPage
-
+-(void) showAboutController
 {
-    CGRect scrollRect = self.scrollCards.frame;
+    self.cardsScrollView.alpha = 0.0f;
 
-    [self.scrollCards scrollRectToVisible:CGRectMake(0,0, scrollRect.size.width,scrollRect.size.height) animated:YES];
+    aboutController = [[AboutViewController alloc] initWithView:self.contextContainerView above:self.cardsScrollView];
+    aboutController.delegate = self;
+    [aboutController showAboutView];
+}
+
+-(void) hideAboutController
+{
+    [aboutController hideAboutView];
+    aboutController = nil;
+  
+    [self willAboutViewHide];
+}
+
+-(void) willAboutViewHide
+{
+    aboutController = nil;
+  
+    self.cardsScrollView.alpha = 0.0f;
+    
+    [UIView animateWithDuration:0.4 animations:^(void)  {
+      self.cardsScrollView.alpha = 1.0f;
+    }];
+}
+
+-(void) scrollToFirstPage
+{
+    CGRect scrollRect = self.cardsScrollView.frame;
+
+    [self.cardsScrollView scrollRectToVisible:CGRectMake(0,0, scrollRect.size.width,scrollRect.size.height) animated:YES];
 }
 
 @end
