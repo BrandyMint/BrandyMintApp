@@ -32,6 +32,8 @@
     UIImage *btnImageHighlighted;
 }
 
+static AboutViewController *aboutController = nil;
+
 @synthesize scrollCards;
 @synthesize cloudBtn;
 
@@ -53,14 +55,25 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
+    [self setHookOnLogoClick];
+    
     btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
     btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
     
     self.scrollCards.backgroundColor = [UIColor clearColor];
     
-    [self.view showBrandymintLogo];
-    [self.view showDevelopersLogo];
-    [self.view showTopLine];
+    //[self.view showBrandymintLogo];
+    //[self.view showDevelopersLogo];
+    //[self.view showTopLine];
+}
+
+-(void) setHookOnLogoClick
+{
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(logoTaped:)];
+    singleTap.numberOfTapsRequired = 1;
+    singleTap.numberOfTouchesRequired = 1;
+    [self.logo addGestureRecognizer:singleTap];
+    [self.logo setUserInteractionEnabled:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,7 +110,7 @@
 -(void) addViewToIndexScrollView:(UIView*)view position:(NSUInteger)index
 {
     CGRect frame;
-    frame.origin.x = (index * view.frame.size.width);
+    frame.origin.x = (index * self.scrollCards.frame.size.width);
     frame.origin.y = 0;
     frame.size.width = view.frame.size.width;
     frame.size.height = view.frame.size.height;
@@ -109,36 +122,53 @@
 
 -(void) onCloudClick:(id)sender
 {
-    static AboutViewController *aboutController = nil;
-    
     cloudBtn.selected = !cloudBtn.selected;
     cloudBtn.highlighted = !cloudBtn.highlighted;
     
     if(aboutController == nil)  {
-        
-        self.scrollCards.alpha = 0.0f;
-        
-        [self.view hideBottomLine:^(BOOL finished)  {
-           aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
-            
-            [aboutController showAboutView];
-        }];
+        [self showAboutController];
     }
     else    {
-        
-        self.scrollCards.alpha = 0.0f;
-        
-        [aboutController hideAboutView];
-        aboutController = nil;
-        
-        [UIView animateWithDuration:0.4 animations:^(void)  {
-            self.scrollCards.alpha = 1.0f;
-        }];
-        
-        [self.view showBottomLine];
+        [self hideAboutController];
     }
 }
 
+-(void) showAboutController
+{
+    self.scrollCards.alpha = 0.0f;
+    
+    aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
+    [aboutController showAboutView];
+}
 
+-(void) hideAboutController
+{
+    self.scrollCards.alpha = 0.0f;
+    
+    [aboutController hideAboutView];
+    aboutController = nil;
+    
+    [UIView animateWithDuration:0.4 animations:^(void)  {
+        self.scrollCards.alpha = 1.0f;
+    }];
+}
+
+-(void) logoTaped:(id)sender
+{
+    if(aboutController != nil)
+    {
+        cloudBtn.highlighted = !cloudBtn.highlighted;
+        
+        [self hideAboutController];
+        
+        [self scrollToFirstPage];
+    }
+}
+
+-(void) scrollToFirstPage
+{
+    CGRect scrollRect = self.scrollCards.frame;
+    [self.scrollCards scrollRectToVisible:CGRectMake(0,0, scrollRect.size.width,scrollRect.size.height) animated:YES];
+}
 
 @end
