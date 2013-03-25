@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1730B1C4170032DD006BE122 /* entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1730B1C3170032DD006BE122 /* entypo.ttf */; };
+		1730B1C7170035C9006BE122 /* icon-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 1730B1C5170035C9006BE122 /* icon-cloud.png */; };
+		1730B1C8170035C9006BE122 /* icon-cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1730B1C6170035C9006BE122 /* icon-cloud@2x.png */; };
+		1730B1CB170035EA006BE122 /* icon-link.png in Resources */ = {isa = PBXBuildFile; fileRef = 1730B1C9170035EA006BE122 /* icon-link.png */; };
+		1730B1CC170035EA006BE122 /* icon-link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1730B1CA170035EA006BE122 /* icon-link@2x.png */; };
+		1730B1CF17003919006BE122 /* brandymint_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 1730B1CD17003919006BE122 /* brandymint_logo_white.png */; };
+		1730B1D017003919006BE122 /* brandymint_logo_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1730B1CE17003919006BE122 /* brandymint_logo_white@2x.png */; };
+		17D8195117003C1D004855ED /* BlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D8195017003C1D004855ED /* BlockView.xib */; };
+		17D8195317003C26004855ED /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D8195217003C26004855ED /* LinksView.xib */; };
+		17D8195617003EF2004855ED /* icon-cloud-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D8195417003EF2004855ED /* icon-cloud-tap.png */; };
+		17D8195717003EF2004855ED /* icon-cloud-tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D8195517003EF2004855ED /* icon-cloud-tap@2x.png */; };
 		18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5916F885D500B5FF97 /* AboutViewController.m */; };
 		18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */; };
 		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
@@ -15,12 +26,8 @@
 		7B0DBF926A2F48D9BC6513C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDD8401E13B4A509E9DBC6C /* libPods.a */; };
 		7C01D50516EE0B70004216EC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4EF16EE0B70004216EC /* background.jpg */; };
 		7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F016EE0B70004216EC /* background@2x.jpg */; };
-		7C01D50716EE0B70004216EC /* brandymint_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F116EE0B70004216EC /* brandymint_logo_white.png */; };
-		7C01D50816EE0B70004216EC /* brandymint_logo_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F216EE0B70004216EC /* brandymint_logo_white@2x.png */; };
 		7C01D50916EE0B70004216EC /* icon-agile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F316EE0B70004216EC /* icon-agile.png */; };
 		7C01D50A16EE0B70004216EC /* icon-agile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F416EE0B70004216EC /* icon-agile@2x.png */; };
-		7C01D50B16EE0B70004216EC /* icon-cloud-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F516EE0B70004216EC /* icon-cloud-tap.png */; };
-		7C01D50C16EE0B70004216EC /* icon-cloud-tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F616EE0B70004216EC /* icon-cloud-tap@2x.png */; };
 		7C01D50D16EE0B70004216EC /* icon-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F716EE0B70004216EC /* icon-cloud.png */; };
 		7C01D50E16EE0B70004216EC /* icon-cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F816EE0B70004216EC /* icon-cloud@2x.png */; };
 		7C01D50F16EE0B70004216EC /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F916EE0B70004216EC /* icon-location.png */; };
@@ -101,6 +108,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1730B1C3170032DD006BE122 /* entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = entypo.ttf; path = "../../../../install/!fonts/!icons/Entypo/@font-face/Entypo @font-face/entypo.ttf"; sourceTree = "<group>"; };
+		1730B1C5170035C9006BE122 /* icon-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-cloud.png"; path = "../../../../work/dapi/brandymint/2013/assets/images/icon-cloud.png"; sourceTree = "<group>"; };
+		1730B1C6170035C9006BE122 /* icon-cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-cloud@2x.png"; path = "../../../../work/dapi/brandymint/2013/assets/images/icon-cloud@2x.png"; sourceTree = "<group>"; };
+		1730B1C9170035EA006BE122 /* icon-link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-link.png"; path = "../../../../work/dapi/brandymint/2013/assets/images/icon-link.png"; sourceTree = "<group>"; };
+		1730B1CA170035EA006BE122 /* icon-link@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-link@2x.png"; path = "../../../../work/dapi/brandymint/2013/assets/images/icon-link@2x.png"; sourceTree = "<group>"; };
+		1730B1CD17003919006BE122 /* brandymint_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brandymint_logo_white.png; path = ../../../../work/dapi/brandymint/2013/assets/images/brandymint_logo_white.png; sourceTree = "<group>"; };
+		1730B1CE17003919006BE122 /* brandymint_logo_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brandymint_logo_white@2x.png"; path = "../../../../work/dapi/brandymint/2013/assets/images/brandymint_logo_white@2x.png"; sourceTree = "<group>"; };
+		17D8195017003C1D004855ED /* BlockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlockView.xib; sourceTree = "<group>"; };
+		17D8195217003C26004855ED /* LinksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinksView.xib; sourceTree = "<group>"; };
+		17D8195417003EF2004855ED /* icon-cloud-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-cloud-tap.png"; path = "../../../../work/dapi/brandymint/2013/assets/images/icon-cloud-tap.png"; sourceTree = "<group>"; };
+		17D8195517003EF2004855ED /* icon-cloud-tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-cloud-tap@2x.png"; path = "../../../../work/dapi/brandymint/2013/assets/images/icon-cloud-tap@2x.png"; sourceTree = "<group>"; };
 		18CE3B5816F885D500B5FF97 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		18CE3B5916F885D500B5FF97 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -113,12 +131,8 @@
 		6213BC4BE3A643C2B0A89E5F /* libPods-LogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C01D4EF16EE0B70004216EC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		7C01D4F016EE0B70004216EC /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
-		7C01D4F116EE0B70004216EC /* brandymint_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brandymint_logo_white.png; sourceTree = "<group>"; };
-		7C01D4F216EE0B70004216EC /* brandymint_logo_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brandymint_logo_white@2x.png"; sourceTree = "<group>"; };
 		7C01D4F316EE0B70004216EC /* icon-agile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-agile.png"; sourceTree = "<group>"; };
 		7C01D4F416EE0B70004216EC /* icon-agile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-agile@2x.png"; sourceTree = "<group>"; };
-		7C01D4F516EE0B70004216EC /* icon-cloud-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud-tap.png"; sourceTree = "<group>"; };
-		7C01D4F616EE0B70004216EC /* icon-cloud-tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud-tap@2x.png"; sourceTree = "<group>"; };
 		7C01D4F716EE0B70004216EC /* icon-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud.png"; sourceTree = "<group>"; };
 		7C01D4F816EE0B70004216EC /* icon-cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud@2x.png"; sourceTree = "<group>"; };
 		7C01D4F916EE0B70004216EC /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location.png"; sourceTree = "<group>"; };
@@ -270,6 +284,8 @@
 		18CE3B5B16F885D500B5FF97 /* BlockView */ = {
 			isa = PBXGroup;
 			children = (
+				7C81EFB817003452005B5C19 /* BlockView.xib */,
+				17D8195017003C1D004855ED /* BlockView.xib */,
 				18CE3B5C16F885D500B5FF97 /* BlockView.h */,
 				18CE3B5D16F885D500B5FF97 /* BlockView.m */,
 				7C81EFB817003452005B5C19 /* BlockView.xib */,
@@ -280,6 +296,8 @@
 		18CE3B5E16F885D500B5FF97 /* LinksView */ = {
 			isa = PBXGroup;
 			children = (
+				7C81EFBA17003457005B5C19 /* LinksView.xib */,
+				17D8195217003C26004855ED /* LinksView.xib */,
 				18CE3B5F16F885D500B5FF97 /* LinksView.h */,
 				18CE3B6016F885D500B5FF97 /* LinksView.m */,
 				7C81EFBA17003457005B5C19 /* LinksView.xib */,
@@ -329,6 +347,7 @@
 		7C80D77316F2FBB9007D5E3B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				1730B1C3170032DD006BE122 /* entypo.ttf */,
 				7C80D77416F2FBD1007D5E3B /* Ubuntu-B.ttf */,
 				7C80D77516F2FBD1007D5E3B /* Ubuntu-BI.ttf */,
 				7C80D77616F2FBD1007D5E3B /* Ubuntu-C.ttf */,
@@ -436,18 +455,22 @@
 				7C19C04E16F0966D003D6CDE /* DataManifest.json */,
 				7C01D4EF16EE0B70004216EC /* background.jpg */,
 				7C01D4F016EE0B70004216EC /* background@2x.jpg */,
-				7C01D4F116EE0B70004216EC /* brandymint_logo_white.png */,
-				7C01D4F216EE0B70004216EC /* brandymint_logo_white@2x.png */,
 				7C01D4F316EE0B70004216EC /* icon-agile.png */,
 				7C01D4F416EE0B70004216EC /* icon-agile@2x.png */,
-				7C01D4F516EE0B70004216EC /* icon-cloud-tap.png */,
-				7C01D4F616EE0B70004216EC /* icon-cloud-tap@2x.png */,
 				7C01D4F716EE0B70004216EC /* icon-cloud.png */,
 				7C01D4F816EE0B70004216EC /* icon-cloud@2x.png */,
+				1730B1CD17003919006BE122 /* brandymint_logo_white.png */,
+				1730B1CE17003919006BE122 /* brandymint_logo_white@2x.png */,
+				17D8195417003EF2004855ED /* icon-cloud-tap.png */,
+				17D8195517003EF2004855ED /* icon-cloud-tap@2x.png */,
+				1730B1C5170035C9006BE122 /* icon-cloud.png */,
+				1730B1C6170035C9006BE122 /* icon-cloud@2x.png */,
 				7C01D4F916EE0B70004216EC /* icon-location.png */,
 				7C01D4FA16EE0B70004216EC /* icon-location@2x.png */,
 				7C01D4FB16EE0B70004216EC /* icon-projects.png */,
 				7C01D4FC16EE0B70004216EC /* icon-projects@2x.png */,
+				1730B1C9170035EA006BE122 /* icon-link.png */,
+				1730B1CA170035EA006BE122 /* icon-link@2x.png */,
 				7C01D4FD16EE0B70004216EC /* icon-right.png */,
 				7C01D4FE16EE0B70004216EC /* icon-right@2x.png */,
 				7C01D4FF16EE0B70004216EC /* icon-rocket.png */,
@@ -651,12 +674,8 @@
 				7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */,
 				7C01D50516EE0B70004216EC /* background.jpg in Resources */,
 				7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */,
-				7C01D50716EE0B70004216EC /* brandymint_logo_white.png in Resources */,
-				7C01D50816EE0B70004216EC /* brandymint_logo_white@2x.png in Resources */,
 				7C01D50916EE0B70004216EC /* icon-agile.png in Resources */,
 				7C01D50A16EE0B70004216EC /* icon-agile@2x.png in Resources */,
-				7C01D50B16EE0B70004216EC /* icon-cloud-tap.png in Resources */,
-				7C01D50C16EE0B70004216EC /* icon-cloud-tap@2x.png in Resources */,
 				7C01D50D16EE0B70004216EC /* icon-cloud.png in Resources */,
 				7C01D50E16EE0B70004216EC /* icon-cloud@2x.png in Resources */,
 				7C01D50F16EE0B70004216EC /* icon-location.png in Resources */,
@@ -691,6 +710,17 @@
 				7C81EFB917003452005B5C19 /* BlockView.xib in Resources */,
 				7C81EFBB17003457005B5C19 /* LinksView.xib in Resources */,
 				7C961B3D1700664B00EC8432 /* WebViewController.xib in Resources */,
+				1730B1C4170032DD006BE122 /* entypo.ttf in Resources */,
+				1730B1C7170035C9006BE122 /* icon-cloud.png in Resources */,
+				1730B1C8170035C9006BE122 /* icon-cloud@2x.png in Resources */,
+				1730B1CB170035EA006BE122 /* icon-link.png in Resources */,
+				1730B1CC170035EA006BE122 /* icon-link@2x.png in Resources */,
+				1730B1CF17003919006BE122 /* brandymint_logo_white.png in Resources */,
+				1730B1D017003919006BE122 /* brandymint_logo_white@2x.png in Resources */,
+				17D8195117003C1D004855ED /* BlockView.xib in Resources */,
+				17D8195317003C26004855ED /* LinksView.xib in Resources */,
+				17D8195617003EF2004855ED /* icon-cloud-tap.png in Resources */,
+				17D8195717003EF2004855ED /* icon-cloud-tap@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
