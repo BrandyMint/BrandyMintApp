@@ -15,4 +15,7 @@
 
 -(id)initWithURL:(NSURL*)url;
 
+-(IBAction) onBackButton:(id)sender;
+-(IBAction) onOpenInButton:(id)sender;
+
 @end

@@ -41,4 +41,14 @@
     [super didReceiveMemoryWarning];
 }
 
+-(IBAction) onBackButton:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction) onOpenInButton:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:_url];
+}
+
 @end
