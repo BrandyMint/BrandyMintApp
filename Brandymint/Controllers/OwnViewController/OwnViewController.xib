@@ -52,22 +52,6 @@
 							<string key="NSResourceName">background.jpg</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="214724955">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 51}, {189, 46}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="742619331"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<int key="IBUIContentMode">9</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">brandymint_logo_white.png</string>
-						</object>
-					</object>
 					<object class="IBUIView" id="742619331">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
@@ -113,6 +97,22 @@
 						<bool key="IBUIPagingEnabled">YES</bool>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
+					</object>
+					<object class="IBUIImageView" id="214724955">
+						<reference key="NSNextResponder" ref="766721923"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{20, 51}, {189, 46}}</string>
+						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="742619331"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<int key="IBUIContentMode">9</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">brandymint_logo_white.png</string>
+						</object>
 					</object>
 					<object class="IBUIButton" id="1002856574">
 						<reference key="NSNextResponder" ref="766721923"/>
@@ -206,6 +206,14 @@
 					<int key="connectionID">14</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">logo</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="214724955"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">onCloudClick:</string>
 						<reference key="source" ref="1002856574"/>
@@ -240,9 +248,9 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="742619331"/>
 							<reference ref="958163345"/>
-							<reference ref="214724955"/>
 							<reference ref="165601862"/>
 							<reference ref="486831597"/>
+							<reference ref="214724955"/>
 							<reference ref="1002856574"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -306,7 +314,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -326,12 +334,17 @@
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="cloudBtn">UIButton</string>
+						<string key="logo">UIImageView</string>
 						<string key="scrollCards">UIScrollView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="cloudBtn">
 							<string key="name">cloudBtn</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="logo">
+							<string key="name">logo</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="scrollCards">
 							<string key="name">scrollCards</string>
