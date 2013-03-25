@@ -74,6 +74,8 @@
 		7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81924316E86D0B00B71598 /* CardViewController.xib */; };
 		7C81EFB917003452005B5C19 /* BlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81EFB817003452005B5C19 /* BlockView.xib */; };
 		7C81EFBB17003457005B5C19 /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81EFBA17003457005B5C19 /* LinksView.xib */; };
+		7C961B3C1700664B00EC8432 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C961B3A1700664B00EC8432 /* WebViewController.m */; };
+		7C961B3D1700664B00EC8432 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C961B3B1700664B00EC8432 /* WebViewController.xib */; };
 		8303415B16FC7B3F0057FAD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
 		8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326873116F73E3B000351BC /* BMCoreTextLabel.m */; };
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
@@ -182,6 +184,9 @@
 		7C81924316E86D0B00B71598 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		7C81EFB817003452005B5C19 /* BlockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlockView.xib; sourceTree = "<group>"; };
 		7C81EFBA17003457005B5C19 /* LinksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinksView.xib; sourceTree = "<group>"; };
+		7C961B391700664B00EC8432 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		7C961B3A1700664B00EC8432 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		7C961B3B1700664B00EC8432 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
@@ -414,6 +419,7 @@
 		7C81922816E867FE00B71598 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C961B381700664B00EC8432 /* WebViewController */,
 				18CE3B5716F885D500B5FF97 /* AboutViewController */,
 				18CE3B5B16F885D500B5FF97 /* BlockView */,
 				18CE3B5E16F885D500B5FF97 /* LinksView */,
@@ -475,6 +481,16 @@
 				7C81924316E86D0B00B71598 /* CardViewController.xib */,
 			);
 			path = CardViewController;
+			sourceTree = "<group>";
+		};
+		7C961B381700664B00EC8432 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7C961B391700664B00EC8432 /* WebViewController.h */,
+				7C961B3A1700664B00EC8432 /* WebViewController.m */,
+				7C961B3B1700664B00EC8432 /* WebViewController.xib */,
+			);
+			path = WebViewController;
 			sourceTree = "<group>";
 		};
 		838F22D216FB06A6000A3EEE /* Other Frameworks */ = {
@@ -674,6 +690,7 @@
 				838F230316FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist in Resources */,
 				7C81EFB917003452005B5C19 /* BlockView.xib in Resources */,
 				7C81EFBB17003457005B5C19 /* LinksView.xib in Resources */,
+				7C961B3D1700664B00EC8432 /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +803,7 @@
 				18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */,
 				18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */,
 				18CE3B6416F885D500B5FF97 /* LinksView.m in Sources */,
+				7C961B3C1700664B00EC8432 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
