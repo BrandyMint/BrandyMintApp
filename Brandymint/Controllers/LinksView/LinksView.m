@@ -8,6 +8,8 @@
 
 #import "LinksView.h"
 #import "Link.h"
+#import "AppDelegate.h"
+#import "WebViewController.h"
 
 @implementation LinksView
 
@@ -38,7 +40,23 @@
             btnLink.titleLabel.shadowColor = [UIColor blackColor];
             btnLink.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
             btnLink.backgroundColor = [UIColor clearColor];
+            btnLink.tag = [link.position integerValue];
+            [btnLink addTarget:self action:@selector(onClickLink:) forControlEvents:UIControlEventTouchUpInside];
         }
+    }
+}
+
+-(void) onClickLink:(id)sender
+{
+    UIButton *btnLink = (UIButton*)sender;
+  
+    NSPredicate* searchPredicate = [NSPredicate predicateWithFormat:@"position == %i", btnLink.tag];
+    NSArray *linkArray = [[[LinksRepository sharedInstance] entitiesBuffer] filteredArrayUsingPredicate: searchPredicate];
+    if(linkArray.count > 0)
+    {
+        Link *link = [linkArray objectAtIndex:0];
+        WebViewController *webViewController = [[WebViewController alloc] initWithURL:link.url];
+        [((AppDelegate*)[[UIApplication sharedApplication] delegate]) presentModalViewController:webViewController];
     }
 }
 

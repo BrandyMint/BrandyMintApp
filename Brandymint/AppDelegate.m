@@ -35,6 +35,11 @@
     return YES;
 }
 
+-(void) presentModalViewController:(UIViewController*)controller
+{
+    [ownViewController presentViewController:controller animated:YES completion:nil];
+}
+
 -(void) showAllFontsInConsole
 {
     NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
