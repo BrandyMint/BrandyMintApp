@@ -10,6 +10,7 @@
 
 @interface OwnViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *scrollContainer;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollCards;
 @property (nonatomic, strong) IBOutlet UIImageView *logo;
 

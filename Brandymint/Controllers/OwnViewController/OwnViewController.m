@@ -34,8 +34,10 @@
 
 static AboutViewController *aboutController = nil;
 
+@synthesize scrollContainer;
 @synthesize scrollCards;
 @synthesize cloudBtn;
+@synthesize logo;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -136,7 +138,7 @@ static AboutViewController *aboutController = nil;
 {
     self.scrollCards.alpha = 0.0f;
 
-    aboutController = [[AboutViewController alloc] initWithView:self.view above:self.scrollCards];
+    aboutController = [[AboutViewController alloc] initWithView:self.scrollContainer above:self.scrollCards];
 
     [aboutController showAboutView];
 }
@@ -165,7 +167,6 @@ static AboutViewController *aboutController = nil;
 }
 
 -(void) scrollToFirstPage
-
 {
     CGRect scrollRect = self.scrollCards.frame;
 
