@@ -30,6 +30,8 @@
     
     UIImage *btnImageDefault;
     UIImage *btnImageHighlighted;
+  
+    NSMutableArray *cardControllersArray;
 }
 
 static AboutViewController *aboutController = nil;
@@ -94,16 +96,46 @@ static AboutViewController *aboutController = nil;
     NSInteger scrollHeight = (NSInteger)self.cardsScrollView.frame.size.height;
     
     unsigned int current_pos = 0;
+    cardControllersArray = [[NSMutableArray alloc] init];
     
     for (Card *card in [[CardsRepository sharedInstance] entitiesBuffer])
     {
         CardViewController *cardController = [[CardViewController alloc] initCardController:card];
+        [cardControllersArray addObject:cardController];
         
         [self addViewToIndexScrollView:cardController.view position:current_pos++];
     }
     
     cardsScrollView.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
+  
+    [self updatePageAlpha:0];
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender
+{  
+    CGFloat pageWidth = self.cardsScrollView.frame.size.width;
+    CGFloat scrollOfs = self.cardsScrollView.contentOffset.x;
+    
+    NSInteger curPageIndex = (NSInteger)(floor(scrollOfs/pageWidth - 0.5) + 1);
+    
+    CGFloat pageOfs = scrollOfs/pageWidth - curPageIndex; // -0.5..0.5
+    
+    CardViewController *cardController = [cardControllersArray objectAtIndex:(NSUInteger)curPageIndex];
+    cardController.view.alpha = 1.0 - fabs(pageOfs);
+}
+
+-(void)updatePageAlpha:(NSUInteger)pageIndex
+{
+    if (pageIndex > 0){
+        CardViewController *cardController = [cardControllersArray objectAtIndex: pageIndex-1];
+        cardController.view.alpha = 0.5;
+    }
+    if (pageIndex < cardsScrollView.subviews.count-1){
+        CardViewController *cardController = [cardControllersArray objectAtIndex: pageIndex+1];
+        cardController.view.alpha = 0.5;
+    }
+}
+
 
 -(void) addViewToIndexScrollView:(UIView*)view position:(NSUInteger)index
 {
