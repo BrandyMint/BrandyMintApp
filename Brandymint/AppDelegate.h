@@ -25,6 +25,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+-(void) presentModalViewController:(UIViewController*)controller;
+
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 

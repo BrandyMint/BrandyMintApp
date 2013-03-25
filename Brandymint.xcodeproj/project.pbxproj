@@ -270,9 +270,9 @@
 		18CE3B5B16F885D500B5FF97 /* BlockView */ = {
 			isa = PBXGroup;
 			children = (
-				7C81EFB817003452005B5C19 /* BlockView.xib */,
 				18CE3B5C16F885D500B5FF97 /* BlockView.h */,
 				18CE3B5D16F885D500B5FF97 /* BlockView.m */,
+				7C81EFB817003452005B5C19 /* BlockView.xib */,
 			);
 			path = BlockView;
 			sourceTree = "<group>";
@@ -280,9 +280,9 @@
 		18CE3B5E16F885D500B5FF97 /* LinksView */ = {
 			isa = PBXGroup;
 			children = (
-				7C81EFBA17003457005B5C19 /* LinksView.xib */,
 				18CE3B5F16F885D500B5FF97 /* LinksView.h */,
 				18CE3B6016F885D500B5FF97 /* LinksView.m */,
+				7C81EFBA17003457005B5C19 /* LinksView.xib */,
 			);
 			path = LinksView;
 			sourceTree = "<group>";

@@ -13,7 +13,7 @@
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 
--(id)initWithURL:(NSURL*)url;
+-(id)initWithURL:(NSString*)url;
 
 -(IBAction) onBackButton:(id)sender;
 -(IBAction) onOpenInButton:(id)sender;

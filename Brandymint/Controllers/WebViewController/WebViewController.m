@@ -20,13 +20,13 @@
 @synthesize navBar;
 @synthesize webView;
 
--(id)initWithURL:(NSURL*)url
+-(id)initWithURL:(NSString*)url
 {
-  self = [super initWithNibName:nil bundle:nil];
-  if (self) {
-      _url = url;
-  }
-  return self;
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        _url = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    }
+    return self;
 }
 
 - (void)viewDidLoad
