@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BMLinkButton.h"
 
 @interface LinksView : UIView
 
