@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17723F2C17015CDB00DCDACE /* BlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2B17015CDB00DCDACE /* BlockView.xib */; };
-		17D8195317003C26004855ED /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D8195217003C26004855ED /* LinksView.xib */; };
+		17723F30170178D700DCDACE /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2F170178D700DCDACE /* LinksView.xib */; };
 		18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5916F885D500B5FF97 /* AboutViewController.m */; };
 		18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */; };
 		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
@@ -70,7 +70,6 @@
 		7C81923F16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C81923C16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg */; };
 		7C81924416E86D0B00B71598 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C81924216E86D0B00B71598 /* CardViewController.m */; };
 		7C81924516E86D0B00B71598 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81924316E86D0B00B71598 /* CardViewController.xib */; };
-		7C81EFBB17003457005B5C19 /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C81EFBA17003457005B5C19 /* LinksView.xib */; };
 		7C961B3C1700664B00EC8432 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C961B3A1700664B00EC8432 /* WebViewController.m */; };
 		7C961B3D1700664B00EC8432 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C961B3B1700664B00EC8432 /* WebViewController.xib */; };
 		8303415B16FC7B3F0057FAD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
@@ -101,12 +100,12 @@
 		1730B1C3170032DD006BE122 /* entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = entypo.ttf; path = "../../../../install/!fonts/!icons/Entypo/@font-face/Entypo @font-face/entypo.ttf"; sourceTree = "<group>"; };
 		17723F2B17015CDB00DCDACE /* BlockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlockView.xib; sourceTree = "<group>"; };
 		17723F2D17015CE400DCDACE /* BlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockView.h; sourceTree = "<group>"; };
-		17D8195217003C26004855ED /* LinksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinksView.xib; sourceTree = "<group>"; };
+		17723F2E170178D700DCDACE /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinksView.h; sourceTree = "<group>"; };
+		17723F2F170178D700DCDACE /* LinksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinksView.xib; sourceTree = "<group>"; };
 		18CE3B5816F885D500B5FF97 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		18CE3B5916F885D500B5FF97 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		18CE3B5D16F885D500B5FF97 /* BlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockView.m; sourceTree = "<group>"; };
-		18CE3B5F16F885D500B5FF97 /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinksView.h; sourceTree = "<group>"; };
 		18CE3B6016F885D500B5FF97 /* LinksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinksView.m; sourceTree = "<group>"; };
 		3FDD8401E13B4A509E9DBC6C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6F91EC0C014FE8B93977D4 /* Pods-LogicTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogicTests.xcconfig"; path = "Pods/Pods-LogicTests.xcconfig"; sourceTree = SOURCE_ROOT; };
@@ -178,7 +177,6 @@
 		7C81924116E86D0B00B71598 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		7C81924216E86D0B00B71598 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		7C81924316E86D0B00B71598 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
-		7C81EFBA17003457005B5C19 /* LinksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinksView.xib; sourceTree = "<group>"; };
 		7C961B391700664B00EC8432 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		7C961B3A1700664B00EC8432 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		7C961B3B1700664B00EC8432 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
@@ -275,11 +273,9 @@
 		18CE3B5E16F885D500B5FF97 /* LinksView */ = {
 			isa = PBXGroup;
 			children = (
-				7C81EFBA17003457005B5C19 /* LinksView.xib */,
-				17D8195217003C26004855ED /* LinksView.xib */,
-				18CE3B5F16F885D500B5FF97 /* LinksView.h */,
+				17723F2E170178D700DCDACE /* LinksView.h */,
+				17723F2F170178D700DCDACE /* LinksView.xib */,
 				18CE3B6016F885D500B5FF97 /* LinksView.m */,
-				7C81EFBA17003457005B5C19 /* LinksView.xib */,
 			);
 			path = LinksView;
 			sourceTree = "<group>";
@@ -678,10 +674,9 @@
 				833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */,
 				18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */,
 				838F230316FB0E92000A3EEE /* BrandyMintUnitTests-Info.plist in Resources */,
-				7C81EFBB17003457005B5C19 /* LinksView.xib in Resources */,
 				7C961B3D1700664B00EC8432 /* WebViewController.xib in Resources */,
-				17D8195317003C26004855ED /* LinksView.xib in Resources */,
 				17723F2C17015CDB00DCDACE /* BlockView.xib in Resources */,
+				17723F30170178D700DCDACE /* LinksView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
