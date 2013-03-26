@@ -191,6 +191,8 @@ static AboutViewController *aboutController = nil;
 
 -(void) willAboutViewHide
 {
+    cloudBtn.selected = !cloudBtn.selected;
+  
     aboutController = nil;
   
     self.cardsScrollView.alpha = 0.0f;
