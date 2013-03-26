@@ -8,24 +8,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Brandymint/Controllers/OwnViewController/OwnViewController.m"
-         timestampString = "385911641.302872"
+         timestampString = "385988409.543002"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "167"
-         endingLineNumber = "167"
-         landmarkName = "-logoTaped:"
-         landmarkType = "5">
+         startingLineNumber = "219"
+         endingLineNumber = "219">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Brandymint/Controllers/CardViewController/CardViewController.m"
-         timestampString = "385908602.092603"
+         timestampString = "385976248.448916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "121"
-         endingLineNumber = "121">
+         startingLineNumber = "119"
+         endingLineNumber = "119">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
