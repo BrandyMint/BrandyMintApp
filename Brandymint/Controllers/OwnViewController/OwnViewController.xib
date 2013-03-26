@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">11G63</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1138.51</string>
-		<string key="IBDocument.HIToolboxVersion">569.00</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">2083</string>
@@ -137,7 +137,7 @@
 							<object class="IBUIScrollView" id="958163345">
 								<reference key="NSNextResponder" ref="1063037063"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{0, 20}, {1024, 594}}</string>
+								<string key="NSFrame">{{0, 20}, {1024, 500}}</string>
 								<reference key="NSSuperview" ref="1063037063"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1002856574"/>
@@ -166,7 +166,7 @@
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{493, 707}, {38, 36}}</string>
+						<string key="NSFrame">{{493, 667}, {38, 36}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -425,7 +425,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="background.jpg">{1024, 768}</string>
-			<string key="brandymint_logo_white.png">{386, 42}</string>
+			<string key="brandymint_logo_white.png">{353, 44}</string>
 			<string key="icon-cloud-tap.png">{64, 64}</string>
 			<string key="icon-cloud.png">{36, 24}</string>
 		</dictionary>

@@ -64,8 +64,9 @@
     
     self.cardTitleLabel.font    = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
     self.cardSubtitleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:25];
-    self.cardDescLabel.font     = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:20];
-    
+    self.cardDescLabel.font     = [UIFont fontWithName:@"Ubuntu" size:20];
+    self.cardDescLabel.textColor = [UIColor whiteColor];
+  
     self.cardImageView.image    = card.image.data;
     self.cardTitleLabel.text    = card.title;
     self.cardSubtitleLabel.text = card.subtitle;
