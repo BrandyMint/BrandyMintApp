@@ -73,6 +73,7 @@
 		7C961B3C1700664B00EC8432 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C961B3A1700664B00EC8432 /* WebViewController.m */; };
 		7C961B3D1700664B00EC8432 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C961B3B1700664B00EC8432 /* WebViewController.xib */; };
 		7CDF97131701A25300AC31F3 /* BMLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF97121701A25300AC31F3 /* BMLinkButton.m */; };
+		7CDF97161701C1A200AC31F3 /* Brandymint.nss in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF97151701C1A200AC31F3 /* Brandymint.nss */; };
 		8303415B16FC7B3F0057FAD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
 		8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326873116F73E3B000351BC /* BMCoreTextLabel.m */; };
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
@@ -183,6 +184,7 @@
 		7C961B3B1700664B00EC8432 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		7CDF97111701A25300AC31F3 /* BMLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLinkButton.h; sourceTree = "<group>"; };
 		7CDF97121701A25300AC31F3 /* BMLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLinkButton.m; sourceTree = "<group>"; };
+		7CDF97151701C1A200AC31F3 /* Brandymint.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Brandymint.nss; sourceTree = "<group>"; };
 		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 		7C81922916E867FE00B71598 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7CDF97141701C18A00AC31F3 /* NSS */,
 				7C80D77316F2FBB9007D5E3B /* Fonts */,
 				7C19C04E16F0966D003D6CDE /* DataManifest.json */,
 				7C01D4EF16EE0B70004216EC /* background.jpg */,
@@ -494,6 +497,12 @@
 				7CDF97121701A25300AC31F3 /* BMLinkButton.m */,
 			);
 			path = CustomClass;
+		7CDF97141701C18A00AC31F3 /* NSS */ = {
+			isa = PBXGroup;
+			children = (
+				7CDF97151701C1A200AC31F3 /* Brandymint.nss */,
+			);
+			name = NSS;
 			sourceTree = "<group>";
 		};
 		838F22D216FB06A6000A3EEE /* Other Frameworks */ = {
@@ -690,6 +699,7 @@
 				7C961B3D1700664B00EC8432 /* WebViewController.xib in Resources */,
 				17723F2C17015CDB00DCDACE /* BlockView.xib in Resources */,
 				17723F30170178D700DCDACE /* LinksView.xib in Resources */,
+				7CDF97161701C1A200AC31F3 /* Brandymint.nss in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

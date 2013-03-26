@@ -2,12 +2,14 @@ PODS:
   - ABMultiton (1.0.0)
   - AFNetworking (1.1.0)
   - NMCustomLabel (0.1.1)
+  - NUI (HEAD based on 0.2.7)
   - OCMock (2.0.1)
 
 DEPENDENCIES:
   - ABMultiton
   - AFNetworking
   - NMCustomLabel (from `git://github.com/BrandyMint/NMCustomLabel.git`, tag `0.1.1`)
+  - NUI (HEAD)
   - OCMock
 
 EXTERNAL SOURCES:
@@ -19,6 +21,7 @@ SPEC CHECKSUMS:
   ABMultiton: a32dda074f17f0faf11a84c7510c338369135b66
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
   NMCustomLabel: 20f5c45e29013a2a77b3d7fac63bc9a8c25c680e
+  NUI: bc96741235be530960404a7c7b7aca8d7c2be81c
   OCMock: 77a9c4c57af6bf258a537d34cf09abf422affede
 
 COCOAPODS: 0.17.0.rc6
