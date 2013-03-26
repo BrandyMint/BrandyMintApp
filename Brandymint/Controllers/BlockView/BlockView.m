@@ -29,7 +29,9 @@
     titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
     contentLabel.text = bloc.content;
-    contentLabel.font = [UIFont fontWithName:@"Ubuntu" size:18];
+    contentLabel.font = [UIFont fontWithName:@"Ubuntu" size:17];
+    contentLabel.numberOfLines = 0;
+    [contentLabel sizeToFit];
 }
 
 @end
