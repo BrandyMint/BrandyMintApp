@@ -25,7 +25,9 @@
 {
     icon.image = bloc.icon.data;
     titleLabel.text = bloc.title;
+    titleLabel.font = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
     contentLabel.text = bloc.content;
+    contentLabel.font = [UIFont fontWithName:@"Ubuntu" size:18];
 }
 
 @end
