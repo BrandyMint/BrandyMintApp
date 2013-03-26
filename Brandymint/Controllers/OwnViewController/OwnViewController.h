@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *contextContainerView;
 @property (strong, nonatomic) IBOutlet UIScrollView *cardsScrollView;
+@property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, strong) IBOutlet UIImageView *logo;
 
 @property (nonatomic, strong) IBOutlet UIButton *cloudBtn;

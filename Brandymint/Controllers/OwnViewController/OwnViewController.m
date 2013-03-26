@@ -38,6 +38,7 @@ static AboutViewController *aboutController = nil;
 
 @synthesize contextContainerView;
 @synthesize cardsScrollView;
+@synthesize pageControl;
 @synthesize cloudBtn;
 @synthesize logo;
 
@@ -60,6 +61,8 @@ static AboutViewController *aboutController = nil;
 -(void) viewWillAppear:(BOOL)animated
 {
     [self setHookOnLogoClick];
+  
+    pageControl.alpha = 0.0f;
   
     btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
     btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
@@ -108,6 +111,9 @@ static AboutViewController *aboutController = nil;
     
     cardsScrollView.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
   
+    pageControl.currentPage = 0;
+    pageControl.numberOfPages = current_pos;
+  
     [self updatePageAlpha:0];
 }
 
@@ -117,11 +123,53 @@ static AboutViewController *aboutController = nil;
     CGFloat scrollOfs = self.cardsScrollView.contentOffset.x;
     
     NSInteger curPageIndex = (NSInteger)(floor(scrollOfs/pageWidth - 0.5) + 1);
+  
+    pageControl.currentPage = curPageIndex;
     
     CGFloat pageOfs = scrollOfs/pageWidth - curPageIndex; // -0.5..0.5
     
     CardViewController *cardController = [cardControllersArray objectAtIndex:(NSUInteger)curPageIndex];
     cardController.view.alpha = 1.0 - fabs(pageOfs);
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+      //show page control
+      [self pageControlAlphaShow];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+      //hide page control
+      [self pageControlAlphaHide];
+}
+
+-(void) pageControlAlphaShow
+{
+    CGFloat timeElapsed = 0.8f * pageControl.alpha;
+  
+    [UIView animateWithDuration:timeElapsed
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                        pageControl.alpha = 1.0;
+                     }
+                     completion:^(BOOL finished){
+                       
+                     }];
+}
+
+-(void) pageControlAlphaHide
+{
+  CGFloat timeElapsed = 0.5f * pageControl.alpha;
+  
+  [UIView animateWithDuration:timeElapsed
+                        delay:0.4
+                      options: UIViewAnimationOptionCurveEaseIn
+                   animations:^{
+                     pageControl.alpha = 0.0;
+                   }
+                   completion:^(BOOL finished){
+                     
+                   }];
 }
 
 -(void)updatePageAlpha:(NSUInteger)pageIndex
