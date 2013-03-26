@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176DD5181701C58800559BB7 /* icon-cloud-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 176DD5161701C58800559BB7 /* icon-cloud-tap.png */; };
+		176DD5191701C58800559BB7 /* icon-cloud-tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 176DD5171701C58800559BB7 /* icon-cloud-tap@2x.png */; };
 		17723F2C17015CDB00DCDACE /* BlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2B17015CDB00DCDACE /* BlockView.xib */; };
 		17723F30170178D700DCDACE /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2F170178D700DCDACE /* LinksView.xib */; };
 		18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5916F885D500B5FF97 /* AboutViewController.m */; };
@@ -99,6 +101,8 @@
 
 /* Begin PBXFileReference section */
 		1730B1C3170032DD006BE122 /* entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = entypo.ttf; path = "../../../../install/!fonts/!icons/Entypo/@font-face/Entypo @font-face/entypo.ttf"; sourceTree = "<group>"; };
+		176DD5161701C58800559BB7 /* icon-cloud-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud-tap.png"; sourceTree = "<group>"; };
+		176DD5171701C58800559BB7 /* icon-cloud-tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud-tap@2x.png"; sourceTree = "<group>"; };
 		17723F2B17015CDB00DCDACE /* BlockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlockView.xib; sourceTree = "<group>"; };
 		17723F2D17015CE400DCDACE /* BlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockView.h; sourceTree = "<group>"; };
 		17723F2E170178D700DCDACE /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinksView.h; sourceTree = "<group>"; };
@@ -430,6 +434,8 @@
 		7C81922916E867FE00B71598 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				176DD5161701C58800559BB7 /* icon-cloud-tap.png */,
+				176DD5171701C58800559BB7 /* icon-cloud-tap@2x.png */,
 				7C80D77316F2FBB9007D5E3B /* Fonts */,
 				7C19C04E16F0966D003D6CDE /* DataManifest.json */,
 				7C01D4EF16EE0B70004216EC /* background.jpg */,
@@ -690,6 +696,8 @@
 				7C961B3D1700664B00EC8432 /* WebViewController.xib in Resources */,
 				17723F2C17015CDB00DCDACE /* BlockView.xib in Resources */,
 				17723F30170178D700DCDACE /* LinksView.xib in Resources */,
+				176DD5181701C58800559BB7 /* icon-cloud-tap.png in Resources */,
+				176DD5191701C58800559BB7 /* icon-cloud-tap@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
