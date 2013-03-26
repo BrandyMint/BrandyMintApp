@@ -65,13 +65,11 @@
     self.cardTitleLabel.font    = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
     self.cardSubtitleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:25];
     self.cardDescLabel.font     = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:20];
-    //self.cardLinkLabel.font     = [UIFont fontWithName:@"Ubuntu-Light" size:23];
     
     self.cardImageView.image    = card.image.data;
     self.cardTitleLabel.text    = card.title;
     self.cardSubtitleLabel.text = card.subtitle;
     self.cardDescLabel.text     = card.desc;
-    //self.cardLinkLabel.text     = card.link;
   
     //self.cardImageView.layer.cornerRadius = 4;
     //self.cardImageView.layer.masksToBounds = YES;
@@ -86,7 +84,6 @@
     [cardLinkButton setTitle:card.link forState:UIControlStateNormal];
     cardLinkButton.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];
     cardLinkButton.titleLabel.textAlignment = UITextAlignmentLeft;
-    //cardLinkButton.titleLabel.shadowColor = [UIColor blackColor];
     cardLinkButton.titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
     cardLinkButton.backgroundColor = [UIColor clearColor];
 }

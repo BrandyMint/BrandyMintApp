@@ -26,5 +26,11 @@
 
 }
 
+-(void) setFont:(UIFont *)_font
+{
+  [super setFont:_font];
+  
+  [self setDefaultStyle:[NMCustomLabelStyle styleWithFont:_font color:self.textColor]];
+}
 
 @end
