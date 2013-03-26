@@ -32,15 +32,22 @@
     for (Link *link in [[LinksRepository sharedInstance] entitiesBuffer])
     {
         UIButton * btnLink = (UIButton*)[buttonsContainer viewWithTag: link.position.integerValue ];
-        if([btnLink isKindOfClass:[UIButton class]])  {
-            
+        if([btnLink isKindOfClass:[UIButton class]])  {          
             [btnLink setTitle:link.title forState:UIControlStateNormal];
-            btnLink.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:32];
+            btnLink.titleLabel.font = [UIFont fontWithName:@"Ubuntu" size:30];
             btnLink.titleLabel.textAlignment = UITextAlignmentLeft;
             btnLink.titleLabel.shadowColor = [UIColor blackColor];
-            btnLink.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
+            btnLink.titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
             btnLink.backgroundColor = [UIColor clearColor];
             btnLink.tag = [link.position integerValue];
+            UIImage * rightIcon = [UIImage imageNamed:@"icon-right.png"];
+            UIImageView *rightIconView = [[UIImageView alloc] initWithFrame:CGRectMake(312,18,7,12)];
+            rightIconView.alpha = 0.7f;
+            [rightIconView setImage:rightIcon];
+            UIView * separator = [[UIView alloc] initWithFrame:CGRectMake(0, 48, 320, 1)];
+            separator.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1];
+            [btnLink addSubview:separator];
+            [btnLink addSubview:rightIconView];
             [btnLink addTarget:self action:@selector(onClickLink:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
