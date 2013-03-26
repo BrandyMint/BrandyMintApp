@@ -8,11 +8,21 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Brandymint/Controllers/OwnViewController/OwnViewController.m"
+<<<<<<< HEAD
          timestampString = "385988409.543002"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "219"
          endingLineNumber = "219">
+=======
+         timestampString = "385982036.202943"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "215"
+         endingLineNumber = "215"
+         landmarkName = "-logoTaped:"
+         landmarkType = "5">
+>>>>>>> Встроен pageControl с анимированным появлением и исчезновением по альфаканалу
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
