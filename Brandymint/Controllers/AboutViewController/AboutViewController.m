@@ -88,19 +88,14 @@
 
 -(void) showAboutView
 {
-    CGRect aboutViewFrame = self.view.frame;
-    aboutViewFrame.origin.y = rootView.frame.size.height;
-    self.view.frame = aboutViewFrame;
-    
+    self.view.alpha = 0;
     [rootView addSubview:self.view];
   
     [UIView animateWithDuration:0.2
                           delay:0.0
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
-                         CGRect rect = aboutViewFrame;
-                         rect.origin.y = 0;
-                         self.view.frame = rect;
+                         self.view.alpha = 1;
                      }
                      completion:^(BOOL finished){
                         //
@@ -114,20 +109,12 @@
 
 -(void) hideAboutViewToDirection:(UISwipeGestureRecognizerDirection)direction
 {
-    CGRect aboutViewFrame = self.view.frame;
     
     [UIView animateWithDuration:0.2
                           delay:0.0
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
-                         CGRect rect = aboutViewFrame;
-                       
-                         if(direction == UISwipeGestureRecognizerDirectionUp)
-                           rect.origin.y = -rootView.frame.size.height;
-                         else
-                           rect.origin.y = rootView.frame.size.height;
-                       
-                         self.view.frame = rect;
+                         self.view.alpha = 0;
                      }
                      completion:^(BOOL finished){
                          [self.view removeFromSuperview];
