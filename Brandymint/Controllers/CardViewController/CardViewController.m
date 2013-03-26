@@ -75,8 +75,8 @@
     [cardLinkButton setTitle:card.link forState:UIControlStateNormal];
     cardLinkButton.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];
     cardLinkButton.titleLabel.textAlignment = UITextAlignmentLeft;
-    cardLinkButton.titleLabel.shadowColor = [UIColor blackColor];
-    cardLinkButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
+    //cardLinkButton.titleLabel.shadowColor = [UIColor blackColor];
+    cardLinkButton.titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
     cardLinkButton.backgroundColor = [UIColor clearColor];
 }
 
