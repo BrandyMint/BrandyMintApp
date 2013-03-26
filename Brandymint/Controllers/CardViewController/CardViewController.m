@@ -8,6 +8,7 @@
 
 #import "CardViewController.h"
 #import "UIImage+external.h"
+#import <QuartzCore/QuartzCore.h>
 #import "NMCustomLabel.h"
 #import "WebViewController.h"
 #import "AppDelegate.h"
@@ -71,6 +72,16 @@
     self.cardSubtitleLabel.text = card.subtitle;
     self.cardDescLabel.text     = card.desc;
     //self.cardLinkLabel.text     = card.link;
+  
+    //self.cardImageView.layer.cornerRadius = 4;
+    //self.cardImageView.layer.masksToBounds = YES;
+    [self.cardImageView.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.cardImageView.layer setShadowOpacity:0.3f];
+    [self.cardImageView.layer setShadowOffset: CGSizeMake(0.0f, 5.0f)];
+    [self.cardImageView.layer setShadowRadius:10];
+    [self.cardImageView.layer setBorderColor:[UIColor colorWithWhite:1.0 alpha:0.5f].CGColor];
+    [self.cardImageView.layer setBorderWidth:1.0f];
+  
   
     [cardLinkButton setTitle:card.link forState:UIControlStateNormal];
     cardLinkButton.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];

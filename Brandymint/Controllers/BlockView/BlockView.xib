@@ -54,7 +54,7 @@
 					<object class="IBUILabel" id="183192663">
 						<reference key="NSNextResponder" ref="619741913"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{115, 0}, {369, 35}}</string>
+						<string key="NSFrame">{{113, 0}, {369, 35}}</string>
 						<reference key="NSSuperview" ref="619741913"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="25246826"/>
@@ -88,8 +88,8 @@
 					</object>
 					<object class="IBUILabel" id="25246826">
 						<reference key="NSNextResponder" ref="619741913"/>
-						<int key="NSvFlags">276</int>
-						<string key="NSFrame">{{115, 43}, {344, 111}}</string>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{115, 48}, {344, 106}}</string>
 						<reference key="NSSuperview" ref="619741913"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -101,6 +101,7 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">9</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="IBUIContentStretch">{{0, 0}, {0, 0}}</string>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu</string>
 						<object class="NSColor" key="IBUITextColor" id="416171528">
@@ -109,7 +110,6 @@
 						</object>
 						<reference key="IBUIHighlightedColor" ref="416171528"/>
 						<int key="IBUIBaselineAdjustment">0</int>
-						<bool key="IBUIHighlighted">YES</bool>
 						<int key="IBUINumberOfLines">0</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<string key="name">Helvetica</string>
