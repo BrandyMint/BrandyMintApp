@@ -13,6 +13,7 @@
 		176DD51D1701C66400559BB7 /* brandymint_logo_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 176DD51B1701C66400559BB7 /* brandymint_logo_white@2x.png */; };
 		17723F2C17015CDB00DCDACE /* BlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2B17015CDB00DCDACE /* BlockView.xib */; };
 		17723F30170178D700DCDACE /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2F170178D700DCDACE /* LinksView.xib */; };
+		17AA7FCD17030367007D16D9 /* Empty.nss in Resources */ = {isa = PBXBuildFile; fileRef = 17AA7FCC17030367007D16D9 /* Empty.nss */; };
 		18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5916F885D500B5FF97 /* AboutViewController.m */; };
 		18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */; };
 		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
@@ -113,6 +114,7 @@
 		17723F2D17015CE400DCDACE /* BlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockView.h; sourceTree = "<group>"; };
 		17723F2E170178D700DCDACE /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinksView.h; sourceTree = "<group>"; };
 		17723F2F170178D700DCDACE /* LinksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinksView.xib; sourceTree = "<group>"; };
+		17AA7FCC17030367007D16D9 /* Empty.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Empty.nss; sourceTree = "<group>"; };
 		18CE3B5816F885D500B5FF97 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		18CE3B5916F885D500B5FF97 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 				7C81923A16E86B1400B71598 /* brandymint_2013_redesign_fnl.jpg */,
 				7C81923B16E86B1400B71598 /* brandymint_2013_redesign_fnl2.jpg */,
 				7C81923C16E86B1400B71598 /* brandymint_2013_redesign_fnl3.jpg */,
+				17AA7FCC17030367007D16D9 /* Empty.nss */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				176DD5191701C58800559BB7 /* icon-cloud-tap@2x.png in Resources */,
 				176DD51C1701C66400559BB7 /* brandymint_logo_white.png in Resources */,
 				176DD51D1701C66400559BB7 /* brandymint_logo_white@2x.png in Resources */,
+				17AA7FCD17030367007D16D9 /* Empty.nss in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
