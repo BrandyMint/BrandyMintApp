@@ -79,7 +79,6 @@
 		7CDF97131701A25300AC31F3 /* BMLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF97121701A25300AC31F3 /* BMLinkButton.m */; };
 		7CE791191702BADF00163AFE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE791181702BADF00163AFE /* CoreImage.framework */; };
 		7CE7911B1702BAE500163AFE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE7911A1702BAE500163AFE /* QuartzCore.framework */; };
-		7CE7911E1702BBD900163AFE /* Brandymint.nss in Resources */ = {isa = PBXBuildFile; fileRef = 7CE7911D1702BBD900163AFE /* Brandymint.nss */; };
 		8303415B16FC7B3F0057FAD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
 		8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326873116F73E3B000351BC /* BMCoreTextLabel.m */; };
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
@@ -196,7 +195,6 @@
 		7CDF97121701A25300AC31F3 /* BMLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLinkButton.m; sourceTree = "<group>"; };
 		7CE791181702BADF00163AFE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		7CE7911A1702BAE500163AFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7CE7911D1702BBD900163AFE /* Brandymint.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Brandymint.nss; path = ../../../../../denisdbv/Documents/BrandyMintApp/Brandymint/Resources/Brandymint.nss; sourceTree = "<group>"; };
 		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
@@ -448,7 +446,6 @@
 		7C81922916E867FE00B71598 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7CE7911C1702BBC600163AFE /* NSS */,
 				176DD51A1701C66300559BB7 /* brandymint_logo_white.png */,
 				176DD51B1701C66400559BB7 /* brandymint_logo_white@2x.png */,
 				176DD5161701C58800559BB7 /* icon-cloud-tap.png */,
@@ -517,14 +514,6 @@
 				7CDF97121701A25300AC31F3 /* BMLinkButton.m */,
 			);
 			path = CustomClass;
-			sourceTree = "<group>";
-		};
-		7CE7911C1702BBC600163AFE /* NSS */ = {
-			isa = PBXGroup;
-			children = (
-				7CE7911D1702BBD900163AFE /* Brandymint.nss */,
-			);
-			name = NSS;
 			sourceTree = "<group>";
 		};
 		838F22D216FB06A6000A3EEE /* Other Frameworks */ = {
@@ -725,7 +714,6 @@
 				176DD5191701C58800559BB7 /* icon-cloud-tap@2x.png in Resources */,
 				176DD51C1701C66400559BB7 /* brandymint_logo_white.png in Resources */,
 				176DD51D1701C66400559BB7 /* brandymint_logo_white@2x.png in Resources */,
-				7CE7911E1702BBD900163AFE /* Brandymint.nss in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
