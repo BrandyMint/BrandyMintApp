@@ -53,9 +53,13 @@ static AboutViewController *aboutController = nil;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    [self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
+  
+  [super viewDidLoad];
+  [self performSelector:@selector(initBackLayer) withObject:nil afterDelay:0];
+  [self performSelector:@selector(initBackLayerAnimated) withObject:nil afterDelay:0];
+  [self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
+
+
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -66,8 +70,9 @@ static AboutViewController *aboutController = nil;
   
     btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
     btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
-    
+  
     self.cardsScrollView.backgroundColor = [UIColor clearColor];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,12 +115,53 @@ static AboutViewController *aboutController = nil;
     }
     
     cardsScrollView.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
-  
+  cardsScrollView.layer.zPosition = 2;
     pageControl.currentPage = 0;
     pageControl.numberOfPages = current_pos;
   
     [self updatePageAlpha:0];
 }
+
+-(void) initBackLayer
+{
+  UIImage *backLayerImage = [UIImage imageNamed:@"background.jpg"];
+  UIImageView *backLayerImageView = [[UIImageView alloc] initWithImage:backLayerImage];
+  [self.view addSubview:backLayerImageView];
+  backLayerImageView.layer.zPosition = -2;
+}
+
+-(void) initBackLayerAnimated
+{
+  unsigned int i, cnt = 2;
+  UIImage *backLayerImageAnimated[cnt];
+  UIImageView *backLayerImageAnimatedView[cnt];
+  UIImageView *imageRef;
+  for(i = 0; i < cnt; i++)
+  {
+    backLayerImageAnimated[i] = [UIImage imageNamed:[NSString stringWithFormat:@"background-item-%d.png", i]];
+    backLayerImageAnimatedView[i] = [[UIImageView alloc] initWithImage:backLayerImageAnimated[i]];
+    backLayerImageAnimatedView[i].layer.position = CGPointMake(430*i,400+(arc4random()%2 ? -1 : 1)*(arc4random() % 100));
+    imageRef.transform = CGAffineTransformMakeRotation(0);
+    [self.view addSubview:backLayerImageAnimatedView[i] ];
+    
+    imageRef = backLayerImageAnimatedView[i];
+    imageRef.layer.zPosition = -1;
+    [UIView animateWithDuration:3+i delay:0 options:(UIViewAnimationCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat) animations:^{
+      imageRef.transform = CGAffineTransformMakeScale(2, 2);
+    } completion:^ (BOOL finished) {
+      //
+    }];
+    [UIView animateWithDuration:30 delay:0 options:(UIViewAnimationCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat) animations:^{
+      imageRef.transform = CGAffineTransformMakeRotation(1.54906585);
+      imageRef.layer.position = CGPointMake(imageRef.layer.position.x + (arc4random()%2 ? -1 : 1)*400, imageRef.layer.position.y + (arc4random()%2 ? -1 : 1)*400);
+    } completion:^ (BOOL finished) {
+      //
+    }];
+
+  }
+
+}
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {  
