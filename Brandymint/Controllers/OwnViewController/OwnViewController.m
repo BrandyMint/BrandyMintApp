@@ -59,8 +59,6 @@ static AboutViewController *aboutController = nil;
   [super viewDidLoad];
   [self performSelector:@selector(initBackLayer) withObject:nil afterDelay:0];
   [self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
-
-
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -73,7 +71,6 @@ static AboutViewController *aboutController = nil;
     btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
   
     self.cardsScrollView.backgroundColor = [UIColor clearColor];
-
 }
 
 - (void)didReceiveMemoryWarning

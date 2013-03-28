@@ -14,6 +14,7 @@
 @interface Image : NSManagedObject
 
 @property (nonatomic, retain) UIImage * data;
+@property (nonatomic, retain) UIImage * thumb;
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) Card *card;
 

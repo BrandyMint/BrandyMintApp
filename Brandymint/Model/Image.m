@@ -14,6 +14,7 @@
 @implementation Image
 
 @dynamic data;
+@dynamic thumb;
 @dynamic url;
 @dynamic card;
 
@@ -64,6 +65,34 @@
             initWithData:[NSData
                           dataWithContentsOfURL:[NSURL URLWithString:url]]];
     
+}
+
+- (void)didChangeValueForKey:(NSString *)key
+{
+    if ([key isEqualToString:@"url"]) {
+      UIImage *image = self.data;
+  
+      self.thumb = [self scaleToSize:CGSizeMake(image.size.width/8, image.size.height/8)];
+    }
+    
+    [super didChangeValueForKey:key];
+}
+
+- (UIImage*)scaleToSize:(CGSize)size
+{
+    UIGraphicsBeginImageContext(size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(context, 0.0, size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    
+    CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, size.width, size.height), self.data.CGImage);
+    
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
 }
 
 @end
