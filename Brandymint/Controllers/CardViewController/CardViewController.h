@@ -20,6 +20,9 @@
 @property (nonatomic, assign) IBOutlet UILabel *cardSubtitleLabel;
 @property (nonatomic, assign) IBOutlet BMCoreTextLabel *cardDescLabel;
 @property (nonatomic, assign) IBOutlet UIButton *cardLinkButton;
+@property (nonatomic, assign) IBOutlet UIButton *cardAppstoreButton;
+@property (nonatomic, assign) IBOutlet UIButton *cardGoogleplayButton;
+
 
 @property (nonatomic, retain) Card *card;
 
