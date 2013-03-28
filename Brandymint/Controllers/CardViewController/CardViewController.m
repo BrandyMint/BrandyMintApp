@@ -24,6 +24,8 @@
 @synthesize cardSubtitleLabel;
 @synthesize cardDescLabel;
 @synthesize cardLinkButton;
+@synthesize cardAppstoreButton;
+@synthesize cardGoogleplayButton;
 @synthesize card;
 
 - (id)initCardController:(Card*)srcCard
@@ -71,7 +73,7 @@
     self.cardTitleLabel.text    = card.title;
     self.cardSubtitleLabel.text = card.subtitle;
     self.cardDescLabel.text     = card.desc;
-  
+
     //self.cardImageView.layer.cornerRadius = 4;
     //self.cardImageView.layer.masksToBounds = YES;
     [self.cardImageView.layer setShadowColor:[UIColor blackColor].CGColor];
@@ -81,12 +83,33 @@
     [self.cardImageView.layer setBorderColor:[UIColor colorWithWhite:1.0 alpha:0.5f].CGColor];
     [self.cardImageView.layer setBorderWidth:1.0f];
   
+    if (card.url && [card.url length]!=0) {
+      [cardLinkButton setTitle:NULL forState:UIControlStateNormal];
+      [cardLinkButton setTitle:card.link forState:UIControlStateNormal];
+      //cardLinkButton.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];
+      //cardLinkButton.titleLabel.textAlignment = UITextAlignmentLeft;
+      //cardLinkButton.titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
+      cardLinkButton.backgroundColor = [UIColor clearColor];
+      UIImage *cardLinkIcon = [UIImage imageNamed:@"icon-link.png"];
+      [cardLinkButton setImage:cardLinkIcon forState:UIControlStateNormal];
+    }
+    else
+    {
+      cardLinkButton.hidden = true;
+    }
   
-    [cardLinkButton setTitle:card.link forState:UIControlStateNormal];
-    cardLinkButton.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];
-    cardLinkButton.titleLabel.textAlignment = UITextAlignmentLeft;
-    cardLinkButton.titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
-    cardLinkButton.backgroundColor = [UIColor clearColor];
+    //TODO if (card.appstore_url && [card.appstore_url length]!=0)
+    [cardAppstoreButton setTitle:NULL forState:UIControlStateNormal];
+    cardAppstoreButton.backgroundColor = [UIColor clearColor];
+    UIImage *cardAppstoreBadge = [UIImage imageNamed:@"badge-appstore.png"];
+    [cardAppstoreButton setImage:cardAppstoreBadge forState:UIControlStateNormal];
+  
+    //TODO if (card.googleplay_url && [card.googleplay_url length]!=0)
+    [cardGoogleplayButton setTitle:NULL forState:UIControlStateNormal];
+    cardGoogleplayButton.backgroundColor = [UIColor clearColor];
+    UIImage *cardGoogleplayBadge = [UIImage imageNamed:@"badge-googleplay.png"];
+    [cardGoogleplayButton setImage:cardGoogleplayBadge forState:UIControlStateNormal];
+
 }
 
 -(void) setHookOnAppImageClick
