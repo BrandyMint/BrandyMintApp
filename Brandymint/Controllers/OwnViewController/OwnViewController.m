@@ -20,6 +20,8 @@
 //
 //
 
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
 @interface OwnViewController ()
 
 @end
@@ -200,9 +202,6 @@ static AboutViewController *aboutController = nil;
 
 -(void) onCloudClick:(id)sender
 {
-    cloudBtn.selected = !cloudBtn.selected;
-    cloudBtn.highlighted = !cloudBtn.highlighted;
-    
     if(aboutController == nil)  {
         [self showAboutController];
     }
@@ -222,6 +221,8 @@ static AboutViewController *aboutController = nil;
 
 -(void) showAboutController
 {
+    [cloudBtn setImage:[UIImage imageNamed:@"icon-cloud-tap.png"] forState:UIControlStateNormal];
+  
     self.cardsScrollView.alpha = 0.0f;
 
     aboutController = [[AboutViewController alloc] initWithView:self.contextContainerView above:self.cardsScrollView];
@@ -233,13 +234,11 @@ static AboutViewController *aboutController = nil;
 {
     [aboutController hideAboutView];
     aboutController = nil;
-  
-    [self willAboutViewHide];
 }
 
 -(void) willAboutViewHide
 {
-    cloudBtn.selected = !cloudBtn.selected;
+    [cloudBtn setImage:[UIImage imageNamed:@"icon-cloud.png"] forState:UIControlStateNormal];
   
     aboutController = nil;
   

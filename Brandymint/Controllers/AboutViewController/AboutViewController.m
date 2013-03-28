@@ -53,8 +53,6 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    [self setHookOnMovingFinger];
-  
     self.view.backgroundColor = [UIColor clearColor];
     
     for (Bloc *bloc in [[BlocsRepository sharedInstance] entitiesBuffer])
@@ -70,20 +68,6 @@
     UIView * linksContainer = (UIView*)[self.view viewWithTag: 5 ];
     linksView = [[[NSBundle mainBundle] loadNibNamed:@"LinksView" owner:self options:nil] objectAtIndex:0];
     [linksContainer addSubview: linksView];
-}
-
--(void) setHookOnMovingFinger
-{
-    UISwipeGestureRecognizer *recognizer;
-  
-    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hideAboutViewToUp:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
-    [[self view] addGestureRecognizer:recognizer];
-  
-    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hideAboutViewToDown:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
-  
-    [[self view] addGestureRecognizer:recognizer];
 }
 
 -(void) showAboutView
@@ -124,16 +108,6 @@
     {
         [delegate willAboutViewHide];
     }
-}
-
--(void) hideAboutViewToDown:(UISwipeGestureRecognizer *)recognizer
-{
-    [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionDown];
-}
-
--(void) hideAboutViewToUp:(UISwipeGestureRecognizer *)recognizer
-{
-    [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionUp];
 }
 
 @end
