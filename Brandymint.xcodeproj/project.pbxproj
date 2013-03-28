@@ -14,6 +14,10 @@
 		17723F2C17015CDB00DCDACE /* BlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2B17015CDB00DCDACE /* BlockView.xib */; };
 		17723F30170178D700DCDACE /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2F170178D700DCDACE /* LinksView.xib */; };
 		17AA7FCD17030367007D16D9 /* Empty.nss in Resources */ = {isa = PBXBuildFile; fileRef = 17AA7FCC17030367007D16D9 /* Empty.nss */; };
+		17EB93BB170417920040461D /* background-item-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EB93B3170417920040461D /* background-item-1.png */; };
+		17EB93BC170417920040461D /* background-item-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EB93B4170417920040461D /* background-item-1@2x.png */; };
+		17EB93BD170417920040461D /* background-item-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EB93B5170417920040461D /* background-item-2.png */; };
+		17EB93BE170417920040461D /* background-item-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EB93B6170417920040461D /* background-item-2@2x.png */; };
 		18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5916F885D500B5FF97 /* AboutViewController.m */; };
 		18CE3B6216F885D500B5FF97 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */; };
 		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
@@ -115,6 +119,10 @@
 		17723F2E170178D700DCDACE /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinksView.h; sourceTree = "<group>"; };
 		17723F2F170178D700DCDACE /* LinksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinksView.xib; sourceTree = "<group>"; };
 		17AA7FCC17030367007D16D9 /* Empty.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Empty.nss; sourceTree = "<group>"; };
+		17EB93B3170417920040461D /* background-item-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-item-1.png"; sourceTree = "<group>"; };
+		17EB93B4170417920040461D /* background-item-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-item-1@2x.png"; sourceTree = "<group>"; };
+		17EB93B5170417920040461D /* background-item-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-item-2.png"; sourceTree = "<group>"; };
+		17EB93B6170417920040461D /* background-item-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-item-2@2x.png"; sourceTree = "<group>"; };
 		18CE3B5816F885D500B5FF97 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		18CE3B5916F885D500B5FF97 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		18CE3B5A16F885D500B5FF97 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -448,6 +456,10 @@
 		7C81922916E867FE00B71598 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				17EB93B3170417920040461D /* background-item-1.png */,
+				17EB93B4170417920040461D /* background-item-1@2x.png */,
+				17EB93B5170417920040461D /* background-item-2.png */,
+				17EB93B6170417920040461D /* background-item-2@2x.png */,
 				176DD51A1701C66300559BB7 /* brandymint_logo_white.png */,
 				176DD51B1701C66400559BB7 /* brandymint_logo_white@2x.png */,
 				176DD5161701C58800559BB7 /* icon-cloud-tap.png */,
@@ -718,6 +730,10 @@
 				176DD51C1701C66400559BB7 /* brandymint_logo_white.png in Resources */,
 				176DD51D1701C66400559BB7 /* brandymint_logo_white@2x.png in Resources */,
 				17AA7FCD17030367007D16D9 /* Empty.nss in Resources */,
+				17EB93BB170417920040461D /* background-item-1.png in Resources */,
+				17EB93BC170417920040461D /* background-item-1@2x.png in Resources */,
+				17EB93BD170417920040461D /* background-item-2.png in Resources */,
+				17EB93BE170417920040461D /* background-item-2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,7 +976,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brandy Mint LLC";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Brandymint/Brandymint-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -971,7 +987,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C92684D1-5DDC-4AF7-ACFF-FE822905D4D0";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -987,7 +1003,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brandy Mint LLC";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Brandymint/Brandymint-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -998,7 +1014,7 @@
 				INFOPLIST_FILE = "Brandymint/Brandymint-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C92684D1-5DDC-4AF7-ACFF-FE822905D4D0";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1127,7 +1143,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brandy Mint LLC";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Brandymint/Brandymint-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -1138,7 +1154,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C92684D1-5DDC-4AF7-ACFF-FE822905D4D0";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Coverage;

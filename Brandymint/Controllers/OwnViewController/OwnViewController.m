@@ -56,7 +56,7 @@ static AboutViewController *aboutController = nil;
   
   [super viewDidLoad];
   [self performSelector:@selector(initBackLayer) withObject:nil afterDelay:0];
-  //[self performSelector:@selector(initBackLayerAnimated) withObject:nil afterDelay:0];
+  [self performSelector:@selector(initBackLayerAnimated) withObject:nil afterDelay:0];
   [self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
 
 
@@ -132,22 +132,32 @@ static AboutViewController *aboutController = nil;
 
 -(void) initBackLayerAnimated
 {
-  unsigned int i, cnt = 5;
+  unsigned int i, cnt = 2;
   UIImage *backLayerImageAnimated[cnt];
   UIImageView *backLayerImageAnimatedView[cnt];
+  UIImageView *imageRef;
   for(i = 0; i < cnt; i++)
   {
-    backLayerImageAnimated[i] = [UIImage imageNamed:@"icon-location.png"];
-    backLayerImageAnimatedView[i] = [[UIImageView alloc] initWithFrame:CGRectMake(arc4random() % 1024,arc4random() % 768,50,50)];
-    [backLayerImageAnimatedView[i] setImage:backLayerImageAnimated[i]];
-    [self.view addSubview:backLayerImageAnimatedView[i]];
-    backLayerImageAnimatedView[i].layer.zPosition = -1;
-    /*
-    [UIView animateWithDuration:0.5 delay:0 options:(UIViewAnimationCurveLinear | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat) animations:^{
-      //UIImageView *animatedObject = (UIImageView*)[backLayerImageAnimatedView objectAtIndex:1];
-      //self.alpha = 0.2;
-    }  completion:nil];
-     */
+    backLayerImageAnimated[i] = [UIImage imageNamed:[NSString stringWithFormat:@"background-item-%d.png", i]];
+    backLayerImageAnimatedView[i] = [[UIImageView alloc] initWithImage:backLayerImageAnimated[i]];
+    backLayerImageAnimatedView[i].layer.position = CGPointMake(430*i,400+(arc4random()%2 ? -1 : 1)*(arc4random() % 100));
+    imageRef.transform = CGAffineTransformMakeRotation(0);
+    [self.view addSubview:backLayerImageAnimatedView[i] ];
+    
+    imageRef = backLayerImageAnimatedView[i];
+    imageRef.layer.zPosition = -1;
+    [UIView animateWithDuration:3+i delay:0 options:(UIViewAnimationCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat) animations:^{
+      imageRef.transform = CGAffineTransformMakeScale(2, 2);
+    } completion:^ (BOOL finished) {
+      //
+    }];
+    [UIView animateWithDuration:30 delay:0 options:(UIViewAnimationCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat) animations:^{
+      imageRef.transform = CGAffineTransformMakeRotation(1.54906585);
+      imageRef.layer.position = CGPointMake(imageRef.layer.position.x + (arc4random()%2 ? -1 : 1)*400, imageRef.layer.position.y + (arc4random()%2 ? -1 : 1)*400);
+    } completion:^ (BOOL finished) {
+      //
+    }];
+
   }
 
 }
