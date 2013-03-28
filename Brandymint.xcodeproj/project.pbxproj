@@ -47,6 +47,8 @@
 		7C19C04916F09364003D6CDE /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C19C04816F09364003D6CDE /* UpdateManager.m */; };
 		7C19C04C16F09393003D6CDE /* CardsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C19C04B16F09393003D6CDE /* CardsRepository.m */; };
 		7C19C04F16F0966D003D6CDE /* DataManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C19C04E16F0966D003D6CDE /* DataManifest.json */; };
+		7C249D31170470A100D899BC /* ThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C249D30170470A100D899BC /* ThumbView.m */; };
+		7C249D33170470B400D899BC /* ThumbView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C249D32170470B400D899BC /* ThumbView.xib */; };
 		7C3DC5AB16EF45D900C00066 /* OwnSectorsAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */; };
 		7C61759F16F1B32900D57594 /* NSDate+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C61759E16F1B32900D57594 /* NSDate+external.m */; };
 		7C80D77216F2ECFF007D5E3B /* UIImage+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C80D77116F2ECFF007D5E3B /* UIImage+external.m */; };
@@ -158,6 +160,9 @@
 		7C19C04A16F09393003D6CDE /* CardsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardsRepository.h; path = Model/CardsRepository.h; sourceTree = "<group>"; };
 		7C19C04B16F09393003D6CDE /* CardsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardsRepository.m; path = Model/CardsRepository.m; sourceTree = "<group>"; };
 		7C19C04E16F0966D003D6CDE /* DataManifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataManifest.json; sourceTree = "<group>"; };
+		7C249D2F170470A100D899BC /* ThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbView.h; sourceTree = "<group>"; };
+		7C249D30170470A100D899BC /* ThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbView.m; sourceTree = "<group>"; };
+		7C249D32170470B400D899BC /* ThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbView.xib; sourceTree = "<group>"; };
 		7C3DC5A916EF45D900C00066 /* OwnSectorsAnim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnSectorsAnim.h; sourceTree = "<group>"; };
 		7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnSectorsAnim.m; sourceTree = "<group>"; };
 		7C61759D16F1B32900D57594 /* NSDate+external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+external.h"; sourceTree = "<group>"; };
@@ -328,6 +333,17 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		7C249D2E1704707700D899BC /* ThumbView */ = {
+			isa = PBXGroup;
+			children = (
+				7C249D2F170470A100D899BC /* ThumbView.h */,
+				7C249D30170470A100D899BC /* ThumbView.m */,
+				7C249D32170470B400D899BC /* ThumbView.xib */,
+			);
+			name = ThumbView;
+			path = ../../../../../denisdbv/Documents/BrandyMintApp/Brandymint/Controllers/ThumbView;
+			sourceTree = "<group>";
+		};
 		7C3DC5A816EF453B00C00066 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +463,7 @@
 		7C81922816E867FE00B71598 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C249D2E1704707700D899BC /* ThumbView */,
 				7C961B381700664B00EC8432 /* WebViewController */,
 				18CE3B5716F885D500B5FF97 /* AboutViewController */,
 				18CE3B5B16F885D500B5FF97 /* BlockView */,
@@ -742,6 +759,11 @@
 				17D106BE17045F9B008D906B /* badge-googleplay@2x.png in Resources */,
 				17D106C117045F9B008D906B /* icon-link.png in Resources */,
 				17D106C217045F9B008D906B /* icon-link@2x.png in Resources */,
+				17EB93BB170417920040461D /* background-item-1.png in Resources */,
+				17EB93BC170417920040461D /* background-item-1@2x.png in Resources */,
+				17EB93BD170417920040461D /* background-item-2.png in Resources */,
+				17EB93BE170417920040461D /* background-item-2@2x.png in Resources */,
+				7C249D33170470B400D899BC /* ThumbView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +878,7 @@
 				18CE3B6416F885D500B5FF97 /* LinksView.m in Sources */,
 				7C961B3C1700664B00EC8432 /* WebViewController.m in Sources */,
 				7CDF97131701A25300AC31F3 /* BMLinkButton.m in Sources */,
+				7C249D31170470A100D899BC /* ThumbView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
