@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
+#import "Watchdog.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
         //[NUISettings init];
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, NSStringFromClass([Watchdog class]), NSStringFromClass([AppDelegate class]));
     }
 }
