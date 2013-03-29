@@ -267,53 +267,41 @@ static AboutViewController *aboutController = nil;
     static BOOL path = YES;
     static NSInteger pageIndex = 0;
   
-    if(curPageIndex != pageIndex)
+    if(pageIndex != curPageIndex)
     {
-        if(curPageIndex < pageIndex)
-        {
-          if(curPageIndex > 0)  {
-            path = NO;
-            pageIndex = curPageIndex;
-            pageIndex--;
-          }
-          else
-          {
-            path = YES;
-            pageIndex = curPageIndex;
-            pageIndex++;
-          }
+      if(pageIndex < curPageIndex)  {
+        if(pageIndex < cardControllersArray.count-1)  {
+          path = YES;
         }
-      
-        if(curPageIndex > pageIndex)
-        {
-          if(curPageIndex < cardControllersArray.count-1)
-          {
-            path = YES;
-            pageIndex = curPageIndex;
-            pageIndex++;
-          }
-          else
-          {
-            path = NO;
-            pageIndex = curPageIndex;
-            pageIndex--;
-          }
+        else  {
+          path = NO;
         }
+      }
+      else  {
+        if(pageIndex > 0)  {
+          path = NO;
+        }
+        else  {
+          path = YES;
+        }
+      }
     }
-    
-    [self setActivePage:(NSUInteger)pageIndex];
+  
+    pageIndex = curPageIndex;
   
     if(path)  {
-        pageIndex++;
-        if(pageIndex == cardControllersArray.count-1)
-          path = !path;
+      pageIndex++;
+      if(pageIndex == cardControllersArray.count-1)
+        path = !path;
     }
     else
     {
-        pageIndex--;
-        if(pageIndex == 0)
-          path = !path;
+      pageIndex--;
+      if(pageIndex == 0)
+        path = !path;
     }
+  
+    [self setActivePage:(NSUInteger)pageIndex];
 }
 
 @end
