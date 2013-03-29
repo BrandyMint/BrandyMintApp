@@ -212,6 +212,8 @@ static AboutViewController *aboutController = nil;
 
 -(void) showAboutController
 {
+    [(Watchdog *)[UIApplication sharedApplication] stopTimer];
+  
     [cloudBtn setImage:[UIImage imageNamed:@"icon-cloud-tap.png"] forState:UIControlStateNormal];
   
     self.cardsScrollView.alpha = 0.0f;
@@ -225,6 +227,8 @@ static AboutViewController *aboutController = nil;
 
 -(void) hideAboutController
 {
+    [(Watchdog *)[UIApplication sharedApplication] startTimer];
+  
     [aboutController hideAboutView];
     aboutController = nil;
   

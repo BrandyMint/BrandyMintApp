@@ -16,8 +16,12 @@
 @interface Watchdog : UIApplication
 {
     NSTimer     *myidleTimer;
+  
+    BOOL stop;
 }
 
 -(void)resetIdleTimer;
+-(void) stopTimer;
+-(void) startTimer;
 
 @end

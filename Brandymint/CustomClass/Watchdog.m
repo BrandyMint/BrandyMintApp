@@ -14,19 +14,21 @@
 {
     [super sendEvent:event];
   
-    if (!myidleTimer)
-    {
-        [self resetIdleTimer];
-    }
-    
-    NSSet *allTouches = [event allTouches];
-    if ([allTouches count] > 0)
-    {
-        UITouchPhase phase = ((UITouch *)[allTouches anyObject]).phase;
-        if (phase == UITouchPhaseBegan)
-        {
-            [self resetIdleTimer];
-        }
+    if(!stop) {
+      if (!myidleTimer)
+      {
+          [self resetIdleTimer];
+      }
+      
+      NSSet *allTouches = [event allTouches];
+      if ([allTouches count] > 0)
+      {
+          UITouchPhase phase = ((UITouch *)[allTouches anyObject]).phase;
+          if (phase == UITouchPhaseBegan)
+          {
+              [self resetIdleTimer];
+          }
+      }
     }
 }
 
@@ -43,6 +45,20 @@
 -(void)idleTimerExceeded
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:kApplicationDidTimeoutNotification object:nil];
+}
+
+-(void) stopTimer
+{
+    stop = YES;
+  
+    [myidleTimer invalidate];
+}
+
+-(void) startTimer
+{
+    stop = NO;
+    
+    myidleTimer = [NSTimer scheduledTimerWithTimeInterval:kApplicationTimeout target:self selector:@selector(idleTimerExceeded) userInfo:nil repeats:YES];
 }
 
 @end
