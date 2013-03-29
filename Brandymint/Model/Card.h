@@ -22,6 +22,8 @@
 @property (nonatomic, retain) NSString * subtitle;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * image_url;
+@property (nonatomic, retain) NSString * gplay_url;
+@property (nonatomic, retain) NSString * itunes_url;
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) NSDate * updated_at;
 @property (nonatomic, retain) Image *image;

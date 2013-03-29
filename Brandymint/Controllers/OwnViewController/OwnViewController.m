@@ -28,6 +28,8 @@
 
 @implementation OwnViewController
 {
+    NSInteger curPageIndex;
+  
     NSArray *imagesName;
     
     UIImage *btnImageDefault;
@@ -38,11 +40,11 @@
 
 static AboutViewController *aboutController = nil;
 
-@synthesize contextContainerView;
+@synthesize contextContainerView, thumbsContainerView;
 @synthesize cardsScrollView;
-@synthesize pageControl;
 @synthesize cloudBtn;
 @synthesize logo;
+@synthesize thumbView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,25 +57,24 @@ static AboutViewController *aboutController = nil;
 
 - (void)viewDidLoad
 {
-  
   [super viewDidLoad];
+  
   [self performSelector:@selector(initBackLayer) withObject:nil afterDelay:0];
   [self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
-
-
 }
 
 -(void) viewWillAppear:(BOOL)animated
 {
     [self setHookOnLogoClick];
   
-    pageControl.alpha = 0.0f;
-  
     btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
     btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
   
     self.cardsScrollView.backgroundColor = [UIColor clearColor];
-
+  
+    thumbView = [[[NSBundle mainBundle] loadNibNamed:@"ThumbView" owner:self options:nil] objectAtIndex:0];
+    thumbView.delegate = self;
+    [thumbsContainerView addSubview:thumbView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,10 +117,9 @@ static AboutViewController *aboutController = nil;
     }
     
     cardsScrollView.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
-  cardsScrollView.layer.zPosition = 2;
-    pageControl.currentPage = 0;
-    pageControl.numberOfPages = current_pos;
+    cardsScrollView.layer.zPosition = 2;
   
+    [thumbView setActivePage:0];
     [self updatePageAlpha:0];
 }
 
@@ -131,15 +131,12 @@ static AboutViewController *aboutController = nil;
   backLayerImageView.layer.zPosition = -2;
 }
 
-
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {  
     CGFloat pageWidth = self.cardsScrollView.frame.size.width;
     CGFloat scrollOfs = self.cardsScrollView.contentOffset.x;
     
-    NSInteger curPageIndex = (NSInteger)(floor(scrollOfs/pageWidth - 0.5) + 1);
-  
-    pageControl.currentPage = curPageIndex;
+    curPageIndex = (NSInteger)(floor(scrollOfs/pageWidth - 0.5) + 1);
     
     CGFloat pageOfs = scrollOfs/pageWidth - curPageIndex; // -0.5..0.5
     
@@ -149,42 +146,10 @@ static AboutViewController *aboutController = nil;
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
       //show page control
-      [self pageControlAlphaShow];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-      //hide page control
-      [self pageControlAlphaHide];
-}
-
--(void) pageControlAlphaShow
-{
-    CGFloat timeElapsed = 0.8f * pageControl.alpha;
-  
-    [UIView animateWithDuration:timeElapsed
-                          delay:0.0
-                        options: UIViewAnimationOptionCurveEaseIn
-                     animations:^{
-                        pageControl.alpha = 1.0;
-                     }
-                     completion:^(BOOL finished){
-                       
-                     }];
-}
-
--(void) pageControlAlphaHide
-{
-  CGFloat timeElapsed = 0.5f * pageControl.alpha;
-  
-  [UIView animateWithDuration:timeElapsed
-                        delay:0.4
-                      options: UIViewAnimationOptionCurveEaseIn
-                   animations:^{
-                     pageControl.alpha = 0.0;
-                   }
-                   completion:^(BOOL finished){
-                     
-                   }];
+    [thumbView setActivePage:(NSUInteger)curPageIndex];
 }
 
 -(void)updatePageAlpha:(NSUInteger)pageIndex
@@ -267,6 +232,17 @@ static AboutViewController *aboutController = nil;
     CGRect scrollRect = self.cardsScrollView.frame;
 
     [self.cardsScrollView scrollRectToVisible:CGRectMake(0,0, scrollRect.size.width,scrollRect.size.height) animated:YES];
+}
+
+-(void) setActivePage:(NSUInteger)pageIndex
+{
+  if(pageIndex < cardControllersArray.count)
+  {
+      CGRect scrollRect = self.cardsScrollView.frame;
+      scrollRect.origin.x = pageIndex * scrollRect.size.width;
+    
+      [self.cardsScrollView scrollRectToVisible:scrollRect animated:YES];
+  }
 }
 
 @end
