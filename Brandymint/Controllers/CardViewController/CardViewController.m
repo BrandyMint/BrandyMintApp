@@ -82,6 +82,8 @@
     [self.cardImageView.layer setShadowRadius:10];
     [self.cardImageView.layer setBorderColor:[UIColor colorWithWhite:1.0 alpha:0.5f].CGColor];
     [self.cardImageView.layer setBorderWidth:1.0f];
+    self.cardImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.cardImageView.clipsToBounds = true;
   
     if (card.url && [card.url length]!=0) {
       [cardLinkButton setTitle:NULL forState:UIControlStateNormal];
