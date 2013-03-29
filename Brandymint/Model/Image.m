@@ -73,7 +73,7 @@
     if ([key isEqualToString:@"url"]) {
       UIImage *image = self.data;
   
-      self.thumb = [self scaleToSize:CGSizeMake(image.size.width/8, image.size.height/8)];
+      self.thumb = [self scaleToSize:CGSizeMake(image.size.width/4, image.size.height/4)];
     }
     
     [super didChangeValueForKey:key];

@@ -20,6 +20,7 @@
 		17723F2C17015CDB00DCDACE /* BlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2B17015CDB00DCDACE /* BlockView.xib */; };
 		17723F30170178D700DCDACE /* LinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17723F2F170178D700DCDACE /* LinksView.xib */; };
 		17AA7FCD17030367007D16D9 /* Empty.nss in Resources */ = {isa = PBXBuildFile; fileRef = 17AA7FCC17030367007D16D9 /* Empty.nss */; };
+		17AD57DA1705A6D60075F730 /* Watchdog.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AD57D91705A6D60075F730 /* Watchdog.m */; };
 		17D106BB17045F9B008D906B /* badge-appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D106B317045F9B008D906B /* badge-appstore.png */; };
 		17D106BC17045F9B008D906B /* badge-appstore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D106B417045F9B008D906B /* badge-appstore@2x.png */; };
 		17D106BD17045F9B008D906B /* badge-googleplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D106B517045F9B008D906B /* badge-googleplay.png */; };
@@ -94,7 +95,6 @@
 		7CDF97131701A25300AC31F3 /* BMLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF97121701A25300AC31F3 /* BMLinkButton.m */; };
 		7CE791191702BADF00163AFE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE791181702BADF00163AFE /* CoreImage.framework */; };
 		7CE7911B1702BAE500163AFE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE7911A1702BAE500163AFE /* QuartzCore.framework */; };
-		7CF7A51A170594C100E56FD6 /* Watchdog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7A519170594C100E56FD6 /* Watchdog.m */; };
 		8303415B16FC7B3F0057FAD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8191F116E867A000B71598 /* CoreGraphics.framework */; };
 		8326873216F73E3B000351BC /* BMCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326873116F73E3B000351BC /* BMCoreTextLabel.m */; };
 		833F447816F5ABC4003D0B5F /* Brandymint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 833F447716F5ABC3003D0B5F /* Brandymint.sqlite */; };
@@ -136,6 +136,8 @@
 		17723F2E170178D700DCDACE /* LinksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinksView.h; sourceTree = "<group>"; };
 		17723F2F170178D700DCDACE /* LinksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinksView.xib; sourceTree = "<group>"; };
 		17AA7FCC17030367007D16D9 /* Empty.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Empty.nss; sourceTree = "<group>"; };
+		17AD57D81705A6D60075F730 /* Watchdog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Watchdog.h; sourceTree = "<group>"; };
+		17AD57D91705A6D60075F730 /* Watchdog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Watchdog.m; sourceTree = "<group>"; };
 		17D106B317045F9B008D906B /* badge-appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge-appstore.png"; sourceTree = "<group>"; };
 		17D106B417045F9B008D906B /* badge-appstore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge-appstore@2x.png"; sourceTree = "<group>"; };
 		17D106B517045F9B008D906B /* badge-googleplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge-googleplay.png"; sourceTree = "<group>"; };
@@ -227,8 +229,6 @@
 		7CDF97121701A25300AC31F3 /* BMLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLinkButton.m; sourceTree = "<group>"; };
 		7CE791181702BADF00163AFE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		7CE7911A1702BAE500163AFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7CF7A518170594C100E56FD6 /* Watchdog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Watchdog.h; path = ../../../../../denisdbv/Documents/BrandyMintApp/Brandymint/CustomClass/Watchdog.h; sourceTree = "<group>"; };
-		7CF7A519170594C100E56FD6 /* Watchdog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Watchdog.m; path = ../../../../../denisdbv/Documents/BrandyMintApp/Brandymint/CustomClass/Watchdog.m; sourceTree = "<group>"; };
 		8326873016F73E3B000351BC /* BMCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMCoreTextLabel.h; path = Brandymint/Common/BMCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
 		8326873116F73E3B000351BC /* BMCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMCoreTextLabel.m; path = Brandymint/Common/BMCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
 		833F447716F5ABC3003D0B5F /* Brandymint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandymint.sqlite; sourceTree = "<group>"; };
@@ -569,10 +569,10 @@
 		7CDF97101701A24400AC31F3 /* CustomClass */ = {
 			isa = PBXGroup;
 			children = (
+				17AD57D81705A6D60075F730 /* Watchdog.h */,
+				17AD57D91705A6D60075F730 /* Watchdog.m */,
 				7CDF97111701A25300AC31F3 /* BMLinkButton.h */,
 				7CDF97121701A25300AC31F3 /* BMLinkButton.m */,
-				7CF7A518170594C100E56FD6 /* Watchdog.h */,
-				7CF7A519170594C100E56FD6 /* Watchdog.m */,
 			);
 			path = CustomClass;
 			sourceTree = "<group>";
@@ -906,7 +906,7 @@
 				7C961B3C1700664B00EC8432 /* WebViewController.m in Sources */,
 				7CDF97131701A25300AC31F3 /* BMLinkButton.m in Sources */,
 				186CB9BA170535EF00081BE2 /* ThumbView.m in Sources */,
-				7CF7A51A170594C100E56FD6 /* Watchdog.m in Sources */,
+				17AD57DA1705A6D60075F730 /* Watchdog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
