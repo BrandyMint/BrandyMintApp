@@ -45,6 +45,7 @@ static AboutViewController *aboutController = nil;
 @synthesize cloudBtn;
 @synthesize logo;
 @synthesize thumbView;
+@synthesize aboutContainerView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,23 +62,27 @@ static AboutViewController *aboutController = nil;
   
   [self performSelector:@selector(initBackLayer) withObject:nil afterDelay:0];
   [self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
+  
+  [self setHookOnLogoClick];
+  
+  btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
+  btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
+  
+  self.cardsScrollView.backgroundColor = [UIColor clearColor];
+  
+  thumbView = [[[NSBundle mainBundle] loadNibNamed:@"ThumbView" owner:self options:nil] objectAtIndex:0];
+  thumbView.delegate = self;
+  [thumbsContainerView addSubview:thumbView];
 }
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    [self setHookOnLogoClick];
-  
-    btnImageDefault = [cloudBtn backgroundImageForState:UIControlStateNormal];
-    btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
-  
-    self.cardsScrollView.backgroundColor = [UIColor clearColor];
+
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    thumbView = [[[NSBundle mainBundle] loadNibNamed:@"ThumbView" owner:self options:nil] objectAtIndex:0];
-    thumbView.delegate = self;
-    [thumbsContainerView addSubview:thumbView];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -206,7 +211,7 @@ static AboutViewController *aboutController = nil;
   
     self.cardsScrollView.alpha = 0.0f;
 
-    aboutController = [[AboutViewController alloc] initWithView:self.contextContainerView above:self.cardsScrollView];
+    aboutController = [[AboutViewController alloc] initWithView:aboutContainerView above:self.cardsScrollView];
     aboutController.delegate = self;
     [aboutController showAboutView];
   

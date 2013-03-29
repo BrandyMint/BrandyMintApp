@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIView *thumbsContainerView;
 @property (strong, nonatomic) IBOutlet UIScrollView *cardsScrollView;
 @property (nonatomic, strong) IBOutlet UIImageView *logo;
+@property (strong, nonatomic) IBOutlet UIView *aboutContainerView;
 
 @property (nonatomic, retain) IBOutlet ThumbView *thumbView;
 

@@ -73,6 +73,7 @@
 -(void) showAboutView
 {
     self.view.alpha = 0;
+    rootView.userInteractionEnabled = YES;
     [rootView addSubview:self.view];
   
     [UIView animateWithDuration:0.2
@@ -88,6 +89,7 @@
 
 -(void) hideAboutView
 {
+    rootView.userInteractionEnabled = NO;
     [self hideAboutViewToDirection:UISwipeGestureRecognizerDirectionDown];
 }
 
