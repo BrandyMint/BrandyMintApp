@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *thumbsScrollView;
 
 -(void) fillContent;
+-(void) setActivePage:(NSUInteger)pageIndex;
 
 @end

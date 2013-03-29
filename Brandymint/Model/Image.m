@@ -9,6 +9,7 @@
 #import "Image.h"
 #import "Card.h"
 #import "ImageToDataTransformer.h"
+#import "UIImage+external.h"
 
 
 @implementation Image

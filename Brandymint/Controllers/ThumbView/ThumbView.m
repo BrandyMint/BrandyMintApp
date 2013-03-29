@@ -11,6 +11,8 @@
 @implementation ThumbView
 {
     NSMutableArray *thumbsImageViewArray;
+  
+    NSUInteger lastActivePageIndex;
 }
 
 const int MARGIN_THUMB = 25;
@@ -38,6 +40,7 @@ const int MARGIN_THUMB = 25;
     for (Card *card in [[CardsRepository sharedInstance] entitiesBuffer])
     {
       UIImageView *thumbImageView = [[UIImageView alloc] initWithImage:card.image.thumb];
+      thumbImageView.alpha = 0.7f;
       
       [thumbsImageViewArray addObject:thumbImageView];
       
@@ -56,6 +59,20 @@ const int MARGIN_THUMB = 25;
     imageView.frame = frame;
     
     [self.thumbsScrollView addSubview:imageView];
+}
+
+-(void) setActivePage:(NSUInteger)pageIndex
+{
+    if(pageIndex < thumbsImageViewArray.count)
+    {
+        UIImageView *lastImageThumb = [thumbsImageViewArray objectAtIndex:lastActivePageIndex];
+        lastImageThumb.alpha = 0.7f;
+      
+        UIImageView *imageThumb = [thumbsImageViewArray objectAtIndex:pageIndex];
+        imageThumb.alpha = 1.0f;
+      
+        lastActivePageIndex = pageIndex;
+    }
 }
 
 @end

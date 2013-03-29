@@ -28,6 +28,8 @@
 
 @implementation OwnViewController
 {
+    NSInteger curPageIndex;
+  
     NSArray *imagesName;
     
     UIImage *btnImageDefault;
@@ -116,6 +118,7 @@ static AboutViewController *aboutController = nil;
     cardsScrollView.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
     cardsScrollView.layer.zPosition = 2;
   
+    [thumbView setActivePage:0];
     [self updatePageAlpha:0];
 }
 
@@ -132,7 +135,7 @@ static AboutViewController *aboutController = nil;
     CGFloat pageWidth = self.cardsScrollView.frame.size.width;
     CGFloat scrollOfs = self.cardsScrollView.contentOffset.x;
     
-    NSInteger curPageIndex = (NSInteger)(floor(scrollOfs/pageWidth - 0.5) + 1);
+    curPageIndex = (NSInteger)(floor(scrollOfs/pageWidth - 0.5) + 1);
     
     CGFloat pageOfs = scrollOfs/pageWidth - curPageIndex; // -0.5..0.5
     
@@ -145,7 +148,7 @@ static AboutViewController *aboutController = nil;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-      //hide page control
+      [thumbView setActivePage:(NSUInteger)curPageIndex];
 }
 
 -(void)updatePageAlpha:(NSUInteger)pageIndex
