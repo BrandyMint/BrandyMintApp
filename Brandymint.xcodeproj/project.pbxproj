@@ -20,10 +20,6 @@
 		17D106BE17045F9B008D906B /* badge-googleplay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D106B617045F9B008D906B /* badge-googleplay@2x.png */; };
 		17D106C117045F9B008D906B /* icon-link.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D106B917045F9B008D906B /* icon-link.png */; };
 		17D106C217045F9B008D906B /* icon-link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D106BA17045F9B008D906B /* icon-link@2x.png */; };
-		17EB93BB170417920040461D /* background-item-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EB93B3170417920040461D /* background-item-1.png */; };
-		17EB93BC170417920040461D /* background-item-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EB93B4170417920040461D /* background-item-1@2x.png */; };
-		17EB93BD170417920040461D /* background-item-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EB93B5170417920040461D /* background-item-2.png */; };
-		17EB93BE170417920040461D /* background-item-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EB93B6170417920040461D /* background-item-2@2x.png */; };
 		186CB9BA170535EF00081BE2 /* ThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB9B8170535EF00081BE2 /* ThumbView.m */; };
 		186CB9BB170535EF00081BE2 /* ThumbView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186CB9B9170535EF00081BE2 /* ThumbView.xib */; };
 		18CE3B6116F885D500B5FF97 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5916F885D500B5FF97 /* AboutViewController.m */; };
@@ -133,10 +129,6 @@
 		17D106B617045F9B008D906B /* badge-googleplay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge-googleplay@2x.png"; sourceTree = "<group>"; };
 		17D106B917045F9B008D906B /* icon-link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-link.png"; sourceTree = "<group>"; };
 		17D106BA17045F9B008D906B /* icon-link@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-link@2x.png"; sourceTree = "<group>"; };
-		17EB93B3170417920040461D /* background-item-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-item-1.png"; sourceTree = "<group>"; };
-		17EB93B4170417920040461D /* background-item-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-item-1@2x.png"; sourceTree = "<group>"; };
-		17EB93B5170417920040461D /* background-item-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-item-2.png"; sourceTree = "<group>"; };
-		17EB93B6170417920040461D /* background-item-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-item-2@2x.png"; sourceTree = "<group>"; };
 		186CB9B7170535EF00081BE2 /* ThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbView.h; path = Brandymint/Controllers/ThumbView/ThumbView.h; sourceTree = SOURCE_ROOT; };
 		186CB9B8170535EF00081BE2 /* ThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbView.m; path = Brandymint/Controllers/ThumbView/ThumbView.m; sourceTree = SOURCE_ROOT; };
 		186CB9B9170535EF00081BE2 /* ThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThumbView.xib; path = Brandymint/Controllers/ThumbView/ThumbView.xib; sourceTree = SOURCE_ROOT; };
@@ -767,10 +759,6 @@
 				17D106BE17045F9B008D906B /* badge-googleplay@2x.png in Resources */,
 				17D106C117045F9B008D906B /* icon-link.png in Resources */,
 				17D106C217045F9B008D906B /* icon-link@2x.png in Resources */,
-				17EB93BB170417920040461D /* background-item-1.png in Resources */,
-				17EB93BC170417920040461D /* background-item-1@2x.png in Resources */,
-				17EB93BD170417920040461D /* background-item-2.png in Resources */,
-				17EB93BE170417920040461D /* background-item-2@2x.png in Resources */,
 				186CB9BB170535EF00081BE2 /* ThumbView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

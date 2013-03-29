@@ -54,7 +54,8 @@ const int MARGIN_THUMB = 25;
       [self setHookOnThumbClick:thumbImageView];
     }
   
-    [self resizeAndCenterRootView];
+    if([[CardsRepository sharedInstance] entitiesBuffer].count > 0)
+      [self resizeAndCenterRootView];
 }
 
 -(void) addViewToIndexScrollView:(UIImageView*)imageView position:(NSUInteger)index
