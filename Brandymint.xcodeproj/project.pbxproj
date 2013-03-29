@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17500A49170576700055E3BE /* background-colored.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17500A47170576700055E3BE /* background-colored.jpg */; };
+		17500A4A170576700055E3BE /* background-colored@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17500A48170576700055E3BE /* background-colored@2x.jpg */; };
+		17500A4C170581F60055E3BE /* app-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17500A4B170581F60055E3BE /* app-icon@2x.png */; };
+		17500A4E170581F90055E3BE /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17500A4D170581F90055E3BE /* app-icon.png */; };
 		176DD5181701C58800559BB7 /* icon-cloud-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 176DD5161701C58800559BB7 /* icon-cloud-tap.png */; };
 		176DD5191701C58800559BB7 /* icon-cloud-tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 176DD5171701C58800559BB7 /* icon-cloud-tap@2x.png */; };
 		176DD51C1701C66400559BB7 /* brandymint_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 176DD51A1701C66300559BB7 /* brandymint_logo_white.png */; };
@@ -114,6 +118,10 @@
 
 /* Begin PBXFileReference section */
 		1730B1C3170032DD006BE122 /* entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = entypo.ttf; path = "../../../../install/!fonts/!icons/Entypo/@font-face/Entypo @font-face/entypo.ttf"; sourceTree = "<group>"; };
+		17500A47170576700055E3BE /* background-colored.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background-colored.jpg"; path = "../../../../work/dapi/brandymint/2013/assets/background-colored.jpg"; sourceTree = "<group>"; };
+		17500A48170576700055E3BE /* background-colored@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background-colored@2x.jpg"; path = "../../../../work/dapi/brandymint/2013/assets/background-colored@2x.jpg"; sourceTree = "<group>"; };
+		17500A4B170581F60055E3BE /* app-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon@2x.png"; sourceTree = "<group>"; };
+		17500A4D170581F90055E3BE /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		176DD5161701C58800559BB7 /* icon-cloud-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud-tap.png"; sourceTree = "<group>"; };
 		176DD5171701C58800559BB7 /* icon-cloud-tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cloud-tap@2x.png"; sourceTree = "<group>"; };
 		176DD51A1701C66300559BB7 /* brandymint_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brandymint_logo_white.png; sourceTree = "<group>"; };
@@ -391,6 +399,8 @@
 		7C8191DE16E867A000B71598 = {
 			isa = PBXGroup;
 			children = (
+				17500A4D170581F90055E3BE /* app-icon.png */,
+				17500A4B170581F60055E3BE /* app-icon@2x.png */,
 				7CE7911A1702BAE500163AFE /* QuartzCore.framework */,
 				7CE791181702BADF00163AFE /* CoreImage.framework */,
 				7C8191F516E867A000B71598 /* Brandymint */,
@@ -477,6 +487,8 @@
 		7C81922916E867FE00B71598 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				17500A47170576700055E3BE /* background-colored.jpg */,
+				17500A48170576700055E3BE /* background-colored@2x.jpg */,
 				17D106B317045F9B008D906B /* badge-appstore.png */,
 				17D106B417045F9B008D906B /* badge-appstore@2x.png */,
 				17D106B517045F9B008D906B /* badge-googleplay.png */,
@@ -760,6 +772,10 @@
 				17D106C117045F9B008D906B /* icon-link.png in Resources */,
 				17D106C217045F9B008D906B /* icon-link@2x.png in Resources */,
 				186CB9BB170535EF00081BE2 /* ThumbView.xib in Resources */,
+				17500A49170576700055E3BE /* background-colored.jpg in Resources */,
+				17500A4A170576700055E3BE /* background-colored@2x.jpg in Resources */,
+				17500A4C170581F60055E3BE /* app-icon@2x.png in Resources */,
+				17500A4E170581F90055E3BE /* app-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
