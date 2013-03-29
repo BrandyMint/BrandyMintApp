@@ -7,6 +7,7 @@
 //
 
 #import "ThumbView.h"
+#import "OwnViewController.h"
 
 @implementation ThumbView
 {
@@ -40,11 +41,14 @@ const int MARGIN_THUMB = 25;
     for (Card *card in [[CardsRepository sharedInstance] entitiesBuffer])
     {
       UIImageView *thumbImageView = [[UIImageView alloc] initWithImage:card.image.thumb];
+      thumbImageView.tag = current_pos;
       thumbImageView.alpha = 0.7f;
       
       [thumbsImageViewArray addObject:thumbImageView];
       
       [self addViewToIndexScrollView:thumbImageView position:current_pos++];
+      
+      [self setHookOnThumbClick:thumbImageView];
     }
 }
 
@@ -73,6 +77,29 @@ const int MARGIN_THUMB = 25;
       
         lastActivePageIndex = pageIndex;
     }
+}
+
+-(void) setHookOnThumbClick:(UIImageView*)thumbImage
+{
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(thumbTaped:)];
+    singleTap.numberOfTapsRequired = 1;
+  
+    singleTap.numberOfTouchesRequired = 1;
+    
+    [thumbImage addGestureRecognizer:singleTap];
+    
+    [thumbImage setUserInteractionEnabled:YES];
+}
+
+-(void) thumbTaped:(UITapGestureRecognizer *)gestureRecognizer
+{
+    UIImageView *thumbImageView = (UIImageView*)gestureRecognizer.view;
+  
+    NSUInteger thumbIndex = thumbImageView.tag;
+  
+    [((OwnViewController*)self.delegate) setActivePage:thumbIndex];
+  
+    [self setActivePage:thumbIndex];
 }
 
 @end

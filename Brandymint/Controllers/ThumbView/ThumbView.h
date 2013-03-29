@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *thumbsScrollView;
 
+@property(nonatomic,assign) id delegate;
+
 -(void) fillContent;
 -(void) setActivePage:(NSUInteger)pageIndex;
 

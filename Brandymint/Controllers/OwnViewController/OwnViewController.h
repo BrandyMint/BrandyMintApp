@@ -28,4 +28,6 @@
 
 -(IBAction) onCloudClick:(id)sender;
 
+-(void) setActivePage:(NSUInteger)pageIndex;
+
 @end

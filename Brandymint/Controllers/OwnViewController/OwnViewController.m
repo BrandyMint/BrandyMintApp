@@ -73,6 +73,7 @@ static AboutViewController *aboutController = nil;
     self.cardsScrollView.backgroundColor = [UIColor clearColor];
   
     thumbView = [[[NSBundle mainBundle] loadNibNamed:@"ThumbView" owner:self options:nil] objectAtIndex:0];
+    thumbView.delegate = self;
     [thumbsContainerView addSubview:thumbView];
 }
 
@@ -231,6 +232,17 @@ static AboutViewController *aboutController = nil;
     CGRect scrollRect = self.cardsScrollView.frame;
 
     [self.cardsScrollView scrollRectToVisible:CGRectMake(0,0, scrollRect.size.width,scrollRect.size.height) animated:YES];
+}
+
+-(void) setActivePage:(NSUInteger)pageIndex
+{
+  if(pageIndex < cardControllersArray.count)
+  {
+      CGRect scrollRect = self.cardsScrollView.frame;
+      scrollRect.origin.x = pageIndex * scrollRect.size.width;
+    
+      [self.cardsScrollView scrollRectToVisible:scrollRect animated:YES];
+  }
 }
 
 @end
