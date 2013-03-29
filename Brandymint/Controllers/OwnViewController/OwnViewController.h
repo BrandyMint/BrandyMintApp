@@ -12,7 +12,7 @@
 
 @protocol RootViewDelegate
 @optional
--(void)willAboutViewHide;
+-(void) willAboutViewHide;
 @end
 
 @interface OwnViewController : UIViewController <RootViewDelegate>

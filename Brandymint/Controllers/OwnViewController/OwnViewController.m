@@ -149,7 +149,7 @@ static AboutViewController *aboutController = nil;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-      [thumbView setActivePage:(NSUInteger)curPageIndex];
+    [thumbView setActivePage:(NSUInteger)curPageIndex];
 }
 
 -(void)updatePageAlpha:(NSUInteger)pageIndex

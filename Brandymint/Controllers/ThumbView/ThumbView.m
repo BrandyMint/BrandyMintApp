@@ -11,6 +11,8 @@
 
 @implementation ThumbView
 {
+    CGFloat scrollViewWidth;
+  
     NSMutableArray *thumbsImageViewArray;
   
     NSUInteger lastActivePageIndex;
@@ -35,6 +37,7 @@ const int MARGIN_THUMB = 25;
 -(void) fillContent
 {
     unsigned int current_pos = 0;
+    scrollViewWidth = 0;
   
     thumbsImageViewArray = [[NSMutableArray alloc] init];
   
@@ -50,10 +53,14 @@ const int MARGIN_THUMB = 25;
       
       [self setHookOnThumbClick:thumbImageView];
     }
+  
+    [self resizeAndCenterRootView];
 }
 
 -(void) addViewToIndexScrollView:(UIImageView*)imageView position:(NSUInteger)index
 {
+    scrollViewWidth += (imageView.frame.size.width + MARGIN_THUMB);
+  
     CGRect frame;
     frame.origin.x = index * (imageView.frame.size.width + MARGIN_THUMB);
     frame.origin.y = 0;
@@ -62,7 +69,21 @@ const int MARGIN_THUMB = 25;
     
     imageView.frame = frame;
     
-    [self.thumbsScrollView addSubview:imageView];
+    [thumbsScrollView addSubview:imageView];
+}
+
+-(void) resizeAndCenterRootView
+{
+    CGRect containerViewRect = self.frame;
+    CGRect superViewRect = self.superview.frame;
+  
+    UIImageView *thumbImage = [thumbsImageViewArray objectAtIndex: [thumbsImageViewArray count]-1 ];
+    thumbsScrollView.contentSize = CGSizeMake(thumbImage.frame.origin.x+thumbImage.frame.size.width+1, thumbsScrollView.frame.size.height);
+  
+    containerViewRect.size.width = thumbImage.frame.origin.x+thumbImage.frame.size.width;
+    containerViewRect.origin.x = (superViewRect.size.width - containerViewRect.size.width)/2;
+    
+    self.frame = containerViewRect;
 }
 
 -(void) setActivePage:(NSUInteger)pageIndex
@@ -95,7 +116,7 @@ const int MARGIN_THUMB = 25;
 {
     UIImageView *thumbImageView = (UIImageView*)gestureRecognizer.view;
   
-    NSUInteger thumbIndex = thumbImageView.tag;
+    NSUInteger thumbIndex = (NSUInteger)thumbImageView.tag;
   
     [((OwnViewController*)self.delegate) setActivePage:thumbIndex];
   
