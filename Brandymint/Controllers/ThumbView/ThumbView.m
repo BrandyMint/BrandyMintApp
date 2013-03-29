@@ -18,7 +18,10 @@
     NSUInteger lastActivePageIndex;
 }
 
-const int MARGIN_THUMB = 25;
+const int THUMB_MARGIN = 120;
+const int CONTENT_MARGIN = 40;
+const CGFloat THUMB_DIAMETER = 90;
+const CGFloat THUMB_ALPHA = 0.4f;
 
 @synthesize thumbsScrollView;
 
@@ -44,8 +47,12 @@ const int MARGIN_THUMB = 25;
     for (Card *card in [[CardsRepository sharedInstance] entitiesBuffer])
     {
       UIImageView *thumbImageView = [[UIImageView alloc] initWithImage:card.image.thumb];
+      thumbImageView.bounds = CGRectMake(0, 0, THUMB_DIAMETER, THUMB_DIAMETER);
+      thumbImageView.layer.cornerRadius = THUMB_DIAMETER/2;
+      thumbImageView.contentMode = UIViewContentModeScaleAspectFill;
+      thumbImageView.clipsToBounds = true;
       thumbImageView.tag = current_pos;
-      thumbImageView.alpha = 0.7f;
+      thumbImageView.alpha = THUMB_ALPHA;
       
       [thumbsImageViewArray addObject:thumbImageView];
       
@@ -60,10 +67,10 @@ const int MARGIN_THUMB = 25;
 
 -(void) addViewToIndexScrollView:(UIImageView*)imageView position:(NSUInteger)index
 {
-    scrollViewWidth += (imageView.frame.size.width + MARGIN_THUMB);
+    scrollViewWidth += (imageView.frame.size.width + THUMB_MARGIN);
   
     CGRect frame;
-    frame.origin.x = index * (imageView.frame.size.width + MARGIN_THUMB);
+    frame.origin.x = index * (imageView.frame.size.width + THUMB_MARGIN);
     frame.origin.y = 0;
     frame.size.width = imageView.frame.size.width;
     frame.size.height = imageView.frame.size.height;
@@ -92,7 +99,7 @@ const int MARGIN_THUMB = 25;
         containerViewRect.size.width = contentWidth;
         containerViewRect.origin.x = (superViewRect.size.width - containerViewRect.size.width)/2;
     }
-    
+  
     self.frame = containerViewRect;
 }
 
@@ -101,7 +108,7 @@ const int MARGIN_THUMB = 25;
     if(pageIndex < thumbsImageViewArray.count)
     {
         UIImageView *lastImageThumb = [thumbsImageViewArray objectAtIndex:lastActivePageIndex];
-        lastImageThumb.alpha = 0.7f;
+        lastImageThumb.alpha = THUMB_ALPHA;
       
         UIImageView *imageThumb = [thumbsImageViewArray objectAtIndex:pageIndex];
         imageThumb.alpha = 1.0f;
@@ -109,6 +116,9 @@ const int MARGIN_THUMB = 25;
         lastActivePageIndex = pageIndex;
       
         [thumbsScrollView scrollRectToVisible:imageThumb.frame animated:YES];
+      
+
+  
     }
 }
 
