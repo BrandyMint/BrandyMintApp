@@ -135,4 +135,30 @@ const int MARGIN_THUMB = 25;
     [self setActivePage:thumbIndex];
 }
 
+-(void) showThumbView
+{
+    [UIView animateWithDuration:0.2
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                       self.alpha = 1;
+                     }
+                     completion:^(BOOL finished){
+                       //
+                     }];
+}
+
+-(void) hideThumbView
+{
+    [UIView animateWithDuration:0.2
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                       self.alpha = 0;
+                     }
+                     completion:^(BOOL finished){
+                       //
+                     }];
+}
+
 @end

@@ -17,4 +17,7 @@
 -(void) fillContent;
 -(void) setActivePage:(NSUInteger)pageIndex;
 
+-(void) showThumbView;
+-(void) hideThumbView;
+
 @end

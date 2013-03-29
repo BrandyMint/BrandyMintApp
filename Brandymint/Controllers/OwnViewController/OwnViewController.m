@@ -209,12 +209,16 @@ static AboutViewController *aboutController = nil;
     aboutController = [[AboutViewController alloc] initWithView:self.contextContainerView above:self.cardsScrollView];
     aboutController.delegate = self;
     [aboutController showAboutView];
+  
+    [thumbView hideThumbView];
 }
 
 -(void) hideAboutController
 {
     [aboutController hideAboutView];
     aboutController = nil;
+  
+    [thumbView showThumbView];
 }
 
 -(void) willAboutViewHide
