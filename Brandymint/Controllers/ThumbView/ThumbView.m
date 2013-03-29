@@ -79,10 +79,19 @@ const int MARGIN_THUMB = 25;
     CGRect superViewRect = self.superview.frame;
   
     UIImageView *thumbImage = [thumbsImageViewArray objectAtIndex: [thumbsImageViewArray count]-1 ];
-    thumbsScrollView.contentSize = CGSizeMake(thumbImage.frame.origin.x+thumbImage.frame.size.width+1, thumbsScrollView.frame.size.height);
+    CGFloat contentWidth = thumbImage.frame.origin.x+thumbImage.frame.size.width;
+    thumbsScrollView.contentSize = CGSizeMake(contentWidth+1, thumbsScrollView.frame.size.height);
   
-    containerViewRect.size.width = thumbImage.frame.origin.x+thumbImage.frame.size.width;
-    containerViewRect.origin.x = (superViewRect.size.width - containerViewRect.size.width)/2;
+    if(contentWidth > superViewRect.size.width)
+    {
+        containerViewRect.size.width = superViewRect.size.width;
+        containerViewRect.origin.x = 0;
+    }
+    else
+    {
+        containerViewRect.size.width = contentWidth;
+        containerViewRect.origin.x = (superViewRect.size.width - containerViewRect.size.width)/2;
+    }
     
     self.frame = containerViewRect;
 }
@@ -98,6 +107,8 @@ const int MARGIN_THUMB = 25;
         imageThumb.alpha = 1.0f;
       
         lastActivePageIndex = pageIndex;
+      
+        [thumbsScrollView scrollRectToVisible:imageThumb.frame animated:YES];
     }
 }
 

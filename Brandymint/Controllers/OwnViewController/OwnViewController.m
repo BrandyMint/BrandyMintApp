@@ -71,7 +71,10 @@ static AboutViewController *aboutController = nil;
     btnImageHighlighted = [cloudBtn backgroundImageForState:UIControlStateHighlighted];
   
     self.cardsScrollView.backgroundColor = [UIColor clearColor];
-  
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
     thumbView = [[[NSBundle mainBundle] loadNibNamed:@"ThumbView" owner:self options:nil] objectAtIndex:0];
     thumbView.delegate = self;
     [thumbsContainerView addSubview:thumbView];
