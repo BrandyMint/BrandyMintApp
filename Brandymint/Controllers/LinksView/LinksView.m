@@ -29,6 +29,7 @@
 
 -(void) layoutSubviews
 {
+    icon.alpha = 0.7;
     for (Link *link in [[LinksRepository sharedInstance] entitiesBuffer])
     {
         UIButton * btnLink = (UIButton*)[buttonsContainer viewWithTag: link.position.integerValue ];

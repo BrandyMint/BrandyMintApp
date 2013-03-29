@@ -24,6 +24,7 @@
 -(void) fillView:(Bloc*)bloc
 {
     icon.image = bloc.icon.data;
+    icon.alpha = 0.7;
     titleLabel.text = bloc.title;
     titleLabel.font = [UIFont fontWithName:@"Ubuntu-Bold" size:32];
     titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
