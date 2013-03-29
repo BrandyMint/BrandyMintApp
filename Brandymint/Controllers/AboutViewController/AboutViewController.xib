@@ -92,7 +92,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{1024, 560}</string>
+				<string key="NSFrameSize">{1024, 600}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="993064612"/>
 				<object class="NSColor" key="IBUIBackgroundColor">

@@ -98,18 +98,24 @@
       cardLinkButton.hidden = true;
     }
   
-    //TODO if (card.appstore_url && [card.appstore_url length]!=0)
-    [cardAppstoreButton setTitle:NULL forState:UIControlStateNormal];
-    cardAppstoreButton.backgroundColor = [UIColor clearColor];
-    UIImage *cardAppstoreBadge = [UIImage imageNamed:@"badge-appstore.png"];
-    [cardAppstoreButton setImage:cardAppstoreBadge forState:UIControlStateNormal];
-  
-    //TODO if (card.googleplay_url && [card.googleplay_url length]!=0)
-    [cardGoogleplayButton setTitle:NULL forState:UIControlStateNormal];
-    cardGoogleplayButton.backgroundColor = [UIColor clearColor];
-    UIImage *cardGoogleplayBadge = [UIImage imageNamed:@"badge-googleplay.png"];
-    [cardGoogleplayButton setImage:cardGoogleplayBadge forState:UIControlStateNormal];
-
+    if (card.itunes_url && [card.itunes_url length]!=0) {
+      [cardAppstoreButton setTitle:NULL forState:UIControlStateNormal];
+      cardAppstoreButton.backgroundColor = [UIColor clearColor];
+      UIImage *cardAppstoreBadge = [UIImage imageNamed:@"badge-appstore.png"];
+      [cardAppstoreButton setImage:cardAppstoreBadge forState:UIControlStateNormal];
+    }
+    else {
+      cardAppstoreButton.hidden = true;
+    }
+    if (card.gplay_url && [card.gplay_url length]!=0) {
+      [cardGoogleplayButton setTitle:NULL forState:UIControlStateNormal];
+      cardGoogleplayButton.backgroundColor = [UIColor clearColor];
+      UIImage *cardGoogleplayBadge = [UIImage imageNamed:@"badge-googleplay.png"];
+      [cardGoogleplayButton setImage:cardGoogleplayBadge forState:UIControlStateNormal];
+    }
+    else{
+      cardGoogleplayButton.hidden = true;
+    }
 }
 
 -(void) setHookOnAppImageClick

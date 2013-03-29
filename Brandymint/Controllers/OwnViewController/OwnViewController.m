@@ -128,7 +128,7 @@ static AboutViewController *aboutController = nil;
 
 -(void) initBackLayer
 {
-  UIImage *backLayerImage = [UIImage imageNamed:@"background.jpg"];
+  UIImage *backLayerImage = [UIImage imageNamed:@"background-colored.jpg"];
   UIImageView *backLayerImageView = [[UIImageView alloc] initWithImage:backLayerImage];
   [self.view addSubview:backLayerImageView];
   backLayerImageView.layer.zPosition = -2;
