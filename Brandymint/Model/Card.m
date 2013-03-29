@@ -21,6 +21,8 @@
 @dynamic updated_at;
 @dynamic image;
 @dynamic image_url;
+@dynamic gplay_url;
+@dynamic itunes_url;
 @dynamic url;
 
 
