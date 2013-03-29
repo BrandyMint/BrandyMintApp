@@ -13,6 +13,7 @@
 #import "Card.h"
 #import "CardsRepository.h"
 #import "Bloc.h"
+#import "Watchdog.h"
 
 //
 //
@@ -73,6 +74,8 @@ static AboutViewController *aboutController = nil;
   thumbView = [[[NSBundle mainBundle] loadNibNamed:@"ThumbView" owner:self options:nil] objectAtIndex:0];
   thumbView.delegate = self;
   [thumbsContainerView addSubview:thumbView];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -150,6 +153,8 @@ static AboutViewController *aboutController = nil;
     
     CardViewController *cardController = [cardControllersArray objectAtIndex:(NSUInteger)curPageIndex];
     cardController.view.alpha = 1.0 - fabs(pageOfs);
+  
+    [thumbView setActivePage:(NSUInteger)curPageIndex];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -157,7 +162,7 @@ static AboutViewController *aboutController = nil;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [thumbView setActivePage:(NSUInteger)curPageIndex];
+
 }
 
 -(void)updatePageAlpha:(NSUInteger)pageIndex
@@ -248,13 +253,67 @@ static AboutViewController *aboutController = nil;
 
 -(void) setActivePage:(NSUInteger)pageIndex
 {
-  if(pageIndex < cardControllersArray.count)
-  {
-      CGRect scrollRect = self.cardsScrollView.frame;
-      scrollRect.origin.x = pageIndex * scrollRect.size.width;
+    if(pageIndex < cardControllersArray.count)
+    {
+        CGRect scrollRect = self.cardsScrollView.frame;
+        scrollRect.origin.x = pageIndex * scrollRect.size.width;
+      
+        [self.cardsScrollView scrollRectToVisible:scrollRect animated:YES];
+    }
+}
+
+-(void)applicationDidTimeout:(NSNotification *) notif
+{
+    static BOOL path = YES;
+    static NSInteger pageIndex = 0;
+  
+    if(curPageIndex != pageIndex)
+    {
+        if(curPageIndex < pageIndex)
+        {
+          if(curPageIndex > 0)  {
+            path = NO;
+            pageIndex = curPageIndex;
+            pageIndex--;
+          }
+          else
+          {
+            path = YES;
+            pageIndex = curPageIndex;
+            pageIndex++;
+          }
+        }
+      
+        if(curPageIndex > pageIndex)
+        {
+          if(curPageIndex < cardControllersArray.count-1)
+          {
+            path = YES;
+            pageIndex = curPageIndex;
+            pageIndex++;
+          }
+          else
+          {
+            path = NO;
+            pageIndex = curPageIndex;
+            pageIndex--;
+          }
+        }
+    }
     
-      [self.cardsScrollView scrollRectToVisible:scrollRect animated:YES];
-  }
+    [self setActivePage:(NSUInteger)pageIndex];
+  
+    if(path)  {
+        pageIndex++;
+        if(pageIndex == cardControllersArray.count-1)
+          path = !path;
+    }
+    else
+    {
+        pageIndex--;
+        if(pageIndex == 0)
+          path = !path;
+    }
 }
 
 @end
