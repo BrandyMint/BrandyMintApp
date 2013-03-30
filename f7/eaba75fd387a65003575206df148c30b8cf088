@@ -1,11 +1,11 @@
 {
   "built_on": "master",
-  "duration": 2.875,
-  "full_display_name": "BrandymintApp #16034",
-  "id": "2013-03-30_12-58-32",
-  "number": 16034,
+  "duration": 2.509,
+  "full_display_name": "BrandymintApp #16035",
+  "id": "2013-03-30_12-58-43",
+  "number": 16035,
   "result": "FAILURE",
   "status_message": "?",
-  "time": "2013-03-30 11:58:32 +0300",
-  "url": "job/BrandymintApp/16034/"
+  "time": "2013-03-30 11:58:43 +0300",
+  "url": "job/BrandymintApp/16035/"
 }
