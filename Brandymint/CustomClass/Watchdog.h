@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#define kApplicationTimeout 3
+#define kApplicationTimeout 10
 
 #define kApplicationDidTimeoutNotification @"AppTimeOut"
 
