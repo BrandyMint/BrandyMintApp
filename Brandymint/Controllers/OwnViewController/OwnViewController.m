@@ -134,6 +134,8 @@ static AboutViewController *aboutController = nil;
     [self updatePageAlpha:0];
   
     [thumbView fillContent];
+  
+    [self scrollToFirstPage];
 }
 
 -(void) initBackLayer
@@ -270,14 +272,14 @@ static AboutViewController *aboutController = nil;
 
 -(void)applicationDidTimeout:(NSNotification *) notif
 {
-    static NSUInteger pageIndex = 0;
+    if((NSUInteger)curPageIndex == cardControllersArray.count-1)
+    {
+      [self scrollToFirstPage];
+      return;
+    }
   
-    pageIndex = (NSUInteger)curPageIndex;
-  
-    if(pageIndex < cardControllersArray.count)  {
-        pageIndex++;
-        
-        [self setActivePage:(NSUInteger)pageIndex];
+    if((NSUInteger)curPageIndex < cardControllersArray.count)  {
+        [self setActivePage:(NSUInteger)curPageIndex+1];
     }
 }
 

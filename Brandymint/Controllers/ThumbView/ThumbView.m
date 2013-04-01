@@ -132,6 +132,10 @@ const CGFloat THUMB_ALPHA = 0.4f;
         CGFloat scrollOffset = (index * (THUMB_DIAMETER+THUMB_MARGIN)) - (2 * (THUMB_DIAMETER+THUMB_MARGIN));
         [thumbsScrollView setContentOffset:CGPointMake(scrollOffset, 0) animated:YES];
     }
+    else if(index <= 2)
+    {
+        [thumbsScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    }
     else if(index >= cardCount-2)
     {
         CGFloat scrollOffset = ((cardCount-3) * (THUMB_DIAMETER+THUMB_MARGIN)) - (2 * (THUMB_DIAMETER+THUMB_MARGIN));
