@@ -85,12 +85,9 @@
     self.cardImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.cardImageView.clipsToBounds = true;
   
-    if (card.url && [card.url length]!=0) {
+    if (card.url && [card.url length]!=0 && card.url!=card.itunes_url && card.url!=card.gplay_url) {
       [cardLinkButton setTitle:NULL forState:UIControlStateNormal];
       [cardLinkButton setTitle:card.link forState:UIControlStateNormal];
-      //cardLinkButton.titleLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:23];
-      //cardLinkButton.titleLabel.textAlignment = UITextAlignmentLeft;
-      //cardLinkButton.titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
       cardLinkButton.backgroundColor = [UIColor clearColor];
       UIImage *cardLinkIcon = [UIImage imageNamed:@"icon-link.png"];
       [cardLinkButton setImage:cardLinkIcon forState:UIControlStateNormal];
@@ -131,8 +128,10 @@
 
 -(IBAction) openLinkInApp:(id)sender
 {
+  if (card.url && [card.url length]!=0) {
     WebViewController *webViewController = [[WebViewController alloc] initWithURL:card.url];
     [((AppDelegate*)[[UIApplication sharedApplication] delegate]) presentModalViewController:webViewController];
+  }
 }
 
 @end
