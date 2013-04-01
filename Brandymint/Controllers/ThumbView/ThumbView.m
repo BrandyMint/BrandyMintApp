@@ -16,6 +16,11 @@
     NSUInteger lastActivePageIndex;
   
     NSUInteger cardCount;
+  
+  CGPoint startOffset;
+  CGPoint destinationOffset;
+  NSDate *startTime;
+  NSTimer *timer;
 }
 
 const int THUMB_MARGIN = 120;
@@ -118,7 +123,6 @@ const CGFloat THUMB_ALPHA = 0.4f;
       
     lastActivePageIndex = pageIndex;
       
-    //[thumbsScrollView scrollRectToVisible:imageThumb.frame animated:YES];
     [self scrollIndexToCenter:pageIndex];
 }
 
@@ -128,6 +132,14 @@ const CGFloat THUMB_ALPHA = 0.4f;
         CGFloat scrollOffset = (index * (THUMB_DIAMETER+THUMB_MARGIN)) - (2 * (THUMB_DIAMETER+THUMB_MARGIN));
         [thumbsScrollView setContentOffset:CGPointMake(scrollOffset, 0) animated:YES];
     }
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+  
+  NSInteger index = lrintf(targetContentOffset->x/(THUMB_DIAMETER+THUMB_MARGIN));
+  targetContentOffset->x = index * (THUMB_DIAMETER+THUMB_MARGIN);
+  
 }
 
 -(void) setHookOnThumbClick:(UIImageView*)thumbImage
