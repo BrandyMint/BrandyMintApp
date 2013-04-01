@@ -85,7 +85,7 @@ static AboutViewController *aboutController = nil;
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,6 +132,8 @@ static AboutViewController *aboutController = nil;
   
     [thumbView setActivePage:0];
     [self updatePageAlpha:0];
+  
+    [thumbView fillContent];
 }
 
 -(void) initBackLayer

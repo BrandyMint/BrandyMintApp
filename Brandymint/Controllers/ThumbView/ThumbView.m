@@ -39,7 +39,7 @@ const CGFloat THUMB_ALPHA = 0.4f;
 
 -(void) layoutSubviews
 {
-    [self fillContent];
+    //[self fillContent];
 }
 
 -(void) fillContent
