@@ -75,7 +75,7 @@ static AboutViewController *aboutController = nil;
   thumbView.delegate = self;
   [thumbsContainerView addSubview:thumbView];
   
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
+  //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -153,8 +153,6 @@ static AboutViewController *aboutController = nil;
     
     CardViewController *cardController = [cardControllersArray objectAtIndex:(NSUInteger)curPageIndex];
     cardController.view.alpha = 1.0 - fabs(pageOfs);
-  
-    [thumbView setActivePage:(NSUInteger)curPageIndex];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -162,7 +160,7 @@ static AboutViewController *aboutController = nil;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-
+    [thumbView setActivePage:(NSUInteger)curPageIndex];
 }
 
 -(void)updatePageAlpha:(NSUInteger)pageIndex
