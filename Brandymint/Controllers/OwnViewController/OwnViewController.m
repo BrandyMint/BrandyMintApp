@@ -75,7 +75,7 @@ static AboutViewController *aboutController = nil;
   thumbView.delegate = self;
   [thumbsContainerView addSubview:thumbView];
   
-  //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -253,6 +253,7 @@ static AboutViewController *aboutController = nil;
     CGRect scrollRect = self.cardsScrollView.frame;
 
     [self.cardsScrollView scrollRectToVisible:CGRectMake(0,0, scrollRect.size.width,scrollRect.size.height) animated:YES];
+    [thumbView setActivePage:(NSUInteger)0];
 }
 
 -(void) setActivePage:(NSUInteger)pageIndex
@@ -263,49 +264,21 @@ static AboutViewController *aboutController = nil;
         scrollRect.origin.x = pageIndex * scrollRect.size.width;
       
         [self.cardsScrollView scrollRectToVisible:scrollRect animated:YES];
+        [thumbView setActivePage:(NSUInteger)pageIndex];
     }
 }
 
 -(void)applicationDidTimeout:(NSNotification *) notif
 {
-    static BOOL path = YES;
-    static NSInteger pageIndex = 0;
+    static NSUInteger pageIndex = 0;
   
-    if(pageIndex != curPageIndex)
-    {
-      if(pageIndex < curPageIndex)  {
-        if(pageIndex < cardControllersArray.count-1)  {
-          path = YES;
-        }
-        else  {
-          path = NO;
-        }
-      }
-      else  {
-        if(pageIndex > 0)  {
-          path = NO;
-        }
-        else  {
-          path = YES;
-        }
-      }
+    pageIndex = (NSUInteger)curPageIndex;
+  
+    if(pageIndex < cardControllersArray.count)  {
+        pageIndex++;
+        
+        [self setActivePage:(NSUInteger)pageIndex];
     }
-  
-    pageIndex = curPageIndex;
-  
-    if(path)  {
-      pageIndex++;
-      if(pageIndex == cardControllersArray.count-1)
-        path = !path;
-    }
-    else
-    {
-      pageIndex--;
-      if(pageIndex == 0)
-        path = !path;
-    }
-  
-    [self setActivePage:(NSUInteger)pageIndex];
 }
 
 @end
