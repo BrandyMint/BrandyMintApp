@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		172DBFA017058BCB00C65592 /* background-colored.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 172DBF9E17058BCB00C65592 /* background-colored.jpg */; };
 		172DBFA117058BCB00C65592 /* background-colored@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 172DBF9F17058BCB00C65592 /* background-colored@2x.jpg */; };
-		17500A49170576700055E3BE /* background-colored.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17500A47170576700055E3BE /* background-colored.jpg */; };
-		17500A4A170576700055E3BE /* background-colored@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17500A48170576700055E3BE /* background-colored@2x.jpg */; };
 		17500A4C170581F60055E3BE /* app-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17500A4B170581F60055E3BE /* app-icon@2x.png */; };
 		17500A4E170581F90055E3BE /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17500A4D170581F90055E3BE /* app-icon.png */; };
 		176DD5181701C58800559BB7 /* icon-cloud-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 176DD5161701C58800559BB7 /* icon-cloud-tap.png */; };
@@ -787,8 +785,6 @@
 				17500A4E170581F90055E3BE /* app-icon.png in Resources */,
 				172DBFA017058BCB00C65592 /* background-colored.jpg in Resources */,
 				172DBFA117058BCB00C65592 /* background-colored@2x.jpg in Resources */,
-				17500A49170576700055E3BE /* background-colored.jpg in Resources */,
-				17500A4A170576700055E3BE /* background-colored@2x.jpg in Resources */,
 				17500A4C170581F60055E3BE /* app-icon@2x.png in Resources */,
 				17500A4E170581F90055E3BE /* app-icon.png in Resources */,
 			);

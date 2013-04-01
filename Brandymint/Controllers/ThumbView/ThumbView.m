@@ -11,11 +11,16 @@
 
 @implementation ThumbView
 {
-    CGFloat scrollViewWidth;
-  
     NSMutableArray *thumbsImageViewArray;
   
     NSUInteger lastActivePageIndex;
+  
+    NSUInteger cardCount;
+  
+  CGPoint startOffset;
+  CGPoint destinationOffset;
+  NSDate *startTime;
+  NSTimer *timer;
 }
 
 const int THUMB_MARGIN = 120;
@@ -40,37 +45,42 @@ const CGFloat THUMB_ALPHA = 0.4f;
 -(void) fillContent
 {
     unsigned int current_pos = 0;
-    scrollViewWidth = 0;
   
     thumbsImageViewArray = [[NSMutableArray alloc] init];
   
+    cardCount = [[CardsRepository sharedInstance] entitiesBuffer].count;
+  
     for (Card *card in [[CardsRepository sharedInstance] entitiesBuffer])
     {
-      UIImageView *thumbImageView = [[UIImageView alloc] initWithImage:card.image.thumb];
-      thumbImageView.bounds = CGRectMake(0, 0, THUMB_DIAMETER, THUMB_DIAMETER);
-      thumbImageView.layer.cornerRadius = THUMB_DIAMETER/2;
-      thumbImageView.contentMode = UIViewContentModeScaleAspectFill;
-      thumbImageView.clipsToBounds = true;
-      thumbImageView.tag = current_pos;
-      thumbImageView.alpha = THUMB_ALPHA;
-      
-      [thumbsImageViewArray addObject:thumbImageView];
-      
-      [self addViewToIndexScrollView:thumbImageView position:current_pos++];
-      
-      [self setHookOnThumbClick:thumbImageView];
+        UIImageView *thumbImageView = [self createRoundImageView:card.image.thumb];
+        thumbImageView.tag = current_pos;
+        [self setHookOnThumbClick:thumbImageView];
+    
+        [thumbsImageViewArray addObject:thumbImageView];
+        
+        [self addViewToIndexScrollView:thumbImageView position:current_pos++];
     }
   
     if([[CardsRepository sharedInstance] entitiesBuffer].count > 0)
       [self resizeAndCenterRootView];
 }
 
+-(UIImageView*) createRoundImageView:(UIImage*)image
+{
+    UIImageView *thumbImageView = [[UIImageView alloc] initWithImage:image];
+    thumbImageView.bounds = CGRectMake(0, 0, THUMB_DIAMETER, THUMB_DIAMETER);
+    thumbImageView.layer.cornerRadius = THUMB_DIAMETER/2;
+    thumbImageView.contentMode = UIViewContentModeScaleAspectFill;
+    thumbImageView.clipsToBounds = true;
+    thumbImageView.alpha = THUMB_ALPHA;
+
+    return thumbImageView;
+}
+
 -(void) addViewToIndexScrollView:(UIImageView*)imageView position:(NSUInteger)index
 {
-    scrollViewWidth += (imageView.frame.size.width + THUMB_MARGIN);
-  
     CGRect frame;
-    frame.origin.x = index * (imageView.frame.size.width + THUMB_MARGIN);
+    frame.origin.x = CONTENT_MARGIN + index * (THUMB_DIAMETER + THUMB_MARGIN);
     frame.origin.y = 0;
     frame.size.width = imageView.frame.size.width;
     frame.size.height = imageView.frame.size.height;
@@ -86,8 +96,8 @@ const CGFloat THUMB_ALPHA = 0.4f;
     CGRect superViewRect = self.superview.frame;
   
     UIImageView *thumbImage = [thumbsImageViewArray objectAtIndex: [thumbsImageViewArray count]-1 ];
-    CGFloat contentWidth = thumbImage.frame.origin.x+thumbImage.frame.size.width;
-    thumbsScrollView.contentSize = CGSizeMake(contentWidth+1, thumbsScrollView.frame.size.height);
+    CGFloat contentWidth = thumbImage.frame.origin.x+thumbImage.frame.size.width + (CONTENT_MARGIN + 10);
+    thumbsScrollView.contentSize = CGSizeMake(contentWidth, thumbsScrollView.frame.size.height);
   
     if(contentWidth > superViewRect.size.width)
     {
@@ -105,21 +115,31 @@ const CGFloat THUMB_ALPHA = 0.4f;
 
 -(void) setActivePage:(NSUInteger)pageIndex
 {
-    if(pageIndex < thumbsImageViewArray.count)
-    {
-        UIImageView *lastImageThumb = [thumbsImageViewArray objectAtIndex:lastActivePageIndex];
-        lastImageThumb.alpha = THUMB_ALPHA;
+    UIImageView *lastImageThumb = [thumbsImageViewArray objectAtIndex:lastActivePageIndex];
+    lastImageThumb.alpha = THUMB_ALPHA;
       
-        UIImageView *imageThumb = [thumbsImageViewArray objectAtIndex:pageIndex];
-        imageThumb.alpha = 1.0f;
+    UIImageView *imageThumb = [thumbsImageViewArray objectAtIndex:pageIndex];
+    imageThumb.alpha = 1.0f;
       
-        lastActivePageIndex = pageIndex;
+    lastActivePageIndex = pageIndex;
       
-        [thumbsScrollView scrollRectToVisible:imageThumb.frame animated:YES];
-      
+    [self scrollIndexToCenter:pageIndex];
+}
 
-  
+-(void) scrollIndexToCenter:(NSUInteger)index
+{
+    if(index >=2 && index < cardCount-2)  {
+        CGFloat scrollOffset = (index * (THUMB_DIAMETER+THUMB_MARGIN)) - (2 * (THUMB_DIAMETER+THUMB_MARGIN));
+        [thumbsScrollView setContentOffset:CGPointMake(scrollOffset, 0) animated:YES];
     }
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+  
+  NSInteger index = lrintf(targetContentOffset->x/(THUMB_DIAMETER+THUMB_MARGIN));
+  targetContentOffset->x = index * (THUMB_DIAMETER+THUMB_MARGIN);
+  
 }
 
 -(void) setHookOnThumbClick:(UIImageView*)thumbImage
