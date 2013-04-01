@@ -76,6 +76,7 @@ static AboutViewController *aboutController = nil;
   [thumbsContainerView addSubview:thumbView];
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRefreshDataNotification:) name:didRefreshDataNotification object:nil];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -117,6 +118,10 @@ static AboutViewController *aboutController = nil;
     NSInteger scrollHeight = (NSInteger)self.cardsScrollView.frame.size.height;
     
     unsigned int current_pos = 0;
+  
+    if(cardControllersArray != nil && cardControllersArray.count > 0)
+       [cardControllersArray removeAllObjects];
+  
     cardControllersArray = [[NSMutableArray alloc] init];
     
     for (Card *card in [[CardsRepository sharedInstance] entitiesBuffer])
@@ -136,6 +141,11 @@ static AboutViewController *aboutController = nil;
     [thumbView fillContent];
   
     [self scrollToFirstPage];
+}
+
+-(void)didRefreshDataNotification:(NSNotification *) notification
+{
+    [self initScrollCards];
 }
 
 -(void) initBackLayer

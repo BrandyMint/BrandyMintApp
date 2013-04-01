@@ -16,6 +16,7 @@
     #import <MobileCoreServices/MobileCoreServices.h>
 #endif
 
+#import "Notifications.h"
 #import "CardsRepository.h"
 #import "BlocsRepository.h"
 #import "LinksRepository.h"

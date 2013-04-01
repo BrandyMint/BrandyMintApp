@@ -46,6 +46,9 @@ const CGFloat THUMB_ALPHA = 0.4f;
 {
     unsigned int current_pos = 0;
   
+    if(thumbsImageViewArray != nil && thumbsImageViewArray.count > 0)
+       [thumbsImageViewArray removeAllObjects];
+  
     thumbsImageViewArray = [[NSMutableArray alloc] init];
   
     cardCount = [[CardsRepository sharedInstance] entitiesBuffer].count;

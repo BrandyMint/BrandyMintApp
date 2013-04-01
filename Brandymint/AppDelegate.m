@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "UpdateManager.h"
 
-
 @implementation AppDelegate
 
 @synthesize window;
@@ -83,7 +82,10 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     NSLog(@"Updating base...");
+  
     [[UpdateManager sharedInstance] updateData];
+  
+    [[NSNotificationCenter defaultCenter] postNotificationName:didRefreshDataNotification object:nil];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -143,7 +145,7 @@
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
-    
+
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Brandymint.sqlite"];
     
     /*if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {

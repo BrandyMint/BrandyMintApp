@@ -56,6 +56,7 @@
 		7C19C04F16F0966D003D6CDE /* DataManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C19C04E16F0966D003D6CDE /* DataManifest.json */; };
 		7C3DC5AB16EF45D900C00066 /* OwnSectorsAnim.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */; };
 		7C61759F16F1B32900D57594 /* NSDate+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C61759E16F1B32900D57594 /* NSDate+external.m */; };
+		7C70C64E1709B17600EFACB3 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C70C64D1709B17600EFACB3 /* Notifications.m */; };
 		7C80D77216F2ECFF007D5E3B /* UIImage+external.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C80D77116F2ECFF007D5E3B /* UIImage+external.m */; };
 		7C80D78116F2FBD1007D5E3B /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C80D77416F2FBD1007D5E3B /* Ubuntu-B.ttf */; };
 		7C80D78216F2FBD1007D5E3B /* Ubuntu-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C80D77516F2FBD1007D5E3B /* Ubuntu-BI.ttf */; };
@@ -180,6 +181,8 @@
 		7C3DC5AA16EF45D900C00066 /* OwnSectorsAnim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnSectorsAnim.m; sourceTree = "<group>"; };
 		7C61759D16F1B32900D57594 /* NSDate+external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+external.h"; sourceTree = "<group>"; };
 		7C61759E16F1B32900D57594 /* NSDate+external.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+external.m"; sourceTree = "<group>"; };
+		7C70C64C1709B17600EFACB3 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		7C70C64D1709B17600EFACB3 /* Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
 		7C80D77016F2ECFF007D5E3B /* UIImage+external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+external.h"; sourceTree = "<group>"; };
 		7C80D77116F2ECFF007D5E3B /* UIImage+external.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+external.m"; sourceTree = "<group>"; };
 		7C80D77416F2FBD1007D5E3B /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
@@ -375,6 +378,8 @@
 				7C61759E16F1B32900D57594 /* NSDate+external.m */,
 				7C80D77016F2ECFF007D5E3B /* UIImage+external.h */,
 				7C80D77116F2ECFF007D5E3B /* UIImage+external.m */,
+				7C70C64C1709B17600EFACB3 /* Notifications.h */,
+				7C70C64D1709B17600EFACB3 /* Notifications.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -903,6 +908,7 @@
 				7CDF97131701A25300AC31F3 /* BMLinkButton.m in Sources */,
 				186CB9BA170535EF00081BE2 /* ThumbView.m in Sources */,
 				17AD57DA1705A6D60075F730 /* Watchdog.m in Sources */,
+				7C70C64E1709B17600EFACB3 /* Notifications.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

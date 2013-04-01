@@ -34,7 +34,6 @@
 
 -(void) updateEnities:(NSArray *)entities withRepo:(BaseRepository*)repo
 {
-    
     NSMutableArray *entitiesToDelete = [[NSMutableArray alloc]init];
     [repo getAllEntities];
     [entitiesToDelete addObjectsFromArray: repo.entitiesBuffer];
