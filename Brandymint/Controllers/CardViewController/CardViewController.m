@@ -28,6 +28,8 @@
 @synthesize cardGoogleplayButton;
 @synthesize card;
 
+const int MARGIN_LINK = 18;
+
 - (id)initCardController:(Card*)srcCard
 {
     self = [super initWithNibName:@"CardViewController" bundle:[NSBundle mainBundle]];
@@ -85,12 +87,11 @@
     self.cardImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.cardImageView.clipsToBounds = true;
   
+    CGFloat offsetXFromLinksContainer = 0;
+    CGRect rectLinkBtn;
+  
     if (card.url && [card.url length]!=0 && card.url!=card.itunes_url && card.url!=card.gplay_url) {
-      [cardLinkButton setTitle:NULL forState:UIControlStateNormal];
-      [cardLinkButton setTitle:card.link forState:UIControlStateNormal];
-      cardLinkButton.backgroundColor = [UIColor clearColor];
-      UIImage *cardLinkIcon = [UIImage imageNamed:@"icon-link.png"];
-      [cardLinkButton setImage:cardLinkIcon forState:UIControlStateNormal];
+      offsetXFromLinksContainer += cardLinkButton.frame.size.width + MARGIN_LINK;
     }
     else
     {
@@ -98,19 +99,21 @@
     }
   
     if (card.itunes_url && [card.itunes_url length]!=0) {
-      [cardAppstoreButton setTitle:NULL forState:UIControlStateNormal];
-      cardAppstoreButton.backgroundColor = [UIColor clearColor];
-      UIImage *cardAppstoreBadge = [UIImage imageNamed:@"badge-appstore.png"];
-      [cardAppstoreButton setImage:cardAppstoreBadge forState:UIControlStateNormal];
+      rectLinkBtn = cardAppstoreButton.frame;
+      rectLinkBtn.origin.x = offsetXFromLinksContainer;
+      cardAppstoreButton.frame = rectLinkBtn;
+      
+      offsetXFromLinksContainer += cardAppstoreButton.frame.size.width + MARGIN_LINK;
     }
     else {
       cardAppstoreButton.hidden = true;
     }
     if (card.gplay_url && [card.gplay_url length]!=0) {
-      [cardGoogleplayButton setTitle:NULL forState:UIControlStateNormal];
-      cardGoogleplayButton.backgroundColor = [UIColor clearColor];
-      UIImage *cardGoogleplayBadge = [UIImage imageNamed:@"badge-googleplay.png"];
-      [cardGoogleplayButton setImage:cardGoogleplayBadge forState:UIControlStateNormal];
+      rectLinkBtn = cardGoogleplayButton.frame;
+      rectLinkBtn.origin.x = offsetXFromLinksContainer;
+      cardGoogleplayButton.frame = rectLinkBtn;
+      
+      offsetXFromLinksContainer += cardGoogleplayButton.frame.size.width;
     }
     else{
       cardGoogleplayButton.hidden = true;
