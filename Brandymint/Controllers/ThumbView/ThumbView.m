@@ -122,10 +122,14 @@ const CGFloat THUMB_ALPHA = 0.4f;
   
     UIImageView *lastImageThumb = [thumbsImageViewArray objectAtIndex:lastActivePageIndex];
     lastImageThumb.alpha = THUMB_ALPHA;
+    [lastImageThumb.layer setBorderWidth:0.0f];
   
     UIImageView *imageThumb = [thumbsImageViewArray objectAtIndex:pageIndex];
     imageThumb.alpha = 1.0f;
-      
+    [imageThumb.layer setBorderColor:[UIColor colorWithWhite:0.0 alpha:0.3f].CGColor];
+    [imageThumb.layer setBorderWidth:1.0f];
+  
+  
     lastActivePageIndex = pageIndex;
       
     [self scrollIndexToCenter:pageIndex];
