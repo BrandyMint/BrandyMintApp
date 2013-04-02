@@ -62,7 +62,7 @@ static AboutViewController *aboutController = nil;
   [super viewDidLoad];
   
   [self performSelector:@selector(initBackLayer) withObject:nil afterDelay:0];
-  [self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
+  //[self performSelector:@selector(initScrollCards) withObject:nil afterDelay:0];
   
   [self setHookOnLogoClick];
   
@@ -135,12 +135,10 @@ static AboutViewController *aboutController = nil;
     cardsScrollView.contentSize = CGSizeMake(scrollWidth * current_pos, scrollHeight);
     cardsScrollView.layer.zPosition = 2;
   
-    [thumbView setActivePage:0];
     [self updatePageAlpha:0];
   
     [thumbView fillContent];
-  
-    [self scrollToFirstPage];
+    [thumbView setActivePage:0];
 }
 
 -(void)didRefreshDataNotification:(NSNotification *) notification

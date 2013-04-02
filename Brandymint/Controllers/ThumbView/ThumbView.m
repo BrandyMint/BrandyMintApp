@@ -118,9 +118,11 @@ const CGFloat THUMB_ALPHA = 0.4f;
 
 -(void) setActivePage:(NSUInteger)pageIndex
 {
+    NSLog(@"last=%i current=%i", lastActivePageIndex, pageIndex);
+  
     UIImageView *lastImageThumb = [thumbsImageViewArray objectAtIndex:lastActivePageIndex];
     lastImageThumb.alpha = THUMB_ALPHA;
-      
+  
     UIImageView *imageThumb = [thumbsImageViewArray objectAtIndex:pageIndex];
     imageThumb.alpha = 1.0f;
       
@@ -174,7 +176,7 @@ const CGFloat THUMB_ALPHA = 0.4f;
   
     [((OwnViewController*)self.delegate) setActivePage:thumbIndex];
   
-    [self setActivePage:thumbIndex];
+    //[self setActivePage:thumbIndex];
 }
 
 -(void) showThumbView

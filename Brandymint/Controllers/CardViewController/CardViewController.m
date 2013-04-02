@@ -112,8 +112,6 @@ const int MARGIN_LINK = 18;
       rectLinkBtn = cardGoogleplayButton.frame;
       rectLinkBtn.origin.x = offsetXFromLinksContainer;
       cardGoogleplayButton.frame = rectLinkBtn;
-      
-      offsetXFromLinksContainer += cardGoogleplayButton.frame.size.width;
     }
     else{
       cardGoogleplayButton.hidden = true;
