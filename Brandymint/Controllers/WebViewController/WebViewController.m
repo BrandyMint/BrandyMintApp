@@ -34,6 +34,7 @@
     [super viewDidLoad];
   
     [self.webView loadRequest:[NSURLRequest requestWithURL:_url]];
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 - (void)didReceiveMemoryWarning
