@@ -58,30 +58,27 @@ const CGFloat THUMB_ALPHA = 0.4f;
         UIImageView *thumbImageView = [self createRoundImageView:card.image.thumb];
         thumbImageView.tag = current_pos;
         [self setHookOnThumbClick:thumbImageView];
-      
-      // Создаем "подложку"
-      UIView *shadowView = [[UIView alloc] initWithFrame:thumbImageView.frame];
-      //UIView *shadowView = [[UIView alloc] initWithFrame:CGRectMake(CONTENT_MARGIN + current_pos * (THUMB_DIAMETER + THUMB_MARGIN), 0, THUMB_DIAMETER, THUMB_DIAMETER)];
-      shadowView.bounds = CGRectMake(0, 0, THUMB_DIAMETER, THUMB_DIAMETER);
-      shadowView.layer.shadowOffset = CGSizeMake(5, 5);
-      shadowView.layer.shadowColor = [UIColor blackColor].CGColor;
-      shadowView.layer.shadowOpacity = 0.9f;
-      shadowView.layer.shadowRadius = 2;
-      shadowView.tag = current_pos;
-      
-      // Скругляем углы
+
       thumbImageView.layer.cornerRadius = THUMB_DIAMETER/2;
       thumbImageView.layer.masksToBounds = YES;
+
+      UIView *shadowView = [[UIView alloc] initWithFrame:thumbImageView.frame];
+      shadowView.bounds = CGRectMake(0, 0, THUMB_DIAMETER, THUMB_DIAMETER);
+      shadowView.layer.shadowOffset = CGSizeMake(3, 3);
+      shadowView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+      shadowView.layer.shadowOpacity = 0.9f;
+      shadowView.layer.shadowRadius = 3;
+      shadowView.tag = current_pos;
+      shadowView.layer.cornerRadius = THUMB_DIAMETER/2;
+      shadowView.layer.borderWidth = -1;
+      shadowView.alpha = THUMB_ALPHA;
       
       CGRect frame;
-      frame.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER + THUMB_MARGIN);
-      //frame.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER);
-      frame.origin.y = 0;
       frame.size.width = thumbImageView.frame.size.width;
       frame.size.height = thumbImageView.frame.size.height;
       
       CGRect frameView;
-      //frameView.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER + THUMB_MARGIN);
+      frameView.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER + THUMB_MARGIN);
       //frameView.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER);
       frameView.origin.y = 0;
       frameView.size.width = shadowView.frame.size.width;
@@ -90,17 +87,14 @@ const CGFloat THUMB_ALPHA = 0.4f;
       thumbImageView.frame = frame;
       shadowView.frame = frameView;
       
-      //[thumbImageView addSubview:shadowView];
-      //[thumbsScrollView addSubview:thumbImageView];
-      
-      //[shadowView addSubview:thumbImageView];
-      [thumbsScrollView addSubview:thumbImageView];
-      
       current_pos++;
+      
+      [shadowView addSubview:thumbImageView];
+      [thumbsScrollView addSubview:shadowView];
     
-        [thumbsImageViewArray addObject:thumbImageView];
+      [thumbsImageViewArray addObject:shadowView];
         
-        //[self addViewToIndexScrollView:thumbImageView position:current_pos++];
+      //[self addViewToIndexScrollView:shadowView position:current_pos++];
     }
   
     if([[CardsRepository sharedInstance] entitiesBuffer].count > 0)
@@ -114,12 +108,12 @@ const CGFloat THUMB_ALPHA = 0.4f;
     thumbImageView.layer.cornerRadius = THUMB_DIAMETER/2;
     thumbImageView.contentMode = UIViewContentModeScaleAspectFill;
     thumbImageView.clipsToBounds = true;
-    thumbImageView.alpha = THUMB_ALPHA;
+    //thumbImageView.alpha = THUMB_ALPHA;
 
     return thumbImageView;
 }
 
--(void) addViewToIndexScrollView:(UIImageView*)imageView position:(NSUInteger)index
+-(void) addViewToIndexScrollView:(UIView*)imageView position:(NSUInteger)index
 {
     CGRect frame;
     frame.origin.x = CONTENT_MARGIN + index * (THUMB_DIAMETER + THUMB_MARGIN);
