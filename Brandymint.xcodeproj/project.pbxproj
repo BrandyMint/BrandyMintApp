@@ -34,7 +34,6 @@
 		18CE3B6316F885D500B5FF97 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B5D16F885D500B5FF97 /* BlockView.m */; };
 		18CE3B6416F885D500B5FF97 /* LinksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE3B6016F885D500B5FF97 /* LinksView.m */; };
 		25C501D0A98E4997BC43689D /* libPods-LogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6213BC4BE3A643C2B0A89E5F /* libPods-LogicTests.a */; };
-		66079E8E179EAF3B0020DF00 /* zero.png in Resources */ = {isa = PBXBuildFile; fileRef = 66079E8D179EAF3B0020DF00 /* zero.png */; };
 		7B0DBF926A2F48D9BC6513C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDD8401E13B4A509E9DBC6C /* libPods.a */; };
 		7C01D50516EE0B70004216EC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4EF16EE0B70004216EC /* background.jpg */; };
 		7C01D50616EE0B70004216EC /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C01D4F016EE0B70004216EC /* background@2x.jpg */; };
@@ -159,7 +158,6 @@
 		3FDD8401E13B4A509E9DBC6C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6F91EC0C014FE8B93977D4 /* Pods-LogicTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogicTests.xcconfig"; path = "Pods/Pods-LogicTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		6213BC4BE3A643C2B0A89E5F /* libPods-LogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		66079E8D179EAF3B0020DF00 /* zero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zero.png; sourceTree = "<group>"; };
 		7C01D4EF16EE0B70004216EC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		7C01D4F016EE0B70004216EC /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		7C01D4F316EE0B70004216EC /* icon-agile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-agile.png"; sourceTree = "<group>"; };
@@ -506,7 +504,6 @@
 			isa = PBXGroup;
 			children = (
 				172DBF9E17058BCB00C65592 /* background-colored.jpg */,
-				66079E8D179EAF3B0020DF00 /* zero.png */,
 				172DBF9F17058BCB00C65592 /* background-colored@2x.jpg */,
 				17500A47170576700055E3BE /* background-colored.jpg */,
 				17500A48170576700055E3BE /* background-colored@2x.jpg */,
@@ -803,7 +800,6 @@
 				17500A4E170581F90055E3BE /* app-icon.png in Resources */,
 				179F28FB170AA28B00B40EAD /* Default-Landscape@2x~ipad.png in Resources */,
 				179F28FD170AA28E00B40EAD /* Default-Landscape~ipad.png in Resources */,
-				66079E8E179EAF3B0020DF00 /* zero.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
