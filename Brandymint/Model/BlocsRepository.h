@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Bloc.h>
+#import "Bloc.h"
 #import "BaseRepository.h"
 
 @interface BlocsRepository : BaseRepository

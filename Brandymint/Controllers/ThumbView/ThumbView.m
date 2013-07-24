@@ -58,10 +58,49 @@ const CGFloat THUMB_ALPHA = 0.4f;
         UIImageView *thumbImageView = [self createRoundImageView:card.image.thumb];
         thumbImageView.tag = current_pos;
         [self setHookOnThumbClick:thumbImageView];
+      
+      // Создаем "подложку"
+      UIView *shadowView = [[UIView alloc] initWithFrame:thumbImageView.frame];
+      //UIView *shadowView = [[UIView alloc] initWithFrame:CGRectMake(CONTENT_MARGIN + current_pos * (THUMB_DIAMETER + THUMB_MARGIN), 0, THUMB_DIAMETER, THUMB_DIAMETER)];
+      shadowView.bounds = CGRectMake(0, 0, THUMB_DIAMETER, THUMB_DIAMETER);
+      shadowView.layer.shadowOffset = CGSizeMake(5, 5);
+      shadowView.layer.shadowColor = [UIColor blackColor].CGColor;
+      shadowView.layer.shadowOpacity = 0.9f;
+      shadowView.layer.shadowRadius = 2;
+      shadowView.tag = current_pos;
+      
+      // Скругляем углы
+      thumbImageView.layer.cornerRadius = THUMB_DIAMETER/2;
+      thumbImageView.layer.masksToBounds = YES;
+      
+      CGRect frame;
+      frame.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER + THUMB_MARGIN);
+      //frame.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER);
+      frame.origin.y = 0;
+      frame.size.width = thumbImageView.frame.size.width;
+      frame.size.height = thumbImageView.frame.size.height;
+      
+      CGRect frameView;
+      //frameView.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER + THUMB_MARGIN);
+      //frameView.origin.x = CONTENT_MARGIN + current_pos * (THUMB_DIAMETER);
+      frameView.origin.y = 0;
+      frameView.size.width = shadowView.frame.size.width;
+      frameView.size.height = shadowView.frame.size.height;
+      
+      thumbImageView.frame = frame;
+      shadowView.frame = frameView;
+      
+      //[thumbImageView addSubview:shadowView];
+      //[thumbsScrollView addSubview:thumbImageView];
+      
+      //[shadowView addSubview:thumbImageView];
+      [thumbsScrollView addSubview:thumbImageView];
+      
+      current_pos++;
     
         [thumbsImageViewArray addObject:thumbImageView];
         
-        [self addViewToIndexScrollView:thumbImageView position:current_pos++];
+        //[self addViewToIndexScrollView:thumbImageView position:current_pos++];
     }
   
     if([[CardsRepository sharedInstance] entitiesBuffer].count > 0)
