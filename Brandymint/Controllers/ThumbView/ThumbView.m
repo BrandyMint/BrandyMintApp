@@ -91,7 +91,7 @@ const CGFloat THUMB_ALPHA = 0.4f;
       
       [shadowView addSubview:thumbImageView];
       [thumbsScrollView addSubview:shadowView];
-    
+ 
       [thumbsImageViewArray addObject:shadowView];
         
       //[self addViewToIndexScrollView:shadowView position:current_pos++];
@@ -111,6 +111,16 @@ const CGFloat THUMB_ALPHA = 0.4f;
     //thumbImageView.alpha = THUMB_ALPHA;
 
     return thumbImageView;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  thumbsScrollView.scrollEnabled = NO;
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  thumbsScrollView.scrollEnabled = YES;
 }
 
 -(void) addViewToIndexScrollView:(UIView*)imageView position:(NSUInteger)index
