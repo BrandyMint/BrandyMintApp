@@ -37,6 +37,8 @@
     UIImage *btnImageHighlighted;
   
     NSMutableArray *cardControllersArray;
+  
+    NSUInteger thumbdidFinishScroll;
 }
 
 static AboutViewController *aboutController = nil;
@@ -77,6 +79,14 @@ static AboutViewController *aboutController = nil;
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRefreshDataNotification:) name:didRefreshDataNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didSetActivePageThumb:)  name:@"SetActivePageThumb"  object:nil];
+}
+
+- (void)didSetActivePageThumb:(NSNotification*)notification {
+  NSString* qw = [notification object];
+  thumbdidFinishScroll = [qw longLongValue];
+  
+  [thumbView setActivePage:thumbdidFinishScroll];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -187,7 +197,6 @@ static AboutViewController *aboutController = nil;
     }
 }
 
-
 -(void) addViewToIndexScrollView:(UIView*)view position:(NSUInteger)index
 {
     CGRect frame;
@@ -272,7 +281,7 @@ static AboutViewController *aboutController = nil;
     {
         CGRect scrollRect = self.cardsScrollView.frame;
         scrollRect.origin.x = pageIndex * scrollRect.size.width;
-      
+       
         [self.cardsScrollView scrollRectToVisible:scrollRect animated:YES];
         [thumbView setActivePage:(NSUInteger)pageIndex];
     }
